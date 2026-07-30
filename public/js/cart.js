@@ -243,11 +243,7 @@
                     promoMsg.style.color = '#ff5252';
                     promoMsg.textContent = 'Geçersiz promosyon kodu.';
                 }
-            }
-        });
-    }
-
-    // Checkout Button Handler - Direct WhatsApp Integration
+      // Checkout Button Handler - Direct E-Commerce Credit Card Integration
     function initCheckout() {
         const checkoutBtn = document.getElementById('checkoutBtn');
         if (!checkoutBtn) return;
@@ -260,44 +256,104 @@
                 return;
             }
 
-            const waMeta = document.querySelector('meta[name="whatsapp-number"]');
-            const waNumber = waMeta ? waMeta.getAttribute('content') : '905449157011';
-            const isEn = (document.documentElement.lang === 'en');
+            // Open Credit Card Payment Modal
+            openCreditCardModal();
+        });
+    }
 
-            let msg = isEn 
-                ? '👑 *DIOREAL LUXURY ORDER REQUEST*\n\nHello Dioreal Concierge Team, I would like to place an order for the following items in my cart:\n\n'
-                : '👑 *DIOREAL LÜKS SİPARİŞ VE REZERVASYON TALEBİ*\n\nMerhaba Dioreal Concierge Ekibi, sepetimdeki ürün ve deneyim paketlerini sipariş vermek istiyorum:\n\n';
-
-            let rawSubtotal = 0;
-            cart.forEach((item, index) => {
-                const sub = item.price * item.quantity;
-                rawSubtotal += sub;
-                msg += `*${index + 1}. ${item.name}*\n`;
-                msg += `   • Kategori: ${item.type || 'Lüks Paket'}\n`;
-                msg += `   • Adet: ${item.quantity}\n`;
-                msg += `   • Birim Fiyat: ₺${item.price.toLocaleString('tr-TR')}\n`;
-                msg += `   • Tutar: ₺${sub.toLocaleString('tr-TR')}\n\n`;
-            });
-
+    function openCreditCardModal() {
+        const modal = document.getElementById('creditCardModal');
+        if (modal) {
+            modal.classList.add('active');
+            // Update total in modal
+            const cart = getCart();
+            const rawSubtotal = cart.reduce((sum, item) => sum + (item.price * item.quantity), 0);
             const discountAmount = rawSubtotal * (appliedDiscountPercent / 100);
             const serviceFee = rawSubtotal * 0.08;
             const grandTotal = rawSubtotal - discountAmount + serviceFee;
 
-            if (appliedDiscountPercent > 0) {
-                msg += `🎟️ *Uygulanan İndirim:* %${appliedDiscountPercent} (-₺${discountAmount.toLocaleString('tr-TR')})\n`;
+            const modalTotalEl = document.getElementById('modalPayAmount');
+            if (modalTotalEl) {
+                modalTotalEl.textContent = formatCurrency(grandTotal);
             }
-            msg += `💳 *GENEL TOPLAM (Hizmet & KDV Dahil): ₺${grandTotal.toLocaleString('tr-TR')}*\n\n`;
-            msg += isEn 
-                ? 'Please confirm availability and booking details. Thank you!'
-                : 'Lütfen rezervasyon durumunu ve detayları onaylamak için benimle iletişime geçin. Teşekkürler!';
-
-            const waUrl = `https://wa.me/${waNumber}?text=${encodeURIComponent(msg)}`;
-            window.open(waUrl, '_blank');
-        });
+        }
     }
 
+    window.closeCreditCardModal = function() {
+        const modal = document.getElementById('creditCardModal');
+        if (modal) modal.classList.remove('active');
+    };
 
-    // Export window cart helper for external calls (e.g., adding item from hotel detail page)
+    // Format credit card input numbers
+    window.formatCardNumber = function(input) {
+        let value = input.value.replace(/\D/g, '');
+        value = value.substring(0, 16);
+        let formatted = value.match(/.{1,4}/g)?.join(' ') || value;
+        input.value = formatted;
+    };
+
+    // Process Credit Card Payment (Simulated 3D Secure Approval)
+    window.processCreditCardPayment = function(event) {
+        event.preventDefault();
+        const cardName = document.getElementById('cardName').value;
+        const cardNumber = document.getElementById('cardNumber').value;
+        const cardExp = document.getElementById('cardExp').value;
+        const cardCvc = document.getElementById('cardCvc').value;
+
+        if (!cardName || !cardNumber || !cardExp || !cardCvc) {
+            alert('Lütfen kart üzerindeki tüm alanları doldurun.');
+            return;
+        }
+
+        const payBtn = document.getElementById('paySubmitBtn');
+        if (payBtn) {
+            payBtn.disabled = true;
+            payBtn.innerHTML = '<i class="fa-solid fa-spinner fa-spin"></i> 3D SECURE DOĞRULANIYOR...';
+        }
+
+        setTimeout(() => {
+            closeCreditCardModal();
+            if (payBtn) {
+                payBtn.disabled = false;
+                payBtn.innerHTML = '<span>ÖDEMEYİ TAMAMLA</span>';
+            }
+            showOrderSuccessModal();
+        }, 2000);
+    };
+
+    function showOrderSuccessModal() {
+        const cart = getCart();
+        const orderCode = 'DIO-' + Math.floor(100000 + Math.random() * 900000);
+        
+        const rawSubtotal = cart.reduce((sum, item) => sum + (item.price * item.quantity), 0);
+        const discountAmount = rawSubtotal * (appliedDiscountPercent / 100);
+        const serviceFee = rawSubtotal * 0.08;
+        const grandTotal = rawSubtotal - discountAmount + serviceFee;
+
+        const orderCodeEl = document.getElementById('successOrderCode');
+        const orderTotalEl = document.getElementById('successOrderTotal');
+        const successModal = document.getElementById('orderSuccessModal');
+
+        if (orderCodeEl) orderCodeEl.textContent = orderCode;
+        if (orderTotalEl) orderTotalEl.textContent = formatCurrency(grandTotal);
+
+        if (successModal) {
+            successModal.classList.add('active');
+        }
+
+        // Clear cart after successful purchase
+        localStorage.removeItem(CART_STORAGE_KEY);
+        updateBadge();
+        renderCart();
+    }
+
+    window.closeOrderSuccessModal = function() {
+        const successModal = document.getElementById('orderSuccessModal');
+        if (successModal) successModal.classList.remove('active');
+        window.location.href = '/urunler';
+    };
+
+    // Export window cart helper
     window.DiorealCart = {
         addItem: function (item) {
             let cart = getCart();
@@ -329,3 +385,4 @@
         initCheckout();
     });
 })();
+

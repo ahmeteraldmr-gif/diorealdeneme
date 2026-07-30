@@ -154,20 +154,100 @@
                         <span class="summary-total-price" id="cartGrandTotal">₺0</span>
                     </div>
 
-                    <button type="button" id="checkoutBtn" class="checkout-btn" style="background: #25D366; color: #ffffff; border: none; display: flex; align-items: center; justify-content: center; gap: 0.75rem; transition: all 0.3s ease;">
-                        <i class="fa-brands fa-whatsapp" style="font-size: 1.4rem;"></i>
-                        <span data-i18n="cart_checkout_wa">WhatsApp ile Sipariş Ver</span>
+                    <button type="button" id="checkoutBtn" class="checkout-btn" style="background: #111111; color: #ffffff; border: none; display: flex; align-items: center; justify-content: center; gap: 0.75rem; transition: all 0.3s ease; padding: 1.1rem; border-radius: 40px; font-weight: 600; width: 100%; cursor: pointer;">
+                        <i class="fa-solid fa-credit-card" style="font-size: 1.2rem; color: #c8a96e;"></i>
+                        <span>Kredi Kartı ile Güvenli Öde</span>
                     </button>
 
-                    <p class="checkout-notes">
-                        <i class="fa-solid fa-shield-halved" style="color: #c5a059; margin-right: 4px;"></i>
-                        Siparişiniz doğrudan WhatsApp hattımıza aktarılacak ve özel temsilcimiz anında yardımcı olacaktır.
+                    <!-- E-Commerce Payment Security Badges -->
+                    <div style="display: flex; align-items: center; justify-content: center; gap: 1rem; margin-top: 1.2rem; opacity: 0.85;">
+                        <i class="fa-brands fa-cc-visa" style="font-size: 1.8rem; color: #1a1f71;"></i>
+                        <i class="fa-brands fa-cc-mastercard" style="font-size: 1.8rem; color: #eb001b;"></i>
+                        <span style="font-size: 0.75rem; font-weight: 700; background: #e8f5e9; color: #2e7d32; padding: 0.2rem 0.6rem; border-radius: 12px; display: inline-flex; align-items: center; gap: 0.2rem;">
+                            <i class="fa-solid fa-shield-halved"></i> 256-Bit SSL 3D SECURE
+                        </span>
+                    </div>
+
+                    <p class="checkout-notes" style="text-align: center; margin-top: 1rem; font-size: 0.8rem; color: #777;">
+                        Ödemeniz 256-Bit SSL şifreleme altyapısı ile güvence altındadır.
                     </p>
                 </div>
             </div>
         </div>
 
     </section>
+
+    <!-- 💳 E-COMMERCE CREDIT CARD PAYMENT MODAL -->
+    <div class="mojea-modal-backdrop" id="creditCardModal">
+        <div class="mojea-modal-box" style="max-width: 550px; grid-template-columns: 1fr; padding: 2.5rem; border-radius: 20px;">
+            <button type="button" class="mojea-modal-close-btn" onclick="closeCreditCardModal()">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+
+            <div style="text-align: center; margin-bottom: 1.8rem;">
+                <span style="font-size: 0.75rem; letter-spacing: 0.2em; color: #c8a96e; font-weight: 600; text-transform: uppercase;">GÜVENLİ ÖDEME NOKTASI</span>
+                <h2 style="font-family: var(--font-display, 'Cormorant Garamond', serif); font-size: 2rem; color: #111; margin-top: 0.4rem;">Kredi Kartı ile Ödeme</h2>
+                <div style="font-size: 1.8rem; font-weight: 700; color: #111; margin-top: 0.5rem;" id="modalPayAmount">₺0</div>
+            </div>
+
+            <form onsubmit="processCreditCardPayment(event)" style="display: flex; flex-direction: column; gap: 1.2rem;">
+                <div class="form-group">
+                    <label style="font-size: 0.82rem; font-weight: 600; color: #333; display: block; margin-bottom: 0.4rem;">Kart Üzerindeki İsim ve Soyisim</label>
+                    <input type="text" id="cardName" required placeholder="Örn: AHMET ERALDEMİR" style="width: 100%; padding: 0.85rem 1rem; border: 1px solid #ddd; border-radius: 8px; font-size: 0.95rem; outline: none;">
+                </div>
+
+                <div class="form-group">
+                    <label style="font-size: 0.82rem; font-weight: 600; color: #333; display: block; margin-bottom: 0.4rem;">Kart Numarası</label>
+                    <div style="position: relative;">
+                        <input type="text" id="cardNumber" required placeholder="0000 0000 0000 0000" oninput="formatCardNumber(this)" maxlength="19" style="width: 100%; padding: 0.85rem 1rem; border: 1px solid #ddd; border-radius: 8px; font-size: 1.05rem; letter-spacing: 0.1em; outline: none;">
+                        <i class="fa-solid fa-credit-card" style="position: absolute; right: 1rem; top: 50%; transform: translateY(-50%); color: #aaa;"></i>
+                    </div>
+                </div>
+
+                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;">
+                    <div class="form-group">
+                        <label style="font-size: 0.82rem; font-weight: 600; color: #333; display: block; margin-bottom: 0.4rem;">Son Kullanma (AA/YY)</label>
+                        <input type="text" id="cardExp" required placeholder="08/28" maxlength="5" style="width: 100%; padding: 0.85rem 1rem; border: 1px solid #ddd; border-radius: 8px; font-size: 0.95rem; text-align: center; outline: none;">
+                    </div>
+                    <div class="form-group">
+                        <label style="font-size: 0.82rem; font-weight: 600; color: #333; display: block; margin-bottom: 0.4rem;">CVC / CVV</label>
+                        <input type="password" id="cardCvc" required placeholder="***" maxlength="4" style="width: 100%; padding: 0.85rem 1rem; border: 1px solid #ddd; border-radius: 8px; font-size: 0.95rem; text-align: center; outline: none;">
+                    </div>
+                </div>
+
+                <button type="submit" id="paySubmitBtn" style="background: #111111; color: #ffffff; border: none; padding: 1.1rem; border-radius: 40px; font-size: 0.9rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; cursor: pointer; transition: all 0.3s ease; margin-top: 0.5rem; display: flex; align-items: center; justify-content: center; gap: 0.5rem;">
+                    <span>3D SECURE İLE ÖDEMEYİ TAMAMLA</span>
+                </button>
+            </form>
+        </div>
+    </div>
+
+    <!-- 🎉 ORDER SUCCESS RECEIPT MODAL -->
+    <div class="mojea-modal-backdrop" id="orderSuccessModal">
+        <div class="mojea-modal-box" style="max-width: 500px; grid-template-columns: 1fr; padding: 3rem 2rem; border-radius: 20px; text-align: center;">
+            <div style="width: 70px; height: 70px; background: #e8f5e9; color: #2e7d32; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 2.2rem; margin: 0 auto 1.5rem;">
+                <i class="fa-solid fa-circle-check"></i>
+            </div>
+            
+            <h2 style="font-family: var(--font-display, 'Cormorant Garamond', serif); font-size: 2.2rem; color: #111; margin-bottom: 0.5rem;">Ödemeniz Alındı!</h2>
+            <p style="font-size: 0.95rem; color: #666; margin-bottom: 1.5rem;">Siparişiniz başarıyla onaylandı. Onay belgeniz e-posta adresinize gönderilmiştir.</p>
+
+            <div style="background: #f9f9f9; border: 1px solid #eee; padding: 1.2rem; border-radius: 12px; margin-bottom: 2rem; text-align: left;">
+                <div style="display: flex; justify-content: space-between; margin-bottom: 0.5rem;">
+                    <span style="font-size: 0.85rem; color: #777;">Sipariş Kodu:</span>
+                    <strong style="font-size: 0.9rem; color: #111;" id="successOrderCode">#DIO-000000</strong>
+                </div>
+                <div style="display: flex; justify-content: space-between;">
+                    <span style="font-size: 0.85rem; color: #777;">Ödenen Tutar:</span>
+                    <strong style="font-size: 1.1rem; color: #c8a96e;" id="successOrderTotal">₺0</strong>
+                </div>
+            </div>
+
+            <button type="button" onclick="closeOrderSuccessModal()" style="background: #111; color: #fff; border: none; padding: 1rem 2rem; border-radius: 30px; font-weight: 600; cursor: pointer; text-transform: uppercase; letter-spacing: 0.08em;">
+                Alışverişe Devam Et
+            </button>
+        </div>
+    </div>
 
     <!-- Footer -->
     @include('partials.footer')
@@ -180,3 +260,4 @@
 
 </body>
 </html>
+
