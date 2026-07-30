@@ -935,32 +935,22 @@
 
 
 
-    <!-- Sticky Mojea Toolbar (Filters + Sort + Count) -->
+    <!-- Sticky Mojea Toolbar (Hamburger Filter + Search + Sort + Count) -->
     <div class="mojea-toolbar-wrap">
-        <div class="mojea-toolbar">
-            <!-- Category Pills -->
-            <div class="mojea-pills">
-                <button class="mojea-pill-btn active" onclick="filterMojeaProducts('all', this)">
-                    <span data-i18n="prod_filter_all">Tüm Ürünler</span>
-                    <span class="mojea-pill-count">({{ count($products) }})</span>
-                </button>
-
-
-                @if(isset($categories) && count($categories) > 0)
-                    @foreach($categories as $cat)
-                        <button class="mojea-pill-btn" onclick="filterMojeaProducts('cat-{{ $cat->id }}', this)">
-                            <span>{{ $cat->name[$locale] ?? ($cat->name['tr'] ?? $cat->slug) }}</span>
-                            <span class="mojea-pill-count">({{ $cat->products_count ?? count($cat->products) }})</span>
-                        </button>
-                    @endforeach
-                @endif
-            </div>
+        <div class="mojea-toolbar" style="display: flex; align-items: center; justify-content: space-between; gap: 1rem; flex-wrap: wrap;">
+            
+            <!-- Left Hamburger Category Drawer Trigger Button -->
+            <button type="button" onclick="openCategoryDrawer()" style="background: #111111; color: #ffffff; border: none; padding: 0.65rem 1.3rem; border-radius: 30px; font-size: 0.82rem; font-weight: 600; cursor: pointer; display: flex; align-items: center; gap: 0.65rem; transition: all 0.3s ease; box-shadow: 0 4px 15px rgba(0,0,0,0.1);">
+                <i class="fa-solid fa-bars-staggered" style="color: #c8a96e; font-size: 0.95rem;"></i>
+                <span>KATEGORİLER & FİLTRELER</span>
+                <span style="background: rgba(200, 169, 110, 0.25); color: #c8a96e; padding: 0.15rem 0.55rem; border-radius: 12px; font-size: 0.75rem; font-weight: 700;">({{ count($products) }})</span>
+            </button>
 
             <!-- Toolbar Right Controls (Search + Sort + Count) -->
-            <div class="mojea-toolbar-right" style="display: flex; align-items: center; gap: 1rem; flex-wrap: wrap;">
-                <div class="ecom-search-box" style="position: relative; flex: 1; min-width: 200px;">
-                    <input type="text" id="ecomSearchInput" oninput="searchMojeaProducts(this.value)" placeholder="🔍 Ürün veya paket ara..." style="width: 100%; padding: 0.55rem 1rem 0.55rem 2.2rem; border-radius: 20px; border: 1px solid #e5e5e5; background: #f7f7f7; font-size: 0.82rem; outline: none;">
-                    <i class="fa-solid fa-magnifying-glass" style="position: absolute; left: 0.8rem; top: 50%; transform: translateY(-50%); color: #999; font-size: 0.8rem;"></i>
+            <div class="mojea-toolbar-right" style="display: flex; align-items: center; gap: 1rem; flex-wrap: wrap; flex: 1; justify-content: flex-end;">
+                <div class="ecom-search-box" style="position: relative; min-width: 220px; flex: 1; max-width: 320px;">
+                    <input type="text" id="ecomSearchInput" oninput="searchMojeaProducts(this.value)" placeholder="🔍 Ürün veya paket ara..." style="width: 100%; padding: 0.6rem 1rem 0.6rem 2.3rem; border-radius: 20px; border: 1px solid #e5e5e5; background: #f7f7f7; font-size: 0.82rem; outline: none;">
+                    <i class="fa-solid fa-magnifying-glass" style="position: absolute; left: 0.85rem; top: 50%; transform: translateY(-50%); color: #999; font-size: 0.8rem;"></i>
                 </div>
 
                 <span class="mojea-product-count" id="visibleProductCount">{{ count($products) }} Ürün Listeleniyor</span>
@@ -974,6 +964,7 @@
             </div>
         </div>
     </div>
+
 
 
     <!-- Mojea Products Catalogue Grid -->
@@ -1100,8 +1091,47 @@
 
 
 
+    <!-- 🍔 LEFT HAMBURGER CATEGORY DRAWER MODAL -->
+    <div class="mojea-modal-backdrop" id="categoryDrawerModal">
+        <div class="mojea-modal-box" style="max-width: 420px; margin-left: 0; border-radius: 0 24px 24px 0; height: 100vh; max-height: 100vh; overflow-y: auto; display: flex; flex-direction: column; padding: 2rem;">
+            <div style="display: flex; align-items: center; justify-content: space-between; padding-bottom: 1.2rem; border-bottom: 1px solid #eee; margin-bottom: 1.5rem;">
+                <div style="display: flex; align-items: center; gap: 0.6rem;">
+                    <i class="fa-solid fa-bars-staggered" style="color: #c8a96e; font-size: 1.1rem;"></i>
+                    <h3 style="font-family: var(--font-display, serif); font-size: 1.4rem; color: #111; font-weight: 500;">Kategoriler & Filtreler</h3>
+                </div>
+                <button type="button" class="mojea-modal-close-btn" onclick="closeCategoryDrawer()" style="position: static; transform: none;">
+                    <i class="fa-solid fa-xmark"></i>
+                </button>
+            </div>
+
+            <!-- Category List -->
+            <div style="display: flex; flex-direction: column; gap: 0.6rem; flex: 1;">
+                <button class="drawer-cat-item active" onclick="filterFromDrawer('all', this)" style="display: flex; align-items: center; justify-content: space-between; padding: 0.9rem 1.2rem; border-radius: 12px; border: 1px solid #e0e0e0; background: #111; color: #fff; font-weight: 600; font-size: 0.9rem; cursor: pointer; transition: all 0.3s ease;">
+                    <span>Tüm Ürünler & Paketler</span>
+                    <span style="font-size: 0.78rem; opacity: 0.8;">({{ count($products) }})</span>
+                </button>
+
+                @if(isset($categories) && count($categories) > 0)
+                    @foreach($categories as $cat)
+                        <button class="drawer-cat-item" onclick="filterFromDrawer('cat-{{ $cat->id }}', this)" style="display: flex; align-items: center; justify-content: space-between; padding: 0.9rem 1.2rem; border-radius: 12px; border: 1px solid #eee; background: #f9f9f9; color: #222; font-weight: 500; font-size: 0.88rem; cursor: pointer; transition: all 0.3s ease;">
+                            <span>{{ $cat->name[$locale] ?? ($cat->name['tr'] ?? $cat->slug) }}</span>
+                            <span style="font-size: 0.78rem; color: #888;">({{ $cat->products_count ?? count($cat->products) }})</span>
+                        </button>
+                    @endforeach
+                @endif
+            </div>
+
+            <div style="padding-top: 1.5rem; border-top: 1px solid #eee; margin-top: 1.5rem;">
+                <button type="button" onclick="closeCategoryDrawer()" style="width: 100%; background: #111; color: #fff; border: none; padding: 0.9rem; border-radius: 30px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; cursor: pointer;">
+                    Filtreleri Uygula
+                </button>
+            </div>
+        </div>
+    </div>
+
     <!-- Mojea Quick View Modal -->
     <div class="mojea-modal-backdrop" id="mojeaModal">
+
         <div class="mojea-modal-box">
             <button type="button" class="mojea-modal-close-btn" onclick="closeQuickView()">
                 <i class="fa-solid fa-xmark"></i>
@@ -1144,7 +1174,42 @@
     <script>
         let currentModalItem = null;
 
+        function openCategoryDrawer() {
+            const drawer = document.getElementById('categoryDrawerModal');
+            if (drawer) drawer.classList.add('active');
+        }
+
+        function closeCategoryDrawer() {
+            const drawer = document.getElementById('categoryDrawerModal');
+            if (drawer) drawer.classList.remove('active');
+        }
+
+        function filterFromDrawer(category, btn) {
+            document.querySelectorAll('.drawer-cat-item').forEach(b => {
+                b.style.background = '#f9f9f9';
+                b.style.color = '#222';
+                b.style.borderColor = '#eee';
+            });
+            btn.style.background = '#111111';
+            btn.style.color = '#ffffff';
+            btn.style.borderColor = '#111111';
+
+            const cards = document.querySelectorAll('.mojea-card');
+            let visibleCount = 0;
+            cards.forEach(card => {
+                if (category === 'all' || card.getAttribute('data-category') === category) {
+                    card.style.display = 'flex';
+                    visibleCount++;
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+
+            document.getElementById('visibleProductCount').textContent = visibleCount + ' Ürün Listeleniyor';
+        }
+
         function searchMojeaProducts(query) {
+
             query = query.toLowerCase().trim();
             const cards = document.querySelectorAll('.mojea-card');
             let visibleCount = 0;
