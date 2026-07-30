@@ -1,0 +1,120 @@
+<?php
+
+use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\PageController;
+use App\Http\Controllers\AuthController;
+use App\Http\Controllers\ApiController;
+use App\Http\Controllers\SitemapController;
+
+// Public Front-end Routes (clean URLs + legacy .html 301 redirects)
+Route::get('/sitemap.xml', [SitemapController::class, 'index'])->name('sitemap');
+
+Route::get('/', [PageController::class, 'index'])->name('home');
+Route::get('/index.html', function() {
+    return redirect()->route('home', [], 301);
+});
+
+Route::get('/hakkimizda', [PageController::class, 'hakkimizda'])->name('hakkimizda');
+Route::get('/hakkimizda.html', function() {
+    return redirect()->route('hakkimizda', [], 301);
+});
+
+Route::get('/oteller', [PageController::class, 'oteller'])->name('oteller');
+Route::get('/oteller.html', function() {
+    return redirect()->route('oteller', [], 301);
+});
+
+Route::get('/yatlar', [PageController::class, 'yatlar'])->name('yatlar');
+Route::get('/yatlar.html', function() {
+    return redirect()->route('yatlar', [], 301);
+});
+
+Route::get('/restoranlar', [PageController::class, 'restoranlar'])->name('restoranlar');
+Route::get('/restoranlar.html', function() {
+    return redirect()->route('restoranlar', [], 301);
+});
+
+Route::get('/gezi-rehberi', [PageController::class, 'geziRehberi'])->name('gezi-rehberi');
+Route::get('/gezi-rehberi.html', function() {
+    return redirect()->route('gezi-rehberi', [], 301);
+});
+Route::get('/destinasyonlar', function() {
+    return redirect()->route('gezi-rehberi', [], 301);
+});
+Route::get('/destinasyonlar.html', function() {
+    return redirect()->route('gezi-rehberi', [], 301);
+});
+
+Route::get('/etkinlikler', [PageController::class, 'etkinlikler'])->name('etkinlikler');
+Route::get('/etkinlikler.html', function() {
+    return redirect()->route('etkinlikler', [], 301);
+});
+
+Route::get('/journal', [PageController::class, 'journal'])->name('journal');
+Route::get('/journal.html', function() {
+    return redirect()->route('journal', [], 301);
+});
+
+Route::get('/sepet', [PageController::class, 'sepet'])->name('sepet');
+Route::get('/sepet.html', function() {
+    return redirect()->route('sepet', [], 301);
+});
+
+Route::get('/urunler', [PageController::class, 'urunler'])->name('urunler');
+Route::get('/urunler.html', function() {
+    return redirect()->route('urunler', [], 301);
+});
+
+
+
+// Detail Pages (Slug-first, ID fallback with 301 redirect to canonical slug)
+Route::get('/otel/{slug_or_id}', [PageController::class, 'otelDetay'])->name('otel.detay');
+Route::get('/restoran/{slug_or_id}', [PageController::class, 'restoranDetay'])->name('restoran.detay');
+Route::get('/journal/{slug_or_id}', [PageController::class, 'journalDetay'])->name('journal.detay');
+Route::get('/destinasyon/{slug_or_id}', [PageController::class, 'destinasyonDetay'])->name('destinasyon.detay');
+Route::get('/etkinlik/{slug_or_id}', [PageController::class, 'etkinlikDetay'])->name('etkinlik.detay');
+Route::get('/rehber/{slug_or_id}', [PageController::class, 'rehberDetay'])->name('rehber.detay');
+Route::get('/yat/{slug_or_id}', [PageController::class, 'yatDetay'])->name('yat.detay');
+
+// Authentication Routes
+Route::get('/login', [AuthController::class, 'showLogin'])->name('login');
+Route::post('/login', [AuthController::class, 'login']);
+Route::post('/logout', [AuthController::class, 'logout'])->name('logout');
+
+// Protected Admin Routes Group
+Route::middleware(['admin'])->prefix('admin')->name('admin.')->group(function () {
+    Route::get('/', [App\Http\Controllers\Admin\DashboardController::class, 'index'])->name('dashboard');
+    
+    Route::middleware(['permission:hotels'])->resource('hotels', App\Http\Controllers\Admin\HotelController::class)->except(['show']);
+    Route::middleware(['permission:restaurants'])->resource('restaurants', App\Http\Controllers\Admin\RestaurantController::class)->except(['show']);
+    Route::middleware(['permission:yachts'])->resource('yachts', App\Http\Controllers\Admin\YachtController::class)->except(['show']);
+    Route::middleware(['permission:guides'])->resource('guides', App\Http\Controllers\Admin\GuideController::class)->except(['show']);
+    Route::middleware(['permission:events'])->resource('events', App\Http\Controllers\Admin\EventController::class)->except(['show']);
+    Route::middleware(['permission:journals'])->resource('journals', App\Http\Controllers\Admin\JournalController::class)->except(['show']);
+    
+    // Product & Category Management
+    Route::resource('categories', App\Http\Controllers\Admin\ProductCategoryController::class)->except(['show']);
+    Route::resource('products', App\Http\Controllers\Admin\ProductController::class)->except(['show']);
+
+    
+    // Users Management
+    Route::middleware(['permission:users'])->resource('users', App\Http\Controllers\Admin\UserController::class)->except(['show']);
+    
+    // Destinations Management
+    Route::middleware(['permission:destinations'])->resource('destinations', App\Http\Controllers\Admin\DestinationController::class)->except(['show']);
+    
+    // Global Settings & Brands Management
+    Route::middleware(['permission:settings'])->group(function () {
+        Route::get('settings', [App\Http\Controllers\Admin\SettingController::class, 'index'])->name('settings.index');
+        Route::post('settings', [App\Http\Controllers\Admin\SettingController::class, 'update'])->name('settings.update');
+        Route::post('settings/brands', [App\Http\Controllers\Admin\SettingController::class, 'addBrand'])->name('settings.add_brand');
+        Route::delete('settings/brands/{index}', [App\Http\Controllers\Admin\SettingController::class, 'deleteBrand'])->name('settings.delete_brand');
+        Route::put('settings/brands/{index}', [App\Http\Controllers\Admin\SettingController::class, 'updateBrand'])->name('settings.update_brand');
+    });
+});
+
+// Admin fallback redirects
+Route::get('/admin.html', function() {
+    return redirect()->route('admin.dashboard');
+});
+

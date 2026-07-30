@@ -1,0 +1,55 @@
+<?php
+
+namespace App\Providers;
+
+use App\Models\Setting;
+use Illuminate\Support\Facades\Schema;
+use Illuminate\Support\Facades\View;
+use Illuminate\Support\ServiceProvider;
+
+class AppServiceProvider extends ServiceProvider
+{
+    /**
+     * Register any application services.
+     */
+    public function register(): void
+    {
+        if (file_exists(app_path('Helpers/SeoHelper.php'))) {
+            require_once app_path('Helpers/SeoHelper.php');
+        }
+    }
+
+    /**
+     * Bootstrap any application services.
+     */
+    public function boot(): void
+    {
+        if (config('app.env') === 'production' || request()->header('X-Forwarded-Proto') === 'https') {
+            \Illuminate\Support\Facades\URL::forceScheme('https');
+        }
+        try {
+            if (Schema::hasTable('settings')) {
+                $settings = [];
+                foreach (Setting::all() as $setting) {
+                    $settings[$setting->key] = $setting->value;
+                }
+                View::share('settings', $settings);
+            }
+        } catch (\Exception $e) {
+            // Safeguard to prevent artisan / migration crashes before database setup
+        }
+
+        // Custom Blade permission helper
+        \Illuminate\Support\Facades\Blade::if('adminCan', function (string $permission) {
+            if (session('is_admin') === true && !auth()->check()) {
+                return true;
+            }
+
+            if (auth()->check()) {
+                return auth()->user()->hasPermission($permission);
+            }
+
+            return false;
+        });
+    }
+}
