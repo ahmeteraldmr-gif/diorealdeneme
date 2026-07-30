@@ -1132,57 +1132,12 @@
     <!-- Footer -->
     @include('partials.footer')
 
-    <!-- 🛍️ SOCIAL PROOF LIVE PURCHASE TOAST NOTIFICATION -->
-    <div id="socialProofToast" style="position: fixed; bottom: 25px; left: 25px; background: #ffffff; border: 1px solid #e0e0e0; padding: 0.9rem 1.2rem; border-radius: 14px; box-shadow: 0 15px 35px rgba(0,0,0,0.15); display: flex; align-items: center; gap: 0.85rem; z-index: 9999; transform: translateY(150px); opacity: 0; transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275); max-width: 380px;">
-        <div style="width: 44px; height: 44px; border-radius: 50%; background: #f5efe6; color: #c8a96e; display: flex; align-items: center; justify-content: center; font-size: 1.2rem; flex-shrink: 0;">
-            <i class="fa-solid fa-bag-shopping"></i>
-        </div>
-        <div>
-            <div style="font-size: 0.75rem; font-weight: 700; color: #111;" id="spCustomerName">Mehmet Y. (İstanbul)</div>
-            <div style="font-size: 0.82rem; color: #444; line-height: 1.2; margin-top: 0.15rem;" id="spProductName">Bodrum Ultra Luxury Sunset Villa satın aldı!</div>
-            <div style="font-size: 0.68rem; color: #888; margin-top: 0.2rem;" id="spTimeAgo">2 dakika önce • Doğrulanmış Sipariş</div>
-        </div>
-    </div>
-
     <!-- Core Scripts -->
     <script src="{{ asset('js/i18n.js') }}?v={{ time() }}"></script>
     <script src="{{ asset('js/common.js') }}?v={{ time() }}"></script>
     <script src="{{ asset('js/nav.js') }}?v={{ time() }}"></script>
     <script src="{{ asset('js/cart.js') }}?v={{ time() }}"></script>
 
-    <script>
-        // Live Social Proof Sales Simulation
-        const samplePurchases = [
-            { name: "Mehmet Y. (İstanbul)", product: "Bodrum Ultra Luxury Sunset Villa", time: "2 dakika önce" },
-            { name: "Zeynep K. (İzmir)", product: "Fethiye Mega Yacht Cruise", time: "5 dakika önce" },
-            { name: "Can T. (Ankara)", product: "Kapadokya VIP Sıcak Hava Balonu", time: "1 dakika önce" },
-            { name: "Selin A. (Bursa)", product: "D-Maris Bay VIP Helicopter & Stay", time: "8 dakika önce" },
-            { name: "Emre H. (Antalya)", product: "Istanbul Bosphorus Heli & Yacht Tour", time: "3 dakika önce" }
-        ];
-
-        function triggerSocialProof() {
-            const toast = document.getElementById('socialProofToast');
-            if (!toast) return;
-            const item = samplePurchases[Math.floor(Math.random() * samplePurchases.length)];
-            
-            document.getElementById('spCustomerName').textContent = item.name;
-            document.getElementById('spProductName').textContent = item.product + ' satın aldı!';
-            document.getElementById('spTimeAgo').textContent = item.time + ' • Doğrulanmış Sipariş';
-
-            toast.style.transform = 'translateY(0)';
-            toast.style.opacity = '1';
-
-            setTimeout(() => {
-                toast.style.transform = 'translateY(150px)';
-                toast.style.opacity = '0';
-            }, 4500);
-        }
-
-        setTimeout(() => {
-            triggerSocialProof();
-            setInterval(triggerSocialProof, 16000);
-        }, 3000);
-    </script>
 
 
     <script>
