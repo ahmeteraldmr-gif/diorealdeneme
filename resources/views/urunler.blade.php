@@ -883,12 +883,9 @@
         </ul>
     </div>
 
-    <!-- Mojea Style Shop Hero Header -->
-    <section class="mojea-shop-hero reveal" style="padding-bottom: 2rem;">
-        <span class="mojea-hero-brand" data-i18n="prod_hero_brand">DIOREAL LUXURY DEPARTMENT STORE</span>
-        <h1 class="mojea-hero-title">Lüks Ev Ürünleri & <em>Özel Paketler</em></h1>
-        <p class="mojea-hero-desc">Porselen yemek takımları, kristal kadehler ve ev dekorasyon ürünlerinden VIP seyahat paketlerine kadar tüm seçkin ürünleri doğrudan sepetinize ekleyip sipariş verebilirsiniz.</p>
-    </section>
+    <!-- Spacing under navbar -->
+    <div style="height: 120px;"></div>
+
 
     <!-- 🏷️ MOJEA CATEGORY SHOWCASE BANNER GRID -->
     <section style="max-width: 1350px; margin: 0 auto 3.5rem; padding: 0 2rem;">
@@ -1141,12 +1138,7 @@
         </div>
     </div>
 
-    <!-- Toast Notification Popup -->
-    <div class="cart-toast" id="cartToast">
-        <i class="fa-solid fa-circle-check toast-icon"></i>
-        <span class="toast-text" id="toastText">Ürün sepetinize eklendi!</span>
-        <a href="{{ route('sepet') }}" class="toast-btn">Sepete Git</a>
-    </div>
+
 
     <!-- Footer -->
     @include('partials.footer')
