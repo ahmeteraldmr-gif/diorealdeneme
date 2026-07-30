@@ -935,16 +935,39 @@
 
 
 
-    <!-- Sticky Mojea Toolbar (Hamburger Filter + Search + Sort + Count) -->
+    <!-- Sticky Mojea Toolbar (Left Hamburger Dropdown + Search + Sort + Count) -->
     <div class="mojea-toolbar-wrap">
         <div class="mojea-toolbar" style="display: flex; align-items: center; justify-content: space-between; gap: 1rem; flex-wrap: wrap;">
             
-            <!-- Left Hamburger Category Drawer Trigger Button -->
-            <button type="button" onclick="openCategoryDrawer()" style="background: #111111; color: #ffffff; border: none; padding: 0.65rem 1.3rem; border-radius: 30px; font-size: 0.82rem; font-weight: 600; cursor: pointer; display: flex; align-items: center; gap: 0.65rem; transition: all 0.3s ease; box-shadow: 0 4px 15px rgba(0,0,0,0.1);">
-                <i class="fa-solid fa-bars-staggered" style="color: #c8a96e; font-size: 0.95rem;"></i>
-                <span>KATEGORİLER & FİLTRELER</span>
-                <span style="background: rgba(200, 169, 110, 0.25); color: #c8a96e; padding: 0.15rem 0.55rem; border-radius: 12px; font-size: 0.75rem; font-weight: 700;">({{ count($products) }})</span>
-            </button>
+            <!-- Left Hamburger Dropdown Container -->
+            <div style="position: relative; z-index: 100;">
+                <button type="button" id="leftHambBtn" onclick="toggleLeftDropdown(event)" style="background: #111111; color: #ffffff; border: none; padding: 0.65rem 1.3rem; border-radius: 30px; font-size: 0.82rem; font-weight: 600; cursor: pointer; display: flex; align-items: center; gap: 0.65rem; transition: all 0.3s ease; box-shadow: 0 4px 15px rgba(0,0,0,0.1);">
+                    <i class="fa-solid fa-bars" style="color: #c8a96e; font-size: 0.95rem;"></i>
+                    <span id="selectedCatLabel">KATEGORİLER</span>
+                    <i class="fa-solid fa-chevron-down" style="font-size: 0.75rem; transition: transform 0.3s ease; margin-left: 0.2rem;" id="hambChevron"></i>
+                </button>
+
+                <!-- Clean Left Dropdown Menu (No Full Screen Backdrop) -->
+                <div id="leftCatDropdown" onclick="event.stopPropagation()" style="position: absolute; top: calc(100% + 8px); left: 0; background: #ffffff; border: 1px solid #e0e0e0; border-radius: 16px; box-shadow: 0 15px 35px rgba(0,0,0,0.12); width: 280px; padding: 0.6rem; display: none; flex-direction: column; gap: 0.3rem;">
+                    <button class="left-dropdown-item active" onclick="selectCategory('all', 'Tüm Ürünler & Paketler', this)" style="display: flex; align-items: center; justify-content: space-between; padding: 0.75rem 1rem; border-radius: 10px; border: none; background: #111; color: #fff; font-size: 0.85rem; font-weight: 600; cursor: pointer; text-align: left;">
+                        <span>Tüm Ürünler & Paketler</span>
+                        <span style="font-size: 0.75rem; opacity: 0.8;">({{ count($products) }})</span>
+                    </button>
+
+                    @if(isset($categories) && count($categories) > 0)
+                        @foreach($categories as $cat)
+                            @php
+                                $catName = $cat->name[$locale] ?? ($cat->name['tr'] ?? $cat->slug);
+                                $catCount = $cat->products_count ?? count($cat->products);
+                            @endphp
+                            <button class="left-dropdown-item" onclick="selectCategory('cat-{{ $cat->id }}', '{{ addslashes($catName) }}', this)" style="display: flex; align-items: center; justify-content: space-between; padding: 0.75rem 1rem; border-radius: 10px; border: none; background: transparent; color: #333; font-size: 0.85rem; font-weight: 500; cursor: pointer; text-align: left; transition: background 0.2s ease;">
+                                <span>{{ $catName }}</span>
+                                <span style="font-size: 0.75rem; color: #888;">({{ $catCount }})</span>
+                            </button>
+                        @endforeach
+                    @endif
+                </div>
+            </div>
 
             <!-- Toolbar Right Controls (Search + Sort + Count) -->
             <div class="mojea-toolbar-right" style="display: flex; align-items: center; gap: 1rem; flex-wrap: wrap; flex: 1; justify-content: flex-end;">
@@ -964,6 +987,7 @@
             </div>
         </div>
     </div>
+
 
 
 
@@ -1091,43 +1115,7 @@
 
 
 
-    <!-- 🍔 LEFT HAMBURGER CATEGORY DRAWER MODAL -->
-    <div class="mojea-modal-backdrop" id="categoryDrawerModal">
-        <div class="mojea-modal-box" style="max-width: 420px; margin-left: 0; border-radius: 0 24px 24px 0; height: 100vh; max-height: 100vh; overflow-y: auto; display: flex; flex-direction: column; padding: 2rem;">
-            <div style="display: flex; align-items: center; justify-content: space-between; padding-bottom: 1.2rem; border-bottom: 1px solid #eee; margin-bottom: 1.5rem;">
-                <div style="display: flex; align-items: center; gap: 0.6rem;">
-                    <i class="fa-solid fa-bars-staggered" style="color: #c8a96e; font-size: 1.1rem;"></i>
-                    <h3 style="font-family: var(--font-display, serif); font-size: 1.4rem; color: #111; font-weight: 500;">Kategoriler & Filtreler</h3>
-                </div>
-                <button type="button" class="mojea-modal-close-btn" onclick="closeCategoryDrawer()" style="position: static; transform: none;">
-                    <i class="fa-solid fa-xmark"></i>
-                </button>
-            </div>
 
-            <!-- Category List -->
-            <div style="display: flex; flex-direction: column; gap: 0.6rem; flex: 1;">
-                <button class="drawer-cat-item active" onclick="filterFromDrawer('all', this)" style="display: flex; align-items: center; justify-content: space-between; padding: 0.9rem 1.2rem; border-radius: 12px; border: 1px solid #e0e0e0; background: #111; color: #fff; font-weight: 600; font-size: 0.9rem; cursor: pointer; transition: all 0.3s ease;">
-                    <span>Tüm Ürünler & Paketler</span>
-                    <span style="font-size: 0.78rem; opacity: 0.8;">({{ count($products) }})</span>
-                </button>
-
-                @if(isset($categories) && count($categories) > 0)
-                    @foreach($categories as $cat)
-                        <button class="drawer-cat-item" onclick="filterFromDrawer('cat-{{ $cat->id }}', this)" style="display: flex; align-items: center; justify-content: space-between; padding: 0.9rem 1.2rem; border-radius: 12px; border: 1px solid #eee; background: #f9f9f9; color: #222; font-weight: 500; font-size: 0.88rem; cursor: pointer; transition: all 0.3s ease;">
-                            <span>{{ $cat->name[$locale] ?? ($cat->name['tr'] ?? $cat->slug) }}</span>
-                            <span style="font-size: 0.78rem; color: #888;">({{ $cat->products_count ?? count($cat->products) }})</span>
-                        </button>
-                    @endforeach
-                @endif
-            </div>
-
-            <div style="padding-top: 1.5rem; border-top: 1px solid #eee; margin-top: 1.5rem;">
-                <button type="button" onclick="closeCategoryDrawer()" style="width: 100%; background: #111; color: #fff; border: none; padding: 0.9rem; border-radius: 30px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; cursor: pointer;">
-                    Filtreleri Uygula
-                </button>
-            </div>
-        </div>
-    </div>
 
     <!-- Mojea Quick View Modal -->
     <div class="mojea-modal-backdrop" id="mojeaModal">
@@ -1174,25 +1162,39 @@
     <script>
         let currentModalItem = null;
 
-        function openCategoryDrawer() {
-            const drawer = document.getElementById('categoryDrawerModal');
-            if (drawer) drawer.classList.add('active');
+        function toggleLeftDropdown(e) {
+            e.stopPropagation();
+            const dropdown = document.getElementById('leftCatDropdown');
+            const chevron = document.getElementById('hambChevron');
+            if (!dropdown) return;
+            const isOpen = dropdown.style.display === 'flex';
+            
+            dropdown.style.display = isOpen ? 'none' : 'flex';
+            if (chevron) chevron.style.transform = isOpen ? 'rotate(0deg)' : 'rotate(180deg)';
         }
 
-        function closeCategoryDrawer() {
-            const drawer = document.getElementById('categoryDrawerModal');
-            if (drawer) drawer.classList.remove('active');
-        }
+        document.addEventListener('click', function() {
+            const dropdown = document.getElementById('leftCatDropdown');
+            const chevron = document.getElementById('hambChevron');
+            if (dropdown) dropdown.style.display = 'none';
+            if (chevron) chevron.style.transform = 'rotate(0deg)';
+        });
 
-        function filterFromDrawer(category, btn) {
-            document.querySelectorAll('.drawer-cat-item').forEach(b => {
-                b.style.background = '#f9f9f9';
-                b.style.color = '#222';
-                b.style.borderColor = '#eee';
+        function selectCategory(category, label, btn) {
+            document.querySelectorAll('.left-dropdown-item').forEach(b => {
+                b.style.background = 'transparent';
+                b.style.color = '#333';
+                b.style.fontWeight = '500';
             });
             btn.style.background = '#111111';
             btn.style.color = '#ffffff';
-            btn.style.borderColor = '#111111';
+            btn.style.fontWeight = '600';
+
+            const labelEl = document.getElementById('selectedCatLabel');
+            if (labelEl) labelEl.textContent = label;
+
+            const dropdown = document.getElementById('leftCatDropdown');
+            if (dropdown) dropdown.style.display = 'none';
 
             const cards = document.querySelectorAll('.mojea-card');
             let visibleCount = 0;
@@ -1209,6 +1211,7 @@
         }
 
         function searchMojeaProducts(query) {
+
 
             query = query.toLowerCase().trim();
             const cards = document.querySelectorAll('.mojea-card');
