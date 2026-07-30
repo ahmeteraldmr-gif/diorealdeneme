@@ -885,53 +885,54 @@
 
     <!-- Mojea Style Shop Hero Header -->
     <section class="mojea-shop-hero reveal" style="padding-bottom: 2rem;">
-        <span class="mojea-hero-brand" data-i18n="prod_hero_brand">MOJEA & DIOREAL HOME COLLECTION</span>
-        <h1 class="mojea-hero-title" data-i18n="prod_hero_title">Özel Koleksiyon & <em>Lüks Paketler</em></h1>
-        <p class="mojea-hero-desc" data-i18n="prod_hero_desc">Lüks yaşam alanları, VIP concierge deneyimleri ve seçkin destinasyon paketlerini keşfedin, sepetinize ekleyip doğrudan sipariş verin.</p>
+        <span class="mojea-hero-brand" data-i18n="prod_hero_brand">DIOREAL LUXURY DEPARTMENT STORE</span>
+        <h1 class="mojea-hero-title">Lüks Ev Ürünleri & <em>Özel Paketler</em></h1>
+        <p class="mojea-hero-desc">Porselen yemek takımları, kristal kadehler ve ev dekorasyon ürünlerinden VIP seyahat paketlerine kadar tüm seçkin ürünleri doğrudan sepetinize ekleyip sipariş verebilirsiniz.</p>
     </section>
 
     <!-- 🏷️ MOJEA CATEGORY SHOWCASE BANNER GRID -->
     <section style="max-width: 1350px; margin: 0 auto 3.5rem; padding: 0 2rem;">
         <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 1.5rem;">
             
-            <div onclick="filterMojeaProducts('cat-1', document.querySelector('.mojea-pill-btn'))" style="position: relative; border-radius: 12px; overflow: hidden; height: 170px; cursor: pointer; group; box-shadow: 0 10px 25px rgba(0,0,0,0.08);">
+            <div onclick="filterMojeaProducts('cat-1', document.querySelector('.mojea-pill-btn'))" style="position: relative; border-radius: 12px; overflow: hidden; height: 170px; cursor: pointer; box-shadow: 0 10px 25px rgba(0,0,0,0.08);">
                 <img src="{{ asset('foto.img/hero_4k.jpg') }}" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s ease;" onmouseover="this.style.transform='scale(1.08)'" onmouseout="this.style.transform='scale(1.0)'">
                 <div style="position: absolute; inset: 0; background: linear-gradient(180deg, rgba(0,0,0,0.1) 0%, rgba(0,0,0,0.7) 100%); padding: 1.2rem; display: flex; flex-direction: column; justify-content: flex-end; color: #fff;">
-                    <span style="font-size: 0.68rem; letter-spacing: 0.15em; color: #c8a96e; font-weight: 700; text-transform: uppercase;">KOLEKSİYON</span>
-                    <h3 style="font-size: 1.2rem; font-weight: 400; font-family: var(--font-display, serif); margin-top: 0.2rem;">Lüks Ev & Dekorasyon</h3>
-                    <span style="font-size: 0.75rem; opacity: 0.85; margin-top: 0.2rem;">3.420+ Ürün • Özel Üretim</span>
+                    <span style="font-size: 0.68rem; letter-spacing: 0.15em; color: #c8a96e; font-weight: 700; text-transform: uppercase;">MUTFAK & YEMEK</span>
+                    <h3 style="font-size: 1.2rem; font-weight: 400; font-family: var(--font-display, serif); margin-top: 0.2rem;">Porselen & Çatal Bıçak</h3>
+                    <span style="font-size: 0.75rem; opacity: 0.85; margin-top: 0.2rem;">Yemek Takımları • Kristal Kadehler</span>
                 </div>
             </div>
 
-            <div onclick="filterMojeaProducts('cat-2', document.querySelector('.mojea-pill-btn'))" style="position: relative; border-radius: 12px; overflow: hidden; height: 170px; cursor: pointer; group; box-shadow: 0 10px 25px rgba(0,0,0,0.08);">
+            <div onclick="filterMojeaProducts('cat-2', document.querySelector('.mojea-pill-btn'))" style="position: relative; border-radius: 12px; overflow: hidden; height: 170px; cursor: pointer; box-shadow: 0 10px 25px rgba(0,0,0,0.08);">
+                <img src="{{ asset('foto.img/otel_hero.jpg') }}" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s ease;" onmouseover="this.style.transform='scale(1.08)'" onmouseout="this.style.transform='scale(1.0)'">
+                <div style="position: absolute; inset: 0; background: linear-gradient(180deg, rgba(0,0,0,0.1) 0%, rgba(0,0,0,0.7) 100%); padding: 1.2rem; display: flex; flex-direction: column; justify-content: flex-end; color: #fff;">
+                    <span style="font-size: 0.68rem; letter-spacing: 0.15em; color: #c8a96e; font-weight: 700; text-transform: uppercase;">EV DEKORASYON</span>
+                    <h3 style="font-size: 1.2rem; font-weight: 400; font-family: var(--font-display, serif); margin-top: 0.2rem;">İpek Kırlent & Vazo</h3>
+                    <span style="font-size: 0.75rem; opacity: 0.85; margin-top: 0.2rem;">Murano Cam Vazo • Özel Üretim</span>
+                </div>
+            </div>
+
+            <div onclick="filterMojeaProducts('cat-3', document.querySelector('.mojea-pill-btn'))" style="position: relative; border-radius: 12px; overflow: hidden; height: 170px; cursor: pointer; box-shadow: 0 10px 25px rgba(0,0,0,0.08);">
                 <img src="{{ asset('foto.img/bodrum.jpg') }}" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s ease;" onmouseover="this.style.transform='scale(1.08)'" onmouseout="this.style.transform='scale(1.0)'" onerror="this.src='{{ asset('foto.img/hero_4k.jpg') }}'">
                 <div style="position: absolute; inset: 0; background: linear-gradient(180deg, rgba(0,0,0,0.1) 0%, rgba(0,0,0,0.7) 100%); padding: 1.2rem; display: flex; flex-direction: column; justify-content: flex-end; color: #fff;">
-                    <span style="font-size: 0.68rem; letter-spacing: 0.15em; color: #c8a96e; font-weight: 700; text-transform: uppercase;">DESTİNASYON</span>
-                    <h3 style="font-size: 1.2rem; font-weight: 400; font-family: var(--font-display, serif); margin-top: 0.2rem;">VIP Villa & Konaklama</h3>
-                    <span style="font-size: 0.75rem; opacity: 0.85; margin-top: 0.2rem;">1.280+ Paket • VIP Hizmet</span>
+                    <span style="font-size: 0.68rem; letter-spacing: 0.15em; color: #c8a96e; font-weight: 700; text-transform: uppercase;">LÜKS PAKETLER</span>
+                    <h3 style="font-size: 1.2rem; font-weight: 400; font-family: var(--font-display, serif); margin-top: 0.2rem;">VIP Villa & Balon Turu</h3>
+                    <span style="font-size: 0.75rem; opacity: 0.85; margin-top: 0.2rem;">Bodrum Sunset Villa • Kapadokya</span>
                 </div>
             </div>
 
-            <div onclick="filterMojeaProducts('cat-3', document.querySelector('.mojea-pill-btn'))" style="position: relative; border-radius: 12px; overflow: hidden; height: 170px; cursor: pointer; group; box-shadow: 0 10px 25px rgba(0,0,0,0.08);">
+            <div onclick="filterMojeaProducts('cat-4', document.querySelector('.mojea-pill-btn'))" style="position: relative; border-radius: 12px; overflow: hidden; height: 170px; cursor: pointer; box-shadow: 0 10px 25px rgba(0,0,0,0.08);">
                 <img src="{{ asset('foto.img/fethiye.jpg') }}" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s ease;" onmouseover="this.style.transform='scale(1.08)'" onmouseout="this.style.transform='scale(1.0)'" onerror="this.src='{{ asset('foto.img/hero_4k.jpg') }}'">
                 <div style="position: absolute; inset: 0; background: linear-gradient(180deg, rgba(0,0,0,0.1) 0%, rgba(0,0,0,0.7) 100%); padding: 1.2rem; display: flex; flex-direction: column; justify-content: flex-end; color: #fff;">
-                    <span style="font-size: 0.68rem; letter-spacing: 0.15em; color: #c8a96e; font-weight: 700; text-transform: uppercase;">MAVİ TUR</span>
+                    <span style="font-size: 0.68rem; letter-spacing: 0.15em; color: #c8a96e; font-weight: 700; text-transform: uppercase;">MAVİ YOLCULUK</span>
                     <h3 style="font-size: 1.2rem; font-weight: 400; font-family: var(--font-display, serif); margin-top: 0.2rem;">Lüks Yat & Charter</h3>
-                    <span style="font-size: 0.75rem; opacity: 0.85; margin-top: 0.2rem;">940+ Özel Rota • Kaptanlı</span>
-                </div>
-            </div>
-
-            <div onclick="filterMojeaProducts('cat-4', document.querySelector('.mojea-pill-btn'))" style="position: relative; border-radius: 12px; overflow: hidden; height: 170px; cursor: pointer; group; box-shadow: 0 10px 25px rgba(0,0,0,0.08);">
-                <img src="{{ asset('foto.img/istanbul.jpg') }}" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s ease;" onmouseover="this.style.transform='scale(1.08)'" onmouseout="this.style.transform='scale(1.0)'" onerror="this.src='{{ asset('foto.img/hero_4k.jpg') }}'">
-                <div style="position: absolute; inset: 0; background: linear-gradient(180deg, rgba(0,0,0,0.1) 0%, rgba(0,0,0,0.7) 100%); padding: 1.2rem; display: flex; flex-direction: column; justify-content: flex-end; color: #fff;">
-                    <span style="font-size: 0.68rem; letter-spacing: 0.15em; color: #c8a96e; font-weight: 700; text-transform: uppercase;">GASTRONOMİ</span>
-                    <h3 style="font-size: 1.2rem; font-weight: 400; font-family: var(--font-display, serif); margin-top: 0.2rem;">Fine Dining & Spa</h3>
-                    <span style="font-size: 0.75rem; opacity: 0.85; margin-top: 0.2rem;">2.150+ Deneyim • Özel Masa</span>
+                    <span style="font-size: 0.75rem; opacity: 0.85; margin-top: 0.2rem;">Özel Mavi Tur • Kaptanlı</span>
                 </div>
             </div>
 
         </div>
     </section>
+
 
 
     <!-- Sticky Mojea Toolbar (Filters + Sort + Count) -->
