@@ -1145,52 +1145,7 @@
 
 
 
-    <!-- 🛡️ E-COMMERCE LUXURY GUARANTEES BAR -->
-    <section style="background: #fafafa; border-top: 1px solid #eaeaea; border-bottom: 1px solid #eaeaea; padding: 3rem 2rem; margin-top: 4rem;">
-        <div style="max-width: 1350px; margin: 0 auto; display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 2rem;">
-            
-            <div style="display: flex; align-items: center; gap: 1rem;">
-                <div style="width: 50px; height: 50px; border-radius: 50%; background: #f5efe6; color: #c8a96e; display: flex; align-items: center; justify-content: center; font-size: 1.3rem; flex-shrink: 0;">
-                    <i class="fa-solid fa-gem"></i>
-                </div>
-                <div>
-                    <h4 style="font-size: 0.95rem; font-weight: 600; color: #111; margin-bottom: 0.2rem;">%100 Orijinal & Sertifikalı</h4>
-                    <p style="font-size: 0.8rem; color: #666;">Tüm porselen, kristal ve lüks ürünlerde özgünlük garantisi.</p>
-                </div>
-            </div>
 
-            <div style="display: flex; align-items: center; gap: 1rem;">
-                <div style="width: 50px; height: 50px; border-radius: 50%; background: #f5efe6; color: #c8a96e; display: flex; align-items: center; justify-content: center; font-size: 1.3rem; flex-shrink: 0;">
-                    <i class="fa-solid fa-truck-fast"></i>
-                </div>
-                <div>
-                    <h4 style="font-size: 0.95rem; font-weight: 600; color: #111; margin-bottom: 0.2rem;">Sigortalı VIP Kargo</h4>
-                    <p style="font-size: 0.8rem; color: #666;">Hassas kırılabilir ev ürünlerinde ultra korumalı özel kurye.</p>
-                </div>
-            </div>
-
-            <div style="display: flex; align-items: center; gap: 1rem;">
-                <div style="width: 50px; height: 50px; border-radius: 50%; background: #f5efe6; color: #c8a96e; display: flex; align-items: center; justify-content: center; font-size: 1.3rem; flex-shrink: 0;">
-                    <i class="fa-solid fa-credit-card"></i>
-                </div>
-                <div>
-                    <h4 style="font-size: 0.95rem; font-weight: 600; color: #111; margin-bottom: 0.2rem;">12 Taksit İmkânı</h4>
-                    <p style="font-size: 0.8rem; color: #666;">Tüm banka kredi kartlarına peşin fiyatına taksit imkânı.</p>
-                </div>
-            </div>
-
-            <div style="display: flex; align-items: center; gap: 1rem;">
-                <div style="width: 50px; height: 50px; border-radius: 50%; background: #f5efe6; color: #c8a96e; display: flex; align-items: center; justify-content: center; font-size: 1.3rem; flex-shrink: 0;">
-                    <i class="fa-solid fa-shield-halved"></i>
-                </div>
-                <div>
-                    <h4 style="font-size: 0.95rem; font-weight: 600; color: #111; margin-bottom: 0.2rem;">256-Bit SSL 3D Güvenlik</h4>
-                    <p style="font-size: 0.8rem; color: #666;">Banka düzeyinde koruma ile tam emniyetli ödeme altyapısı.</p>
-                </div>
-            </div>
-
-        </div>
-    </section>
 
     <!-- Footer -->
     @include('partials.footer')
