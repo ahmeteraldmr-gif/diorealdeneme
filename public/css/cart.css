@@ -440,32 +440,91 @@
     color: #ffffff;
 }
 
+/* Centered Modals for Cart & Credit Card */
+.mojea-modal-backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 9999;
+    background: rgba(0, 0, 0, 0.65);
+    backdrop-filter: blur(8px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1.5rem;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.35s ease;
+}
+
+.mojea-modal-backdrop.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+.mojea-modal-box {
+    background: #ffffff;
+    border-radius: 24px;
+    width: 100%;
+    max-width: 550px;
+    margin: auto !important;
+    position: relative;
+    box-shadow: 0 25px 60px rgba(0, 0, 0, 0.3);
+    transform: translateY(20px) scale(0.95);
+    transition: all 0.35s cubic-bezier(0.19, 1, 0.22, 1);
+    max-height: 90vh;
+    overflow-y: auto;
+}
+
+.mojea-modal-backdrop.active .mojea-modal-box {
+    transform: translateY(0) scale(1);
+}
+
+.mojea-modal-close-btn {
+    position: absolute;
+    top: 1.2rem;
+    right: 1.2rem;
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    background: #f7f7f7;
+    border: 1px solid #e0e0e0;
+    color: #111111;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    z-index: 10;
+    transition: all 0.3s ease;
+}
+
+.mojea-modal-close-btn:hover {
+    background: #111111;
+    color: #ffffff;
+}
+
 /* Mobile Adjustments */
 @media (max-width: 768px) {
     .cart-item {
-        grid-template-columns: 80px 1fr;
+        flex-direction: column;
+        align-items: stretch;
         gap: 1rem;
-        padding: 1.2rem;
+        padding: 1rem;
     }
     
-    .cart-item-img-wrap {
-        width: 80px;
-        height: 80px;
+    .cart-item-name {
+        white-space: normal;
+        font-size: 0.95rem;
     }
     
-    .cart-item-right {
-        grid-column: 1 / -1;
-        flex-direction: row;
+    .cart-item-right-block {
         justify-content: space-between;
-        align-items: center;
         width: 100%;
         padding-top: 0.8rem;
         border-top: 1px solid rgba(0, 0, 0, 0.05);
-    }
-    
-    .quantity-control {
-        grid-column: 1 / -1;
-        justify-self: start;
-        margin-top: 0.5rem;
+        gap: 1rem;
     }
 }
+

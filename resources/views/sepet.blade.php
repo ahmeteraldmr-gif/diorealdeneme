@@ -179,7 +179,7 @@
 
     <!-- 💳 E-COMMERCE CREDIT CARD PAYMENT MODAL -->
     <div class="mojea-modal-backdrop" id="creditCardModal">
-        <div class="mojea-modal-box" style="max-width: 550px; grid-template-columns: 1fr; padding: 2.5rem; border-radius: 20px;">
+        <div class="mojea-modal-box" style="max-width: 550px; grid-template-columns: 1fr; padding: 2.5rem; border-radius: 20px; margin: auto !important;">
             <button type="button" class="mojea-modal-close-btn" onclick="closeCreditCardModal()">
                 <i class="fa-solid fa-xmark"></i>
             </button>
@@ -224,7 +224,8 @@
 
     <!-- 🎉 ORDER SUCCESS RECEIPT MODAL -->
     <div class="mojea-modal-backdrop" id="orderSuccessModal">
-        <div class="mojea-modal-box" style="max-width: 500px; grid-template-columns: 1fr; padding: 3rem 2rem; border-radius: 20px; text-align: center;">
+        <div class="mojea-modal-box" style="max-width: 500px; grid-template-columns: 1fr; padding: 3rem 2rem; border-radius: 20px; text-align: center; margin: auto !important;">
+
             <div style="width: 70px; height: 70px; background: #e8f5e9; color: #2e7d32; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 2.2rem; margin: 0 auto 1.5rem;">
                 <i class="fa-solid fa-circle-check"></i>
             </div>
