@@ -128,15 +128,16 @@
 
 
         .mojea-toolbar {
-            max-width: 1400px;
-            margin: 0 auto;
-            padding: 1rem 2rem;
+            width: 100%;
+            max-width: 100%;
+            padding: 1rem 2.5rem;
             display: flex;
             align-items: center;
             justify-content: space-between;
             flex-wrap: wrap;
             gap: 1rem;
         }
+
 
         /* Category Filter Pills */
         .mojea-pills {
@@ -981,12 +982,13 @@
 
 
 
-    <!-- Sticky Mojea Toolbar (Left Hamburger Dropdown + Search + Sort + Count) -->
+    <!-- Sticky Mojea Toolbar (Absolute Far Left KATEGORİLER Button) -->
     <div class="mojea-toolbar-wrap">
-        <div class="mojea-toolbar" style="display: flex; align-items: center; justify-content: space-between; gap: 1rem; flex-wrap: wrap; max-width: 1400px; margin: 0 auto; padding: 1rem 2rem;">
+        <div class="mojea-toolbar" style="display: flex; align-items: center; justify-content: space-between; gap: 1rem; flex-wrap: wrap; width: 100%; max-width: 100%; padding: 1rem 2.5rem;">
             
-            <!-- Left Hamburger Dropdown Container (Dead-locked Far Left) -->
+            <!-- Left Hamburger Dropdown Container (Absolute Far Left Wall) -->
             <div style="position: relative; z-index: 100; margin-right: auto; display: flex; align-items: center;">
+
                 <button type="button" id="leftHambBtn" onclick="toggleLeftDropdown(event)" style="background: #111111; color: #ffffff; border: none; padding: 0.65rem 1.3rem; border-radius: 30px; font-size: 0.82rem; font-weight: 600; cursor: pointer; display: flex; align-items: center; gap: 0.65rem; transition: all 0.3s ease; box-shadow: 0 4px 15px rgba(0,0,0,0.1);">
                     <i class="fa-solid fa-bars" style="color: #c8a96e; font-size: 0.95rem;"></i>
                     <span id="selectedCatLabel">KATEGORİLER</span>
