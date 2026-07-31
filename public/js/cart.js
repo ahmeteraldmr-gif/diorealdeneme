@@ -112,25 +112,30 @@
 
         // Render Item HTML
         itemsListEl.innerHTML = cart.map(item => `
-            <div class="cart-item" data-id="${item.id}">
-                <div class="cart-item-img-wrap">
-                    <img src="${item.image}" alt="${item.name}" class="cart-item-img" onerror="this.src='/foto.img/hero_4k.jpg'">
+            <div class="cart-item">
+                <div class="cart-item-left-block">
+                    <div class="cart-item-img-wrap">
+                        <img src="${item.image}" alt="${item.name}" class="cart-item-img" onerror="this.src='/foto.img/hero_4k.jpg'">
+                    </div>
+                    <div class="cart-item-details">
+                        <span class="cart-item-tag">${item.type || 'Lüks Koleksiyon'}</span>
+                        <a href="#" class="cart-item-name">${item.name}</a>
+                        <span class="cart-item-price-unit">${item.details || ''} • ₺${item.price.toLocaleString('tr-TR')}</span>
+                    </div>
                 </div>
-                <div class="cart-item-details">
-                    <span class="cart-item-tag">${item.type}</span>
-                    <a href="#" class="cart-item-name">${item.name}</a>
-                    <span class="cart-item-price-unit">${item.details || ''} • ${formatCurrency(item.price)}</span>
-                </div>
-                <div class="quantity-control">
-                    <button type="button" class="qty-btn btn-minus" data-id="${item.id}">-</button>
-                    <span class="qty-val">${item.quantity}</span>
-                    <button type="button" class="qty-btn btn-plus" data-id="${item.id}">+</button>
-                </div>
-                <div class="cart-item-right">
-                    <div class="cart-item-subtotal">${formatCurrency(item.price * item.quantity)}</div>
-                    <button type="button" class="remove-btn" data-id="${item.id}">
-                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 6h18M19 6v14a2 2 0 01-2 2H7a2 2 0 01-2-2V6m3 0V4a2 2 0 012-2h4a2 2 0 012 2v2"></path></svg>
-                        Sil
+
+                <div class="cart-item-right-block">
+                    <div class="quantity-control">
+                        <button type="button" class="qty-btn btn-minus" data-id="${item.id}">-</button>
+                        <span class="qty-val">${item.quantity}</span>
+                        <button type="button" class="qty-btn btn-plus" data-id="${item.id}">+</button>
+                    </div>
+
+                    <div class="cart-item-subtotal">₺${(item.price * item.quantity).toLocaleString('tr-TR')}</div>
+
+                    <button type="button" class="remove-btn" data-id="${item.id}" title="Ürünü Kaldır">
+                        <i class="fa-regular fa-trash-can" style="font-size: 1rem;"></i>
+                        <span>Sil</span>
                     </button>
                 </div>
             </div>
