@@ -982,59 +982,62 @@
 
 
 
-    <!-- 📌 FLOATING FIXED LEFT CATEGORY BUTTON (Follows screen scroll up and down) -->
+    <!-- 📌 UNIFIED FLOATING FIXED LEFT MENU (Categories + Search + Sort + Count) -->
     <div style="position: fixed; left: 24px; top: 120px; z-index: 9999; display: flex; flex-direction: column;">
         <button type="button" id="leftHambBtn" onclick="toggleLeftDropdown(event)" style="background: #111111; color: #ffffff; border: 1px solid rgba(255,255,255,0.15); padding: 0.75rem 1.4rem; border-radius: 30px; font-size: 0.85rem; font-weight: 600; cursor: pointer; display: flex; align-items: center; gap: 0.65rem; transition: all 0.3s ease; box-shadow: 0 10px 30px rgba(0,0,0,0.25); backdrop-filter: blur(10px);">
             <i class="fa-solid fa-bars" style="color: #c8a96e; font-size: 0.95rem;"></i>
-            <span id="selectedCatLabel">KATEGORİLER</span>
+            <span id="selectedCatLabel">KATEGORİLER & FİLTRELER</span>
             <i class="fa-solid fa-chevron-down" style="font-size: 0.75rem; transition: transform 0.3s ease; margin-left: 0.2rem;" id="hambChevron"></i>
         </button>
 
-        <!-- Clean Left Dropdown Menu (Fixed Below Button) -->
-        <div id="leftCatDropdown" onclick="event.stopPropagation()" style="position: absolute; top: calc(100% + 10px); left: 0; background: #ffffff; border: 1px solid #e0e0e0; border-radius: 18px; box-shadow: 0 20px 45px rgba(0,0,0,0.2); width: 280px; padding: 0.65rem; display: none; flex-direction: column; gap: 0.35rem;">
-            <button class="left-dropdown-item active" onclick="selectCategory('all', 'Tüm Ürünler & Paketler', this)" style="display: flex; align-items: center; justify-content: space-between; padding: 0.8rem 1.1rem; border-radius: 12px; border: none; background: #111; color: #fff; font-size: 0.85rem; font-weight: 600; cursor: pointer; text-align: left;">
-                <span>Tüm Ürünler & Paketler</span>
-                <span style="font-size: 0.75rem; opacity: 0.8;">({{ count($products) }})</span>
-            </button>
-
-            @if(isset($categories) && count($categories) > 0)
-                @foreach($categories as $cat)
-                    @php
-                        $catName = $cat->name[$locale] ?? ($cat->name['tr'] ?? $cat->slug);
-                        $catCount = $cat->products_count ?? count($cat->products);
-                    @endphp
-                    <button class="left-dropdown-item" onclick="selectCategory('cat-{{ $cat->id }}', '{{ addslashes($catName) }}', this)" style="display: flex; align-items: center; justify-content: space-between; padding: 0.8rem 1.1rem; border-radius: 12px; border: none; background: transparent; color: #333; font-size: 0.85rem; font-weight: 500; cursor: pointer; text-align: left; transition: background 0.2s ease;">
-                        <span>{{ $catName }}</span>
-                        <span style="font-size: 0.75rem; color: #888;">({{ $catCount }})</span>
-                    </button>
-                @endforeach
-            @endif
-        </div>
-    </div>
-
-    <!-- Sticky Mojea Toolbar (Search + Sort + Count) -->
-    <div class="mojea-toolbar-wrap">
-        <div class="mojea-toolbar" style="display: flex; align-items: center; justify-content: flex-end; gap: 1rem; flex-wrap: wrap; max-width: 1400px; margin: 0 auto; padding: 1rem 2rem;">
+        <!-- Clean Unified Left Dropdown Menu (Contains All Controls) -->
+        <div id="leftCatDropdown" onclick="event.stopPropagation()" style="position: absolute; top: calc(100% + 10px); left: 0; background: #ffffff; border: 1px solid #e0e0e0; border-radius: 18px; box-shadow: 0 20px 45px rgba(0,0,0,0.2); width: 310px; padding: 1rem; display: none; flex-direction: column; gap: 0.6rem;">
             
-            <!-- Toolbar Right Controls (Search + Sort + Count) -->
-            <div class="mojea-toolbar-right" style="display: flex; align-items: center; gap: 1rem; flex-wrap: wrap; flex: 1; justify-content: flex-end;">
+            <!-- 🔍 Search Box inside Left Menu -->
+            <div style="position: relative; margin-bottom: 0.4rem;">
+                <input type="text" id="ecomSearchInput" oninput="searchMojeaProducts(this.value)" placeholder="🔍 Ürün veya paket ara..." style="width: 100%; padding: 0.65rem 1rem 0.65rem 2.2rem; border-radius: 12px; border: 1px solid #e0e0e0; background: #f9f9f9; font-size: 0.82rem; outline: none;">
+                <i class="fa-solid fa-magnifying-glass" style="position: absolute; left: 0.8rem; top: 50%; transform: translateY(-50%); color: #999; font-size: 0.8rem;"></i>
+            </div>
 
-                <div class="ecom-search-box" style="position: relative; min-width: 220px; flex: 1; max-width: 320px;">
-                    <input type="text" id="ecomSearchInput" oninput="searchMojeaProducts(this.value)" placeholder="🔍 Ürün veya paket ara..." style="width: 100%; padding: 0.6rem 1rem 0.6rem 2.3rem; border-radius: 20px; border: 1px solid #e5e5e5; background: #f7f7f7; font-size: 0.82rem; outline: none;">
-                    <i class="fa-solid fa-magnifying-glass" style="position: absolute; left: 0.85rem; top: 50%; transform: translateY(-50%); color: #999; font-size: 0.8rem;"></i>
-                </div>
+            <!-- 📁 Categories List inside Left Menu -->
+            <span style="font-size: 0.7rem; letter-spacing: 0.15em; color: #888; font-weight: 700; text-transform: uppercase; margin-bottom: 0.1rem; display: block;">KATEGORİLER</span>
+            
+            <div style="display: flex; flex-direction: column; gap: 0.3rem; max-height: 220px; overflow-y: auto;">
+                <button class="left-dropdown-item active" onclick="selectCategory('all', 'Tüm Ürünler & Paketler', this)" style="display: flex; align-items: center; justify-content: space-between; padding: 0.7rem 0.9rem; border-radius: 10px; border: none; background: #111; color: #fff; font-size: 0.82rem; font-weight: 600; cursor: pointer; text-align: left;">
+                    <span>Tüm Ürünler & Paketler</span>
+                    <span style="font-size: 0.72rem; opacity: 0.8;">({{ count($products) }})</span>
+                </button>
 
-                <span class="mojea-product-count" id="visibleProductCount">{{ count($products) }} Ürün Listeleniyor</span>
-                
-                <select class="mojea-sort-select" onchange="sortMojeaProducts(this.value)">
-                    <option value="default">Sıralama: Önerilen</option>
-                    <option value="price-asc">Fiyat: Düşükten Yükseğe</option>
-                    <option value="price-desc">Fiyat: Yüksekten Düşüğe</option>
-                    <option value="name-asc">A-Z Alfabetik</option>
-                </select>
+                @if(isset($categories) && count($categories) > 0)
+                    @foreach($categories as $cat)
+                        @php
+                            $catName = $cat->name[$locale] ?? ($cat->name['tr'] ?? $cat->slug);
+                            $catCount = $cat->products_count ?? count($cat->products);
+                        @endphp
+                        <button class="left-dropdown-item" onclick="selectCategory('cat-{{ $cat->id }}', '{{ addslashes($catName) }}', this)" style="display: flex; align-items: center; justify-content: space-between; padding: 0.7rem 0.9rem; border-radius: 10px; border: none; background: transparent; color: #333; font-size: 0.82rem; font-weight: 500; cursor: pointer; text-align: left; transition: background 0.2s ease;">
+                            <span>{{ $catName }}</span>
+                            <span style="font-size: 0.72rem; color: #888;">({{ $catCount }})</span>
+                        </button>
+                    @endforeach
+                @endif
+            </div>
+
+            <!-- 🔃 Sort Select Dropdown inside Left Menu -->
+            <span style="font-size: 0.7rem; letter-spacing: 0.15em; color: #888; font-weight: 700; text-transform: uppercase; margin-top: 0.4rem; margin-bottom: 0.1rem; display: block;">SIRALAMA</span>
+            <select class="mojea-sort-select" onchange="sortMojeaProducts(this.value)" style="width: 100%; padding: 0.6rem 0.9rem; border-radius: 10px; border: 1px solid #e0e0e0; background: #f9f9f9; font-size: 0.82rem; outline: none; cursor: pointer;">
+                <option value="default">Sıralama: Önerilen</option>
+                <option value="price-asc">Fiyat: Düşükten Yükseğe</option>
+                <option value="price-desc">Fiyat: Yüksekten Düşüğe</option>
+                <option value="name-asc">A-Z Alfabetik</option>
+            </select>
+
+            <!-- 📊 Product Count Footer inside Left Menu -->
+            <div style="margin-top: 0.4rem; padding-top: 0.6rem; border-top: 1px solid #f0f0f0; font-size: 0.78rem; color: #888; text-align: center;" id="visibleProductCount">
+                {{ count($products) }} Ürün Listeleniyor
             </div>
         </div>
     </div>
+
 
     <!-- Mojea Products Catalogue Grid -->
     <section class="mojea-products-container">
