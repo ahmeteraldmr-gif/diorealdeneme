@@ -403,7 +403,7 @@
             width: 100%;
             height: 100%;
             object-fit: cover;
-            transition: opacity 0.5s cubic-bezier(0.25, 1, 0.5, 1), transform 0.8s cubic-bezier(0.25, 1, 0.5, 1);
+            transition: opacity 0.4s ease, transform 0.6s ease;
             position: relative;
             z-index: 1;
         }
@@ -415,8 +415,9 @@
             height: 100%;
             object-fit: cover;
             opacity: 0;
-            transition: opacity 0.5s cubic-bezier(0.25, 1, 0.5, 1), transform 0.8s cubic-bezier(0.25, 1, 0.5, 1);
-            z-index: 1;
+            transition: opacity 0.4s ease, transform 0.6s ease;
+            z-index: 2;
+            pointer-events: none;
         }
 
         .mojea-card:hover .mojea-card-img {
@@ -428,6 +429,20 @@
             opacity: 1;
             transform: scale(1.08);
         }
+
+        /* Slide overlay must be above hover image */
+        .mojea-slide-overlay {
+            z-index: 10 !important;
+        }
+
+        .mojea-wish-btn {
+            z-index: 10 !important;
+        }
+
+        .mojea-badge {
+            z-index: 10 !important;
+        }
+
 
 
         /* Top Left Discount / Feature Badge */
@@ -1020,10 +1035,15 @@
                         $pDesc = $p->desc[$locale] ?? ($p->desc['tr'] ?? '');
                         $pDetails = $p->details[$locale] ?? ($p->details['tr'] ?? '');
                         $pImg = asset($p->image ?: 'foto.img/hero_4k.jpg');
-                        $hoverImgs = ['foto.img/hero_slide_2.jpg', 'foto.img/hero_slide_3.jpg', 'foto.img/otel_hero.jpg', 'foto.img/bodrum.jpg', 'foto.img/fethiye.jpg', 'foto.img/dest_istanbul.jpg'];
-                        $pHoverImg = asset(!empty($p->image_hover) ? $p->image_hover : $hoverImgs[$index % count($hoverImgs)]);
+                        
+                        $hoverList = ['foto.img/hero_slide_2.jpg', 'foto.img/hero_slide_3.jpg', 'foto.img/fethiye.jpg', 'foto.img/dest_istanbul.jpg', 'foto.img/dest_kapadokya.jpg', 'foto.img/otel_hero.jpg'];
+                        $pHoverImg = asset(!empty($p->image_hover) ? $p->image_hover : $hoverList[$index % count($hoverList)]);
+                        if ($pHoverImg === $pImg) {
+                            $pHoverImg = asset($hoverList[($index + 1) % count($hoverList)]);
+                        }
                         $isFeatured = ($index === 1 || $index === 5 || $index === 8);
                     @endphp
+
 
                     <div class="mojea-card {{ $isFeatured ? 'is-featured' : '' }} reveal" style="transition-delay: {{ 0.08 * (($index % 4) + 1) }}s" data-category="cat-{{ $p->category_id }}" data-price="{{ $p->price }}" data-name="{{ $pName }}">
 
