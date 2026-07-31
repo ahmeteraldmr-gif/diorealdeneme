@@ -403,12 +403,32 @@
             width: 100%;
             height: 100%;
             object-fit: cover;
-            transition: transform 0.8s cubic-bezier(0.25, 1, 0.5, 1);
+            transition: opacity 0.5s cubic-bezier(0.25, 1, 0.5, 1), transform 0.8s cubic-bezier(0.25, 1, 0.5, 1);
+            position: relative;
+            z-index: 1;
+        }
+
+        .mojea-card-img-hover {
+            position: absolute;
+            inset: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            opacity: 0;
+            transition: opacity 0.5s cubic-bezier(0.25, 1, 0.5, 1), transform 0.8s cubic-bezier(0.25, 1, 0.5, 1);
+            z-index: 1;
         }
 
         .mojea-card:hover .mojea-card-img {
+            opacity: 0;
             transform: scale(1.08);
         }
+
+        .mojea-card:hover .mojea-card-img-hover {
+            opacity: 1;
+            transform: scale(1.08);
+        }
+
 
         /* Top Left Discount / Feature Badge */
         .mojea-badge {
@@ -1000,6 +1020,8 @@
                         $pDesc = $p->desc[$locale] ?? ($p->desc['tr'] ?? '');
                         $pDetails = $p->details[$locale] ?? ($p->details['tr'] ?? '');
                         $pImg = asset($p->image ?: 'foto.img/hero_4k.jpg');
+                        $hoverImgs = ['foto.img/hero_slide_2.jpg', 'foto.img/hero_slide_3.jpg', 'foto.img/otel_hero.jpg', 'foto.img/bodrum.jpg', 'foto.img/fethiye.jpg', 'foto.img/dest_istanbul.jpg'];
+                        $pHoverImg = asset(!empty($p->image_hover) ? $p->image_hover : $hoverImgs[$index % count($hoverImgs)]);
                         $isFeatured = ($index === 1 || $index === 5 || $index === 8);
                     @endphp
 
@@ -1007,9 +1029,13 @@
 
                         
                         <div class="mojea-card-img-box">
+                            <!-- Primary Normal Image -->
                             <img src="{{ $pImg }}" alt="{{ $pName }}" class="mojea-card-img" onerror="this.src='{{ asset('foto.img/hero_4k.jpg') }}'">
+                            <!-- Secondary Hover Image (Mouse Over Reveal) -->
+                            <img src="{{ $pHoverImg }}" alt="{{ $pName }} - Detay Görseli" class="mojea-card-img-hover" onerror="this.src='{{ asset('foto.img/hero_slide_2.jpg') }}'">
                             
                             <!-- Category Badge -->
+
                             <span class="mojea-badge {{ $index % 2 === 0 ? 'accent' : '' }}">{{ $pTag }}</span>
 
                             <!-- Top-Right Wishlist Button -->
