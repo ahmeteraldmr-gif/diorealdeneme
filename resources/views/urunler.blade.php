@@ -982,67 +982,65 @@
 
 
 
-    <!-- Sticky Mojea Toolbar (Absolute Far Left KATEGORİLER Button) -->
-    <div class="mojea-toolbar-wrap">
-        <div class="mojea-toolbar" style="display: flex; align-items: center; justify-content: space-between; gap: 1rem; flex-wrap: wrap; width: 100%; max-width: 100%; padding: 1rem 2.5rem;">
-            
-            <!-- Left Hamburger Dropdown Container (Absolute Far Left Wall) -->
-            <div style="position: relative; z-index: 100; margin-right: auto; display: flex; align-items: center;">
+    <!-- 🛍️ MAIN E-COMMERCE LAYOUT (STICKY LEFT VERTICAL CATEGORIES SIDEBAR + PRODUCTS GRID) -->
+    <div style="max-width: 1400px; margin: 0 auto; padding: 1rem 2rem 5rem; display: grid; grid-template-columns: 280px 1fr; gap: 2.5rem; align-items: start;">
 
-                <button type="button" id="leftHambBtn" onclick="toggleLeftDropdown(event)" style="background: #111111; color: #ffffff; border: none; padding: 0.65rem 1.3rem; border-radius: 30px; font-size: 0.82rem; font-weight: 600; cursor: pointer; display: flex; align-items: center; gap: 0.65rem; transition: all 0.3s ease; box-shadow: 0 4px 15px rgba(0,0,0,0.1);">
-                    <i class="fa-solid fa-bars" style="color: #c8a96e; font-size: 0.95rem;"></i>
-                    <span id="selectedCatLabel">KATEGORİLER</span>
-                    <i class="fa-solid fa-chevron-down" style="font-size: 0.75rem; transition: transform 0.3s ease; margin-left: 0.2rem;" id="hambChevron"></i>
+        <!-- 📌 LEFT STICKY VERTICAL CATEGORIES SIDEBAR (Glides smoothly when scrolling) -->
+        <aside style="position: sticky; top: 100px; z-index: 80; background: #ffffff; border: 1px solid #eaeaea; border-radius: 20px; padding: 1.5rem; box-shadow: 0 10px 30px rgba(0,0,0,0.04);">
+            <div style="display: flex; align-items: center; justify-content: space-between; padding-bottom: 1rem; border-bottom: 1px solid #f0f0f0; margin-bottom: 1.2rem;">
+                <div style="display: flex; align-items: center; gap: 0.6rem;">
+                    <i class="fa-solid fa-layer-group" style="color: #c8a96e; font-size: 1.1rem;"></i>
+                    <h3 style="font-family: var(--font-display, serif); font-size: 1.25rem; font-weight: 600; color: #111;">KATEGORİLER</h3>
+                </div>
+                <span style="background: #f5efe6; color: #c8a96e; padding: 0.2rem 0.6rem; border-radius: 12px; font-size: 0.75rem; font-weight: 700;">{{ count($products) }}</span>
+            </div>
+
+            <!-- Vertical Category Item Buttons -->
+            <div style="display: flex; flex-direction: column; gap: 0.4rem;">
+                <button class="left-vcat-btn active" onclick="selectVerticalCategory('all', 'Tüm Ürünler & Paketler', this)" style="display: flex; align-items: center; justify-content: space-between; padding: 0.8rem 1rem; border-radius: 12px; border: none; background: #111; color: #fff; font-size: 0.85rem; font-weight: 600; cursor: pointer; text-align: left; transition: all 0.2s ease;">
+                    <span>Tüm Ürünler & Paketler</span>
+                    <span style="font-size: 0.75rem; opacity: 0.8;">({{ count($products) }})</span>
                 </button>
 
+                @if(isset($categories) && count($categories) > 0)
+                    @foreach($categories as $cat)
+                        @php
+                            $catName = $cat->name[$locale] ?? ($cat->name['tr'] ?? $cat->slug);
+                            $catCount = $cat->products_count ?? count($cat->products);
+                        @endphp
+                        <button class="left-vcat-btn" onclick="selectVerticalCategory('cat-{{ $cat->id }}', '{{ addslashes($catName) }}', this)" style="display: flex; align-items: center; justify-content: space-between; padding: 0.8rem 1rem; border-radius: 12px; border: none; background: transparent; color: #444; font-size: 0.85rem; font-weight: 500; cursor: pointer; text-align: left; transition: all 0.2s ease;">
+                            <span>{{ $catName }}</span>
+                            <span style="font-size: 0.75rem; color: #888;">({{ $catCount }})</span>
+                        </button>
+                    @endforeach
+                @endif
+            </div>
+        </aside>
 
-                <!-- Clean Left Dropdown Menu (No Full Screen Backdrop) -->
-                <div id="leftCatDropdown" onclick="event.stopPropagation()" style="position: absolute; top: calc(100% + 8px); left: 0; background: #ffffff; border: 1px solid #e0e0e0; border-radius: 16px; box-shadow: 0 15px 35px rgba(0,0,0,0.12); width: 280px; padding: 0.6rem; display: none; flex-direction: column; gap: 0.3rem;">
-                    <button class="left-dropdown-item active" onclick="selectCategory('all', 'Tüm Ürünler & Paketler', this)" style="display: flex; align-items: center; justify-content: space-between; padding: 0.75rem 1rem; border-radius: 10px; border: none; background: #111; color: #fff; font-size: 0.85rem; font-weight: 600; cursor: pointer; text-align: left;">
-                        <span>Tüm Ürünler & Paketler</span>
-                        <span style="font-size: 0.75rem; opacity: 0.8;">({{ count($products) }})</span>
-                    </button>
+        <!-- 📦 RIGHT PRODUCTS AREA -->
+        <main style="flex: 1; min-width: 0;">
+            <!-- Top Right Toolbar (Search + Sort + Count) -->
+            <div style="display: flex; align-items: center; justify-content: space-between; gap: 1rem; flex-wrap: wrap; margin-bottom: 2rem; background: #ffffff; padding: 1rem 1.5rem; border-radius: 16px; border: 1px solid #eaeaea;">
+                <div class="ecom-search-box" style="position: relative; min-width: 240px; flex: 1; max-width: 380px;">
+                    <input type="text" id="ecomSearchInput" oninput="searchMojeaProducts(this.value)" placeholder="🔍 Ürün veya paket ara..." style="width: 100%; padding: 0.65rem 1rem 0.65rem 2.4rem; border-radius: 20px; border: 1px solid #e5e5e5; background: #f7f7f7; font-size: 0.85rem; outline: none;">
+                    <i class="fa-solid fa-magnifying-glass" style="position: absolute; left: 0.9rem; top: 50%; transform: translateY(-50%); color: #999; font-size: 0.8rem;"></i>
+                </div>
 
-                    @if(isset($categories) && count($categories) > 0)
-                        @foreach($categories as $cat)
-                            @php
-                                $catName = $cat->name[$locale] ?? ($cat->name['tr'] ?? $cat->slug);
-                                $catCount = $cat->products_count ?? count($cat->products);
-                            @endphp
-                            <button class="left-dropdown-item" onclick="selectCategory('cat-{{ $cat->id }}', '{{ addslashes($catName) }}', this)" style="display: flex; align-items: center; justify-content: space-between; padding: 0.75rem 1rem; border-radius: 10px; border: none; background: transparent; color: #333; font-size: 0.85rem; font-weight: 500; cursor: pointer; text-align: left; transition: background 0.2s ease;">
-                                <span>{{ $catName }}</span>
-                                <span style="font-size: 0.75rem; color: #888;">({{ $catCount }})</span>
-                            </button>
-                        @endforeach
-                    @endif
+                <div style="display: flex; align-items: center; gap: 1.2rem;">
+                    <span class="mojea-product-count" id="visibleProductCount">{{ count($products) }} Ürün Listeleniyor</span>
+                    
+                    <select class="mojea-sort-select" onchange="sortMojeaProducts(this.value)">
+                        <option value="default">Sıralama: Önerilen</option>
+                        <option value="price-asc">Fiyat: Düşükten Yükseğe</option>
+                        <option value="price-desc">Fiyat: Yüksekten Düşüğe</option>
+                        <option value="name-asc">A-Z Alfabetik</option>
+                    </select>
                 </div>
             </div>
 
-            <!-- Toolbar Right Controls (Search + Sort + Count) -->
-            <div class="mojea-toolbar-right" style="display: flex; align-items: center; gap: 1rem; flex-wrap: wrap; flex: 1; justify-content: flex-end;">
-                <div class="ecom-search-box" style="position: relative; min-width: 220px; flex: 1; max-width: 320px;">
-                    <input type="text" id="ecomSearchInput" oninput="searchMojeaProducts(this.value)" placeholder="🔍 Ürün veya paket ara..." style="width: 100%; padding: 0.6rem 1rem 0.6rem 2.3rem; border-radius: 20px; border: 1px solid #e5e5e5; background: #f7f7f7; font-size: 0.82rem; outline: none;">
-                    <i class="fa-solid fa-magnifying-glass" style="position: absolute; left: 0.85rem; top: 50%; transform: translateY(-50%); color: #999; font-size: 0.8rem;"></i>
-                </div>
+            <!-- Mojea Products Catalogue Grid -->
+            <div class="mojea-grid" id="mojeaGrid" style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.8rem;">
 
-                <span class="mojea-product-count" id="visibleProductCount">{{ count($products) }} Ürün Listeleniyor</span>
-                
-                <select class="mojea-sort-select" onchange="sortMojeaProducts(this.value)">
-                    <option value="default">Sıralama: Önerilen</option>
-                    <option value="price-asc">Fiyat: Düşükten Yükseğe</option>
-                    <option value="price-desc">Fiyat: Yüksekten Düşüğe</option>
-                    <option value="name-asc">A-Z Alfabetik</option>
-                </select>
-            </div>
-        </div>
-    </div>
-
-
-
-
-    <!-- Mojea Products Catalogue Grid -->
-    <section class="mojea-products-container">
-        <div class="mojea-grid" id="mojeaGrid">
 
             @if(isset($products) && count($products) > 0)
                 @foreach($products as $index => $p)
@@ -1175,8 +1173,10 @@
                 @endforeach
             @endif
 
-        </div>
-    </section>
+            </div>
+        </main>
+    </div>
+
 
 
 
@@ -1263,7 +1263,32 @@
             if (chevron) chevron.style.transform = 'rotate(0deg)';
         });
 
+        function selectVerticalCategory(category, label, btn) {
+            document.querySelectorAll('.left-vcat-btn').forEach(b => {
+                b.style.background = 'transparent';
+                b.style.color = '#444';
+                b.style.fontWeight = '500';
+            });
+            btn.style.background = '#111111';
+            btn.style.color = '#ffffff';
+            btn.style.fontWeight = '600';
+
+            const cards = document.querySelectorAll('.mojea-card');
+            let visibleCount = 0;
+            cards.forEach(card => {
+                if (category === 'all' || card.getAttribute('data-category') === category) {
+                    card.style.display = 'flex';
+                    visibleCount++;
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+
+            document.getElementById('visibleProductCount').textContent = visibleCount + ' Ürün Listeleniyor';
+        }
+
         function selectCategory(category, label, btn) {
+
             document.querySelectorAll('.left-dropdown-item').forEach(b => {
                 b.style.background = 'transparent';
                 b.style.color = '#333';
