@@ -922,19 +922,19 @@
     <div style="height: 120px;"></div>
 
 
-    <!-- 🔄 5-SECOND AUTO-ROTATING LUXURY PRODUCT SHOWCASE CAROUSEL -->
-    <section style="max-width: 1400px; margin: 0 auto 3rem; padding: 0 2rem;">
-        <div id="autoShowcaseSlider" style="position: relative; height: 260px; border-radius: 16px; overflow: hidden; box-shadow: 0 15px 35px rgba(0,0,0,0.1);">
+    <!-- 🔄 5-SECOND AUTO-ROTATING LUXURY PRODUCT SHOWCASE CAROUSEL (LARGE HERO SLIDER) -->
+    <section style="max-width: 1400px; margin: 0 auto 3.5rem; padding: 0 2rem;">
+        <div id="autoShowcaseSlider" style="position: relative; height: 420px; border-radius: 24px; overflow: hidden; box-shadow: 0 20px 45px rgba(0,0,0,0.14);">
             
             <!-- Slide 1 -->
             <div class="showcase-slide" style="position: absolute; inset: 0; opacity: 1; transition: opacity 0.8s ease-in-out; background-image: url('{{ asset('foto.img/hero_4k.jpg') }}'); background-size: cover; background-position: center;">
-                <div style="position: absolute; inset: 0; background: linear-gradient(90deg, rgba(0,0,0,0.75) 0%, rgba(0,0,0,0.2) 60%, rgba(0,0,0,0.1) 100%); display: flex; flex-direction: column; justify-content: center; padding: 3rem; color: #fff;">
-                    <span style="font-size: 0.75rem; letter-spacing: 0.25em; color: #c8a96e; font-weight: 700; text-transform: uppercase; margin-bottom: 0.4rem;">Porselen & Çatal Bıçak Koleksiyonu</span>
-                    <h2 style="font-family: var(--font-display, serif); font-size: 2.2rem; font-weight: 400; margin-bottom: 0.5rem;">Royal Altın İşlemeli Yemek Takımları</h2>
-                    <p style="font-size: 0.95rem; opacity: 0.85; max-width: 500px; margin-bottom: 1.2rem;">24 Parça Fine Bone China Porselen ve Saf İpek Kırlent Koleksiyonu</p>
+                <div style="position: absolute; inset: 0; background: linear-gradient(90deg, rgba(0,0,0,0.82) 0%, rgba(0,0,0,0.35) 55%, rgba(0,0,0,0.1) 100%); display: flex; flex-direction: column; justify-content: center; padding: 4rem 5rem; color: #fff;">
+                    <span style="font-size: 0.85rem; letter-spacing: 0.25em; color: #c8a96e; font-weight: 700; text-transform: uppercase; margin-bottom: 0.6rem;">PORSELEN & ÇATAL BIÇAK KOLEKSİYONU</span>
+                    <h2 style="font-family: var(--font-display, serif); font-size: clamp(2rem, 3.5vw, 3.2rem); font-weight: 400; margin-bottom: 0.8rem; line-height: 1.2;">Royal Altın İşlemeli Yemek Takımları</h2>
+                    <p style="font-size: 1.1rem; opacity: 0.9; max-width: 600px; margin-bottom: 2rem; line-height: 1.6;">24 Parça Fine Bone China Porselen, Kristal Şarap Kadehleri ve Saf İpek Kırlent Koleksiyonu</p>
                     <div>
-                        <button type="button" onclick="selectCategory('cat-1', 'Mutfak & Yemek Takımları', document.querySelector('.left-dropdown-item'))" style="background: #c8a96e; color: #111; border: none; padding: 0.65rem 1.6rem; border-radius: 30px; font-weight: 600; font-size: 0.82rem; cursor: pointer; text-transform: uppercase; letter-spacing: 0.08em; transition: all 0.3s ease;">
-                            Koleksiyonu İncele
+                        <button type="button" onclick="selectCategory('cat-1', 'Mutfak & Yemek Takımları', document.querySelector('.left-dropdown-item'))" style="background: #c8a96e; color: #111; border: none; padding: 0.9rem 2.2rem; border-radius: 40px; font-weight: 600; font-size: 0.9rem; cursor: pointer; text-transform: uppercase; letter-spacing: 0.1em; transition: all 0.3s ease; box-shadow: 0 8px 25px rgba(200, 169, 110, 0.4);">
+                            Koleksiyonu İncele <i class="fa-solid fa-arrow-right" style="margin-left: 0.4rem;"></i>
                         </button>
                     </div>
                 </div>
@@ -942,13 +942,13 @@
 
             <!-- Slide 2 -->
             <div class="showcase-slide" style="position: absolute; inset: 0; opacity: 0; transition: opacity 0.8s ease-in-out; background-image: url('{{ asset('foto.img/otel_hero.jpg') }}'); background-size: cover; background-position: center;">
-                <div style="position: absolute; inset: 0; background: linear-gradient(90deg, rgba(0,0,0,0.75) 0%, rgba(0,0,0,0.2) 60%, rgba(0,0,0,0.1) 100%); display: flex; flex-direction: column; justify-content: center; padding: 3rem; color: #fff;">
-                    <span style="font-size: 0.75rem; letter-spacing: 0.25em; color: #c8a96e; font-weight: 700; text-transform: uppercase; margin-bottom: 0.4rem;">Ev & Lüks Dekorasyon</span>
-                    <h2 style="font-family: var(--font-display, serif); font-size: 2.2rem; font-weight: 400; margin-bottom: 0.5rem;">Baccarat Kristal Kadehler & Murano Vazo</h2>
-                    <p style="font-size: 0.95rem; opacity: 0.85; max-width: 500px; margin-bottom: 1.2rem;">El Üfleme Cam Sanatı ve İpek Dokuma Ev Aksesuarları</p>
+                <div style="position: absolute; inset: 0; background: linear-gradient(90deg, rgba(0,0,0,0.82) 0%, rgba(0,0,0,0.35) 55%, rgba(0,0,0,0.1) 100%); display: flex; flex-direction: column; justify-content: center; padding: 4rem 5rem; color: #fff;">
+                    <span style="font-size: 0.85rem; letter-spacing: 0.25em; color: #c8a96e; font-weight: 700; text-transform: uppercase; margin-bottom: 0.6rem;">EV & LÜKS DEKORASYON</span>
+                    <h2 style="font-family: var(--font-display, serif); font-size: clamp(2rem, 3.5vw, 3.2rem); font-weight: 400; margin-bottom: 0.8rem; line-height: 1.2;">Baccarat Kristal Kadehler & Murano Vazo</h2>
+                    <p style="font-size: 1.1rem; opacity: 0.9; max-width: 600px; margin-bottom: 2rem; line-height: 1.6;">Özel El Üfleme Cam Sanatı Eserleri ve Hermès İpek Dokuma Aksesuarlar</p>
                     <div>
-                        <button type="button" onclick="selectCategory('cat-2', 'Ev & Lüks Dekorasyon', document.querySelector('.left-dropdown-item'))" style="background: #ffffff; color: #111; border: none; padding: 0.65rem 1.6rem; border-radius: 30px; font-weight: 600; font-size: 0.82rem; cursor: pointer; text-transform: uppercase; letter-spacing: 0.08em; transition: all 0.3s ease;">
-                            Ürünleri Keşfet
+                        <button type="button" onclick="selectCategory('cat-2', 'Ev & Lüks Dekorasyon', document.querySelector('.left-dropdown-item'))" style="background: #ffffff; color: #111; border: none; padding: 0.9rem 2.2rem; border-radius: 40px; font-weight: 600; font-size: 0.9rem; cursor: pointer; text-transform: uppercase; letter-spacing: 0.1em; transition: all 0.3s ease; box-shadow: 0 8px 25px rgba(255, 255, 255, 0.3);">
+                            Ürünleri Keşfet <i class="fa-solid fa-arrow-right" style="margin-left: 0.4rem;"></i>
                         </button>
                     </div>
                 </div>
@@ -956,26 +956,27 @@
 
             <!-- Slide 3 -->
             <div class="showcase-slide" style="position: absolute; inset: 0; opacity: 0; transition: opacity 0.8s ease-in-out; background-image: url('{{ asset('foto.img/bodrum.jpg') }}'); background-size: cover; background-position: center;">
-                <div style="position: absolute; inset: 0; background: linear-gradient(90deg, rgba(0,0,0,0.75) 0%, rgba(0,0,0,0.2) 60%, rgba(0,0,0,0.1) 100%); display: flex; flex-direction: column; justify-content: center; padding: 3rem; color: #fff;">
-                    <span style="font-size: 0.75rem; letter-spacing: 0.25em; color: #c8a96e; font-weight: 700; text-transform: uppercase; margin-bottom: 0.4rem;">VIP Seyahat & Konaklama</span>
-                    <h2 style="font-family: var(--font-display, serif); font-size: 2.2rem; font-weight: 400; margin-bottom: 0.5rem;">Bodrum Sunset Villa & Kapadokya Turu</h2>
-                    <p style="font-size: 0.95rem; opacity: 0.85; max-width: 500px; margin-bottom: 1.2rem;">Kişiye Özel VIP Karşılama ve Özel Havuzlu Villa Tatili</p>
+                <div style="position: absolute; inset: 0; background: linear-gradient(90deg, rgba(0,0,0,0.82) 0%, rgba(0,0,0,0.35) 55%, rgba(0,0,0,0.1) 100%); display: flex; flex-direction: column; justify-content: center; padding: 4rem 5rem; color: #fff;">
+                    <span style="font-size: 0.85rem; letter-spacing: 0.25em; color: #c8a96e; font-weight: 700; text-transform: uppercase; margin-bottom: 0.6rem;">VIP SEYAHAT & KONAKLAMA</span>
+                    <h2 style="font-family: var(--font-display, serif); font-size: clamp(2rem, 3.5vw, 3.2rem); font-weight: 400; margin-bottom: 0.8rem; line-height: 1.2;">Bodrum Sunset Villa & Kapadokya Turu</h2>
+                    <p style="font-size: 1.1rem; opacity: 0.9; max-width: 600px; margin-bottom: 2rem; line-height: 1.6;">Özel Havuzlu Lüks Villa Tatili, Mavi Yolculuk ve VIP Havalimanı Karşılama</p>
                     <div>
-                        <button type="button" onclick="selectCategory('cat-3', 'Konaklama Paketleri', document.querySelector('.left-dropdown-item'))" style="background: #c8a96e; color: #111; border: none; padding: 0.65rem 1.6rem; border-radius: 30px; font-weight: 600; font-size: 0.82rem; cursor: pointer; text-transform: uppercase; letter-spacing: 0.08em; transition: all 0.3s ease;">
-                            Paketleri İncele
+                        <button type="button" onclick="selectCategory('cat-3', 'Konaklama Paketleri', document.querySelector('.left-dropdown-item'))" style="background: #c8a96e; color: #111; border: none; padding: 0.9rem 2.2rem; border-radius: 40px; font-weight: 600; font-size: 0.9rem; cursor: pointer; text-transform: uppercase; letter-spacing: 0.1em; transition: all 0.3s ease; box-shadow: 0 8px 25px rgba(200, 169, 110, 0.4);">
+                            Paketleri İncele <i class="fa-solid fa-arrow-right" style="margin-left: 0.4rem;"></i>
                         </button>
                     </div>
                 </div>
             </div>
 
             <!-- Slide Dots Indicator -->
-            <div style="position: absolute; bottom: 1.2rem; right: 2rem; display: flex; gap: 0.5rem; z-index: 10;">
-                <span class="showcase-dot active" onclick="setMasterSlide(0)" style="width: 10px; height: 10px; border-radius: 50%; background: #c8a96e; cursor: pointer; transition: all 0.3s ease;"></span>
-                <span class="showcase-dot" onclick="setMasterSlide(1)" style="width: 10px; height: 10px; border-radius: 50%; background: rgba(255,255,255,0.4); cursor: pointer; transition: all 0.3s ease;"></span>
-                <span class="showcase-dot" onclick="setMasterSlide(2)" style="width: 10px; height: 10px; border-radius: 50%; background: rgba(255,255,255,0.4); cursor: pointer; transition: all 0.3s ease;"></span>
+            <div style="position: absolute; bottom: 1.8rem; right: 3rem; display: flex; gap: 0.7rem; z-index: 10;">
+                <span class="showcase-dot active" onclick="setMasterSlide(0)" style="width: 14px; height: 14px; border-radius: 50%; background: #c8a96e; cursor: pointer; transition: all 0.3s ease;"></span>
+                <span class="showcase-dot" onclick="setMasterSlide(1)" style="width: 14px; height: 14px; border-radius: 50%; background: rgba(255,255,255,0.4); cursor: pointer; transition: all 0.3s ease;"></span>
+                <span class="showcase-dot" onclick="setMasterSlide(2)" style="width: 14px; height: 14px; border-radius: 50%; background: rgba(255,255,255,0.4); cursor: pointer; transition: all 0.3s ease;"></span>
             </div>
         </div>
     </section>
+
 
 
 
