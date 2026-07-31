@@ -922,48 +922,61 @@
     <div style="height: 120px;"></div>
 
 
-    <!-- 🏷️ MOJEA CATEGORY SHOWCASE BANNER GRID -->
-    <section style="max-width: 1350px; margin: 0 auto 3.5rem; padding: 0 2rem;">
-        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 1.5rem;">
+    <!-- 🔄 5-SECOND AUTO-ROTATING LUXURY PRODUCT SHOWCASE CAROUSEL -->
+    <section style="max-width: 1400px; margin: 0 auto 3rem; padding: 0 2rem;">
+        <div id="autoShowcaseSlider" style="position: relative; height: 260px; border-radius: 16px; overflow: hidden; box-shadow: 0 15px 35px rgba(0,0,0,0.1);">
             
-            <div onclick="filterMojeaProducts('cat-1', document.querySelector('.mojea-pill-btn'))" style="position: relative; border-radius: 12px; overflow: hidden; height: 170px; cursor: pointer; box-shadow: 0 10px 25px rgba(0,0,0,0.08);">
-                <img src="{{ asset('foto.img/hero_4k.jpg') }}" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s ease;" onmouseover="this.style.transform='scale(1.08)'" onmouseout="this.style.transform='scale(1.0)'">
-                <div style="position: absolute; inset: 0; background: linear-gradient(180deg, rgba(0,0,0,0.1) 0%, rgba(0,0,0,0.7) 100%); padding: 1.2rem; display: flex; flex-direction: column; justify-content: flex-end; color: #fff;">
-                    <span style="font-size: 0.68rem; letter-spacing: 0.15em; color: #c8a96e; font-weight: 700; text-transform: uppercase;">MUTFAK & YEMEK</span>
-                    <h3 style="font-size: 1.2rem; font-weight: 400; font-family: var(--font-display, serif); margin-top: 0.2rem;">Porselen & Çatal Bıçak</h3>
-                    <span style="font-size: 0.75rem; opacity: 0.85; margin-top: 0.2rem;">Yemek Takımları • Kristal Kadehler</span>
+            <!-- Slide 1 -->
+            <div class="showcase-slide" style="position: absolute; inset: 0; opacity: 1; transition: opacity 0.8s ease-in-out; background-image: url('{{ asset('foto.img/hero_4k.jpg') }}'); background-size: cover; background-position: center;">
+                <div style="position: absolute; inset: 0; background: linear-gradient(90deg, rgba(0,0,0,0.75) 0%, rgba(0,0,0,0.2) 60%, rgba(0,0,0,0.1) 100%); display: flex; flex-direction: column; justify-content: center; padding: 3rem; color: #fff;">
+                    <span style="font-size: 0.75rem; letter-spacing: 0.25em; color: #c8a96e; font-weight: 700; text-transform: uppercase; margin-bottom: 0.4rem;">Porselen & Çatal Bıçak Koleksiyonu</span>
+                    <h2 style="font-family: var(--font-display, serif); font-size: 2.2rem; font-weight: 400; margin-bottom: 0.5rem;">Royal Altın İşlemeli Yemek Takımları</h2>
+                    <p style="font-size: 0.95rem; opacity: 0.85; max-width: 500px; margin-bottom: 1.2rem;">24 Parça Fine Bone China Porselen ve Saf İpek Kırlent Koleksiyonu</p>
+                    <div>
+                        <button type="button" onclick="selectCategory('cat-1', 'Mutfak & Yemek Takımları', document.querySelector('.left-dropdown-item'))" style="background: #c8a96e; color: #111; border: none; padding: 0.65rem 1.6rem; border-radius: 30px; font-weight: 600; font-size: 0.82rem; cursor: pointer; text-transform: uppercase; letter-spacing: 0.08em; transition: all 0.3s ease;">
+                            Koleksiyonu İncele
+                        </button>
+                    </div>
                 </div>
             </div>
 
-            <div onclick="filterMojeaProducts('cat-2', document.querySelector('.mojea-pill-btn'))" style="position: relative; border-radius: 12px; overflow: hidden; height: 170px; cursor: pointer; box-shadow: 0 10px 25px rgba(0,0,0,0.08);">
-                <img src="{{ asset('foto.img/otel_hero.jpg') }}" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s ease;" onmouseover="this.style.transform='scale(1.08)'" onmouseout="this.style.transform='scale(1.0)'">
-                <div style="position: absolute; inset: 0; background: linear-gradient(180deg, rgba(0,0,0,0.1) 0%, rgba(0,0,0,0.7) 100%); padding: 1.2rem; display: flex; flex-direction: column; justify-content: flex-end; color: #fff;">
-                    <span style="font-size: 0.68rem; letter-spacing: 0.15em; color: #c8a96e; font-weight: 700; text-transform: uppercase;">EV DEKORASYON</span>
-                    <h3 style="font-size: 1.2rem; font-weight: 400; font-family: var(--font-display, serif); margin-top: 0.2rem;">İpek Kırlent & Vazo</h3>
-                    <span style="font-size: 0.75rem; opacity: 0.85; margin-top: 0.2rem;">Murano Cam Vazo • Özel Üretim</span>
+            <!-- Slide 2 -->
+            <div class="showcase-slide" style="position: absolute; inset: 0; opacity: 0; transition: opacity 0.8s ease-in-out; background-image: url('{{ asset('foto.img/otel_hero.jpg') }}'); background-size: cover; background-position: center;">
+                <div style="position: absolute; inset: 0; background: linear-gradient(90deg, rgba(0,0,0,0.75) 0%, rgba(0,0,0,0.2) 60%, rgba(0,0,0,0.1) 100%); display: flex; flex-direction: column; justify-content: center; padding: 3rem; color: #fff;">
+                    <span style="font-size: 0.75rem; letter-spacing: 0.25em; color: #c8a96e; font-weight: 700; text-transform: uppercase; margin-bottom: 0.4rem;">Ev & Lüks Dekorasyon</span>
+                    <h2 style="font-family: var(--font-display, serif); font-size: 2.2rem; font-weight: 400; margin-bottom: 0.5rem;">Baccarat Kristal Kadehler & Murano Vazo</h2>
+                    <p style="font-size: 0.95rem; opacity: 0.85; max-width: 500px; margin-bottom: 1.2rem;">El Üfleme Cam Sanatı ve İpek Dokuma Ev Aksesuarları</p>
+                    <div>
+                        <button type="button" onclick="selectCategory('cat-2', 'Ev & Lüks Dekorasyon', document.querySelector('.left-dropdown-item'))" style="background: #ffffff; color: #111; border: none; padding: 0.65rem 1.6rem; border-radius: 30px; font-weight: 600; font-size: 0.82rem; cursor: pointer; text-transform: uppercase; letter-spacing: 0.08em; transition: all 0.3s ease;">
+                            Ürünleri Keşfet
+                        </button>
+                    </div>
                 </div>
             </div>
 
-            <div onclick="filterMojeaProducts('cat-3', document.querySelector('.mojea-pill-btn'))" style="position: relative; border-radius: 12px; overflow: hidden; height: 170px; cursor: pointer; box-shadow: 0 10px 25px rgba(0,0,0,0.08);">
-                <img src="{{ asset('foto.img/bodrum.jpg') }}" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s ease;" onmouseover="this.style.transform='scale(1.08)'" onmouseout="this.style.transform='scale(1.0)'" onerror="this.src='{{ asset('foto.img/hero_4k.jpg') }}'">
-                <div style="position: absolute; inset: 0; background: linear-gradient(180deg, rgba(0,0,0,0.1) 0%, rgba(0,0,0,0.7) 100%); padding: 1.2rem; display: flex; flex-direction: column; justify-content: flex-end; color: #fff;">
-                    <span style="font-size: 0.68rem; letter-spacing: 0.15em; color: #c8a96e; font-weight: 700; text-transform: uppercase;">LÜKS PAKETLER</span>
-                    <h3 style="font-size: 1.2rem; font-weight: 400; font-family: var(--font-display, serif); margin-top: 0.2rem;">VIP Villa & Balon Turu</h3>
-                    <span style="font-size: 0.75rem; opacity: 0.85; margin-top: 0.2rem;">Bodrum Sunset Villa • Kapadokya</span>
+            <!-- Slide 3 -->
+            <div class="showcase-slide" style="position: absolute; inset: 0; opacity: 0; transition: opacity 0.8s ease-in-out; background-image: url('{{ asset('foto.img/bodrum.jpg') }}'); background-size: cover; background-position: center;">
+                <div style="position: absolute; inset: 0; background: linear-gradient(90deg, rgba(0,0,0,0.75) 0%, rgba(0,0,0,0.2) 60%, rgba(0,0,0,0.1) 100%); display: flex; flex-direction: column; justify-content: center; padding: 3rem; color: #fff;">
+                    <span style="font-size: 0.75rem; letter-spacing: 0.25em; color: #c8a96e; font-weight: 700; text-transform: uppercase; margin-bottom: 0.4rem;">VIP Seyahat & Konaklama</span>
+                    <h2 style="font-family: var(--font-display, serif); font-size: 2.2rem; font-weight: 400; margin-bottom: 0.5rem;">Bodrum Sunset Villa & Kapadokya Turu</h2>
+                    <p style="font-size: 0.95rem; opacity: 0.85; max-width: 500px; margin-bottom: 1.2rem;">Kişiye Özel VIP Karşılama ve Özel Havuzlu Villa Tatili</p>
+                    <div>
+                        <button type="button" onclick="selectCategory('cat-3', 'Konaklama Paketleri', document.querySelector('.left-dropdown-item'))" style="background: #c8a96e; color: #111; border: none; padding: 0.65rem 1.6rem; border-radius: 30px; font-weight: 600; font-size: 0.82rem; cursor: pointer; text-transform: uppercase; letter-spacing: 0.08em; transition: all 0.3s ease;">
+                            Paketleri İncele
+                        </button>
+                    </div>
                 </div>
             </div>
 
-            <div onclick="filterMojeaProducts('cat-4', document.querySelector('.mojea-pill-btn'))" style="position: relative; border-radius: 12px; overflow: hidden; height: 170px; cursor: pointer; box-shadow: 0 10px 25px rgba(0,0,0,0.08);">
-                <img src="{{ asset('foto.img/fethiye.jpg') }}" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s ease;" onmouseover="this.style.transform='scale(1.08)'" onmouseout="this.style.transform='scale(1.0)'" onerror="this.src='{{ asset('foto.img/hero_4k.jpg') }}'">
-                <div style="position: absolute; inset: 0; background: linear-gradient(180deg, rgba(0,0,0,0.1) 0%, rgba(0,0,0,0.7) 100%); padding: 1.2rem; display: flex; flex-direction: column; justify-content: flex-end; color: #fff;">
-                    <span style="font-size: 0.68rem; letter-spacing: 0.15em; color: #c8a96e; font-weight: 700; text-transform: uppercase;">MAVİ YOLCULUK</span>
-                    <h3 style="font-size: 1.2rem; font-weight: 400; font-family: var(--font-display, serif); margin-top: 0.2rem;">Lüks Yat & Charter</h3>
-                    <span style="font-size: 0.75rem; opacity: 0.85; margin-top: 0.2rem;">Özel Mavi Tur • Kaptanlı</span>
-                </div>
+            <!-- Slide Dots Indicator -->
+            <div style="position: absolute; bottom: 1.2rem; right: 2rem; display: flex; gap: 0.5rem; z-index: 10;">
+                <span class="showcase-dot active" onclick="setMasterSlide(0)" style="width: 10px; height: 10px; border-radius: 50%; background: #c8a96e; cursor: pointer; transition: all 0.3s ease;"></span>
+                <span class="showcase-dot" onclick="setMasterSlide(1)" style="width: 10px; height: 10px; border-radius: 50%; background: rgba(255,255,255,0.4); cursor: pointer; transition: all 0.3s ease;"></span>
+                <span class="showcase-dot" onclick="setMasterSlide(2)" style="width: 10px; height: 10px; border-radius: 50%; background: rgba(255,255,255,0.4); cursor: pointer; transition: all 0.3s ease;"></span>
             </div>
-
         </div>
     </section>
+
 
 
 
@@ -1208,8 +1221,28 @@
 
     <script>
         let currentModalItem = null;
+        let currentShowcaseSlide = 0;
+
+        function setMasterSlide(index) {
+            const slides = document.querySelectorAll('.showcase-slide');
+            const dots = document.querySelectorAll('.showcase-dot');
+            if (!slides.length) return;
+            
+            currentShowcaseSlide = (index + slides.length) % slides.length;
+            slides.forEach((slide, i) => {
+                slide.style.opacity = (i === currentShowcaseSlide) ? '1' : '0';
+            });
+            dots.forEach((dot, i) => {
+                dot.style.background = (i === currentShowcaseSlide) ? '#c8a96e' : 'rgba(255,255,255,0.4)';
+            });
+        }
+
+        setInterval(function() {
+            setMasterSlide(currentShowcaseSlide + 1);
+        }, 5000);
 
         function toggleLeftDropdown(e) {
+
             e.stopPropagation();
             const dropdown = document.getElementById('leftCatDropdown');
             const chevron = document.getElementById('hambChevron');
