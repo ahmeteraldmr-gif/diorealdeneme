@@ -969,15 +969,16 @@
 
     <!-- Sticky Mojea Toolbar (Left Hamburger Dropdown + Search + Sort + Count) -->
     <div class="mojea-toolbar-wrap">
-        <div class="mojea-toolbar" style="display: flex; align-items: center; justify-content: space-between; gap: 1rem; flex-wrap: wrap;">
+        <div class="mojea-toolbar" style="display: flex; align-items: center; justify-content: space-between; gap: 1rem; flex-wrap: wrap; max-width: 1400px; margin: 0 auto; padding: 1rem 2rem;">
             
-            <!-- Left Hamburger Dropdown Container -->
-            <div style="position: relative; z-index: 100;">
+            <!-- Left Hamburger Dropdown Container (Dead-locked Far Left) -->
+            <div style="position: relative; z-index: 100; margin-right: auto; display: flex; align-items: center;">
                 <button type="button" id="leftHambBtn" onclick="toggleLeftDropdown(event)" style="background: #111111; color: #ffffff; border: none; padding: 0.65rem 1.3rem; border-radius: 30px; font-size: 0.82rem; font-weight: 600; cursor: pointer; display: flex; align-items: center; gap: 0.65rem; transition: all 0.3s ease; box-shadow: 0 4px 15px rgba(0,0,0,0.1);">
                     <i class="fa-solid fa-bars" style="color: #c8a96e; font-size: 0.95rem;"></i>
                     <span id="selectedCatLabel">KATEGORİLER</span>
                     <i class="fa-solid fa-chevron-down" style="font-size: 0.75rem; transition: transform 0.3s ease; margin-left: 0.2rem;" id="hambChevron"></i>
                 </button>
+
 
                 <!-- Clean Left Dropdown Menu (No Full Screen Backdrop) -->
                 <div id="leftCatDropdown" onclick="event.stopPropagation()" style="position: absolute; top: calc(100% + 8px); left: 0; background: #ffffff; border: 1px solid #e0e0e0; border-radius: 16px; box-shadow: 0 15px 35px rgba(0,0,0,0.12); width: 280px; padding: 0.6rem; display: none; flex-direction: column; gap: 0.3rem;">
