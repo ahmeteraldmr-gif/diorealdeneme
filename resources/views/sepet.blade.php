@@ -106,9 +106,10 @@
 
             <div class="cart-grid">
                 <!-- Cart Items List (Left Side) -->
-                <div class="cart-items-list reveal" style="transition-delay: 0.1s" id="cartItemsList">
+                <div class="cart-items-list reveal visible" style="transition-delay: 0.1s; opacity: 1; visibility: visible;" id="cartItemsList">
                     <!-- Items rendered dynamically via cart.js -->
                 </div>
+
 
                 <!-- Empty Cart Fallback -->
                 <div class="empty-cart-state" id="emptyCartState" style="display: none;">
@@ -258,7 +259,13 @@
     <script src="{{ asset('js/common.js') }}?v={{ time() }}"></script>
     <script src="{{ asset('js/nav.js') }}?v={{ time() }}"></script>
     <script src="{{ asset('js/cart.js') }}?v={{ time() }}"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            if (window.DiorealCart) window.DiorealCart.updateBadge();
+        });
+    </script>
 
 </body>
 </html>
+
 

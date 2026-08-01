@@ -429,12 +429,26 @@
     };
 
 
-    // Initialize on DOM Ready
-    document.addEventListener('DOMContentLoaded', function () {
+    function initCartApp() {
         updateBadge();
         renderCart();
         initPromoCode();
         initCheckout();
+    }
+
+    // Initialize on DOM Ready or immediately if already loaded
+    if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', initCartApp);
+    } else {
+        initCartApp();
+    }
+
+    window.addEventListener('pageshow', function() {
+        initCartApp();
+    });
+    window.addEventListener('focus', function() {
+        updateBadge();
     });
 })();
+
 
