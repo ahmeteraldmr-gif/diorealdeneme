@@ -52,9 +52,7 @@
     function getCart() {
         const stored = localStorage.getItem(CART_STORAGE_KEY);
         if (!stored) {
-            // First time initialization with sample data
-            localStorage.setItem(CART_STORAGE_KEY, JSON.stringify(DEFAULT_SAMPLE_ITEMS));
-            return DEFAULT_SAMPLE_ITEMS;
+            return [];
         }
         try {
             return JSON.parse(stored);
@@ -63,6 +61,7 @@
             return [];
         }
     }
+
 
     // Save Cart Items
     function saveCart(cart) {

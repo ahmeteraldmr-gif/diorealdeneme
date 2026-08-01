@@ -1070,6 +1070,17 @@
                             $pHoverImg = asset($hoverList[($index + 1) % count($hoverList)]);
                         }
                         $isFeatured = ($index === 1 || $index === 5 || $index === 8);
+
+                        $pItemData = [
+                            'id' => 'product-' . $p->id,
+                            'type' => $pTag,
+                            'name' => $pName,
+                            'price' => (float)$p->price,
+                            'image' => $pImg,
+                            'desc' => $pDesc,
+                            'details' => $pDetails
+                        ];
+                        $pItemJson = e(json_encode($pItemData, JSON_UNESCAPED_UNICODE));
                     @endphp
 
 
@@ -1093,27 +1104,12 @@
 
                             <!-- Slide-Up Hover Overlay Button Bar -->
                             <div class="mojea-slide-overlay">
-                                <button type="button" class="mojea-action-btn mojea-btn-white" onclick="openQuickView({
-                                    id: 'product-{{ $p->id }}',
-                                    name: '{{ addslashes($pName) }}',
-                                    tag: '{{ addslashes($pTag) }}',
-                                    price: {{ $p->price }},
-                                    image: '{{ $pImg }}',
-                                    desc: '{{ addslashes($pDesc) }}',
-                                    details: '{{ addslashes($pDetails) }}'
-                                })">
+                                <button type="button" class="mojea-action-btn mojea-btn-white" data-product="{{ $pItemJson }}" onclick="handleQuickViewBtn(this)">
                                     <i class="fa-regular fa-eye"></i>
                                     <span>Hızlı İncele</span>
                                 </button>
 
-                                <button type="button" class="mojea-action-btn mojea-btn-black" onclick="addToCart({
-                                    id: 'product-{{ $p->id }}',
-                                    type: '{{ addslashes($pTag) }}',
-                                    name: '{{ addslashes($pName) }}',
-                                    price: {{ $p->price }},
-                                    image: '{{ $pImg }}',
-                                    details: '{{ addslashes($pDetails) }}'
-                                })">
+                                <button type="button" class="mojea-action-btn mojea-btn-black" data-product="{{ $pItemJson }}" onclick="handleAddToCartBtn(this)">
                                     <i class="fa-solid fa-bag-shopping"></i>
                                     <span>Hızlı Ekle</span>
                                 </button>
@@ -1155,32 +1151,19 @@
                                     <span class="mojea-card-price-tag">₺{{ number_format($p->price, 0, ',', '.') }}</span>
                                 </div>
                                 
-                                <button type="button" class="mojea-add-circle" title="Sepete Ekle" onclick="addToCart({
-                                    id: 'product-{{ $p->id }}',
-                                    type: '{{ addslashes($pTag) }}',
-                                    name: '{{ addslashes($pName) }}',
-                                    price: {{ $p->price }},
-                                    image: '{{ $pImg }}',
-                                    details: '{{ addslashes($pDetails) }}'
-                                })">
+                                <button type="button" class="mojea-add-circle" title="Sepete Ekle" data-product="{{ $pItemJson }}" onclick="handleAddToCartBtn(this)">
                                     <i class="fa-solid fa-plus"></i>
                                 </button>
                             </div>
 
 
                             <!-- Mobile Mojea Outline SEPETE EKLE Button -->
-                            <button type="button" class="mojea-outline-cart-btn" onclick="addToCart({
-                                id: 'product-{{ $p->id }}',
-                                type: '{{ addslashes($pTag) }}',
-                                name: '{{ addslashes($pName) }}',
-                                price: {{ $p->price }},
-                                image: '{{ $pImg }}',
-                                details: '{{ addslashes($pDetails) }}'
-                            })">
+                            <button type="button" class="mojea-outline-cart-btn" data-product="{{ $pItemJson }}" onclick="handleAddToCartBtn(this)">
                                 <span data-i18n="prod_modal_add">SEPETE EKLE</span>
                             </button>
                         </div>
                     </div>
+
 
 
                 @endforeach
@@ -1431,6 +1414,32 @@
             }
         }
         window.addToCart = addToCart;
+
+        function handleAddToCartBtn(btn) {
+
+            try {
+                const itemData = btn.getAttribute('data-product');
+                if (itemData) {
+                    const item = JSON.parse(itemData);
+                    addToCart(item);
+                }
+            } catch(e) {
+                console.error('Error adding product to cart:', e);
+            }
+        }
+
+        function handleQuickViewBtn(btn) {
+            try {
+                const itemData = btn.getAttribute('data-product');
+                if (itemData) {
+                    const item = JSON.parse(itemData);
+                    openQuickView(item);
+                }
+            } catch(e) {
+                console.error('Error opening quick view:', e);
+            }
+        }
+
 
 
         function openQuickView(item) {
