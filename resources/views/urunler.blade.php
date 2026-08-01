@@ -1071,16 +1071,13 @@
                         }
                         $isFeatured = ($index === 1 || $index === 5 || $index === 8);
 
-                        $pItemData = [
-                            'id' => 'product-' . $p->id,
-                            'type' => $pTag,
-                            'name' => $pName,
-                            'price' => (float)$p->price,
-                            'image' => $pImg,
-                            'desc' => $pDesc,
-                            'details' => $pDetails
-                        ];
-                        $pItemJson = e(json_encode($pItemData, JSON_UNESCAPED_UNICODE));
+                        $jsId = 'product-' . $p->id;
+                        $jsName = addslashes($pName);
+                        $jsTag = addslashes($pTag);
+                        $jsImg = addslashes($pImg);
+                        $jsDesc = addslashes($pDesc);
+                        $jsDetails = addslashes($pDetails);
+                        $jsPrice = (float)$p->price;
                     @endphp
 
 
@@ -1104,12 +1101,12 @@
 
                             <!-- Slide-Up Hover Overlay Button Bar -->
                             <div class="mojea-slide-overlay">
-                                <button type="button" class="mojea-action-btn mojea-btn-white" data-product="{{ $pItemJson }}" onclick="handleQuickViewBtn(this)">
+                                <button type="button" class="mojea-action-btn mojea-btn-white" onclick="openQuickView({ id: '{{ $jsId }}', name: '{{ $jsName }}', tag: '{{ $jsTag }}', price: {{ $jsPrice }}, image: '{{ $jsImg }}', desc: '{{ $jsDesc }}', details: '{{ $jsDetails }}' })">
                                     <i class="fa-regular fa-eye"></i>
                                     <span>Hızlı İncele</span>
                                 </button>
 
-                                <button type="button" class="mojea-action-btn mojea-btn-black" data-product="{{ $pItemJson }}" onclick="handleAddToCartBtn(this)">
+                                <button type="button" class="mojea-action-btn mojea-btn-black" onclick="addToCartSimple('{{ $jsId }}', '{{ $jsName }}', {{ $jsPrice }}, '{{ $jsImg }}', '{{ $jsTag }}', '{{ $jsDetails }}')">
                                     <i class="fa-solid fa-bag-shopping"></i>
                                     <span>Hızlı Ekle</span>
                                 </button>
@@ -1151,18 +1148,19 @@
                                     <span class="mojea-card-price-tag">₺{{ number_format($p->price, 0, ',', '.') }}</span>
                                 </div>
                                 
-                                <button type="button" class="mojea-add-circle" title="Sepete Ekle" data-product="{{ $pItemJson }}" onclick="handleAddToCartBtn(this)">
+                                <button type="button" class="mojea-add-circle" title="Sepete Ekle" onclick="addToCartSimple('{{ $jsId }}', '{{ $jsName }}', {{ $jsPrice }}, '{{ $jsImg }}', '{{ $jsTag }}', '{{ $jsDetails }}')">
                                     <i class="fa-solid fa-plus"></i>
                                 </button>
                             </div>
 
 
                             <!-- Mobile Mojea Outline SEPETE EKLE Button -->
-                            <button type="button" class="mojea-outline-cart-btn" data-product="{{ $pItemJson }}" onclick="handleAddToCartBtn(this)">
+                            <button type="button" class="mojea-outline-cart-btn" onclick="addToCartSimple('{{ $jsId }}', '{{ $jsName }}', {{ $jsPrice }}, '{{ $jsImg }}', '{{ $jsTag }}', '{{ $jsDetails }}')">
                                 <span data-i18n="prod_modal_add">SEPETE EKLE</span>
                             </button>
                         </div>
                     </div>
+
 
 
 
@@ -1394,7 +1392,46 @@
         }
         window.showToast = showToast;
 
+        function addToCartSimple(id, name, price, image, type, details) {
+            const item = {
+                id: id,
+                name: name,
+                price: parseFloat(price) || 0,
+                image: image,
+                type: type || 'Lüks Paket',
+                details: details || 'Özel Rezervasyon & VIP Hizmet',
+                quantity: 1
+            };
+
+            let cart = [];
+            try {
+                const stored = localStorage.getItem('dioreal_cart_items');
+                if (stored) cart = JSON.parse(stored);
+            } catch(e) {}
+
+            const existingIndex = cart.findIndex(i => i.id === item.id);
+            if (existingIndex > -1) {
+                cart[existingIndex].quantity = (cart[existingIndex].quantity || 1) + 1;
+            } else {
+                cart.push(item);
+            }
+
+            localStorage.setItem('dioreal_cart_items', JSON.stringify(cart));
+
+            // Update badge counters immediately
+            const totalCount = cart.reduce((sum, i) => sum + (i.quantity || 1), 0);
+            document.querySelectorAll('.cart-badge').forEach(badge => {
+                badge.textContent = totalCount;
+                badge.style.display = 'flex';
+            });
+
+            // Show toast notification
+            showToast(name + ' sepetinize eklendi!');
+        }
+        window.addToCartSimple = addToCartSimple;
+
         function addToCart(item) {
+
             if (window.DiorealCart) {
                 window.DiorealCart.addItem(item);
                 showToast(item.name + ' sepetinize eklendi!');
