@@ -104,15 +104,62 @@
                 <h1 class="cart-title" data-i18n="cart_title">Sepetiniz</h1>
             </div>
 
+            @php
+                $hasItems = !empty($cart) && count($cart) > 0;
+                $serverSubtotal = 0;
+                if ($hasItems) {
+                    foreach ($cart as $cItem) {
+                        $serverSubtotal += ((float)($cItem['price'] ?? 0)) * ((int)($cItem['quantity'] ?? 1));
+                    }
+                }
+                $serverServiceFee = $serverSubtotal > 0 ? $serverSubtotal * 0.08 : 0;
+                $serverGrandTotal = $serverSubtotal + $serverServiceFee;
+            @endphp
+
             <div class="cart-grid">
                 <!-- Cart Items List (Left Side) -->
-                <div class="cart-items-list reveal visible" style="transition-delay: 0.1s; opacity: 1; visibility: visible;" id="cartItemsList">
-                    <!-- Items rendered dynamically via cart.js -->
+                <div class="cart-items-list reveal visible" style="transition-delay: 0.1s; opacity: 1; visibility: visible; {{ !$hasItems ? 'display: none;' : 'display: flex;' }}" id="cartItemsList">
+                    @if($hasItems)
+                        @foreach($cart as $item)
+                            @php
+                                $pPrice = (float)($item['price'] ?? 0);
+                                $pQty = (int)($item['quantity'] ?? 1);
+                                $pSubtotal = $pPrice * $pQty;
+                            @endphp
+                            <div class="cart-item">
+                                <div class="cart-item-left-block">
+                                    <div class="cart-item-img-wrap">
+                                        <img src="{{ asset($item['image'] ?? 'foto.img/hero_4k.jpg') }}" alt="{{ $item['name'] ?? '' }}" class="cart-item-img">
+                                    </div>
+                                    <div class="cart-item-details">
+                                        <span class="cart-item-tag">{{ $item['type'] ?? 'Lüks Koleksiyon' }}</span>
+                                        <a href="#" class="cart-item-name">{{ $item['name'] ?? '' }}</a>
+                                        <span class="cart-item-price-unit">{{ $item['details'] ?? '' }} • ₺{{ number_format($pPrice, 0, ',', '.') }}</span>
+                                    </div>
+                                </div>
+
+                                <div class="cart-item-right-block">
+                                    <div class="quantity-control">
+                                        <button type="button" class="qty-btn btn-minus" data-id="{{ $item['id'] }}">-</button>
+                                        <span class="qty-val">{{ $pQty }}</span>
+                                        <button type="button" class="qty-btn btn-plus" data-id="{{ $item['id'] }}">+</button>
+                                    </div>
+
+                                    <div class="cart-item-subtotal">₺{{ number_format($pSubtotal, 0, ',', '.') }}</div>
+
+                                    <button type="button" class="remove-btn" data-id="{{ $item['id'] }}" title="Ürünü Kaldır">
+                                        <i class="fa-regular fa-trash-can" style="font-size: 1rem;"></i>
+                                        <span>Sil</span>
+                                    </button>
+                                </div>
+                            </div>
+                        @endforeach
+                    @endif
                 </div>
 
 
                 <!-- Empty Cart Fallback -->
-                <div class="empty-cart-state" id="emptyCartState" style="display: none;">
+                <div class="empty-cart-state" id="emptyCartState" style="{{ $hasItems ? 'display: none;' : 'display: block;' }}">
                     <div class="empty-icon">
                         <i class="fa-solid fa-bag-shopping"></i>
                     </div>
@@ -125,13 +172,13 @@
                 </div>
 
                 <!-- Summary Box (Right Side) -->
-                <div class="order-summary-card reveal" style="transition-delay: 0.2s" id="summaryCard">
+                <div class="order-summary-card reveal" style="transition-delay: 0.2s; {{ !$hasItems ? 'display: none;' : 'display: block;' }}" id="summaryCard">
 
                     <h3 class="summary-title" data-i18n="cart_title">Rezervasyon Özeti</h3>
                     
                     <div class="summary-row">
                         <span>Seçilen Deneyimler</span>
-                        <span id="cartSubtotal">₺0</span>
+                        <span id="cartSubtotal">₺{{ number_format($serverSubtotal, 0, ',', '.') }}</span>
                     </div>
 
                     <div class="summary-row" id="discountRow" style="display: none; color: #4caf50;">
@@ -141,7 +188,7 @@
 
                     <div class="summary-row">
                         <span>Hizmet & KDV Bedeli (%8)</span>
-                        <span id="cartServiceFee">₺0</span>
+                        <span id="cartServiceFee">₺{{ number_format($serverServiceFee, 0, ',', '.') }}</span>
                     </div>
 
                     <div class="promo-box">
@@ -152,13 +199,14 @@
 
                     <div class="summary-row total">
                         <span data-i18n="cart_total">Toplam Tutar</span>
-                        <span class="summary-total-price" id="cartGrandTotal">₺0</span>
+                        <span class="summary-total-price" id="cartGrandTotal">₺{{ number_format($serverGrandTotal, 0, ',', '.') }}</span>
                     </div>
 
                     <button type="button" id="checkoutBtn" class="checkout-btn" style="background: #111111; color: #ffffff; border: none; display: flex; align-items: center; justify-content: center; gap: 0.75rem; transition: all 0.3s ease; padding: 1.1rem; border-radius: 40px; font-weight: 600; width: 100%; cursor: pointer;">
                         <i class="fa-solid fa-credit-card" style="font-size: 1.2rem; color: #c8a96e;"></i>
                         <span>Kredi Kartı ile Güvenli Öde</span>
                     </button>
+
 
                     <!-- E-Commerce Payment Security Badges -->
                     <div style="display: flex; align-items: center; justify-content: center; gap: 1rem; margin-top: 1.2rem; opacity: 0.85;">
