@@ -295,20 +295,16 @@
                     promoMsg.style.color = '#ff5252';
                     promoMsg.textContent = 'Geçersiz promosyon kodu.';
                 }
-      // Checkout Button Handler - Direct E-Commerce Credit Card Integration
+            }
+        });
+    }
+
+    // Checkout Button Handler - Direct E-Commerce Credit Card Integration
     function initCheckout() {
         const checkoutBtn = document.getElementById('checkoutBtn');
         if (!checkoutBtn) return;
 
         checkoutBtn.addEventListener('click', function () {
-            const cart = getCart();
-            if (!cart || cart.length === 0) {
-                const isEn = (document.documentElement.lang === 'en');
-                alert(isEn ? 'Your cart is empty!' : 'Sepetiniz henüz boş!');
-                return;
-            }
-
-            // Open Credit Card Payment Modal
             openCreditCardModal();
         });
     }
@@ -319,10 +315,20 @@
             modal.classList.add('active');
             // Update total in modal
             const cart = getCart();
-            const rawSubtotal = cart.reduce((sum, item) => sum + (item.price * item.quantity), 0);
-            const discountAmount = rawSubtotal * (appliedDiscountPercent / 100);
-            const serviceFee = rawSubtotal * 0.08;
-            const grandTotal = rawSubtotal - discountAmount + serviceFee;
+            let grandTotal = 0;
+            if (cart && cart.length > 0) {
+                const rawSubtotal = cart.reduce((sum, item) => sum + ((typeof item.price === 'number' ? item.price : (parseFloat(String(item.price).replace(/[^0-9.]/g, '')) || 0)) * (parseInt(item.quantity) || 1)), 0);
+                const discountAmount = rawSubtotal * (appliedDiscountPercent / 100);
+                const serviceFee = rawSubtotal * 0.08;
+                grandTotal = rawSubtotal - discountAmount + serviceFee;
+            } else {
+                const grandTotalEl = document.getElementById('cartGrandTotal');
+                if (grandTotalEl) {
+                    const text = grandTotalEl.textContent;
+                    const num = parseFloat(text.replace(/[^0-9.]/g, '')) || 0;
+                    grandTotal = num;
+                }
+            }
 
             const modalTotalEl = document.getElementById('modalPayAmount');
             if (modalTotalEl) {
@@ -330,6 +336,8 @@
             }
         }
     }
+    window.openCreditCardModal = openCreditCardModal;
+
 
     window.closeCreditCardModal = function() {
         const modal = document.getElementById('creditCardModal');

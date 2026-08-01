@@ -202,10 +202,11 @@
                         <span class="summary-total-price" id="cartGrandTotal">₺{{ number_format($serverGrandTotal, 0, ',', '.') }}</span>
                     </div>
 
-                    <button type="button" id="checkoutBtn" class="checkout-btn" style="background: #111111; color: #ffffff; border: none; display: flex; align-items: center; justify-content: center; gap: 0.75rem; transition: all 0.3s ease; padding: 1.1rem; border-radius: 40px; font-weight: 600; width: 100%; cursor: pointer;">
+                    <button type="button" id="checkoutBtn" onclick="openCreditCardModal()" class="checkout-btn" style="background: #111111; color: #ffffff; border: none; display: flex; align-items: center; justify-content: center; gap: 0.75rem; transition: all 0.3s ease; padding: 1.1rem; border-radius: 40px; font-weight: 600; width: 100%; cursor: pointer;">
                         <i class="fa-solid fa-credit-card" style="font-size: 1.2rem; color: #c8a96e;"></i>
                         <span>Kredi Kartı ile Güvenli Öde</span>
                     </button>
+
 
 
                     <!-- E-Commerce Payment Security Badges -->
