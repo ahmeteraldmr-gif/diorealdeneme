@@ -927,14 +927,14 @@
 
 
     <!-- 🔄 5-SECOND AUTO-ROTATING LUXURY PRODUCT SHOWCASE CAROUSEL (LARGE HERO SLIDER) -->
-    <section style="max-width: 1400px; margin: 0 auto 3.5rem; padding: 0 2rem;">
+    <section class="ecom-showcase-section">
         <div id="autoShowcaseSlider" style="position: relative; height: 420px; border-radius: 24px; overflow: hidden; box-shadow: 0 20px 45px rgba(0,0,0,0.14);">
             
             <!-- Slide 1 -->
             <div class="showcase-slide" style="position: absolute; inset: 0; opacity: 1; transition: opacity 0.8s ease-in-out; background-image: url('{{ asset('foto.img/hero_4k.jpg') }}'); background-size: cover; background-position: center;">
-                <div style="position: absolute; inset: 0; background: linear-gradient(90deg, rgba(0,0,0,0.82) 0%, rgba(0,0,0,0.35) 55%, rgba(0,0,0,0.1) 100%); display: flex; flex-direction: column; justify-content: center; padding: 4rem 5rem; color: #fff;">
+                <div class="showcase-slide-inner">
                     <span style="font-size: 0.85rem; letter-spacing: 0.25em; color: #c8a96e; font-weight: 700; text-transform: uppercase; margin-bottom: 0.6rem;">PORSELEN & ÇATAL BIÇAK KOLEKSİYONU</span>
-                    <h2 style="font-family: var(--font-display, serif); font-size: clamp(2rem, 3.5vw, 3.2rem); font-weight: 400; margin-bottom: 0.8rem; line-height: 1.2;">Royal Altın İşlemeli Yemek Takımları</h2>
+                    <h2 style="font-family: var(--font-display, serif); font-size: clamp(1.8rem, 3.5vw, 3.2rem); font-weight: 400; margin-bottom: 0.8rem; line-height: 1.2;">Royal Altın İşlemeli Yemek Takımları</h2>
                     <p style="font-size: 1.1rem; opacity: 0.9; max-width: 600px; margin-bottom: 2rem; line-height: 1.6;">24 Parça Fine Bone China Porselen, Kristal Şarap Kadehleri ve Saf İpek Kırlent Koleksiyonu</p>
                     <div>
                         <button type="button" onclick="selectCategory('cat-1', 'Mutfak & Yemek Takımları', document.querySelector('.left-dropdown-item'))" style="background: #c8a96e; color: #111; border: none; padding: 0.9rem 2.2rem; border-radius: 40px; font-weight: 600; font-size: 0.9rem; cursor: pointer; text-transform: uppercase; letter-spacing: 0.1em; transition: all 0.3s ease; box-shadow: 0 8px 25px rgba(200, 169, 110, 0.4);">
@@ -946,9 +946,9 @@
 
             <!-- Slide 2 -->
             <div class="showcase-slide" style="position: absolute; inset: 0; opacity: 0; transition: opacity 0.8s ease-in-out; background-image: url('{{ asset('foto.img/otel_hero.jpg') }}'); background-size: cover; background-position: center;">
-                <div style="position: absolute; inset: 0; background: linear-gradient(90deg, rgba(0,0,0,0.82) 0%, rgba(0,0,0,0.35) 55%, rgba(0,0,0,0.1) 100%); display: flex; flex-direction: column; justify-content: center; padding: 4rem 5rem; color: #fff;">
+                <div class="showcase-slide-inner">
                     <span style="font-size: 0.85rem; letter-spacing: 0.25em; color: #c8a96e; font-weight: 700; text-transform: uppercase; margin-bottom: 0.6rem;">EV & LÜKS DEKORASYON</span>
-                    <h2 style="font-family: var(--font-display, serif); font-size: clamp(2rem, 3.5vw, 3.2rem); font-weight: 400; margin-bottom: 0.8rem; line-height: 1.2;">Baccarat Kristal Kadehler & Murano Vazo</h2>
+                    <h2 style="font-family: var(--font-display, serif); font-size: clamp(1.8rem, 3.5vw, 3.2rem); font-weight: 400; margin-bottom: 0.8rem; line-height: 1.2;">Baccarat Kristal Kadehler & Murano Vazo</h2>
                     <p style="font-size: 1.1rem; opacity: 0.9; max-width: 600px; margin-bottom: 2rem; line-height: 1.6;">Özel El Üfleme Cam Sanatı Eserleri ve Hermès İpek Dokuma Aksesuarlar</p>
                     <div>
                         <button type="button" onclick="selectCategory('cat-2', 'Ev & Lüks Dekorasyon', document.querySelector('.left-dropdown-item'))" style="background: #ffffff; color: #111; border: none; padding: 0.9rem 2.2rem; border-radius: 40px; font-weight: 600; font-size: 0.9rem; cursor: pointer; text-transform: uppercase; letter-spacing: 0.1em; transition: all 0.3s ease; box-shadow: 0 8px 25px rgba(255, 255, 255, 0.3);">
@@ -960,9 +960,9 @@
 
             <!-- Slide 3 -->
             <div class="showcase-slide" style="position: absolute; inset: 0; opacity: 0; transition: opacity 0.8s ease-in-out; background-image: url('{{ asset('foto.img/bodrum.jpg') }}'); background-size: cover; background-position: center;">
-                <div style="position: absolute; inset: 0; background: linear-gradient(90deg, rgba(0,0,0,0.82) 0%, rgba(0,0,0,0.35) 55%, rgba(0,0,0,0.1) 100%); display: flex; flex-direction: column; justify-content: center; padding: 4rem 5rem; color: #fff;">
+                <div class="showcase-slide-inner">
                     <span style="font-size: 0.85rem; letter-spacing: 0.25em; color: #c8a96e; font-weight: 700; text-transform: uppercase; margin-bottom: 0.6rem;">VIP SEYAHAT & KONAKLAMA</span>
-                    <h2 style="font-family: var(--font-display, serif); font-size: clamp(2rem, 3.5vw, 3.2rem); font-weight: 400; margin-bottom: 0.8rem; line-height: 1.2;">Bodrum Sunset Villa & Kapadokya Turu</h2>
+                    <h2 style="font-family: var(--font-display, serif); font-size: clamp(1.8rem, 3.5vw, 3.2rem); font-weight: 400; margin-bottom: 0.8rem; line-height: 1.2;">Bodrum Sunset Villa & Kapadokya Turu</h2>
                     <p style="font-size: 1.1rem; opacity: 0.9; max-width: 600px; margin-bottom: 2rem; line-height: 1.6;">Özel Havuzlu Lüks Villa Tatili, Mavi Yolculuk ve VIP Havalimanı Karşılama</p>
                     <div>
                         <button type="button" onclick="selectCategory('cat-3', 'Konaklama Paketleri', document.querySelector('.left-dropdown-item'))" style="background: #c8a96e; color: #111; border: none; padding: 0.9rem 2.2rem; border-radius: 40px; font-weight: 600; font-size: 0.9rem; cursor: pointer; text-transform: uppercase; letter-spacing: 0.1em; transition: all 0.3s ease; box-shadow: 0 8px 25px rgba(200, 169, 110, 0.4);">
@@ -986,10 +986,11 @@
 
 
     <!-- 🛍️ E-COMMERCE TWO-COLUMN LAYOUT (ADMIN-STYLE LEFT SIDEBAR + MAIN CATALOG GRID) -->
-    <div style="max-width: 1450px; margin: 0 auto; padding: 1rem 2rem 6rem; display: grid; grid-template-columns: 280px 1fr; gap: 2.5rem; align-items: start;">
+    <div class="ecom-two-col-layout">
 
         <!-- 📌 ADMIN-STYLE LEFT SIDEBAR CARD (Sticky gliding on scroll, does NOT overlap header or hero slider) -->
-        <aside style="position: sticky; top: 95px; z-index: 80; background: #ffffff; border: 1px solid #e0e0e0; border-radius: 20px; box-shadow: 0 10px 30px rgba(0,0,0,0.05); overflow: hidden;">
+        <aside class="ecom-sidebar-aside">
+
             
             <!-- Sidebar Header Bar -->
             <div style="background: #111111; color: #ffffff; padding: 1rem 1.2rem; display: flex; align-items: center; justify-content: space-between;">
