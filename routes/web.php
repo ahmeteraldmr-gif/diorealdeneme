@@ -60,6 +60,11 @@ Route::get('/sepet.html', function() {
     return redirect()->route('sepet', [], 301);
 });
 
+Route::post('/cart/add', [PageController::class, 'cartAdd'])->name('cart.add');
+Route::post('/cart/remove', [PageController::class, 'cartRemove'])->name('cart.remove');
+Route::post('/cart/update', [PageController::class, 'cartUpdate'])->name('cart.update');
+
+
 Route::get('/urunler', [PageController::class, 'urunler'])->name('urunler');
 Route::get('/urunler.html', function() {
     return redirect()->route('urunler', [], 301);

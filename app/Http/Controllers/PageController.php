@@ -292,7 +292,87 @@ class PageController extends Controller
         $hreflang_tr = route('sepet', ['lang' => 'tr']);
         $hreflang_en = route('sepet', ['lang' => 'en']);
 
-        return view("sepet", compact("seo", "canonical", "hreflang_tr", "hreflang_en"));
+        $cart = session()->get('cart_items', []);
+
+        return view("sepet", compact("seo", "canonical", "hreflang_tr", "hreflang_en", "cart"));
+    }
+
+    public function cartAdd(Request $request)
+    {
+        $id = $request->input('id');
+        $name = $request->input('name');
+        $price = (float)$request->input('price');
+        $image = $request->input('image');
+        $type = $request->input('type', 'Lüks Paket');
+        $details = $request->input('details', '');
+
+        $cart = session()->get('cart_items', []);
+
+        if (isset($cart[$id])) {
+            $cart[$id]['quantity'] = (int)($cart[$id]['quantity'] ?? 1) + 1;
+        } else {
+            $cart[$id] = [
+                'id' => $id,
+                'name' => $name,
+                'price' => $price,
+                'image' => $image,
+                'type' => $type,
+                'details' => $details,
+                'quantity' => 1
+            ];
+        }
+
+        session()->put('cart_items', $cart);
+
+        $totalCount = array_sum(array_column($cart, 'quantity'));
+
+        return response()->json([
+            'success' => true,
+            'cart' => array_values($cart),
+            'total_count' => $totalCount
+        ]);
+    }
+
+    public function cartRemove(Request $request)
+    {
+        $id = $request->input('id');
+        $cart = session()->get('cart_items', []);
+
+        if (isset($cart[$id])) {
+            unset($cart[$id]);
+        }
+
+        session()->put('cart_items', $cart);
+
+        return response()->json([
+            'success' => true,
+            'cart' => array_values($cart),
+            'total_count' => array_sum(array_column($cart, 'quantity'))
+        ]);
+    }
+
+    public function cartUpdate(Request $request)
+    {
+        $id = $request->input('id');
+        $delta = (int)$request->input('delta', 0);
+        $cart = session()->get('cart_items', []);
+
+        if (isset($cart[$id])) {
+            $newQty = (int)$cart[$id]['quantity'] + $delta;
+            if ($newQty <= 0) {
+                unset($cart[$id]);
+            } else {
+                $cart[$id]['quantity'] = $newQty;
+            }
+        }
+
+        session()->put('cart_items', $cart);
+
+        return response()->json([
+            'success' => true,
+            'cart' => array_values($cart),
+            'total_count' => array_sum(array_column($cart, 'quantity'))
+        ]);
     }
 
     public function urunler()
@@ -309,6 +389,7 @@ class PageController extends Controller
 
         return view("urunler", compact("seo", "canonical", "hreflang_tr", "hreflang_en", "categories", "products", "locale"));
     }
+
 
 
 }

@@ -1430,9 +1430,25 @@
                 });
             }
 
+            // Sync with Laravel session backend
+            try {
+                const csrfToken = document.querySelector('meta[name="csrf-token"]')?.getAttribute('content');
+                if (csrfToken) {
+                    fetch('{{ route("cart.add") }}', {
+                        method: 'POST',
+                        headers: {
+                            'Content-Type': 'application/json',
+                            'X-CSRF-TOKEN': csrfToken
+                        },
+                        body: JSON.stringify(item)
+                    }).catch(e => console.error(e));
+                }
+            } catch(e) {}
+
             showToast(name + ' sepetinize eklendi!');
         }
         window.addToCartSimple = addToCartSimple;
+
 
 
         function addToCart(item) {

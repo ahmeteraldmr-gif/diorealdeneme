@@ -260,6 +260,16 @@
     <script src="{{ asset('js/nav.js') }}?v={{ time() }}"></script>
     <script src="{{ asset('js/cart.js') }}?v={{ time() }}"></script>
     <script>
+        const SERVER_CART = @json(array_values($cart ?? []));
+        if (SERVER_CART && SERVER_CART.length > 0) {
+            try {
+                let localCart = [];
+                try { localCart = JSON.parse(localStorage.getItem('dioreal_cart_items') || '[]'); } catch(e) {}
+                if (!Array.isArray(localCart) || localCart.length === 0) {
+                    localStorage.setItem('dioreal_cart_items', JSON.stringify(SERVER_CART));
+                }
+            } catch(e) {}
+        }
         if (typeof window.renderCart === 'function') {
             window.renderCart();
         }
@@ -267,6 +277,7 @@
             window.DiorealCart.updateBadge();
         }
     </script>
+
 
 
 </body>
