@@ -63,20 +63,26 @@
         document.cookie = `${name}=${encodeURIComponent(value)}; expires=${d.toUTCString()}; path=/; SameSite=Lax`;
     }
 
-    // Get Cart Items (LocalStorage + Cookie Dual Persistence)
+    // Get Cart Items (LocalStorage + Cookie Dual Persistence + Double-Parse Safe)
     function getCart() {
         let stored = null;
         try {
             stored = localStorage.getItem(CART_STORAGE_KEY);
         } catch(e) {}
 
-        if (!stored || stored === '[]') {
-            stored = getCookie(CART_STORAGE_KEY);
+        if (!stored || stored === '[]' || stored === 'null') {
+            try {
+                stored = getCookie(CART_STORAGE_KEY);
+            } catch(e) {}
         }
 
-        if (!stored) return [];
+        if (!stored || stored === '[]' || stored === 'null') return [];
+
         try {
-            const parsed = JSON.parse(stored);
+            let parsed = JSON.parse(stored);
+            if (typeof parsed === 'string') {
+                try { parsed = JSON.parse(parsed); } catch(e) {}
+            }
             if (Array.isArray(parsed)) return parsed;
             return [];
         } catch (e) {
@@ -208,6 +214,8 @@
 
         attachItemEvents();
     }
+
+    window.renderCart = renderCart;
 
     // Attach Event Listeners to cart buttons
     function attachItemEvents() {

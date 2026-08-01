@@ -260,10 +260,14 @@
     <script src="{{ asset('js/nav.js') }}?v={{ time() }}"></script>
     <script src="{{ asset('js/cart.js') }}?v={{ time() }}"></script>
     <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            if (window.DiorealCart) window.DiorealCart.updateBadge();
-        });
+        if (typeof window.renderCart === 'function') {
+            window.renderCart();
+        }
+        if (window.DiorealCart && typeof window.DiorealCart.updateBadge === 'function') {
+            window.DiorealCart.updateBadge();
+        }
     </script>
+
 
 </body>
 </html>
