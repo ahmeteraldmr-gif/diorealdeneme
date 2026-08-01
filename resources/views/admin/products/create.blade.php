@@ -76,15 +76,28 @@
 
             <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; margin-top: 1rem;">
                 <div class="form-group">
-                    <label class="form-label">Ürün Görseli Yükle</label>
+                    <label class="form-label">1. Ürün Ana Görseli Yükle</label>
                     <input type="file" name="image_file" class="form-control" accept="image/*">
                 </div>
 
                 <div class="form-group">
-                    <label class="form-label">Veya Görsel URL / Yolu</label>
+                    <label class="form-label">Veya 1. Görsel URL / Yolu</label>
                     <input type="text" name="image_url" class="form-control" placeholder="foto.img/hero_4k.jpg">
                 </div>
             </div>
+
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; margin-top: 1rem;">
+                <div class="form-group">
+                    <label class="form-label">2. Görsel (Hover / İkinci Görsel) Yükle</label>
+                    <input type="file" name="image_hover_file" class="form-control" accept="image/*">
+                </div>
+
+                <div class="form-group">
+                    <label class="form-label">Veya 2. Görsel URL / Yolu</label>
+                    <input type="text" name="image_hover_url" class="form-control" placeholder="foto.img/hero_slide_2.jpg">
+                </div>
+            </div>
+
 
             <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; margin-top: 1rem;">
                 <div class="form-group">

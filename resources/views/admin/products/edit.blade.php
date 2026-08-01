@@ -79,15 +79,28 @@
 
             <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; margin-top: 1rem;">
                 <div class="form-group">
-                    <label class="form-label">Yeni Görsel Yükle (Mevcut: {{ $product->image }})</label>
+                    <label class="form-label">1. Ana Görsel Yükle (Mevcut: {{ $product->image }})</label>
                     <input type="file" name="image_file" class="form-control" accept="image/*">
                 </div>
 
                 <div class="form-group">
-                    <label class="form-label">Veya Görsel URL / Yolu</label>
+                    <label class="form-label">Veya 1. Görsel URL / Yolu</label>
                     <input type="text" name="image_url" class="form-control" value="{{ $product->image }}">
                 </div>
             </div>
+
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; margin-top: 1rem;">
+                <div class="form-group">
+                    <label class="form-label">2. Görsel (Hover / İkinci Görsel) Yükle {{ $product->image_hover ? '(Mevcut: ' . $product->image_hover . ')' : '' }}</label>
+                    <input type="file" name="image_hover_file" class="form-control" accept="image/*">
+                </div>
+
+                <div class="form-group">
+                    <label class="form-label">Veya 2. Görsel URL / Yolu</label>
+                    <input type="text" name="image_hover_url" class="form-control" value="{{ $product->image_hover }}">
+                </div>
+            </div>
+
 
             <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; margin-top: 1rem;">
                 <div class="form-group">

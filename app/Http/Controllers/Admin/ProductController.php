@@ -48,6 +48,8 @@ class ProductController extends Controller
             'price' => 'required|numeric|min:0',
             'image_file' => 'nullable|file|mimes:jpeg,jpg,png,gif,webp,avif,svg|max:20480',
             'image_url' => 'nullable|string',
+            'image_hover_file' => 'nullable|file|mimes:jpeg,jpg,png,gif,webp,avif,svg|max:20480',
+            'image_hover_url' => 'nullable|string',
             'order' => 'nullable|integer',
             'is_active' => 'nullable|boolean',
         ]);
@@ -55,6 +57,11 @@ class ProductController extends Controller
         $imagePath = $request->input('image_url', 'foto.img/hero_4k.jpg');
         if ($request->hasFile('image_file')) {
             $imagePath = $this->handleFileUpload($request->file('image_file'));
+        }
+
+        $imageHoverPath = $request->input('image_hover_url');
+        if ($request->hasFile('image_hover_file')) {
+            $imageHoverPath = $this->handleFileUpload($request->file('image_hover_file'));
         }
 
         Product::create([
@@ -65,6 +72,7 @@ class ProductController extends Controller
             'desc' => $request->input('desc'),
             'price' => $request->input('price', 0),
             'image' => $imagePath,
+            'image_hover' => $imageHoverPath,
             'order' => $request->input('order', 0),
             'is_active' => $request->has('is_active'),
         ]);
@@ -93,6 +101,8 @@ class ProductController extends Controller
             'price' => 'required|numeric|min:0',
             'image_file' => 'nullable|file|mimes:jpeg,jpg,png,gif,webp,avif,svg|max:20480',
             'image_url' => 'nullable|string',
+            'image_hover_file' => 'nullable|file|mimes:jpeg,jpg,png,gif,webp,avif,svg|max:20480',
+            'image_hover_url' => 'nullable|string',
             'order' => 'nullable|integer',
             'is_active' => 'nullable|boolean',
         ]);
@@ -104,6 +114,13 @@ class ProductController extends Controller
             $imagePath = $request->input('image_url');
         }
 
+        $imageHoverPath = $product->image_hover;
+        if ($request->hasFile('image_hover_file')) {
+            $imageHoverPath = $this->handleFileUpload($request->file('image_hover_file'));
+        } elseif ($request->filled('image_hover_url')) {
+            $imageHoverPath = $request->input('image_hover_url');
+        }
+
         $product->update([
             'category_id' => $request->input('category_id'),
             'name' => $request->input('name'),
@@ -112,6 +129,7 @@ class ProductController extends Controller
             'desc' => $request->input('desc'),
             'price' => $request->input('price', 0),
             'image' => $imagePath,
+            'image_hover' => $imageHoverPath,
             'order' => $request->input('order', 0),
             'is_active' => $request->has('is_active'),
         ]);

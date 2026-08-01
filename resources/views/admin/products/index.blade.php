@@ -34,8 +34,14 @@
                     @forelse($products as $p)
                         <tr>
                             <td>
-                                <img src="{{ asset($p->image) }}" alt="" style="width: 60px; height: 50px; object-fit: cover; border-radius: 6px; border: 1px solid rgba(0,0,0,0.1);">
+                                <div style="display: flex; gap: 4px;">
+                                    <img src="{{ asset($p->image) }}" alt="1. Ana Görsel" title="1. Ana Görsel" style="width: 45px; height: 45px; object-fit: cover; border-radius: 6px; border: 1px solid rgba(0,0,0,0.1);" onerror="this.src='{{ asset('foto.img/hero_4k.jpg') }}'">
+                                    @if($p->image_hover)
+                                        <img src="{{ asset($p->image_hover) }}" alt="2. Hover Görseli" title="2. Hover Görseli" style="width: 45px; height: 45px; object-fit: cover; border-radius: 6px; border: 1px solid rgba(0,0,0,0.1);" onerror="this.src='{{ asset('foto.img/hero_slide_2.jpg') }}'">
+                                    @endif
+                                </div>
                             </td>
+
                             <td>
                                 <div><strong>TR:</strong> {{ $p->name['tr'] ?? '' }}</div>
                                 <div style="color: var(--text-muted);"><strong>EN:</strong> {{ $p->name['en'] ?? '' }}</div>
