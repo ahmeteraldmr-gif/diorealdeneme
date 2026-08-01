@@ -48,24 +48,52 @@
         }).format(amount);
     }
 
-    // Get Cart Items
+    // Helper to get Cookie by name
+    function getCookie(name) {
+        const value = `; ${document.cookie}`;
+        const parts = value.split(`; ${name}=`);
+        if (parts.length === 2) return decodeURIComponent(parts.pop().split(';').shift());
+        return null;
+    }
+
+    // Helper to set Cookie
+    function setCookie(name, value, days = 30) {
+        const d = new Date();
+        d.setTime(d.getTime() + (days * 24 * 60 * 60 * 1000));
+        document.cookie = `${name}=${encodeURIComponent(value)}; expires=${d.toUTCString()}; path=/; SameSite=Lax`;
+    }
+
+    // Get Cart Items (LocalStorage + Cookie Dual Persistence)
     function getCart() {
-        const stored = localStorage.getItem(CART_STORAGE_KEY);
-        if (!stored) {
-            return [];
-        }
+        let stored = null;
         try {
-            return JSON.parse(stored);
+            stored = localStorage.getItem(CART_STORAGE_KEY);
+        } catch(e) {}
+
+        if (!stored || stored === '[]') {
+            stored = getCookie(CART_STORAGE_KEY);
+        }
+
+        if (!stored) return [];
+        try {
+            const parsed = JSON.parse(stored);
+            if (Array.isArray(parsed)) return parsed;
+            return [];
         } catch (e) {
-            console.error('Error parsing cart from localStorage', e);
+            console.error('Error parsing cart data', e);
             return [];
         }
     }
 
-
-    // Save Cart Items
+    // Save Cart Items (LocalStorage + Cookie Dual Persistence)
     function saveCart(cart) {
-        localStorage.setItem(CART_STORAGE_KEY, JSON.stringify(cart));
+        const jsonStr = JSON.stringify(cart);
+        try {
+            localStorage.setItem(CART_STORAGE_KEY, jsonStr);
+        } catch(e) {}
+        try {
+            setCookie(CART_STORAGE_KEY, jsonStr, 30);
+        } catch(e) {}
         updateBadge();
         renderCart();
     }
@@ -73,7 +101,7 @@
     // Update Badge Counters across header
     function updateBadge() {
         const cart = getCart();
-        const totalCount = cart.reduce((sum, item) => sum + item.quantity, 0);
+        const totalCount = cart.reduce((sum, item) => sum + (parseInt(item.quantity) || 1), 0);
 
         const badges = document.querySelectorAll('.cart-badge');
         badges.forEach(badge => {
@@ -110,7 +138,12 @@
         if (emptyStateEl) emptyStateEl.style.display = 'none';
 
         // Render Item HTML
-        itemsListEl.innerHTML = cart.map(item => `
+        itemsListEl.innerHTML = cart.map(item => {
+            const priceNum = typeof item.price === 'number' ? item.price : (parseFloat(String(item.price).replace(/[^0-9.]/g, '')) || 0);
+            const qtyNum = parseInt(item.quantity) || 1;
+            const subtotalNum = priceNum * qtyNum;
+
+            return `
             <div class="cart-item">
                 <div class="cart-item-left-block">
                     <div class="cart-item-img-wrap">
@@ -119,18 +152,18 @@
                     <div class="cart-item-details">
                         <span class="cart-item-tag">${item.type || 'Lüks Koleksiyon'}</span>
                         <a href="#" class="cart-item-name">${item.name}</a>
-                        <span class="cart-item-price-unit">${item.details || ''} • ₺${item.price.toLocaleString('tr-TR')}</span>
+                        <span class="cart-item-price-unit">${item.details || ''} • ₺${priceNum.toLocaleString('tr-TR')}</span>
                     </div>
                 </div>
 
                 <div class="cart-item-right-block">
                     <div class="quantity-control">
                         <button type="button" class="qty-btn btn-minus" data-id="${item.id}">-</button>
-                        <span class="qty-val">${item.quantity}</span>
+                        <span class="qty-val">${qtyNum}</span>
                         <button type="button" class="qty-btn btn-plus" data-id="${item.id}">+</button>
                     </div>
 
-                    <div class="cart-item-subtotal">₺${(item.price * item.quantity).toLocaleString('tr-TR')}</div>
+                    <div class="cart-item-subtotal">₺${subtotalNum.toLocaleString('tr-TR')}</div>
 
                     <button type="button" class="remove-btn" data-id="${item.id}" title="Ürünü Kaldır">
                         <i class="fa-regular fa-trash-can" style="font-size: 1rem;"></i>
@@ -138,13 +171,20 @@
                     </button>
                 </div>
             </div>
-        `).join('');
+        `;
+        }).join('');
 
         // Recalculate totals
-        const subtotal = cart.reduce((sum, item) => sum + (item.price * item.quantity), 0);
+        const subtotal = cart.reduce((sum, item) => {
+            const price = typeof item.price === 'number' ? item.price : (parseFloat(String(item.price).replace(/[^0-9.]/g, '')) || 0);
+            const qty = parseInt(item.quantity) || 1;
+            return sum + (price * qty);
+        }, 0);
+
         const discountAmount = subtotal * (appliedDiscountPercent / 100);
         const serviceFee = subtotal > 0 ? subtotal * 0.08 : 0; // 8% luxury service fee
         const grandTotal = subtotal - discountAmount + serviceFee;
+
 
         // Update Summary Elements
         const subtotalEl = document.getElementById('cartSubtotal');

@@ -1403,32 +1403,37 @@
                 quantity: 1
             };
 
-            let cart = [];
-            try {
-                const stored = localStorage.getItem('dioreal_cart_items');
-                if (stored) cart = JSON.parse(stored);
-            } catch(e) {}
-
-            const existingIndex = cart.findIndex(i => i.id === item.id);
-            if (existingIndex > -1) {
-                cart[existingIndex].quantity = (cart[existingIndex].quantity || 1) + 1;
+            if (window.DiorealCart && typeof window.DiorealCart.addItem === 'function') {
+                window.DiorealCart.addItem(item);
             } else {
-                cart.push(item);
+                let cart = [];
+                try {
+                    const stored = localStorage.getItem('dioreal_cart_items');
+                    if (stored) cart = JSON.parse(stored);
+                } catch(e) {}
+
+                const existingIndex = cart.findIndex(i => i.id === item.id);
+                if (existingIndex > -1) {
+                    cart[existingIndex].quantity = (cart[existingIndex].quantity || 1) + 1;
+                } else {
+                    cart.push(item);
+                }
+
+                const jsonStr = JSON.stringify(cart);
+                try { localStorage.setItem('dioreal_cart_items', jsonStr); } catch(e) {}
+                try { document.cookie = `dioreal_cart_items=${encodeURIComponent(jsonStr)}; path=/; max-age=2592000`; } catch(e) {}
+
+                const totalCount = cart.reduce((sum, i) => sum + (parseInt(i.quantity) || 1), 0);
+                document.querySelectorAll('.cart-badge').forEach(badge => {
+                    badge.textContent = totalCount;
+                    badge.style.display = 'flex';
+                });
             }
 
-            localStorage.setItem('dioreal_cart_items', JSON.stringify(cart));
-
-            // Update badge counters immediately
-            const totalCount = cart.reduce((sum, i) => sum + (i.quantity || 1), 0);
-            document.querySelectorAll('.cart-badge').forEach(badge => {
-                badge.textContent = totalCount;
-                badge.style.display = 'flex';
-            });
-
-            // Show toast notification
             showToast(name + ' sepetinize eklendi!');
         }
         window.addToCartSimple = addToCartSimple;
+
 
         function addToCart(item) {
 
