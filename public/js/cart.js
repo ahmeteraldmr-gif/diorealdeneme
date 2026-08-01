@@ -382,6 +382,14 @@
         updateBadge: updateBadge
     };
 
+    window.addToCart = function (item) {
+        window.DiorealCart.addItem(item);
+        if (typeof window.showToast === 'function') {
+            window.showToast(item.name + ' sepetinize eklendi!');
+        }
+    };
+
+
     // Initialize on DOM Ready
     document.addEventListener('DOMContentLoaded', function () {
         updateBadge();

@@ -1389,12 +1389,49 @@
             cards.forEach(card => grid.appendChild(card));
         }
 
+        function showToast(message) {
+            let toast = document.getElementById('mojeaToastNotification');
+            if (!toast) {
+                toast = document.createElement('div');
+                toast.id = 'mojeaToastNotification';
+                toast.style.cssText = 'position: fixed; bottom: 2rem; right: 2rem; z-index: 99999; background: #111111; color: #ffffff; padding: 1rem 1.5rem; border-radius: 30px; box-shadow: 0 15px 35px rgba(0,0,0,0.3); border: 1px solid #c8a96e; font-size: 0.85rem; font-weight: 600; display: flex; align-items: center; gap: 0.8rem; opacity: 0; transform: translateY(20px); transition: all 0.4s ease; pointer-events: none;';
+                document.body.appendChild(toast);
+            }
+            toast.innerHTML = '<i class="fa-solid fa-circle-check" style="color: #4caf50; font-size: 1.1rem;"></i> <span>' + message + '</span> <a href="{{ url("/sepet") }}" style="background: #c8a96e; color: #111111; padding: 0.35rem 0.85rem; border-radius: 20px; text-decoration: none; font-size: 0.78rem; font-weight: 700; margin-left: 0.5rem; display: inline-flex; align-items: center; gap: 0.3rem;">SEPETE GİT <i class="fa-solid fa-arrow-right"></i></a>';
+            toast.style.opacity = '1';
+            toast.style.transform = 'translateY(0)';
+            toast.style.pointerEvents = 'auto';
+
+            if (window.toastTimeout) clearTimeout(window.toastTimeout);
+            window.toastTimeout = setTimeout(() => {
+                toast.style.opacity = '0';
+                toast.style.transform = 'translateY(20px)';
+                toast.style.pointerEvents = 'none';
+            }, 4000);
+        }
+        window.showToast = showToast;
+
         function addToCart(item) {
             if (window.DiorealCart) {
                 window.DiorealCart.addItem(item);
                 showToast(item.name + ' sepetinize eklendi!');
+            } else {
+                let cart = [];
+                try {
+                    cart = JSON.parse(localStorage.getItem('dioreal_cart_items') || '[]');
+                } catch(e) {}
+                const existing = cart.find(i => i.id === item.id);
+                if (existing) {
+                    existing.quantity = (existing.quantity || 1) + 1;
+                } else {
+                    cart.push({ ...item, quantity: 1 });
+                }
+                localStorage.setItem('dioreal_cart_items', JSON.stringify(cart));
+                showToast(item.name + ' sepetinize eklendi!');
             }
         }
+        window.addToCart = addToCart;
+
 
         function openQuickView(item) {
             currentModalItem = item;
