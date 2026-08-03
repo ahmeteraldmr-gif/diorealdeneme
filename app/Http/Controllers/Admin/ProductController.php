@@ -24,9 +24,11 @@ class ProductController extends Controller
     public function index()
     {
         $products = Product::with('category')->orderBy('order', 'asc')->orderBy('id', 'desc')->get();
+        $showcases = \App\Models\ProductShowcase::orderBy('order', 'asc')->orderBy('id', 'asc')->get();
         $settings = \App\Models\Setting::pluck('value', 'key')->all();
-        return view('admin.products.index', compact('products', 'settings'));
+        return view('admin.products.index', compact('products', 'showcases', 'settings'));
     }
+
 
 
     public function create()

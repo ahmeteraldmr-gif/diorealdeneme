@@ -928,35 +928,44 @@
 
     <!-- 🔄 5-SECOND AUTO-ROTATING LUXURY PRODUCT SHOWCASE CAROUSEL (LARGE HERO SLIDER) -->
     @php
-        $active_slides = [];
-        for ($i = 1; $i <= 6; $i++) {
-            $statusKey = 'ecom_slide' . $i . '_status';
-            $defaultStatus = ($i <= 3) ? '1' : '0';
-            if (($settings[$statusKey] ?? $defaultStatus) == '1') {
-                $active_slides[] = $i;
+        $slidesList = isset($showcases) && count($showcases) > 0 ? $showcases : null;
+        if (!$slidesList) {
+            $slidesList = [];
+            for ($i = 1; $i <= 6; $i++) {
+                $statusKey = 'ecom_slide' . $i . '_status';
+                $defaultStatus = ($i <= 3) ? '1' : '0';
+                if (($settings[$statusKey] ?? $defaultStatus) == '1') {
+                    $defaultImg = 'foto.img/hero_4k.jpg';
+                    if ($i == 2) $defaultImg = 'foto.img/otel_hero.jpg';
+                    if ($i == 3) $defaultImg = 'foto.img/bodrum.jpg';
+                    $slidesList[] = (object)[
+                        'image' => dioreal_img($settings['ecom_slide' . $i . '_img'] ?? '', $defaultImg),
+                        'eye' => ['tr' => $settings['ecom_slide' . $i . '_eye_tr'] ?? 'LÜKS KOLEKSİYON', 'en' => $settings['ecom_slide' . $i . '_eye_en'] ?? 'LUXURY COLLECTION'],
+                        'title' => ['tr' => $settings['ecom_slide' . $i . '_title_tr'] ?? 'Seçkin Koleksiyon Eserleri', 'en' => $settings['ecom_slide' . $i . '_title_en'] ?? 'Exclusive Collection Items'],
+                        'text' => ['tr' => $settings['ecom_slide' . $i . '_text_tr'] ?? 'Dioreal ile keşfedin.', 'en' => $settings['ecom_slide' . $i . '_text_en'] ?? 'Discover with Dioreal.'],
+                        'btn_text' => ['tr' => $settings['ecom_slide' . $i . '_btn_tr'] ?? 'İncele', 'en' => $settings['ecom_slide' . $i . '_btn_en'] ?? 'Explore'],
+                    ];
+                }
             }
         }
-        $active_count = count($active_slides);
+        $active_count = count($slidesList);
     @endphp
 
     @if($active_count > 0)
     <section class="ecom-showcase-section">
         <div id="autoShowcaseSlider" style="position: relative; height: 420px; border-radius: 24px; overflow: hidden; box-shadow: 0 20px 45px rgba(0,0,0,0.14);">
             
-            @foreach($active_slides as $idx => $num)
+            @foreach($slidesList as $idx => $slideItem)
                 @php
-                    $eyeTr = $settings['ecom_slide' . $num . '_eye_tr'] ?? 'LÜKS SEÇKİN KOLEKSİYON';
-                    $eyeEn = $settings['ecom_slide' . $num . '_eye_en'] ?? 'LUXURY SELECTION';
-                    $titleTr = $settings['ecom_slide' . $num . '_title_tr'] ?? 'Özel Tasarım Koleksiyon Eserleri';
-                    $titleEn = $settings['ecom_slide' . $num . '_title_en'] ?? 'Exclusive Design Masterpieces';
-                    $textTr = $settings['ecom_slide' . $num . '_text_tr'] ?? 'Dioreal ayrıcalığı ile keşfedin.';
-                    $textEn = $settings['ecom_slide' . $num . '_text_en'] ?? 'Discover with Dioreal privileges.';
-                    $btnTr = $settings['ecom_slide' . $num . '_btn_tr'] ?? 'Koleksiyonu İncele';
-                    $btnEn = $settings['ecom_slide' . $num . '_btn_en'] ?? 'Explore Collection';
-                    $defaultImg = 'foto.img/hero_4k.jpg';
-                    if ($num == 2) $defaultImg = 'foto.img/otel_hero.jpg';
-                    if ($num == 3) $defaultImg = 'foto.img/bodrum.jpg';
-                    $img = dioreal_img($settings['ecom_slide' . $num . '_img'] ?? '', $defaultImg);
+                    $img = is_object($slideItem) ? (str_starts_with($slideItem->image ?? '', 'http') || str_starts_with($slideItem->image ?? '', 'foto.img') ? asset($slideItem->image) : dioreal_img($slideItem->image ?? '', 'foto.img/hero_4k.jpg')) : '';
+                    $eyeTr = is_array($slideItem->eye) ? ($slideItem->eye['tr'] ?? '') : ($slideItem->eye['tr'] ?? 'LÜKS KOLEKSİYON');
+                    $eyeEn = is_array($slideItem->eye) ? ($slideItem->eye['en'] ?? '') : ($slideItem->eye['en'] ?? 'LUXURY COLLECTION');
+                    $titleTr = is_array($slideItem->title) ? ($slideItem->title['tr'] ?? '') : ($slideItem->title['tr'] ?? '');
+                    $titleEn = is_array($slideItem->title) ? ($slideItem->title['en'] ?? '') : ($slideItem->title['en'] ?? '');
+                    $textTr = is_array($slideItem->text) ? ($slideItem->text['tr'] ?? '') : ($slideItem->text['tr'] ?? '');
+                    $textEn = is_array($slideItem->text) ? ($slideItem->text['en'] ?? '') : ($slideItem->text['en'] ?? '');
+                    $btnTr = is_array($slideItem->btn_text) ? ($slideItem->btn_text['tr'] ?? 'İncele') : ($slideItem->btn_text['tr'] ?? 'İncele');
+                    $btnEn = is_array($slideItem->btn_text) ? ($slideItem->btn_text['en'] ?? 'Explore') : ($slideItem->btn_text['en'] ?? 'Explore');
                 @endphp
                 <div class="showcase-slide" style="position: absolute; inset: 0; opacity: {{ $idx === 0 ? 1 : 0 }}; transition: opacity 0.8s ease-in-out; background-image: url('{{ $img }}'); background-size: cover; background-position: center;">
                     <div class="showcase-slide-inner">
@@ -991,6 +1000,7 @@
         </div>
     </section>
     @endif
+
 
 
 

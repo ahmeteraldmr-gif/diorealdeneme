@@ -389,11 +389,13 @@ class PageController extends Controller
 
         $categories = \App\Models\ProductCategory::where('is_active', true)->orderBy('order', 'asc')->get();
         $products = \App\Models\Product::with('category')->where('is_active', true)->orderBy('order', 'asc')->orderBy('id', 'desc')->get();
+        $showcases = \App\Models\ProductShowcase::where('is_active', true)->orderBy('order', 'asc')->get();
         $locale = $activeLang;
         $settings = \App\Models\Setting::pluck('value', 'key')->toArray();
 
-        return view("urunler", compact("seo", "canonical", "hreflang_tr", "hreflang_en", "categories", "products", "locale", "settings"));
+        return view("urunler", compact("seo", "canonical", "hreflang_tr", "hreflang_en", "categories", "products", "showcases", "locale", "settings"));
     }
+
 
 
 

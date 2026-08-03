@@ -100,6 +100,8 @@ Route::middleware(['admin'])->prefix('admin')->name('admin.')->group(function ()
     // Product & Category Management
     Route::resource('categories', App\Http\Controllers\Admin\ProductCategoryController::class)->except(['show']);
     Route::resource('products', App\Http\Controllers\Admin\ProductController::class)->except(['show']);
+    Route::resource('showcases', App\Http\Controllers\Admin\ProductShowcaseController::class)->except(['create', 'edit', 'show']);
+
 
     
     // Users Management
