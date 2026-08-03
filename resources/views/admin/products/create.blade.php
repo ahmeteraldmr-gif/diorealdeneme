@@ -30,7 +30,12 @@
 
             <div style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 1.5rem; margin-top: 1rem;">
                 <div class="form-group">
-                    <label class="form-label">Kategori <span style="color:red;">*</span></label>
+                    <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.4rem;">
+                        <label class="form-label" style="margin-bottom:0;">Kategori <span style="color:red;">*</span></label>
+                        <a href="{{ route('admin.categories.create') }}" target="_blank" style="font-size: 0.8rem; color: var(--primary); text-decoration: underline;">
+                            <i class="fas fa-plus-circle"></i> + Yeni Kategori Ekle
+                        </a>
+                    </div>
                     <select name="category_id" class="form-control" required>
                         <option value="">-- Kategori Seçin --</option>
                         @foreach($categories as $cat)
@@ -38,6 +43,7 @@
                         @endforeach
                     </select>
                 </div>
+
 
                 <div class="form-group">
                     <label class="form-label">Fiyat (₺) <span style="color:red;">*</span></label>
