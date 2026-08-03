@@ -1220,9 +1220,28 @@
         document.querySelectorAll('.tab-btn').forEach(btn => btn.classList.remove('active'));
         document.querySelectorAll('.setting-tab-pane').forEach(pane => pane.classList.remove('active'));
         
-        event.currentTarget.classList.add('active');
-        document.getElementById(tabId).classList.add('active');
+        if (event && event.currentTarget) {
+            event.currentTarget.classList.add('active');
+        } else {
+            const btn = document.querySelector(`.tab-btn[onclick*="${tabId}"]`);
+            if (btn) btn.classList.add('active');
+        }
+        const pane = document.getElementById(tabId);
+        if (pane) pane.classList.add('active');
+        if (history.replaceState) {
+            history.replaceState(null, null, '#' + tabId);
+        } else {
+            window.location.hash = tabId;
+        }
     }
+
+    document.addEventListener('DOMContentLoaded', function() {
+        let hash = window.location.hash ? window.location.hash.replace('#', '') : '';
+        if (hash && document.getElementById(hash)) {
+            switchSettingTab(null, hash);
+        }
+    });
+
 
     // Instant Image Preview Script
     document.addEventListener('DOMContentLoaded', function() {
