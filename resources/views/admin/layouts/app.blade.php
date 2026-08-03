@@ -18,11 +18,43 @@
     <!-- Premium Stylesheet -->
     <link rel="stylesheet" href="{{ asset('css/admin-new.css') }}?v={{ time() }}">
     <link rel="stylesheet" href="{{ asset('css/responsive.css') }}?v={{ time() }}">
+
+    <script>
+        function doToggleSidebar(e) {
+            if (e) {
+                if (e.preventDefault) e.preventDefault();
+                if (e.stopPropagation) e.stopPropagation();
+            }
+            var sidebar = document.getElementById('sidebar');
+            var overlay = document.getElementById('sidebarOverlay');
+            if (!sidebar) return;
+
+            var isClosed = !sidebar.classList.contains('mobile-active');
+
+            if (isClosed) {
+                sidebar.classList.add('mobile-active');
+                sidebar.style.cssText = 'transform: translateX(0px) !important; left: 0px !important; display: flex !important; flex-direction: column !important; z-index: 9999999 !important; position: fixed !important; top: 0 !important; bottom: 0 !important; width: 280px !important; background: #0f172a !important; box-shadow: 10px 0 30px rgba(0,0,0,0.8) !important; visibility: visible !important; opacity: 1 !important;';
+                if (overlay) {
+                    overlay.style.cssText = 'display: block !important; opacity: 1 !important; z-index: 9999998 !important; position: fixed !important; inset: 0 !important; background: rgba(0,0,0,0.75) !important; backdrop-filter: blur(4px) !important;';
+                }
+                document.body.style.overflow = 'hidden';
+            } else {
+                sidebar.classList.remove('mobile-active');
+                sidebar.style.cssText = 'transform: translateX(-100%) !important; position: fixed !important; top: 0 !important; bottom: 0 !important; left: 0 !important; width: 280px !important; z-index: 9999999 !important;';
+                if (overlay) {
+                    overlay.style.cssText = 'display: none !important; opacity: 0 !important;';
+                }
+                document.body.style.overflow = '';
+            }
+        }
+        window.toggleSidebar = doToggleSidebar;
+    </script>
 </head>
 <body>
 
     <!-- Sidebar Overlay (Mobile) -->
-    <div class="sidebar-overlay" id="sidebarOverlay" onclick="toggleSidebar(event)"></div>
+    <div class="sidebar-overlay" id="sidebarOverlay" onclick="doToggleSidebar(event)" ontouchstart="doToggleSidebar(event)"></div>
+
 
     <!-- Sidebar -->
     <aside class="admin-sidebar" id="sidebar">
@@ -130,9 +162,10 @@
         
         <header class="admin-header">
             <div class="header-left">
-                <button type="button" class="sidebar-toggle" id="sidebarToggle" onclick="toggleSidebar(event)">
+                <button type="button" class="sidebar-toggle" id="sidebarToggle" onclick="doToggleSidebar(event)" ontouchstart="doToggleSidebar(event)">
                     <i class="fas fa-bars"></i>
                 </button>
+
                 <div class="header-title-wrapper">
                     <h1 class="admin-title">@yield('page_title')</h1>
                     <p class="admin-subtitle">@yield('page_subtitle', 'Dioreal Dijital portal yönetimi')</p>
