@@ -119,7 +119,7 @@
                         @forelse($recentHotels as $hotel)
                             <tr>
                                 <td>
-                                    <img src="{{ asset($hotel->img) }}" alt="" class="table-img">
+                                    <img src="{{ dioreal_img($hotel->img, 'foto.img/otel_hero.jpg') }}" onerror="this.onerror=null;this.src='{{ asset('foto.img/otel_hero.jpg') }}';" alt="" class="table-img">
                                 </td>
                                 <td>
                                     <strong>{{ $hotel->name['tr'] ?? '' }}</strong>
@@ -158,7 +158,7 @@
                         @forelse($recentRestaurants as $restaurant)
                             <tr>
                                 <td>
-                                    <img src="{{ asset($restaurant->img) }}" alt="" class="table-img">
+                                    <img src="{{ dioreal_img($restaurant->img, 'foto.img/rest_hero.jpg') }}" onerror="this.onerror=null;this.src='{{ asset('foto.img/rest_hero.jpg') }}';" alt="" class="table-img">
                                 </td>
                                 <td>
                                     <strong>{{ $restaurant->name['tr'] ?? '' }}</strong>
@@ -168,6 +168,7 @@
                                     <span class="badge badge-primary">{{ $restaurant->tag['tr'] ?? '' }}</span>
                                 </td>
                             </tr>
+
                         @empty
                             <tr>
                                 <td colspan="3" style="text-align: center; color: var(--text-muted);">Henüz restoran eklenmemiş.</td>
