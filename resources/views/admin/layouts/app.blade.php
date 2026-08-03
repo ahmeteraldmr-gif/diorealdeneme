@@ -179,30 +179,50 @@
             const overlay = document.getElementById('sidebarOverlay');
             if (!sidebar) return;
 
-            const isOpen = sidebar.classList.contains('open') || sidebar.style.transform === 'translateX(0px)';
-            if (isOpen) {
+            const isCurrentlyOpen = sidebar.classList.contains('open') || sidebar.style.transform === 'translateX(0px)';
+
+            if (isCurrentlyOpen) {
                 sidebar.classList.remove('open');
-                sidebar.setAttribute('style', '');
+                sidebar.style.setProperty('transform', 'translateX(-100%)', 'important');
                 if (overlay) {
                     overlay.classList.remove('active');
-                    overlay.setAttribute('style', '');
+                    overlay.style.setProperty('display', 'none', 'important');
+                    overlay.style.setProperty('opacity', '0', 'important');
                 }
                 document.body.style.overflow = '';
             } else {
                 sidebar.classList.add('open');
-                sidebar.setAttribute('style', 'transform: translateX(0px) !important; left: 0px !important; z-index: 999999 !important; display: flex !important;');
+                sidebar.style.setProperty('transform', 'translateX(0px)', 'important');
+                sidebar.style.setProperty('display', 'flex', 'important');
+                sidebar.style.setProperty('z-index', '999999', 'important');
                 if (overlay) {
                     overlay.classList.add('active');
-                    overlay.setAttribute('style', 'display: block !important; opacity: 1 !important; z-index: 999998 !important;');
+                    overlay.style.setProperty('display', 'block', 'important');
+                    overlay.style.setProperty('opacity', '1', 'important');
+                    overlay.style.setProperty('z-index', '999998', 'important');
                 }
                 document.body.style.overflow = 'hidden';
             }
         }
 
+        document.addEventListener('DOMContentLoaded', function() {
+            const btn = document.getElementById('sidebarToggle');
+            if (btn) {
+                btn.addEventListener('click', toggleSidebar);
+                btn.addEventListener('touchstart', toggleSidebar, {passive: false});
+            }
+            const overlay = document.getElementById('sidebarOverlay');
+            if (overlay) {
+                overlay.addEventListener('click', toggleSidebar);
+                overlay.addEventListener('touchstart', toggleSidebar, {passive: false});
+            }
+        });
+
         // Close sidebar on window resize above tablet breakpoint
         window.addEventListener('resize', () => {
             if (window.innerWidth > 1024) {
                 const sidebar = document.getElementById('sidebar');
+
                 const overlay = document.getElementById('sidebarOverlay');
                 if (sidebar) {
                     sidebar.classList.remove('open');
