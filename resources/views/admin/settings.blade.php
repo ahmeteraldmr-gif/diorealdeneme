@@ -764,6 +764,21 @@
                             <label class="form-label">Tanıtım Metni (EN)</label>
                             <textarea class="form-control" name="rest_intro_text_en" rows="3">{{ $settings['rest_intro_text_en'] ?? 'Discover curated dining experiences ranging from Michelin-starred chefs to coastal seafood sanctuaries and mountain gourmet retreats.' }}</textarea>
                         </div>
+                        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;">
+                            <div class="form-group">
+                                <label class="form-label">Buton Yazısı (TR)</label>
+                                <input type="text" class="form-control" name="rest_btn_tr" value="{{ $settings['rest_btn_tr'] ?? 'Masaları Keşfet' }}">
+                            </div>
+                            <div class="form-group">
+                                <label class="form-label">Buton Yazısı (EN)</label>
+                                <input type="text" class="form-control" name="rest_btn_en" value="{{ $settings['rest_btn_en'] ?? 'Explore Tables' }}">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label">Buton Tıklama Linki (URL / WhatsApp / İletişim)</label>
+                            <input type="text" class="form-control" name="rest_btn_link" placeholder="Örn: #restoranlar veya https://wa.me/905449157011" value="{{ $settings['rest_btn_link'] ?? '' }}">
+                        </div>
+
                     </div>
                     <div style="display: flex; flex-direction: column; gap: 1rem;">
                         <div class="form-group">

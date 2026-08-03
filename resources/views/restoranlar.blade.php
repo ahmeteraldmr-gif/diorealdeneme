@@ -138,10 +138,11 @@
                 <p class="content-body lang-text-tr">{{ $settings['rest_intro_text_tr'] ?? 'Michelin yıldızlı şeflerden yerel lezzet ustalarına, deniz kenarı balık restoranlarından dağ başı gurme deneyimlerine uzanan koleksiyonumuzla her damak tadına hitap eden masaları keşfedin.' }}</p>
                 <p class="content-body lang-text-en">{{ $settings['rest_intro_text_en'] ?? 'Discover curated dining experiences ranging from Michelin-starred chefs to coastal seafood sanctuaries and mountain gourmet retreats.' }}</p>
 
-                <a href="#restoranlar" class="btn btn-primary">
-                    <span class="lang-text-tr">Masaları Keşfet</span>
-                    <span class="lang-text-en">Explore Tables</span>
+                <a href="{{ !empty($settings['rest_btn_link']) ? $settings['rest_btn_link'] : '#restoranlar' }}" class="btn btn-primary">
+                    <span class="lang-text-tr">{{ $settings['rest_btn_tr'] ?? 'Masaları Keşfet' }}</span>
+                    <span class="lang-text-en">{{ $settings['rest_btn_en'] ?? 'Explore Tables' }}</span>
                 </a>
+
             </div>
             <div class="reveal" style="transition-delay:0.2s">
                 <img src="{{ asset($settings['rest_intro_img'] ?? 'foto.img/rest_intro.jpg') }}" alt="Restaurant" style="width:100%;aspect-ratio:4/3;object-fit:cover;">

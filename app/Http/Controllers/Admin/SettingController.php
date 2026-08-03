@@ -257,6 +257,9 @@ class SettingController extends Controller
             'otel_intro_title_en',
             'otel_intro_text_tr',
             'otel_intro_text_en',
+            'otel_btn_tr',
+            'otel_btn_en',
+            'otel_btn_link',
 
             // Restoranlar Page Settings
             'rest_hero_eyebrow_tr',
@@ -269,6 +272,10 @@ class SettingController extends Controller
             'rest_intro_title_en',
             'rest_intro_text_tr',
             'rest_intro_text_en',
+            'rest_btn_tr',
+            'rest_btn_en',
+            'rest_btn_link',
+
 
             // Yatlar Page Settings
             'yat_hero_eyebrow_tr',
