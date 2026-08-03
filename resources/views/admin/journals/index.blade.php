@@ -29,8 +29,9 @@
                     @forelse($journals as $journal)
                         <tr>
                             <td>
-                                <img src="{{ asset($journal->img) }}" alt="" class="table-img">
+                                <img src="{{ dioreal_img($journal->img, 'foto.img/amalfi.jpg') }}" onerror="this.onerror=null;this.src='{{ asset('foto.img/amalfi.jpg') }}';" alt="" class="table-img">
                             </td>
+
                             <td>
                                 <div style="font-weight: 500;">{{ $journal->date }}</div>
                             </td>

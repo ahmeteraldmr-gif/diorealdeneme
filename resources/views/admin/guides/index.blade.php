@@ -28,8 +28,9 @@
                     @forelse($guides as $guide)
                         <tr>
                             <td>
-                                <img src="{{ asset($guide->img) }}" alt="" class="table-img">
+                                <img src="{{ dioreal_img($guide->img, 'foto.img/bodrum.jpg') }}" onerror="this.onerror=null;this.src='{{ asset('foto.img/bodrum.jpg') }}';" alt="" class="table-img">
                             </td>
+
                             <td>
                                 <div><strong>TR:</strong> {{ $guide->title['tr'] ?? '' }}</div>
                                 <div style="color: var(--text-muted);"><strong>EN:</strong> {{ $guide->title['en'] ?? '' }}</div>

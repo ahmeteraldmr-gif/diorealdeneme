@@ -30,8 +30,9 @@
                     @forelse($destinations as $destination)
                         <tr>
                             <td>
-                                <img src="{{ asset($destination->img) }}" alt="" class="table-img" style="width: 60px; height: 60px; object-fit: cover; border-radius: 4px;">
+                                <img src="{{ dioreal_img($destination->img, 'foto.img/bodrum.jpg') }}" onerror="this.onerror=null;this.src='{{ asset('foto.img/bodrum.jpg') }}';" alt="" class="table-img" style="width: 60px; height: 60px; object-fit: cover; border-radius: 4px;">
                             </td>
+
                             <td>
                                 <div><strong>TR:</strong> {{ $destination->name['tr'] ?? '' }}</div>
                                 <div style="color: var(--text-muted);"><strong>EN:</strong> {{ $destination->name['en'] ?? '' }}</div>

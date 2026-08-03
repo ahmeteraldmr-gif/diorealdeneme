@@ -28,8 +28,9 @@
                     @forelse($hotels as $hotel)
                         <tr>
                             <td>
-                                <img src="{{ asset($hotel->img) }}" alt="" class="table-img">
+                                <img src="{{ dioreal_img($hotel->img, 'foto.img/otel_hero.jpg') }}" onerror="this.onerror=null;this.src='{{ asset('foto.img/otel_hero.jpg') }}';" alt="" class="table-img">
                             </td>
+
                             <td>
                                 <div><strong>TR:</strong> {{ $hotel->name['tr'] ?? '' }}</div>
                                 <div style="color: var(--text-muted);"><strong>EN:</strong> {{ $hotel->name['en'] ?? '' }}</div>

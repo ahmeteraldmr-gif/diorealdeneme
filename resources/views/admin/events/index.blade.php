@@ -30,8 +30,9 @@
                     @forelse($events as $event)
                         <tr>
                             <td>
-                                <img src="{{ asset($event->img) }}" alt="" class="table-img">
+                                <img src="{{ dioreal_img($event->img, 'foto.img/etkinlik_hero.jpg') }}" onerror="this.onerror=null;this.src='{{ asset('foto.img/etkinlik_hero.jpg') }}';" alt="" class="table-img">
                             </td>
+
                             <td>
                                 <div style="font-size: 1.2rem; font-weight: 700; color: var(--primary);">{{ $event->day }}</div>
                                 <div style="font-size: 0.8rem; text-transform: uppercase;">
