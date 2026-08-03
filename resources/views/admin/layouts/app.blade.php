@@ -147,16 +147,22 @@
                 </li>
                 @endadminCan
                 
-                <li class="sidebar-item {{ Request::routeIs('admin.categories.*') ? 'active' : '' }}">
-                    <a href="{{ route('admin.categories.index') }}">
-                        <i class="fas fa-tags"></i> Ürün Kategorileri
-                    </a>
-                </li>
                 <li class="sidebar-item {{ Request::routeIs('admin.products.*') ? 'active' : '' }}">
                     <a href="{{ route('admin.products.index') }}">
                         <i class="fas fa-box-open"></i> Ürünler & Paketler
                     </a>
                 </li>
+                <li class="sidebar-item" style="padding-left: 1.2rem; font-size: 0.85rem; opacity: 0.9;">
+                    <a href="{{ route('admin.products.index') }}#showcase-banner-settings" style="padding-top: 0.3rem; padding-bottom: 0.3rem;">
+                        <i class="fas fa-images"></i> ↳ Vitrin Görselleri & Metinler
+                    </a>
+                </li>
+                <li class="sidebar-item {{ Request::routeIs('admin.categories.*') ? 'active' : '' }}" style="padding-left: 1.2rem; font-size: 0.85rem; opacity: 0.9;">
+                    <a href="{{ route('admin.categories.index') }}" style="padding-top: 0.3rem; padding-bottom: 0.3rem;">
+                        <i class="fas fa-tags"></i> ↳ Ürün Kategorileri
+                    </a>
+                </li>
+
 
                 @adminCan('users')
                 <li class="sidebar-item {{ Request::routeIs('admin.users.*') ? 'active' : '' }}">
