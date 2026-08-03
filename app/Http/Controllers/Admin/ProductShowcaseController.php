@@ -20,8 +20,28 @@ class ProductShowcaseController extends Controller
         return $folder . '/' . $filename;
     }
 
+    protected function ensureTableExists()
+    {
+        if (!\Illuminate\Support\Facades\Schema::hasTable('product_showcases')) {
+            \Illuminate\Support\Facades\Schema::create('product_showcases', function (\Illuminate\Database\Schema\Blueprint $table) {
+                $table->id();
+                $table->string('image')->nullable();
+                $table->json('eye')->nullable();
+                $table->json('title')->nullable();
+                $table->json('text')->nullable();
+                $table->json('btn_text')->nullable();
+                $table->string('btn_link')->nullable();
+                $table->integer('order')->default(0);
+                $table->boolean('is_active')->default(true);
+                $table->timestamps();
+            });
+        }
+    }
+
     public function store(Request $request)
     {
+        $this->ensureTableExists();
+
         $data = [
             'eye' => $request->input('eye', []),
             'title' => $request->input('title', []),
@@ -41,8 +61,10 @@ class ProductShowcaseController extends Controller
         return redirect()->back()->with('success', 'Yeni Vitrin Slide Görseli başarıyla eklendi.');
     }
 
+
     public function update(Request $request, $id)
     {
+        $this->ensureTableExists();
         $showcase = ProductShowcase::findOrFail($id);
 
         $data = [
@@ -72,6 +94,7 @@ class ProductShowcaseController extends Controller
 
     public function destroy($id)
     {
+        $this->ensureTableExists();
         $showcase = ProductShowcase::findOrFail($id);
 
         if ($showcase->image && !str_starts_with($showcase->image, 'foto.img/')) {
@@ -85,4 +108,5 @@ class ProductShowcaseController extends Controller
 
         return redirect()->back()->with('success', 'Vitrin Slide Görseli başarıyla silindi.');
     }
+
 }
