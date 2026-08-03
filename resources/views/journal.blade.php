@@ -135,8 +135,9 @@
                             <span class="lang-text-tr">{{ $featured->tag['tr'] ?? '' }}</span>
                             <span class="lang-text-en">{{ $featured->tag['en'] ?? '' }}</span>
                         </span>
+                        <span class="journal-date">{{ $featured->date }}</span>
                         <a href="{{ route('journal.detay', $featured->slug_tr ?: ($featured->slug_en ?: $featured->id)) }}" style="text-decoration: none; color: inherit;">
-                            <div class="journal-title" style="font-family: var(--font-display); font-size: 2rem; font-weight: 300; margin: 1rem 0;">
+                            <div class="journal-title" style="margin: 0.5rem 0 1rem;">
                                 <span class="lang-text-tr">{{ $featured->title['tr'] ?? '' }}</span>
                                 <span class="lang-text-en">{{ $featured->title['en'] ?? '' }}</span>
                             </div>
@@ -156,7 +157,7 @@
             <div class="journal-side">
                 @foreach($journals->slice(1, 4) as $sideItem)
                     <div class="journal-side-item" onclick="window.location='{{ route('journal.detay', $sideItem->slug_tr ?: ($sideItem->slug_en ?: $sideItem->id)) }}'" style="cursor:pointer;">
-                        <img src="{{ asset($sideItem->img) }}" alt="{{ $sideItem->title['tr'] ?? '' }}">
+                        <img src="{{ dioreal_img($sideItem->img, 'foto.img/amalfi.jpg') }}" onerror="this.onerror=null;this.src='{{ asset('foto.img/amalfi.jpg') }}';" alt="{{ $sideItem->title['tr'] ?? '' }}">
                         <div>
                             <span class="journal-date">{{ $sideItem->date }}</span>
                             <div class="journal-title">
@@ -179,7 +180,9 @@
             <div class="card-grid">
                 @foreach($journals->slice(5) as $index => $item)
                     <a href="{{ route('journal.detay', $item->slug_tr ?: ($item->slug_en ?: $item->id)) }}" class="card reveal" style="transition-delay:{{ ($index % 3) * 0.1 }}s; text-decoration: none; color: inherit; display: block;">
-                        <div class="card-img" style="background-image:url('{{ asset($item->img) }}');"></div>
+                        <div class="card-img" style="position: relative; overflow: hidden;">
+                            <img src="{{ dioreal_img($item->img, 'foto.img/amalfi.jpg') }}" onerror="this.onerror=null;this.src='{{ asset('foto.img/amalfi.jpg') }}';" alt="{{ $item->title['tr'] ?? '' }}" style="width: 100%; height: 100%; object-fit: cover;">
+                        </div>
                         <div class="card-body">
                             <span class="card-tag">
                                 <span class="lang-text-tr">{{ $item->tag['tr'] ?? '' }} | {{ $item->date }}</span>

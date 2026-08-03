@@ -159,8 +159,11 @@
         <div class="card-grid">
             @foreach($rehberler as $g)
                 <div class="card reveal visible">
-                    <div class="card-img" style="background-image:url('{{ asset($g->img) }}');"></div>
+                    <div class="card-img" style="position: relative; overflow: hidden;">
+                        <img src="{{ dioreal_img($g->img, 'foto.img/bodrum.jpg') }}" onerror="this.onerror=null;this.src='{{ asset('foto.img/bodrum.jpg') }}';" alt="{{ $g->title['tr'] ?? '' }}" style="width: 100%; height: 100%; object-fit: cover;">
+                    </div>
                     <div class="card-body">
+
                         <span class="card-tag lang-text-tr">{{ !empty($g->tag["tr"]) ? $g->tag["tr"] : ($g->tag["en"] ?? "") }}</span>
                         <span class="card-tag lang-text-en">{{ !empty($g->tag["en"]) ? $g->tag["en"] : ($g->tag["tr"] ?? "") }}</span>
                         
