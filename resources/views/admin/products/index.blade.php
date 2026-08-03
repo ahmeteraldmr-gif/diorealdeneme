@@ -35,12 +35,13 @@
                         <tr>
                             <td>
                                 <div style="display: flex; gap: 4px;">
-                                    <img src="{{ asset($p->image) }}" alt="1. Ana Görsel" title="1. Ana Görsel" style="width: 45px; height: 45px; object-fit: cover; border-radius: 6px; border: 1px solid rgba(0,0,0,0.1);" onerror="this.src='{{ asset('foto.img/hero_4k.jpg') }}'">
+                                    <img src="{{ dioreal_img($p->image, 'foto.img/hero_4k.jpg') }}" alt="1. Ana Görsel" title="1. Ana Görsel" style="width: 45px; height: 45px; object-fit: cover; border-radius: 6px; border: 1px solid rgba(0,0,0,0.1);" onerror="this.onerror=null;this.src='{{ asset('foto.img/hero_4k.jpg') }}';">
                                     @if($p->image_hover)
-                                        <img src="{{ asset($p->image_hover) }}" alt="2. Hover Görseli" title="2. Hover Görseli" style="width: 45px; height: 45px; object-fit: cover; border-radius: 6px; border: 1px solid rgba(0,0,0,0.1);" onerror="this.src='{{ asset('foto.img/hero_slide_2.jpg') }}'">
+                                        <img src="{{ dioreal_img($p->image_hover, 'foto.img/hero_slide_2.jpg') }}" alt="2. Hover Görseli" title="2. Hover Görseli" style="width: 45px; height: 45px; object-fit: cover; border-radius: 6px; border: 1px solid rgba(0,0,0,0.1);" onerror="this.onerror=null;this.src='{{ asset('foto.img/hero_slide_2.jpg') }}';">
                                     @endif
                                 </div>
                             </td>
+
 
                             <td>
                                 <div><strong>TR:</strong> {{ $p->name['tr'] ?? '' }}</div>
