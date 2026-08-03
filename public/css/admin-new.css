@@ -818,8 +818,42 @@ textarea.form-control {
 /* ── MOBİL (768px) ── */
 @media (max-width: 768px) {
 
-    body {
-        overflow-x: hidden;
+    html, body {
+        overflow-x: auto !important;
+        -webkit-overflow-scrolling: touch !important;
+    }
+
+    .admin-main {
+        width: 100% !important;
+        overflow-x: auto !important;
+        -webkit-overflow-scrolling: touch !important;
+        padding: 0.85rem !important;
+        box-sizing: border-box !important;
+    }
+
+    .panel-card {
+        width: 100% !important;
+        box-sizing: border-box !important;
+        overflow-x: auto !important;
+        -webkit-overflow-scrolling: touch !important;
+    }
+
+    .table-responsive {
+        display: block !important;
+        width: 100% !important;
+        overflow-x: auto !important;
+        -webkit-overflow-scrolling: touch !important;
+        touch-action: pan-x pan-y !important;
+    }
+
+    .settings-tabs, .lang-tabs-container, .nav-tabs {
+        display: flex !important;
+        flex-wrap: nowrap !important;
+        overflow-x: auto !important;
+        -webkit-overflow-scrolling: touch !important;
+        touch-action: pan-x !important;
+        white-space: nowrap !important;
+        padding-bottom: 0.5rem !important;
     }
 
     /* Sidebar: smaller width on mobile */
@@ -827,6 +861,7 @@ textarea.form-control {
         width: 260px;
         padding: 1.5rem 1rem;
     }
+
 
     .sidebar-brand {
         font-size: 1.5rem;
