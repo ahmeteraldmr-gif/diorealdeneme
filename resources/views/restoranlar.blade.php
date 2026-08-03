@@ -174,8 +174,9 @@
                                 <iframe src="{{ $embedUrl }}" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" style="width: 100%; height: 100%; object-fit: cover; pointer-events: none; transform: scale(1.35); position: absolute; inset: 0; border: none;"></iframe>
                             @endif
                         @else
-                            <div style="background-image:url('{{ asset($r->img) }}'); width: 100%; height: 100%; background-size: cover; background-position: center; position: absolute; inset: 0;"></div>
+                            <img src="{{ !empty($r->img) ? asset($r->img) : asset('foto.img/rest_intro.jpg') }}" onerror="this.onerror=null;this.src='{{ asset('foto.img/rest_intro.jpg') }}';" alt="{{ $r->name['tr'] ?? '' }}" style="width: 100%; height: 100%; object-fit: cover; position: absolute; inset: 0;">
                         @endif
+
                     </div>
                     <div class="card-body">
                         <span class="card-tag lang-text-tr">{{ $r->tag["tr"] ?? "" }}</span>
