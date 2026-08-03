@@ -241,6 +241,7 @@
             <li><a href="{{ url('/oteller') }}" data-i18n="nav_hotels">Oteller</a></li>
             <li><a href="{{ url('/yatlar') }}" data-i18n="nav_yachts">Yatlar</a></li>
             <li><a href="{{ url('/restoranlar') }}" data-i18n="nav_restaurants">Restoranlar</a></li>
+            <li><a href="{{ route('urunler') }}" data-i18n="nav_products">Ürünler</a></li>
             <li><a href="{{ url('/destinasyonlar') }}" data-i18n="nav_guide">Destinasyonlar</a></li>
             <li><a href="{{ url('/etkinlikler') }}" data-i18n="nav_events">Etkinlikler</a></li>
             <li><a href="{{ url('/journal') }}" data-i18n="nav_journal">Journal</a></li>
@@ -264,6 +265,7 @@
             <li><a href="{{ url('/oteller') }}" data-i18n="nav_hotels">Oteller</a></li>
             <li><a href="{{ url('/yatlar') }}" data-i18n="nav_yachts">Yatlar</a></li>
             <li><a href="{{ url('/restoranlar') }}" data-i18n="nav_restaurants">Restoranlar</a></li>
+            <li><a href="{{ route('urunler') }}" data-i18n="nav_products">Ürünler</a></li>
             <div class="fs-divider"></div>
             <li><a href="{{ url('/destinasyonlar') }}" data-i18n="nav_guide">Destinasyonlar</a></li>
             <li><a href="{{ url('/etkinlikler') }}" data-i18n="nav_events">Etkinlikler</a></li>
@@ -273,6 +275,7 @@
             </li>
         </ul>
     </div>
+
 
     <!-- Page Hero -->
     @php

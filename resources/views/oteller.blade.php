@@ -311,6 +311,7 @@
             <li><a href="{{ route('oteller') }}" class="active-page" data-i18n="nav_hotels">Oteller</a></li>
             <li><a href="{{ route('yatlar') }}" data-i18n="nav_yachts">Yatlar</a></li>
             <li><a href="{{ route('restoranlar') }}" data-i18n="nav_restaurants">Restoranlar</a></li>
+            <li><a href="{{ route('urunler') }}" data-i18n="nav_products">Ürünler</a></li>
             <li><a href="{{ route('gezi-rehberi') }}" data-i18n="nav_guide">Gezi Rehberi</a></li>
             <li><a href="{{ route('etkinlikler') }}" data-i18n="nav_events">Etkinlikler</a></li>
             <li><a href="{{ route('journal') }}" data-i18n="nav_journal">Journal</a></li>
@@ -345,9 +346,11 @@
             <li><a href="{{ route('oteller') }}" data-i18n="nav_hotels">Oteller</a></li>
             <li><a href="{{ route('yatlar') }}" data-i18n="nav_yachts">Yatlar</a></li>
             <li><a href="{{ route('restoranlar') }}" data-i18n="nav_restaurants">Restoranlar</a></li>
+            <li><a href="{{ route('urunler') }}" data-i18n="nav_products">Ürünler</a></li>
             <div class="fs-divider"></div>
             <li><a href="{{ route('gezi-rehberi') }}" data-i18n="nav_guide">Gezi Rehberi</a></li>
             <li><a href="{{ route('etkinlikler') }}" data-i18n="nav_events">Etkinlikler</a></li>
+
             <li><a href="{{ route('journal') }}" data-i18n="nav_journal">Journal</a></li>
             <li class="lang-switch" style="font-size: 1.5rem; font-family: var(--font-display); justify-content: center; margin-top:3rem;">
                 <span id="lang-tr-fs" class="lang-btn">TR</span> | <span id="lang-en-fs" class="lang-btn">EN</span>

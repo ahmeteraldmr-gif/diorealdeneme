@@ -138,6 +138,7 @@
             <li><a href="{{ route('oteller') }}" data-i18n="nav_hotels">Oteller</a></li>
             <li><a href="{{ route('yatlar') }}" data-i18n="nav_yachts">Yatlar</a></li>
             <li><a href="{{ route('restoranlar') }}" data-i18n="nav_restaurants">Restoranlar</a></li>
+            <li><a href="{{ route('urunler') }}" data-i18n="nav_products">Ürünler</a></li>
             <div class="fs-divider"></div>
             <li><a href="{{ route('gezi-rehberi') }}" data-i18n="nav_guide">Gezi Rehberi</a></li>
             <li><a href="{{ route('etkinlikler') }}" data-i18n="nav_events">Etkinlikler</a></li>
@@ -147,6 +148,7 @@
             </li>
         </ul>
     </div>
+
 
     <!-- NEW: Dynamic Hero Area -->
     <section class="hero">

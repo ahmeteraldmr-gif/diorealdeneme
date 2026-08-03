@@ -88,6 +88,7 @@
             <li><a href="{{ route('oteller') }}" data-i18n="nav_hotels">Oteller</a></li>
             <li><a href="{{ route('yatlar') }}" data-i18n="nav_yachts">Yatlar</a></li>
             <li><a href="{{ route('restoranlar') }}" data-i18n="nav_restaurants">Restoranlar</a></li>
+            <li><a href="{{ route('urunler') }}" data-i18n="nav_products">Ürünler</a></li>
             <li><a href="{{ route('sepet') }}" style="color: #c5a059;">Sepetiniz (<span class="cart-badge" style="position:static; display:inline-flex;">0</span>)</a></li>
             <div class="fs-divider"></div>
             <li><a href="{{ route('gezi-rehberi') }}" data-i18n="nav_guide">Gezi Rehberi</a></li>
@@ -95,6 +96,7 @@
             <li><a href="{{ route('journal') }}" data-i18n="nav_journal">Journal</a></li>
         </ul>
     </div>
+
 
     <!-- Main Shopping Cart Section -->
     <section class="cart-section">
