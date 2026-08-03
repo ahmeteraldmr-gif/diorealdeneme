@@ -218,23 +218,37 @@
         </ul>
     </div>
 
-    <div class="page-hero" style="background-image: url('foto.img/yat_manzara.jpg');">
+    <div class="page-hero" style="background-image: url('{{ asset($settings["yat_hero_img"] ?? "foto.img/yat_manzara.jpg") }}');">
         <div class="page-hero-content">
-            <span class="page-eyebrow" data-i18n="yacht_hero_eye">Akdeniz'de Özgürlük</span>
-            <h1 class="page-title" data-i18n="yacht_title">Özel <em>Yatlar</em></h1>
+            <span class="page-eyebrow">
+                <span class="lang-text-tr">{{ $settings['yat_hero_eyebrow_tr'] ?? 'Akdeniz\'de Özgürlük' }}</span>
+                <span class="lang-text-en">{{ $settings['yat_hero_eyebrow_en'] ?? 'Freedom in the Mediterranean' }}</span>
+            </span>
+            <h1 class="page-title lang-text-tr">{!! nl2br(e($settings['yat_hero_title_tr'] ?? "Özel Yatlar")) !!}</h1>
+            <h1 class="page-title lang-text-en">{!! nl2br(e($settings['yat_hero_title_en'] ?? "Private Yachts")) !!}</h1>
         </div>
     </div>
 
     <section class="content-section">
         <div class="content-grid">
             <div class="reveal">
-                <span class="content-eyebrow" data-i18n="yacht_hol_eye">Yat Tatili</span>
-                <h2 class="content-title" data-i18n="yacht_hol_title">Koydan koya, <em>özgürce</em></h2>
-                <p class="content-body" data-i18n="yacht_hol_p1">Kendi rotanızı belirleyin, kendi hızınızda ilerleyin. Türkiye'nin turquoise kıyılarından Yunan adalarına, İtalyan rivieralarından Hırvatistan koylarına uzanan yolculuklarda lüks ve özgürlüğü bir arada yaşayın.</p>
-                <a href="#yatlar" class="btn btn-primary" data-i18n="btn_explore_yachts">Yatları İncele</a>
+                <span class="content-eyebrow">
+                    <span class="lang-text-tr">{{ $settings['yat_intro_eyebrow_tr'] ?? 'Yat Tatili' }}</span>
+                    <span class="lang-text-en">{{ $settings['yat_intro_eyebrow_en'] ?? 'Yacht Holiday' }}</span>
+                </span>
+                <h2 class="content-title lang-text-tr">{{ $settings['yat_intro_title_tr'] ?? 'Koydan koya, özgürce' }}</h2>
+                <h2 class="content-title lang-text-en">{{ $settings['yat_intro_title_en'] ?? 'From bay to bay, freely' }}</h2>
+
+                <p class="content-body lang-text-tr">{{ $settings['yat_intro_text_tr'] ?? "Kendi rotanızı belirleyin, kendi hızınızda ilerleyin. Türkiye'nin turquoise kıyılarından Yunan adalarına, İtalyan rivieralarından Hırvatistan koylarına uzanan yolculuklarda lüks ve özgürlüğü bir arada yaşayın." }}</p>
+                <p class="content-body lang-text-en">{{ $settings['yat_intro_text_en'] ?? "Set your own course and pace. Experience luxury and freedom across Turkey's turquoise coasts, Aegean islands, and Italian rivieras." }}</p>
+
+                <a href="#yatlar" class="btn btn-primary">
+                    <span class="lang-text-tr">Yatları İncele</span>
+                    <span class="lang-text-en">Explore Yachts</span>
+                </a>
             </div>
             <div class="reveal" style="transition-delay: 0.2s;">
-                <img src="foto.img/yat_ozgur.jpg" alt="Özel Yat" style="width:100%; aspect-ratio: 4/3; object-fit: cover;">
+                <img src="{{ asset($settings['yat_intro_img'] ?? 'foto.img/yat_ozgur.jpg') }}" alt="Özel Yat" style="width:100%; aspect-ratio: 4/3; object-fit: cover;">
             </div>
         </div>
     </section>
@@ -276,16 +290,30 @@
     <section class="content-section">
         <div class="content-grid reverse">
             <div class="reveal">
-                <span class="content-eyebrow" data-i18n="yacht_route_eye">Güzergah Planlaması</span>
-                <h2 class="content-title" data-i18n="yacht_route_title">Her yolculuk <em>size özel</em></h2>
-                <p class="content-body" data-i18n="yacht_route_p1">Bodrum'dan Marmaris'e mavi yolculuk, Ege adaları turu ya da Akdeniz'den Adriyatik'e uzanan epik rotalar — siz hayal edin, biz planlayalım. Deneyimli kaptanlarımız ve özel aşçılarımızla konfor ve lüks güvencesinde.</p>
-                <a href="https://wa.me/{{ format_whatsapp($settings['whatsapp'] ?? '') }}" target="_blank" class="btn btn-outline" data-i18n="btn_plan_route">Rota Planlat</a>
+                <span class="content-eyebrow">
+                    <span class="lang-text-tr">{{ $settings['yat_route_eyebrow_tr'] ?? 'Güzergah Planlaması' }}</span>
+                    <span class="lang-text-en">{{ $settings['yat_route_eyebrow_en'] ?? 'Route Planning' }}</span>
+                </span>
+                <h2 class="content-title lang-text-tr">{{ $settings['yat_route_title_tr'] ?? 'Her yolculuk size özel' }}</h2>
+                <h2 class="content-title lang-text-en">{{ $settings['yat_route_title_en'] ?? 'Every voyage tailored for you' }}</h2>
+
+                <p class="content-body lang-text-tr">{{ $settings['yat_route_text_tr'] ?? "Bodrum'dan Marmaris'e mavi yolculuk, Ege adaları turu ya da Akdeniz'den Adriyatik'e uzanan epik rotalar — siz hayal edin, biz planlayalım. Deneyimli kaptanlarımız ve özel aşçılarımızla konfor ve lüks güvencesinde." }}</p>
+                <p class="content-body lang-text-en">{{ $settings['yat_route_text_en'] ?? "Blue voyages from Bodrum to Marmaris, Aegean island tours, or epic routes stretching from the Mediterranean to the Adriatic." }}</p>
+
+                @php
+                    $routeLink = !empty($settings['yat_route_btn_link']) ? $settings['yat_route_btn_link'] : 'https://wa.me/' . format_whatsapp($settings['whatsapp'] ?? '');
+                @endphp
+                <a href="{{ $routeLink }}" target="_blank" class="btn btn-outline">
+                    <span class="lang-text-tr">{{ $settings['yat_route_btn_tr'] ?? 'Rota Planlat' }}</span>
+                    <span class="lang-text-en">{{ $settings['yat_route_btn_en'] ?? 'Plan Your Route' }}</span>
+                </a>
             </div>
             <div class="reveal" style="transition-delay: 0.2s;">
-                <img src="foto.img/yat_rota.jpg" alt="Yat Rotası" style="width:100%; aspect-ratio: 4/3; object-fit: cover;">
+                <img src="{{ asset($settings['yat_route_img'] ?? 'foto.img/yat_rota.jpg') }}" alt="Yat Rotası" style="width:100%; aspect-ratio: 4/3; object-fit: cover;">
             </div>
         </div>
     </section>
+
 
     @include('partials.footer')
 

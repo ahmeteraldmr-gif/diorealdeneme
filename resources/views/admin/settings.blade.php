@@ -71,12 +71,14 @@
                 <i class="fas fa-sliders-h" style="color: var(--primary); margin-right: 0.5rem;"></i> Genel Ayarları Güncelle
             </h3>
             
-            <div class="tabs-navigation" style="display: flex; gap: 0.5rem; border-bottom: 2px solid var(--border-color); width: 100%;">
+            <div class="tabs-navigation" style="display: flex; gap: 0.5rem; border-bottom: 2px solid var(--border-color); width: 100%; flex-wrap: wrap;">
                 <button type="button" class="tab-btn active" onclick="switchSettingTab(event, 'tab-general')">İletişim & Genel</button>
                 <button type="button" class="tab-btn" onclick="switchSettingTab(event, 'tab-ticker')">Duyuru Bandı (Marquee)</button>
                 <button type="button" class="tab-btn" onclick="switchSettingTab(event, 'tab-homepage')">Anasayfa İçeriği</button>
                 <button type="button" class="tab-btn" onclick="switchSettingTab(event, 'tab-about')">Hakkımızda İçeriği</button>
+                <button type="button" class="tab-btn" onclick="switchSettingTab(event, 'tab-pages')">Sayfa Başlıkları & Görselleri</button>
             </div>
+
 
         </div>
 
@@ -658,6 +660,245 @@
                         <div class="img-preview-container" style="height: calc(100% - 25px); margin-top: 0;">
                             <img class="img-preview" src="{{ asset($settings['about_mission_img'] ?? 'foto.img/about_safari.jpg') }}" alt="Mission Image">
                             <input type="file" name="about_mission_img" accept="image/*">
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- ── TAB 5: PAGES (OTELLER, RESTORANLAR, YATLAR) ── -->
+            <div id="tab-pages" class="setting-tab-pane">
+                
+                <!-- 🏨 OTELLER SAYFASI -->
+                <h4 class="form-section-title" style="margin-top: 0;">🏨 Oteller Sayfası İçerikleri & Üst Görsel</h4>
+                <div style="display: grid; grid-template-columns: 1.3fr 1fr; gap: 1.5rem; margin-bottom: 2rem;">
+                    <div>
+                        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;">
+                            <div class="form-group">
+                                <label class="form-label">Hero Üst Etiket (TR)</label>
+                                <input type="text" class="form-control" name="otel_hero_eyebrow_tr" value="{{ $settings['otel_hero_eyebrow_tr'] ?? 'Premium Konaklama' }}">
+                            </div>
+                            <div class="form-group">
+                                <label class="form-label">Hero Üst Etiket (EN)</label>
+                                <input type="text" class="form-control" name="otel_hero_eyebrow_en" value="{{ $settings['otel_hero_eyebrow_en'] ?? 'Premium Stay' }}">
+                            </div>
+                        </div>
+                        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;">
+                            <div class="form-group">
+                                <label class="form-label">Hero Başlığı (TR)</label>
+                                <input type="text" class="form-control" name="otel_hero_title_tr" value="{{ $settings['otel_hero_title_tr'] ?? 'Seçkin Oteller' }}">
+                            </div>
+                            <div class="form-group">
+                                <label class="form-label">Hero Başlığı (EN)</label>
+                                <input type="text" class="form-control" name="otel_hero_title_en" value="{{ $settings['otel_hero_title_en'] ?? 'Exclusive Hotels' }}">
+                            </div>
+                        </div>
+                        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;">
+                            <div class="form-group">
+                                <label class="form-label">Tanıtım Başlığı (TR)</label>
+                                <input type="text" class="form-control" name="otel_intro_title_tr" value="{{ $settings['otel_intro_title_tr'] ?? 'Her konaklamanın bir hikayesi vardır.' }}">
+                            </div>
+                            <div class="form-group">
+                                <label class="form-label">Tanıtım Başlığı (EN)</label>
+                                <input type="text" class="form-control" name="otel_intro_title_en" value="{{ $settings['otel_intro_title_en'] ?? 'Every luxury stay has a story to tell.' }}">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label">Tanıtım Metni (TR)</label>
+                            <textarea class="form-control" name="otel_intro_text_tr" rows="3">{{ $settings['otel_intro_text_tr'] ?? 'Dünyaca ünlü butik oteller, tarihi yapılar ve ultra-lüks resort\'lardan oluşan koleksiyonumuz, seyahatinizin her anını unutulmaz kılmak için özenle seçilmiştir. Sadece konaklama değil; bir vizyon, bir tutku sunuyoruz.' }}</textarea>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label">Tanıtım Metni (EN)</label>
+                            <textarea class="form-control" name="otel_intro_text_en" rows="3">{{ $settings['otel_intro_text_en'] ?? 'Our curated collection of world-renowned boutique hotels, historic estates, and ultra-luxury resorts is selected to make every moment unforgettable.' }}</textarea>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label">Oteller Sayfası Üst Kapak Görseli</label>
+                        <div class="img-preview-container" style="height: calc(100% - 25px); margin-top: 0; flex-direction: column; align-items: flex-start; justify-content: center;">
+                            <img class="img-preview" src="{{ asset($settings['otel_hero_img'] ?? 'foto.img/otel_hero.jpg') }}" alt="Oteller Hero Image" style="width: 100%; height: 160px; object-fit: cover;">
+                            <input type="file" name="otel_hero_img" accept="image/*" style="margin-top: 0.8rem;">
+                            <small style="color: var(--text-muted); margin-top: 0.4rem;">Oteller sayfasının en üstündeki dev arka plan görseli.</small>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 🍽️ RESTORANLAR SAYFASI -->
+                <h4 class="form-section-title">🍽️ Restoranlar Sayfası İçerikleri & Üst Görsel</h4>
+                <div style="display: grid; grid-template-columns: 1.3fr 1fr; gap: 1.5rem; margin-bottom: 2rem;">
+                    <div>
+                        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;">
+                            <div class="form-group">
+                                <label class="form-label">Hero Üst Etiket (TR)</label>
+                                <input type="text" class="form-control" name="rest_hero_eyebrow_tr" value="{{ $settings['rest_hero_eyebrow_tr'] ?? 'Gastronomi Deneyimi' }}">
+                            </div>
+                            <div class="form-group">
+                                <label class="form-label">Hero Üst Etiket (EN)</label>
+                                <input type="text" class="form-control" name="rest_hero_eyebrow_en" value="{{ $settings['rest_hero_eyebrow_en'] ?? 'Gastronomic Experience' }}">
+                            </div>
+                        </div>
+                        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;">
+                            <div class="form-group">
+                                <label class="form-label">Hero Başlığı (TR)</label>
+                                <input type="text" class="form-control" name="rest_hero_title_tr" value="{{ $settings['rest_hero_title_tr'] ?? 'Seçkin Restoranlar' }}">
+                            </div>
+                            <div class="form-group">
+                                <label class="form-label">Hero Başlığı (EN)</label>
+                                <input type="text" class="form-control" name="rest_hero_title_en" value="{{ $settings['rest_hero_title_en'] ?? 'Exclusive Restaurants' }}">
+                            </div>
+                        </div>
+                        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;">
+                            <div class="form-group">
+                                <label class="form-label">Tanıtım Başlığı (TR)</label>
+                                <input type="text" class="form-control" name="rest_intro_title_tr" value="{{ $settings['rest_intro_title_tr'] ?? 'Yemek bir sanattır' }}">
+                            </div>
+                            <div class="form-group">
+                                <label class="form-label">Tanıtım Başlığı (EN)</label>
+                                <input type="text" class="form-control" name="rest_intro_title_en" value="{{ $settings['rest_intro_title_en'] ?? 'Dining is an art' }}">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label">Tanıtım Metni (TR)</label>
+                            <textarea class="form-control" name="rest_intro_text_tr" rows="3">{{ $settings['rest_intro_text_tr'] ?? 'Michelin yıldızlı şeflerden yerel lezzet ustalarına, deniz kenarı balık restoranlarından dağ başı gurme deneyimlerine uzanan koleksiyonumuzla her damak tadına hitap eden masaları keşfedin.' }}</textarea>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label">Tanıtım Metni (EN)</label>
+                            <textarea class="form-control" name="rest_intro_text_en" rows="3">{{ $settings['rest_intro_text_en'] ?? 'Discover curated dining experiences ranging from Michelin-starred chefs to coastal seafood sanctuaries and mountain gourmet retreats.' }}</textarea>
+                        </div>
+                    </div>
+                    <div style="display: flex; flex-direction: column; gap: 1rem;">
+                        <div class="form-group">
+                            <label class="form-label">Restoranlar En Üst Kapak Görseli</label>
+                            <div class="img-preview-container" style="flex-direction: column; align-items: flex-start;">
+                                <img class="img-preview" src="{{ asset($settings['rest_hero_img'] ?? 'foto.img/rest_hero.jpg') }}" alt="Restoran Hero Image" style="width: 100%; height: 110px; object-fit: cover;">
+                                <input type="file" name="rest_hero_img" accept="image/*" style="margin-top: 0.5rem;">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label">Tanıtım Bölümü Yan Görseli</label>
+                            <div class="img-preview-container" style="flex-direction: column; align-items: flex-start;">
+                                <img class="img-preview" src="{{ asset($settings['rest_intro_img'] ?? 'foto.img/rest_intro.jpg') }}" alt="Restoran Intro Image" style="width: 100%; height: 110px; object-fit: cover;">
+                                <input type="file" name="rest_intro_img" accept="image/*" style="margin-top: 0.5rem;">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 🛥️ YATLAR SAYFASI & GÜZERGAH PLANLAMASI -->
+                <h4 class="form-section-title">🛥️ Yatlar Sayfası & Güzergah Planlaması Bölümü</h4>
+                <div style="display: grid; grid-template-columns: 1.3fr 1fr; gap: 1.5rem; margin-bottom: 2rem;">
+                    <div>
+                        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;">
+                            <div class="form-group">
+                                <label class="form-label">Hero Üst Etiket (TR)</label>
+                                <input type="text" class="form-control" name="yat_hero_eyebrow_tr" value="{{ $settings['yat_hero_eyebrow_tr'] ?? 'Akdeniz\'de Özgürlük' }}">
+                            </div>
+                            <div class="form-group">
+                                <label class="form-label">Hero Üst Etiket (EN)</label>
+                                <input type="text" class="form-control" name="yat_hero_eyebrow_en" value="{{ $settings['yat_hero_eyebrow_en'] ?? 'Freedom in the Mediterranean' }}">
+                            </div>
+                        </div>
+                        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;">
+                            <div class="form-group">
+                                <label class="form-label">Hero Başlığı (TR)</label>
+                                <input type="text" class="form-control" name="yat_hero_title_tr" value="{{ $settings['yat_hero_title_tr'] ?? 'Özel Yatlar' }}">
+                            </div>
+                            <div class="form-group">
+                                <label class="form-label">Hero Başlığı (EN)</label>
+                                <input type="text" class="form-control" name="yat_hero_title_en" value="{{ $settings['yat_hero_title_en'] ?? 'Private Yachts' }}">
+                            </div>
+                        </div>
+                        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;">
+                            <div class="form-group">
+                                <label class="form-label">Tanıtım Başlığı (TR)</label>
+                                <input type="text" class="form-control" name="yat_intro_title_tr" value="{{ $settings['yat_intro_title_tr'] ?? 'Koydan koya, özgürce' }}">
+                            </div>
+                            <div class="form-group">
+                                <label class="form-label">Tanıtım Başlığı (EN)</label>
+                                <input type="text" class="form-control" name="yat_intro_title_en" value="{{ $settings['yat_intro_title_en'] ?? 'From bay to bay, freely' }}">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label">Tanıtım Metni (TR)</label>
+                            <textarea class="form-control" name="yat_intro_text_tr" rows="3">{{ $settings['yat_intro_text_tr'] ?? 'Kendi rotanızı belirleyin, kendi hızınızda ilerleyin. Türkiye\'nin turquoise kıyılarından Yunan adalarına, İtalyan rivieralarından Hırvatistan koylarına uzanan yolculuklarda lüks ve özgürlüğü bir arada yaşayın.' }}</textarea>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label">Tanıtım Metni (EN)</label>
+                            <textarea class="form-control" name="yat_intro_text_en" rows="3">{{ $settings['yat_intro_text_en'] ?? 'Set your own course and pace. Experience luxury and freedom across Turkey\'s turquoise coasts, Aegean islands, and Italian rivieras.' }}</textarea>
+                        </div>
+                    </div>
+                    <div style="display: flex; flex-direction: column; gap: 1rem;">
+                        <div class="form-group">
+                            <label class="form-label">Yatlar En Üst Kapak Görseli</label>
+                            <div class="img-preview-container" style="flex-direction: column; align-items: flex-start;">
+                                <img class="img-preview" src="{{ asset($settings['yat_hero_img'] ?? 'foto.img/yat_manzara.jpg') }}" alt="Yat Hero Image" style="width: 100%; height: 110px; object-fit: cover;">
+                                <input type="file" name="yat_hero_img" accept="image/*" style="margin-top: 0.5rem;">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label">Yatlar Tanıtım Yan Görseli</label>
+                            <div class="img-preview-container" style="flex-direction: column; align-items: flex-start;">
+                                <img class="img-preview" src="{{ asset($settings['yat_intro_img'] ?? 'foto.img/yat_ozgur.jpg') }}" alt="Yat Intro Image" style="width: 100%; height: 110px; object-fit: cover;">
+                                <input type="file" name="yat_intro_img" accept="image/*" style="margin-top: 0.5rem;">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 🗺️ YATLAR GÜZERGAH PLANLAMASI BÖLÜMÜ -->
+                <div style="background: rgba(200, 169, 110, 0.05); border: 1px solid rgba(200, 169, 110, 0.2); padding: 1.5rem; border-radius: var(--radius-md); margin-top: 2rem;">
+                    <h5 style="color: var(--primary); font-size: 1.1rem; margin-bottom: 1.2rem;">🗺️ Güzergah Planlaması Bölümü & Rota Planlat Butonu</h5>
+                    <div style="display: grid; grid-template-columns: 1.3fr 1fr; gap: 1.5rem;">
+                        <div>
+                            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;">
+                                <div class="form-group">
+                                    <label class="form-label">Güzergah Üst Etiket (TR)</label>
+                                    <input type="text" class="form-control" name="yat_route_eyebrow_tr" value="{{ $settings['yat_route_eyebrow_tr'] ?? 'Güzergah Planlaması' }}">
+                                </div>
+                                <div class="form-group">
+                                    <label class="form-label">Güzergah Üst Etiket (EN)</label>
+                                    <input type="text" class="form-control" name="yat_route_eyebrow_en" value="{{ $settings['yat_route_eyebrow_en'] ?? 'Route Planning' }}">
+                                </div>
+                            </div>
+                            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;">
+                                <div class="form-group">
+                                    <label class="form-label">Güzergah Başlığı (TR)</label>
+                                    <input type="text" class="form-control" name="yat_route_title_tr" value="{{ $settings['yat_route_title_tr'] ?? 'Her yolculuk size özel' }}">
+                                </div>
+                                <div class="form-group">
+                                    <label class="form-label">Güzergah Başlığı (EN)</label>
+                                    <input type="text" class="form-control" name="yat_route_title_en" value="{{ $settings['yat_route_title_en'] ?? 'Every voyage tailored for you' }}">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="form-label">Güzergah Açıklama Metni (TR)</label>
+                                <textarea class="form-control" name="yat_route_text_tr" rows="3">{{ $settings['yat_route_text_tr'] ?? 'Bodrum\'dan Marmaris\'e mavi yolculuk, Ege adaları turu ya da Akdeniz\'den Adriyatik\'e uzanan epik rotalar — siz hayal edin, biz planlayalım. Deneyimli kaptanlarımız ve özel aşçılarımızla konfor ve lüks güvencesinde.' }}</textarea>
+                            </div>
+                            <div class="form-group">
+                                <label class="form-label">Güzergah Açıklama Metni (EN)</label>
+                                <textarea class="form-control" name="yat_route_text_en" rows="3">{{ $settings['yat_route_text_en'] ?? 'Blue voyages from Bodrum to Marmaris, Aegean island tours, or epic routes stretching from the Mediterranean to the Adriatic.' }}</textarea>
+                            </div>
+                            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;">
+                                <div class="form-group">
+                                    <label class="form-label">Butik/Rota Buton Yazısı (TR)</label>
+                                    <input type="text" class="form-control" name="yat_route_btn_tr" value="{{ $settings['yat_route_btn_tr'] ?? 'Rota Planlat' }}">
+                                </div>
+                                <div class="form-group">
+                                    <label class="form-label">Butik/Rota Buton Yazısı (EN)</label>
+                                    <input type="text" class="form-control" name="yat_route_btn_en" value="{{ $settings['yat_route_btn_en'] ?? 'Plan Your Route' }}">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="form-label">Buton Tıklama Bağlantısı (URL / WhatsApp / İletişim Formu Linki)</label>
+                                <input type="text" class="form-control" name="yat_route_btn_link" placeholder="Örn: https://wa.me/905320000000 veya /iletisim" value="{{ $settings['yat_route_btn_link'] ?? '' }}">
+                                <small style="color: var(--text-muted); display: block; margin-top: 0.3rem;">Boş bırakılırsa varsayılan WhatsApp hattına yönlendirir.</small>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label">Güzergah Bölümü Yan Görseli</label>
+                            <div class="img-preview-container" style="height: calc(100% - 25px); margin-top: 0; flex-direction: column; align-items: flex-start; justify-content: center;">
+                                <img class="img-preview" src="{{ asset($settings['yat_route_img'] ?? 'foto.img/yat_rota.jpg') }}" alt="Yat Route Image" style="width: 100%; height: 180px; object-fit: cover;">
+                                <input type="file" name="yat_route_img" accept="image/*" style="margin-top: 0.8rem;">
+                            </div>
                         </div>
                     </div>
                 </div>

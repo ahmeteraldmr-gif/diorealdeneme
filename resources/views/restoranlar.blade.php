@@ -114,26 +114,41 @@
         </ul>
     </div>
 
-    <div class="page-hero" style="background-image: url('foto.img/rest_hero.jpg');">
+    <div class="page-hero" style="background-image: url('{{ asset($settings["rest_hero_img"] ?? "foto.img/rest_hero.jpg") }}');">
         <div class="page-hero-content">
-            <span class="page-eyebrow" data-i18n="rest_hero_eye">Gastronomi Deneyimi</span>
-            <h1 class="page-title" data-i18n="rest_title">Seçkin <em>Restoranlar</em></h1>
+            <span class="page-eyebrow">
+                <span class="lang-text-tr">{{ $settings['rest_hero_eyebrow_tr'] ?? 'Gastronomi Deneyimi' }}</span>
+                <span class="lang-text-en">{{ $settings['rest_hero_eyebrow_en'] ?? 'Gastronomic Experience' }}</span>
+            </span>
+            <h1 class="page-title lang-text-tr">{!! nl2br(e($settings['rest_hero_title_tr'] ?? "Seçkin Restoranlar")) !!}</h1>
+            <h1 class="page-title lang-text-en">{!! nl2br(e($settings['rest_hero_title_en'] ?? "Exclusive Restaurants")) !!}</h1>
         </div>
     </div>
 
     <section class="content-section">
         <div class="content-grid">
             <div class="reveal">
-                <span class="content-eyebrow" data-i18n="rest_intro_eye">Lezzet & Atmosfer</span>
-                <h2 class="content-title" data-i18n="rest_intro_title">Yemek bir <em>sanat</em>tır</h2>
-                <p class="content-body" data-i18n="rest_intro_p1">Michelin yıldızlı şeflerden yerel lezzet ustalarına, deniz kenarı balık restoranlarından dağ başı gurme deneyimlerine uzanan koleksiyonumuzla her damak tadına hitap eden masaları keşfedin.</p>
-                <a href="#restoranlar" class="btn btn-primary" data-i18n="btn_discover_tables">Masaları Keşfet</a>
+                <span class="content-eyebrow">
+                    <span class="lang-text-tr">{{ $settings['rest_intro_eyebrow_tr'] ?? 'Lezzet & Atmosfer' }}</span>
+                    <span class="lang-text-en">{{ $settings['rest_intro_eyebrow_en'] ?? 'Flavor & Atmosphere' }}</span>
+                </span>
+                <h2 class="content-title lang-text-tr">{{ $settings['rest_intro_title_tr'] ?? 'Yemek bir sanattır' }}</h2>
+                <h2 class="content-title lang-text-en">{{ $settings['rest_intro_title_en'] ?? 'Dining is an art' }}</h2>
+
+                <p class="content-body lang-text-tr">{{ $settings['rest_intro_text_tr'] ?? 'Michelin yıldızlı şeflerden yerel lezzet ustalarına, deniz kenarı balık restoranlarından dağ başı gurme deneyimlerine uzanan koleksiyonumuzla her damak tadına hitap eden masaları keşfedin.' }}</p>
+                <p class="content-body lang-text-en">{{ $settings['rest_intro_text_en'] ?? 'Discover curated dining experiences ranging from Michelin-starred chefs to coastal seafood sanctuaries and mountain gourmet retreats.' }}</p>
+
+                <a href="#restoranlar" class="btn btn-primary">
+                    <span class="lang-text-tr">Masaları Keşfet</span>
+                    <span class="lang-text-en">Explore Tables</span>
+                </a>
             </div>
             <div class="reveal" style="transition-delay:0.2s">
-                <img src="foto.img/rest_intro.jpg" alt="Restaurant" style="width:100%;aspect-ratio:4/3;object-fit:cover;">
+                <img src="{{ asset($settings['rest_intro_img'] ?? 'foto.img/rest_intro.jpg') }}" alt="Restaurant" style="width:100%;aspect-ratio:4/3;object-fit:cover;">
             </div>
         </div>
     </section>
+
 
     <section class="content-section alt" id="restoranlar">
         <div style="text-align:center;margin-bottom:4rem;">

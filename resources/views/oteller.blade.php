@@ -55,7 +55,7 @@
         .bd-hero-bg {
             position: absolute;
             inset: 0;
-            background-image: url('foto.img/otel_hero.jpg');
+            background-image: url('{{ asset($settings["otel_hero_img"] ?? "foto.img/otel_hero.jpg") }}');
             background-size: cover;
             background-position: center;
             transform: scale(1.03);
@@ -63,6 +63,7 @@
             z-index: 1;
             transition: transform 2.5s cubic-bezier(0.16, 1, 0.3, 1);
         }
+
         .bd-hero:hover .bd-hero-bg {
             transform: scale(1);
         }
@@ -358,9 +359,12 @@
     <div class="bd-hero">
         <div class="bd-hero-bg"></div>
         <div class="bd-hero-content">
-            <span class="bd-eyebrow" data-i18n="otel_hero_eye">Premium Konaklama</span>
-            <h1 class="bd-title lang-text-tr">Seçkin <br><em>Oteller</em></h1>
-            <h1 class="bd-title lang-text-en">EXCLUSIVE <br><em>Hotels</em></h1>
+            <span class="bd-eyebrow">
+                <span class="lang-text-tr">{{ $settings['otel_hero_eyebrow_tr'] ?? 'Premium Konaklama' }}</span>
+                <span class="lang-text-en">{{ $settings['otel_hero_eyebrow_en'] ?? 'Premium Stay' }}</span>
+            </span>
+            <h1 class="bd-title lang-text-tr">{!! nl2br(e($settings['otel_hero_title_tr'] ?? "Seçkin \nOteller")) !!}</h1>
+            <h1 class="bd-title lang-text-en">{!! nl2br(e($settings['otel_hero_title_en'] ?? "EXCLUSIVE \nHotels")) !!}</h1>
         </div>
     </div>
 
@@ -369,12 +373,13 @@
         
         <!-- Intro Section -->
         <section class="bd-intro">
-            <h2 class="bd-intro-title lang-text-tr">Her konaklamanın <br>bir <em>hikayesi</em> vardır.</h2>
-            <h2 class="bd-intro-title lang-text-en">Every luxury stay <br>has a <em>story</em> to tell.</h2>
+            <h2 class="bd-intro-title lang-text-tr">{!! nl2br(e($settings['otel_intro_title_tr'] ?? 'Her konaklamanın bir hikayesi vardır.')) !!}</h2>
+            <h2 class="bd-intro-title lang-text-en">{!! nl2br(e($settings['otel_intro_title_en'] ?? 'Every luxury stay has a story to tell.')) !!}</h2>
             
-            <p class="bd-intro-text lang-text-tr">Dünyaca ünlü butik oteller, tarihi yapılar ve ultra-lüks resort'lardan oluşan koleksiyonumuz, seyahatinizin her anını unutulmaz kılmak için özenle seçilmiştir. Sadece konaklama değil; bir vizyon, bir tutku sunuyoruz.</p>
-            <p class="bd-intro-text lang-text-en">Our curated collection of world-renowned boutique hotels, historic estates, and ultra-luxury resorts is selected to make every moment unforgettable. We don't just offer lodging; we share a lifestyle and a vision.</p>
+            <p class="bd-intro-text lang-text-tr">{{ $settings['otel_intro_text_tr'] ?? "Dünyaca ünlü butik oteller, tarihi yapılar ve ultra-lüks resort'lardan oluşan koleksiyonumuz, seyahatinizin her anını unutulmaz kılmak için özenle seçilmiştir. Sadece konaklama değil; bir vizyon, bir tutku sunuyoruz." }}</p>
+            <p class="bd-intro-text lang-text-en">{{ $settings['otel_intro_text_en'] ?? "Our curated collection of world-renowned boutique hotels, historic estates, and ultra-luxury resorts is selected to make every moment unforgettable. We don't just offer lodging; we share a lifestyle and a vision." }}</p>
         </section>
+
 
         <!-- Hotels Alternate Rows -->
         <section id="hotelsList">

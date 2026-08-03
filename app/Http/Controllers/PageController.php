@@ -66,8 +66,9 @@ class PageController extends Controller
         $canonical = route('oteller', $activeLang === 'en' ? ['lang' => 'en'] : []);
         $hreflang_tr = route('oteller', ['lang' => 'tr']);
         $hreflang_en = route('oteller', ['lang' => 'en']);
+        $settings = \App\Models\Setting::pluck('value', 'key')->toArray();
 
-        return view("oteller", compact("oteller", "seo", "canonical", "hreflang_tr", "hreflang_en"));
+        return view("oteller", compact("oteller", "seo", "canonical", "hreflang_tr", "hreflang_en", "settings"));
     }
 
     public function yatlar()
@@ -78,8 +79,9 @@ class PageController extends Controller
         $canonical = route('yatlar', $activeLang === 'en' ? ['lang' => 'en'] : []);
         $hreflang_tr = route('yatlar', ['lang' => 'tr']);
         $hreflang_en = route('yatlar', ['lang' => 'en']);
+        $settings = \App\Models\Setting::pluck('value', 'key')->toArray();
 
-        return view("yatlar", compact("yatlar", "seo", "canonical", "hreflang_tr", "hreflang_en"));
+        return view("yatlar", compact("yatlar", "seo", "canonical", "hreflang_tr", "hreflang_en", "settings"));
     }
 
     public function restoranlar()
@@ -90,9 +92,11 @@ class PageController extends Controller
         $canonical = route('restoranlar', $activeLang === 'en' ? ['lang' => 'en'] : []);
         $hreflang_tr = route('restoranlar', ['lang' => 'tr']);
         $hreflang_en = route('restoranlar', ['lang' => 'en']);
+        $settings = \App\Models\Setting::pluck('value', 'key')->toArray();
 
-        return view("restoranlar", compact("restoranlar", "seo", "canonical", "hreflang_tr", "hreflang_en"));
+        return view("restoranlar", compact("restoranlar", "seo", "canonical", "hreflang_tr", "hreflang_en", "settings"));
     }
+
 
     public function geziRehberi()
     {

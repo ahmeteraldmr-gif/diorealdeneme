@@ -247,6 +247,51 @@ class SettingController extends Controller
             'about_mission_p1_en',
             'about_mission_p2_tr',
             'about_mission_p2_en',
+
+            // Oteller Page Settings
+            'otel_hero_eyebrow_tr',
+            'otel_hero_eyebrow_en',
+            'otel_hero_title_tr',
+            'otel_hero_title_en',
+            'otel_intro_title_tr',
+            'otel_intro_title_en',
+            'otel_intro_text_tr',
+            'otel_intro_text_en',
+
+            // Restoranlar Page Settings
+            'rest_hero_eyebrow_tr',
+            'rest_hero_eyebrow_en',
+            'rest_hero_title_tr',
+            'rest_hero_title_en',
+            'rest_intro_eyebrow_tr',
+            'rest_intro_eyebrow_en',
+            'rest_intro_title_tr',
+            'rest_intro_title_en',
+            'rest_intro_text_tr',
+            'rest_intro_text_en',
+
+            // Yatlar Page Settings
+            'yat_hero_eyebrow_tr',
+            'yat_hero_eyebrow_en',
+            'yat_hero_title_tr',
+            'yat_hero_title_en',
+            'yat_intro_eyebrow_tr',
+            'yat_intro_eyebrow_en',
+            'yat_intro_title_tr',
+            'yat_intro_title_en',
+            'yat_intro_text_tr',
+            'yat_intro_text_en',
+
+            // Yatlar Route Section Settings
+            'yat_route_eyebrow_tr',
+            'yat_route_eyebrow_en',
+            'yat_route_title_tr',
+            'yat_route_title_en',
+            'yat_route_text_tr',
+            'yat_route_text_en',
+            'yat_route_btn_tr',
+            'yat_route_btn_en',
+            'yat_route_btn_link',
         ];
 
         foreach ($fields as $field) {
@@ -265,7 +310,15 @@ class SettingController extends Controller
             'about_hero_img',
             'about_story_img',
             'about_mission_img',
+
+            'otel_hero_img',
+            'rest_hero_img',
+            'rest_intro_img',
+            'yat_hero_img',
+            'yat_intro_img',
+            'yat_route_img',
         ];
+
 
         foreach ($imageFields as $imgField) {
             if ($request->hasFile($imgField)) {
