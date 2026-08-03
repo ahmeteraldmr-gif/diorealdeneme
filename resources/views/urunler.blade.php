@@ -927,11 +927,22 @@
 
 
     <!-- 🔄 5-SECOND AUTO-ROTATING LUXURY PRODUCT SHOWCASE CAROUSEL (LARGE HERO SLIDER) -->
+    @php
+        $slide1_active = ($settings['ecom_slide1_status'] ?? '1') == '1';
+        $slide2_active = ($settings['ecom_slide2_status'] ?? '1') == '1';
+        $slide3_active = ($settings['ecom_slide3_status'] ?? '1') == '1';
+        $active_count = ($slide1_active ? 1 : 0) + ($slide2_active ? 1 : 0) + ($slide3_active ? 1 : 0);
+    @endphp
+
+    @if($active_count > 0)
     <section class="ecom-showcase-section">
         <div id="autoShowcaseSlider" style="position: relative; height: 420px; border-radius: 24px; overflow: hidden; box-shadow: 0 20px 45px rgba(0,0,0,0.14);">
             
+            @php $slide_idx = 0; @endphp
+
+            @if($slide1_active)
             <!-- Slide 1 -->
-            <div class="showcase-slide" style="position: absolute; inset: 0; opacity: 1; transition: opacity 0.8s ease-in-out; background-image: url('{{ asset($settings["ecom_slide1_img"] ?? "foto.img/hero_4k.jpg") }}'); background-size: cover; background-position: center;">
+            <div class="showcase-slide" style="position: absolute; inset: 0; opacity: {{ $slide_idx === 0 ? 1 : 0 }}; transition: opacity 0.8s ease-in-out; background-image: url('{{ dioreal_img($settings["ecom_slide1_img"] ?? "", "foto.img/hero_4k.jpg") }}'); background-size: cover; background-position: center;">
                 <div class="showcase-slide-inner">
                     <span style="font-size: 0.85rem; letter-spacing: 0.25em; color: #c8a96e; font-weight: 700; text-transform: uppercase; margin-bottom: 0.6rem;">
                         <span class="lang-text-tr">{{ $settings['ecom_slide1_eye_tr'] ?? 'PORSELEN & ÇATAL BIÇAK KOLEKSİYONU' }}</span>
@@ -951,9 +962,12 @@
                     </div>
                 </div>
             </div>
+            @php $slide_idx++; @endphp
+            @endif
 
+            @if($slide2_active)
             <!-- Slide 2 -->
-            <div class="showcase-slide" style="position: absolute; inset: 0; opacity: 0; transition: opacity 0.8s ease-in-out; background-image: url('{{ asset($settings["ecom_slide2_img"] ?? "foto.img/otel_hero.jpg") }}'); background-size: cover; background-position: center;">
+            <div class="showcase-slide" style="position: absolute; inset: 0; opacity: {{ $slide_idx === 0 ? 1 : 0 }}; transition: opacity 0.8s ease-in-out; background-image: url('{{ dioreal_img($settings["ecom_slide2_img"] ?? "", "foto.img/otel_hero.jpg") }}'); background-size: cover; background-position: center;">
                 <div class="showcase-slide-inner">
                     <span style="font-size: 0.85rem; letter-spacing: 0.25em; color: #c8a96e; font-weight: 700; text-transform: uppercase; margin-bottom: 0.6rem;">
                         <span class="lang-text-tr">{{ $settings['ecom_slide2_eye_tr'] ?? 'EV & LÜKS DEKORASYON' }}</span>
@@ -973,9 +987,12 @@
                     </div>
                 </div>
             </div>
+            @php $slide_idx++; @endphp
+            @endif
 
+            @if($slide3_active)
             <!-- Slide 3 -->
-            <div class="showcase-slide" style="position: absolute; inset: 0; opacity: 0; transition: opacity 0.8s ease-in-out; background-image: url('{{ asset($settings["ecom_slide3_img"] ?? "foto.img/bodrum.jpg") }}'); background-size: cover; background-position: center;">
+            <div class="showcase-slide" style="position: absolute; inset: 0; opacity: {{ $slide_idx === 0 ? 1 : 0 }}; transition: opacity 0.8s ease-in-out; background-image: url('{{ dioreal_img($settings["ecom_slide3_img"] ?? "", "foto.img/bodrum.jpg") }}'); background-size: cover; background-position: center;">
                 <div class="showcase-slide-inner">
                     <span style="font-size: 0.85rem; letter-spacing: 0.25em; color: #c8a96e; font-weight: 700; text-transform: uppercase; margin-bottom: 0.6rem;">
                         <span class="lang-text-tr">{{ $settings['ecom_slide3_eye_tr'] ?? 'VIP SEYAHAT & KONAKLAMA' }}</span>
@@ -995,16 +1012,22 @@
                     </div>
                 </div>
             </div>
+            @php $slide_idx++; @endphp
+            @endif
 
 
+            @if($active_count > 1)
             <!-- Slide Dots Indicator -->
             <div style="position: absolute; bottom: 1.8rem; right: 3rem; display: flex; gap: 0.7rem; z-index: 10;">
-                <span class="showcase-dot active" onclick="setMasterSlide(0)" style="width: 14px; height: 14px; border-radius: 50%; background: #c8a96e; cursor: pointer; transition: all 0.3s ease;"></span>
-                <span class="showcase-dot" onclick="setMasterSlide(1)" style="width: 14px; height: 14px; border-radius: 50%; background: rgba(255,255,255,0.4); cursor: pointer; transition: all 0.3s ease;"></span>
-                <span class="showcase-dot" onclick="setMasterSlide(2)" style="width: 14px; height: 14px; border-radius: 50%; background: rgba(255,255,255,0.4); cursor: pointer; transition: all 0.3s ease;"></span>
+                @for($d = 0; $d < $active_count; $d++)
+                    <span class="showcase-dot {{ $d === 0 ? 'active' : '' }}" onclick="setMasterSlide({{ $d }})" style="width: 14px; height: 14px; border-radius: 50%; background: {{ $d === 0 ? '#c8a96e' : 'rgba(255,255,255,0.4)' }}; cursor: pointer; transition: all 0.3s ease;"></span>
+                @endfor
             </div>
+            @endif
         </div>
     </section>
+    @endif
+
 
 
 

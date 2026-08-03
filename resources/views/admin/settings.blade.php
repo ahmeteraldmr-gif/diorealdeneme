@@ -924,7 +924,16 @@
 
                 <!-- SLIDE 1 -->
                 <div style="background: rgba(255, 255, 255, 0.02); border: 1px solid var(--border-color); padding: 1.5rem; border-radius: var(--radius-md); margin-bottom: 1.5rem;">
-                    <h5 style="color: var(--primary); font-size: 1.05rem; margin-bottom: 1rem;"><i class="fas fa-images"></i> Vitrin Slide 1</h5>
+                    <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem;">
+                        <h5 style="color: var(--primary); font-size: 1.05rem; margin:0;"><i class="fas fa-images"></i> Vitrin Slide 1</h5>
+                        <div style="display: flex; align-items: center; gap: 0.5rem;">
+                            <label style="font-size: 0.82rem; font-weight: 600; color: var(--text-muted); margin:0;">Slide Durumu:</label>
+                            <select name="ecom_slide1_status" class="form-control" style="width: auto; padding: 0.3rem 0.8rem; font-size: 0.85rem;">
+                                <option value="1" {{ ($settings['ecom_slide1_status'] ?? '1') == '1' ? 'selected' : '' }}>🟢 Aktif (Sitede Göster)</option>
+                                <option value="0" {{ ($settings['ecom_slide1_status'] ?? '1') == '0' ? 'selected' : '' }}>🔴 Pasif (Siteden Çıkart / Gizle)</option>
+                            </select>
+                        </div>
+                    </div>
                     <div style="display: grid; grid-template-columns: 1.3fr 1fr; gap: 1.5rem;">
                         <div>
                             <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;">
@@ -978,7 +987,16 @@
 
                 <!-- SLIDE 2 -->
                 <div style="background: rgba(255, 255, 255, 0.02); border: 1px solid var(--border-color); padding: 1.5rem; border-radius: var(--radius-md); margin-bottom: 1.5rem;">
-                    <h5 style="color: var(--primary); font-size: 1.05rem; margin-bottom: 1rem;"><i class="fas fa-images"></i> Vitrin Slide 2</h5>
+                    <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem;">
+                        <h5 style="color: var(--primary); font-size: 1.05rem; margin:0;"><i class="fas fa-images"></i> Vitrin Slide 2</h5>
+                        <div style="display: flex; align-items: center; gap: 0.5rem;">
+                            <label style="font-size: 0.82rem; font-weight: 600; color: var(--text-muted); margin:0;">Slide Durumu:</label>
+                            <select name="ecom_slide2_status" class="form-control" style="width: auto; padding: 0.3rem 0.8rem; font-size: 0.85rem;">
+                                <option value="1" {{ ($settings['ecom_slide2_status'] ?? '1') == '1' ? 'selected' : '' }}>🟢 Aktif (Sitede Göster)</option>
+                                <option value="0" {{ ($settings['ecom_slide2_status'] ?? '1') == '0' ? 'selected' : '' }}>🔴 Pasif (Siteden Çıkart / Gizle)</option>
+                            </select>
+                        </div>
+                    </div>
                     <div style="display: grid; grid-template-columns: 1.3fr 1fr; gap: 1.5rem;">
                         <div>
                             <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;">
@@ -1032,7 +1050,17 @@
 
                 <!-- SLIDE 3 -->
                 <div style="background: rgba(255, 255, 255, 0.02); border: 1px solid var(--border-color); padding: 1.5rem; border-radius: var(--radius-md); margin-bottom: 1.5rem;">
-                    <h5 style="color: var(--primary); font-size: 1.05rem; margin-bottom: 1rem;"><i class="fas fa-images"></i> Vitrin Slide 3</h5>
+                    <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem;">
+                        <h5 style="color: var(--primary); font-size: 1.05rem; margin:0;"><i class="fas fa-images"></i> Vitrin Slide 3</h5>
+                        <div style="display: flex; align-items: center; gap: 0.5rem;">
+                            <label style="font-size: 0.82rem; font-weight: 600; color: var(--text-muted); margin:0;">Slide Durumu:</label>
+                            <select name="ecom_slide3_status" class="form-control" style="width: auto; padding: 0.3rem 0.8rem; font-size: 0.85rem;">
+                                <option value="1" {{ ($settings['ecom_slide3_status'] ?? '1') == '1' ? 'selected' : '' }}>🟢 Aktif (Sitede Göster)</option>
+                                <option value="0" {{ ($settings['ecom_slide3_status'] ?? '1') == '0' ? 'selected' : '' }}>🔴 Pasif (Siteden Çıkart / Gizle)</option>
+                            </select>
+                        </div>
+                    </div>
+
                     <div style="display: grid; grid-template-columns: 1.3fr 1fr; gap: 1.5rem;">
                         <div>
                             <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;">
