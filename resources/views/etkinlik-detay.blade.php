@@ -350,7 +350,8 @@
     @php
         $showVideoCover = !empty($etkinlik->show_video_on_cover) && (!empty($etkinlik->video_file) || !empty($etkinlik->video_url));
         $eventImg = !empty($etkinlik->img) ? $etkinlik->img : 'foto.img/etkinlik_hero.jpg';
-        $eventImgUrl = str_starts_with($eventImg, 'data:') || str_starts_with($eventImg, 'http') ? $eventImg : asset($eventImg);
+        $eventImgUrl = str_starts_with($eventImg, 'data:') || str_starts_with($eventImg, 'http') ? $eventImg : dioreal_img($eventImg, 'foto.img/etkinlik_hero.jpg');
+
     @endphp
     <div class="page-hero" style="@if(!$showVideoCover) background-image: url('{{ $eventImgUrl }}'); @endif">
         @if($showVideoCover)

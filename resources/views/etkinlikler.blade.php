@@ -262,11 +262,12 @@
                 @foreach($etkinlikler as $e)
                     @php
                         $eventImg = !empty($e->img) ? $e->img : 'foto.img/etkinlik_hero.jpg';
-                        $eventImgUrl = str_starts_with($eventImg, 'data:') || str_starts_with($eventImg, 'http') ? $eventImg : asset($eventImg);
+                        $eventImgUrl = str_starts_with($eventImg, 'data:') || str_starts_with($eventImg, 'http') ? $eventImg : dioreal_img($eventImg, 'foto.img/etkinlik_hero.jpg');
                     @endphp
                     <div class="event-card reveal visible">
                         <div class="event-card-image-box">
-                            <img src="{{ $eventImgUrl }}" alt="{{ $e->title['tr'] ?? '' }}">
+                            <img src="{{ $eventImgUrl }}" onerror="this.onerror=null;this.src='{{ asset('foto.img/etkinlik_hero.jpg') }}';" alt="{{ $e->title['tr'] ?? '' }}">
+
                             
                             <div class="event-card-date-badge">
                                 <span class="event-card-day">{{ $e->day }}</span>
