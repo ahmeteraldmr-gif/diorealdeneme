@@ -200,6 +200,122 @@
                             </div>
                         </div>
                     </div>
+                <!-- SLIDE 4 -->
+                <div style="background: rgba(255, 255, 255, 0.02); border: 1px solid var(--border-color); padding: 1.2rem; border-radius: var(--radius-md); margin-bottom: 1.2rem;">
+                    <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem;">
+                        <h5 style="color: var(--primary); font-size: 1rem; margin:0;"><i class="fas fa-image"></i> Vitrin Slide 4 (Yeni Ekle)</h5>
+                        <div style="display: flex; align-items: center; gap: 0.5rem;">
+                            <label style="font-size: 0.82rem; font-weight: 600; color: var(--text-muted); margin:0;">Slide Durumu:</label>
+                            <select name="ecom_slide4_status" class="form-control" style="width: auto; padding: 0.3rem 0.8rem; font-size: 0.85rem;">
+                                <option value="1" {{ ($settings['ecom_slide4_status'] ?? '0') == '1' ? 'selected' : '' }}>🟢 Aktif (Sitede Göster)</option>
+                                <option value="0" {{ ($settings['ecom_slide4_status'] ?? '0') == '0' ? 'selected' : '' }}>🔴 Pasif (Siteden Çıkart / Gizle)</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div style="display: grid; grid-template-columns: 1.3fr 1fr; gap: 1.5rem;">
+                        <div>
+                            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;">
+                                <div class="form-group">
+                                    <label class="form-label">Üst Etiket (TR)</label>
+                                    <input type="text" class="form-control" name="ecom_slide4_eye_tr" value="{{ $settings['ecom_slide4_eye_tr'] ?? 'YENİ KOLEKSİYON' }}">
+                                </div>
+                                <div class="form-group">
+                                    <label class="form-label">Üst Etiket (EN)</label>
+                                    <input type="text" class="form-control" name="ecom_slide4_eye_en" value="{{ $settings['ecom_slide4_eye_en'] ?? 'NEW COLLECTION' }}">
+                                </div>
+                            </div>
+                            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;">
+                                <div class="form-group">
+                                    <label class="form-label">Slide Ana Başlık (TR)</label>
+                                    <input type="text" class="form-control" name="ecom_slide4_title_tr" value="{{ $settings['ecom_slide4_title_tr'] ?? 'Lüks Yaşam & Özel Ürünler' }}">
+                                </div>
+                                <div class="form-group">
+                                    <label class="form-label">Slide Ana Başlık (EN)</label>
+                                    <input type="text" class="form-control" name="ecom_slide4_title_en" value="{{ $settings['ecom_slide4_title_en'] ?? 'Luxury Living & Special Products' }}">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="form-label">Açıklama Metni (TR)</label>
+                                <textarea class="form-control" name="ecom_slide4_text_tr" rows="2">{{ $settings['ecom_slide4_text_tr'] ?? 'Dioreal ile en seçkin ürün ve koleksiyonları keşfedin.' }}</textarea>
+                            </div>
+                            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;">
+                                <div class="form-group">
+                                    <label class="form-label">Buton Yazısı (TR)</label>
+                                    <input type="text" class="form-control" name="ecom_slide4_btn_tr" value="{{ $settings['ecom_slide4_btn_tr'] ?? 'İncele' }}">
+                                </div>
+                                <div class="form-group">
+                                    <label class="form-label">Buton Yazısı (EN)</label>
+                                    <input type="text" class="form-control" name="ecom_slide4_btn_en" value="{{ $settings['ecom_slide4_btn_en'] ?? 'Explore' }}">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label">Slide 4 Arka Plan Görseli Yükle</label>
+                            <div class="img-preview-container" style="height: calc(100% - 25px); margin-top: 0; flex-direction: column; align-items: flex-start; justify-content: center;">
+                                <img class="img-preview" src="{{ asset($settings['ecom_slide4_img'] ?? 'foto.img/hero_4k.jpg') }}" alt="Slide 4 Image" style="width: 100%; height: 140px; object-fit: cover; border-radius: 8px;">
+                                <input type="file" name="ecom_slide4_img" accept="image/*" style="margin-top: 0.8rem;">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- SLIDE 5 -->
+                <div style="background: rgba(255, 255, 255, 0.02); border: 1px solid var(--border-color); padding: 1.2rem; border-radius: var(--radius-md); margin-bottom: 1.2rem;">
+                    <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem;">
+                        <h5 style="color: var(--primary); font-size: 1rem; margin:0;"><i class="fas fa-image"></i> Vitrin Slide 5 (Yeni Ekle)</h5>
+                        <div style="display: flex; align-items: center; gap: 0.5rem;">
+                            <label style="font-size: 0.82rem; font-weight: 600; color: var(--text-muted); margin:0;">Slide Durumu:</label>
+                            <select name="ecom_slide5_status" class="form-control" style="width: auto; padding: 0.3rem 0.8rem; font-size: 0.85rem;">
+                                <option value="1" {{ ($settings['ecom_slide5_status'] ?? '0') == '1' ? 'selected' : '' }}>🟢 Aktif (Sitede Göster)</option>
+                                <option value="0" {{ ($settings['ecom_slide5_status'] ?? '0') == '0' ? 'selected' : '' }}>🔴 Pasif (Siteden Çıkart / Gizle)</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div style="display: grid; grid-template-columns: 1.3fr 1fr; gap: 1.5rem;">
+                        <div>
+                            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;">
+                                <div class="form-group">
+                                    <label class="form-label">Üst Etiket (TR)</label>
+                                    <input type="text" class="form-control" name="ecom_slide5_eye_tr" value="{{ $settings['ecom_slide5_eye_tr'] ?? 'ÖZEL SEÇİM' }}">
+                                </div>
+                                <div class="form-group">
+                                    <label class="form-label">Üst Etiket (EN)</label>
+                                    <input type="text" class="form-control" name="ecom_slide5_eye_en" value="{{ $settings['ecom_slide5_eye_en'] ?? 'EXCLUSIVE SELECTION' }}">
+                                </div>
+                            </div>
+                            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;">
+                                <div class="form-group">
+                                    <label class="form-label">Slide Ana Başlık (TR)</label>
+                                    <input type="text" class="form-control" name="ecom_slide5_title_tr" value="{{ $settings['ecom_slide5_title_tr'] ?? 'Prestijli Paketler & Deneyimler' }}">
+                                </div>
+                                <div class="form-group">
+                                    <label class="form-label">Slide Ana Başlık (EN)</label>
+                                    <input type="text" class="form-control" name="ecom_slide5_title_en" value="{{ $settings['ecom_slide5_title_en'] ?? 'Prestigious Packages & Experiences' }}">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="form-label">Açıklama Metni (TR)</label>
+                                <textarea class="form-control" name="ecom_slide5_text_tr" rows="2">{{ $settings['ecom_slide5_text_tr'] ?? 'Size özel sunulan lüks fırsatlar.' }}</textarea>
+                            </div>
+                            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;">
+                                <div class="form-group">
+                                    <label class="form-label">Buton Yazısı (TR)</label>
+                                    <input type="text" class="form-control" name="ecom_slide5_btn_tr" value="{{ $settings['ecom_slide5_btn_tr'] ?? 'Keşfet' }}">
+                                </div>
+                                <div class="form-group">
+                                    <label class="form-label">Buton Yazısı (EN)</label>
+                                    <input type="text" class="form-control" name="ecom_slide5_btn_en" value="{{ $settings['ecom_slide5_btn_en'] ?? 'Explore' }}">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label">Slide 5 Arka Plan Görseli Yükle</label>
+                            <div class="img-preview-container" style="height: calc(100% - 25px); margin-top: 0; flex-direction: column; align-items: flex-start; justify-content: center;">
+                                <img class="img-preview" src="{{ asset($settings['ecom_slide5_img'] ?? 'foto.img/otel_hero.jpg') }}" alt="Slide 5 Image" style="width: 100%; height: 140px; object-fit: cover; border-radius: 8px;">
+                                <input type="file" name="ecom_slide5_img" accept="image/*" style="margin-top: 0.8rem;">
+                            </div>
+                        </div>
+                    </div>
                 </div>
 
                 <div style="text-align: right; margin-top: 1rem;">
@@ -207,6 +323,7 @@
                         <i class="fas fa-save"></i> Banner Görsellerini & Metinlerini Kaydet
                     </button>
                 </div>
+
             </form>
         </div>
     </div>

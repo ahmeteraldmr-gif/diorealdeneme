@@ -378,8 +378,30 @@ class SettingController extends Controller
             }
         }
 
-        return redirect()->route('admin.settings.index')->with('success', 'Genel ayarlar başarıyla güncellendi.');
+        // Dynamically save any ecom_slide* text inputs or uploaded files (Slide 1, 2, 3, 4, 5, 6...)
+        foreach ($request->all() as $key => $val) {
+            if (str_starts_with($key, 'ecom_slide') && !$request->hasFile($key)) {
+                Setting::set($key, $val);
+            }
+        }
+
+        foreach ($request->allFiles() as $key => $file) {
+            if (str_starts_with($key, 'ecom_slide')) {
+                $oldPath = Setting::get($key);
+                if ($oldPath && !str_starts_with($oldPath, 'foto.img/')) {
+                    $oldFilePath = public_path($oldPath);
+                    if (File::exists($oldFilePath)) {
+                        File::delete($oldFilePath);
+                    }
+                }
+                $path = $this->handleFileUpload($file, 'uploads/settings');
+                Setting::set($key, $path);
+            }
+        }
+
+        return redirect()->back()->with('success', 'Ayarlar ve Vitrin Görselleri başarıyla güncellendi.');
     }
+
 
     /**
      * Add a brand reference with uploaded logo.

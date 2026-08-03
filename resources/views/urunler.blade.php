@@ -928,93 +928,57 @@
 
     <!-- 🔄 5-SECOND AUTO-ROTATING LUXURY PRODUCT SHOWCASE CAROUSEL (LARGE HERO SLIDER) -->
     @php
-        $slide1_active = ($settings['ecom_slide1_status'] ?? '1') == '1';
-        $slide2_active = ($settings['ecom_slide2_status'] ?? '1') == '1';
-        $slide3_active = ($settings['ecom_slide3_status'] ?? '1') == '1';
-        $active_count = ($slide1_active ? 1 : 0) + ($slide2_active ? 1 : 0) + ($slide3_active ? 1 : 0);
+        $active_slides = [];
+        for ($i = 1; $i <= 6; $i++) {
+            $statusKey = 'ecom_slide' . $i . '_status';
+            $defaultStatus = ($i <= 3) ? '1' : '0';
+            if (($settings[$statusKey] ?? $defaultStatus) == '1') {
+                $active_slides[] = $i;
+            }
+        }
+        $active_count = count($active_slides);
     @endphp
 
     @if($active_count > 0)
     <section class="ecom-showcase-section">
         <div id="autoShowcaseSlider" style="position: relative; height: 420px; border-radius: 24px; overflow: hidden; box-shadow: 0 20px 45px rgba(0,0,0,0.14);">
             
-            @php $slide_idx = 0; @endphp
+            @foreach($active_slides as $idx => $num)
+                @php
+                    $eyeTr = $settings['ecom_slide' . $num . '_eye_tr'] ?? 'LÜKS SEÇKİN KOLEKSİYON';
+                    $eyeEn = $settings['ecom_slide' . $num . '_eye_en'] ?? 'LUXURY SELECTION';
+                    $titleTr = $settings['ecom_slide' . $num . '_title_tr'] ?? 'Özel Tasarım Koleksiyon Eserleri';
+                    $titleEn = $settings['ecom_slide' . $num . '_title_en'] ?? 'Exclusive Design Masterpieces';
+                    $textTr = $settings['ecom_slide' . $num . '_text_tr'] ?? 'Dioreal ayrıcalığı ile keşfedin.';
+                    $textEn = $settings['ecom_slide' . $num . '_text_en'] ?? 'Discover with Dioreal privileges.';
+                    $btnTr = $settings['ecom_slide' . $num . '_btn_tr'] ?? 'Koleksiyonu İncele';
+                    $btnEn = $settings['ecom_slide' . $num . '_btn_en'] ?? 'Explore Collection';
+                    $defaultImg = 'foto.img/hero_4k.jpg';
+                    if ($num == 2) $defaultImg = 'foto.img/otel_hero.jpg';
+                    if ($num == 3) $defaultImg = 'foto.img/bodrum.jpg';
+                    $img = dioreal_img($settings['ecom_slide' . $num . '_img'] ?? '', $defaultImg);
+                @endphp
+                <div class="showcase-slide" style="position: absolute; inset: 0; opacity: {{ $idx === 0 ? 1 : 0 }}; transition: opacity 0.8s ease-in-out; background-image: url('{{ $img }}'); background-size: cover; background-position: center;">
+                    <div class="showcase-slide-inner">
+                        <span style="font-size: 0.85rem; letter-spacing: 0.25em; color: #c8a96e; font-weight: 700; text-transform: uppercase; margin-bottom: 0.6rem;">
+                            <span class="lang-text-tr">{{ $eyeTr }}</span>
+                            <span class="lang-text-en">{{ $eyeEn }}</span>
+                        </span>
+                        <h2 style="font-family: var(--font-display, serif); font-size: clamp(1.8rem, 3.5vw, 3.2rem); font-weight: 400; margin-bottom: 0.8rem; line-height: 1.2;" class="lang-text-tr">{{ $titleTr }}</h2>
+                        <h2 style="font-family: var(--font-display, serif); font-size: clamp(1.8rem, 3.5vw, 3.2rem); font-weight: 400; margin-bottom: 0.8rem; line-height: 1.2;" class="lang-text-en">{{ $titleEn }}</h2>
 
-            @if($slide1_active)
-            <!-- Slide 1 -->
-            <div class="showcase-slide" style="position: absolute; inset: 0; opacity: {{ $slide_idx === 0 ? 1 : 0 }}; transition: opacity 0.8s ease-in-out; background-image: url('{{ dioreal_img($settings["ecom_slide1_img"] ?? "", "foto.img/hero_4k.jpg") }}'); background-size: cover; background-position: center;">
-                <div class="showcase-slide-inner">
-                    <span style="font-size: 0.85rem; letter-spacing: 0.25em; color: #c8a96e; font-weight: 700; text-transform: uppercase; margin-bottom: 0.6rem;">
-                        <span class="lang-text-tr">{{ $settings['ecom_slide1_eye_tr'] ?? 'PORSELEN & ÇATAL BIÇAK KOLEKSİYONU' }}</span>
-                        <span class="lang-text-en">{{ $settings['ecom_slide1_eye_en'] ?? 'PORCELAIN & CUTLERY COLLECTION' }}</span>
-                    </span>
-                    <h2 style="font-family: var(--font-display, serif); font-size: clamp(1.8rem, 3.5vw, 3.2rem); font-weight: 400; margin-bottom: 0.8rem; line-height: 1.2;" class="lang-text-tr">{{ $settings['ecom_slide1_title_tr'] ?? 'Royal Altın İşlemeli Yemek Takımları' }}</h2>
-                    <h2 style="font-family: var(--font-display, serif); font-size: clamp(1.8rem, 3.5vw, 3.2rem); font-weight: 400; margin-bottom: 0.8rem; line-height: 1.2;" class="lang-text-en">{{ $settings['ecom_slide1_title_en'] ?? 'Royal Gold Embossed Dinnerware' }}</h2>
-
-                    <p style="font-size: 1.1rem; opacity: 0.9; max-width: 600px; margin-bottom: 2rem; line-height: 1.6;" class="lang-text-tr">{{ $settings['ecom_slide1_text_tr'] ?? '24 Parça Fine Bone China Porselen, Kristal Şarap Kadehleri ve Saf İpek Kırlent Koleksiyonu' }}</p>
-                    <p style="font-size: 1.1rem; opacity: 0.9; max-width: 600px; margin-bottom: 2rem; line-height: 1.6;" class="lang-text-en">{{ $settings['ecom_slide1_text_en'] ?? '24 Piece Fine Bone China Porcelain, Crystal Wine Glasses and Pure Silk Cushion Collection' }}</p>
-                    <div>
-                        <button type="button" onclick="selectCategory('cat-1', 'Mutfak & Yemek Takımları', document.querySelector('.left-dropdown-item'))" style="background: #c8a96e; color: #111; border: none; padding: 0.9rem 2.2rem; border-radius: 40px; font-weight: 600; font-size: 0.9rem; cursor: pointer; text-transform: uppercase; letter-spacing: 0.1em; transition: all 0.3s ease; box-shadow: 0 8px 25px rgba(200, 169, 110, 0.4);">
-                            <span class="lang-text-tr">{{ $settings['ecom_slide1_btn_tr'] ?? 'Koleksiyonu İncele' }}</span>
-                            <span class="lang-text-en">{{ $settings['ecom_slide1_btn_en'] ?? 'Explore Collection' }}</span>
-                            <i class="fa-solid fa-arrow-right" style="margin-left: 0.4rem;"></i>
-                        </button>
+                        <p style="font-size: 1.1rem; opacity: 0.9; max-width: 600px; margin-bottom: 2rem; line-height: 1.6;" class="lang-text-tr">{{ $textTr }}</p>
+                        <p style="font-size: 1.1rem; opacity: 0.9; max-width: 600px; margin-bottom: 2rem; line-height: 1.6;" class="lang-text-en">{{ $textEn }}</p>
+                        <div>
+                            <button type="button" style="background: #c8a96e; color: #111; border: none; padding: 0.9rem 2.2rem; border-radius: 40px; font-weight: 600; font-size: 0.9rem; cursor: pointer; text-transform: uppercase; letter-spacing: 0.1em; transition: all 0.3s ease; box-shadow: 0 8px 25px rgba(200, 169, 110, 0.4);">
+                                <span class="lang-text-tr">{{ $btnTr }}</span>
+                                <span class="lang-text-en">{{ $btnEn }}</span>
+                                <i class="fa-solid fa-arrow-right" style="margin-left: 0.4rem;"></i>
+                            </button>
+                        </div>
                     </div>
                 </div>
-            </div>
-            @php $slide_idx++; @endphp
-            @endif
-
-            @if($slide2_active)
-            <!-- Slide 2 -->
-            <div class="showcase-slide" style="position: absolute; inset: 0; opacity: {{ $slide_idx === 0 ? 1 : 0 }}; transition: opacity 0.8s ease-in-out; background-image: url('{{ dioreal_img($settings["ecom_slide2_img"] ?? "", "foto.img/otel_hero.jpg") }}'); background-size: cover; background-position: center;">
-                <div class="showcase-slide-inner">
-                    <span style="font-size: 0.85rem; letter-spacing: 0.25em; color: #c8a96e; font-weight: 700; text-transform: uppercase; margin-bottom: 0.6rem;">
-                        <span class="lang-text-tr">{{ $settings['ecom_slide2_eye_tr'] ?? 'EV & LÜKS DEKORASYON' }}</span>
-                        <span class="lang-text-en">{{ $settings['ecom_slide2_eye_en'] ?? 'HOME & LUXURY DECORATION' }}</span>
-                    </span>
-                    <h2 style="font-family: var(--font-display, serif); font-size: clamp(1.8rem, 3.5vw, 3.2rem); font-weight: 400; margin-bottom: 0.8rem; line-height: 1.2;" class="lang-text-tr">{{ $settings['ecom_slide2_title_tr'] ?? 'Baccarat Kristal Kadehler & Murano Vazo' }}</h2>
-                    <h2 style="font-family: var(--font-display, serif); font-size: clamp(1.8rem, 3.5vw, 3.2rem); font-weight: 400; margin-bottom: 0.8rem; line-height: 1.2;" class="lang-text-en">{{ $settings['ecom_slide2_title_en'] ?? 'Baccarat Crystal Glasses & Murano Vase' }}</h2>
-
-                    <p style="font-size: 1.1rem; opacity: 0.9; max-width: 600px; margin-bottom: 2rem; line-height: 1.6;" class="lang-text-tr">{{ $settings['ecom_slide2_text_tr'] ?? 'Özel El Üfleme Cam Sanatı Eserleri ve Hermès İpek Dokuma Aksesuarlar' }}</p>
-                    <p style="font-size: 1.1rem; opacity: 0.9; max-width: 600px; margin-bottom: 2rem; line-height: 1.6;" class="lang-text-en">{{ $settings['ecom_slide2_text_en'] ?? 'Exclusive Handblown Glassware Masterpieces and Hermès Silk Woven Accessories' }}</p>
-                    <div>
-                        <button type="button" onclick="selectCategory('cat-2', 'Ev & Lüks Dekorasyon', document.querySelector('.left-dropdown-item'))" style="background: #ffffff; color: #111; border: none; padding: 0.9rem 2.2rem; border-radius: 40px; font-weight: 600; font-size: 0.9rem; cursor: pointer; text-transform: uppercase; letter-spacing: 0.1em; transition: all 0.3s ease; box-shadow: 0 8px 25px rgba(255, 255, 255, 0.3);">
-                            <span class="lang-text-tr">{{ $settings['ecom_slide2_btn_tr'] ?? 'Ürünleri Keşfet' }}</span>
-                            <span class="lang-text-en">{{ $settings['ecom_slide2_btn_en'] ?? 'Discover Products' }}</span>
-                            <i class="fa-solid fa-arrow-right" style="margin-left: 0.4rem;"></i>
-                        </button>
-                    </div>
-                </div>
-            </div>
-            @php $slide_idx++; @endphp
-            @endif
-
-            @if($slide3_active)
-            <!-- Slide 3 -->
-            <div class="showcase-slide" style="position: absolute; inset: 0; opacity: {{ $slide_idx === 0 ? 1 : 0 }}; transition: opacity 0.8s ease-in-out; background-image: url('{{ dioreal_img($settings["ecom_slide3_img"] ?? "", "foto.img/bodrum.jpg") }}'); background-size: cover; background-position: center;">
-                <div class="showcase-slide-inner">
-                    <span style="font-size: 0.85rem; letter-spacing: 0.25em; color: #c8a96e; font-weight: 700; text-transform: uppercase; margin-bottom: 0.6rem;">
-                        <span class="lang-text-tr">{{ $settings['ecom_slide3_eye_tr'] ?? 'VIP SEYAHAT & KONAKLAMA' }}</span>
-                        <span class="lang-text-en">{{ $settings['ecom_slide3_eye_en'] ?? 'VIP TRAVEL & ACCOMMODATION' }}</span>
-                    </span>
-                    <h2 style="font-family: var(--font-display, serif); font-size: clamp(1.8rem, 3.5vw, 3.2rem); font-weight: 400; margin-bottom: 0.8rem; line-height: 1.2;" class="lang-text-tr">{{ $settings['ecom_slide3_title_tr'] ?? 'Bodrum Sunset Villa & Kapadokya Turu' }}</h2>
-                    <h2 style="font-family: var(--font-display, serif); font-size: clamp(1.8rem, 3.5vw, 3.2rem); font-weight: 400; margin-bottom: 0.8rem; line-height: 1.2;" class="lang-text-en">{{ $settings['ecom_slide3_title_en'] ?? 'Bodrum Sunset Villa & Cappadocia Tour' }}</h2>
-
-                    <p style="font-size: 1.1rem; opacity: 0.9; max-width: 600px; margin-bottom: 2rem; line-height: 1.6;" class="lang-text-tr">{{ $settings['ecom_slide3_text_tr'] ?? 'Özel Havuzlu Lüks Villa Tatili, Mavi Yolculuk ve VIP Havalimanı Karşılama' }}</p>
-                    <p style="font-size: 1.1rem; opacity: 0.9; max-width: 600px; margin-bottom: 2rem; line-height: 1.6;" class="lang-text-en">{{ $settings['ecom_slide3_text_en'] ?? 'Private Pool Luxury Villa Vacation, Blue Cruise and VIP Airport Greeting' }}</p>
-                    <div>
-                        <button type="button" onclick="selectCategory('cat-3', 'Konaklama Paketleri', document.querySelector('.left-dropdown-item'))" style="background: #c8a96e; color: #111; border: none; padding: 0.9rem 2.2rem; border-radius: 40px; font-weight: 600; font-size: 0.9rem; cursor: pointer; text-transform: uppercase; letter-spacing: 0.1em; transition: all 0.3s ease; box-shadow: 0 8px 25px rgba(200, 169, 110, 0.4);">
-                            <span class="lang-text-tr">{{ $settings['ecom_slide3_btn_tr'] ?? 'Paketleri İncele' }}</span>
-                            <span class="lang-text-en">{{ $settings['ecom_slide3_btn_en'] ?? 'Explore Packages' }}</span>
-                            <i class="fa-solid fa-arrow-right" style="margin-left: 0.4rem;"></i>
-                        </button>
-                    </div>
-                </div>
-            </div>
-            @php $slide_idx++; @endphp
-            @endif
-
+            @endforeach
 
             @if($active_count > 1)
             <!-- Slide Dots Indicator -->
@@ -1027,6 +991,7 @@
         </div>
     </section>
     @endif
+
 
 
 
