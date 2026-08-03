@@ -903,7 +903,174 @@
                     </div>
                 </div>
 
+                <!-- 🛍️ ÜRÜNLER SAYFASI VİTRİN SLIDER (SHOWCASE CAROUSEL) -->
+                <h4 class="form-section-title">🛍️ Ürünler Sayfası Dönen Vitrin Slider Görselleri & İçerikleri</h4>
+                <p style="color: var(--text-muted); font-size: 0.85rem; margin-bottom: 1.5rem;">Ürünler sayfasının en üstündeki 3 adımlı dönen büyük vitrin slider alanının görsellerini, başlıklarını ve buton yazılarını buradan güncelleyebilirsiniz.</p>
+
+                <!-- SLIDE 1 -->
+                <div style="background: rgba(255, 255, 255, 0.02); border: 1px solid var(--border-color); padding: 1.5rem; border-radius: var(--radius-md); margin-bottom: 1.5rem;">
+                    <h5 style="color: var(--primary); font-size: 1.05rem; margin-bottom: 1rem;"><i class="fas fa-images"></i> Vitrin Slide 1</h5>
+                    <div style="display: grid; grid-template-columns: 1.3fr 1fr; gap: 1.5rem;">
+                        <div>
+                            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;">
+                                <div class="form-group">
+                                    <label class="form-label">Üst Kategori Etiketi (TR)</label>
+                                    <input type="text" class="form-control" name="ecom_slide1_eye_tr" value="{{ $settings['ecom_slide1_eye_tr'] ?? 'PORSELEN & ÇATAL BIÇAK KOLEKSİYONU' }}">
+                                </div>
+                                <div class="form-group">
+                                    <label class="form-label">Üst Kategori Etiketi (EN)</label>
+                                    <input type="text" class="form-control" name="ecom_slide1_eye_en" value="{{ $settings['ecom_slide1_eye_en'] ?? 'PORCELAIN & CUTLERY COLLECTION' }}">
+                                </div>
+                            </div>
+                            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;">
+                                <div class="form-group">
+                                    <label class="form-label">Slide Ana Başlık (TR)</label>
+                                    <input type="text" class="form-control" name="ecom_slide1_title_tr" value="{{ $settings['ecom_slide1_title_tr'] ?? 'Royal Altın İşlemeli Yemek Takımları' }}">
+                                </div>
+                                <div class="form-group">
+                                    <label class="form-label">Slide Ana Başlık (EN)</label>
+                                    <input type="text" class="form-control" name="ecom_slide1_title_en" value="{{ $settings['ecom_slide1_title_en'] ?? 'Royal Gold Embossed Dinnerware' }}">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="form-label">Açıklama Metni (TR)</label>
+                                <textarea class="form-control" name="ecom_slide1_text_tr" rows="2">{{ $settings['ecom_slide1_text_tr'] ?? '24 Parça Fine Bone China Porselen, Kristal Şarap Kadehleri ve Saf İpek Kırlent Koleksiyonu' }}</textarea>
+                            </div>
+                            <div class="form-group">
+                                <label class="form-label">Açıklama Metni (EN)</label>
+                                <textarea class="form-control" name="ecom_slide1_text_en" rows="2">{{ $settings['ecom_slide1_text_en'] ?? '24 Piece Fine Bone China Porcelain, Crystal Wine Glasses and Pure Silk Cushion Collection' }}</textarea>
+                            </div>
+                            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;">
+                                <div class="form-group">
+                                    <label class="form-label">Buton Yazısı (TR)</label>
+                                    <input type="text" class="form-control" name="ecom_slide1_btn_tr" value="{{ $settings['ecom_slide1_btn_tr'] ?? 'Koleksiyonu İncele' }}">
+                                </div>
+                                <div class="form-group">
+                                    <label class="form-label">Buton Yazısı (EN)</label>
+                                    <input type="text" class="form-control" name="ecom_slide1_btn_en" value="{{ $settings['ecom_slide1_btn_en'] ?? 'Explore Collection' }}">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label">Slide 1 Arka Plan Arka Görseli</label>
+                            <div class="img-preview-container" style="height: calc(100% - 25px); margin-top: 0; flex-direction: column; align-items: flex-start; justify-content: center;">
+                                <img class="img-preview" src="{{ asset($settings['ecom_slide1_img'] ?? 'foto.img/hero_4k.jpg') }}" alt="Slide 1 Image" style="width: 100%; height: 160px; object-fit: cover;">
+                                <input type="file" name="ecom_slide1_img" accept="image/*" style="margin-top: 0.8rem;">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- SLIDE 2 -->
+                <div style="background: rgba(255, 255, 255, 0.02); border: 1px solid var(--border-color); padding: 1.5rem; border-radius: var(--radius-md); margin-bottom: 1.5rem;">
+                    <h5 style="color: var(--primary); font-size: 1.05rem; margin-bottom: 1rem;"><i class="fas fa-images"></i> Vitrin Slide 2</h5>
+                    <div style="display: grid; grid-template-columns: 1.3fr 1fr; gap: 1.5rem;">
+                        <div>
+                            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;">
+                                <div class="form-group">
+                                    <label class="form-label">Üst Kategori Etiketi (TR)</label>
+                                    <input type="text" class="form-control" name="ecom_slide2_eye_tr" value="{{ $settings['ecom_slide2_eye_tr'] ?? 'EV & LÜKS DEKORASYON' }}">
+                                </div>
+                                <div class="form-group">
+                                    <label class="form-label">Üst Kategori Etiketi (EN)</label>
+                                    <input type="text" class="form-control" name="ecom_slide2_eye_en" value="{{ $settings['ecom_slide2_eye_en'] ?? 'HOME & LUXURY DECORATION' }}">
+                                </div>
+                            </div>
+                            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;">
+                                <div class="form-group">
+                                    <label class="form-label">Slide Ana Başlık (TR)</label>
+                                    <input type="text" class="form-control" name="ecom_slide2_title_tr" value="{{ $settings['ecom_slide2_title_tr'] ?? 'Baccarat Kristal Kadehler & Murano Vazo' }}">
+                                </div>
+                                <div class="form-group">
+                                    <label class="form-label">Slide Ana Başlık (EN)</label>
+                                    <input type="text" class="form-control" name="ecom_slide2_title_en" value="{{ $settings['ecom_slide2_title_en'] ?? 'Baccarat Crystal Glasses & Murano Vase' }}">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="form-label">Açıklama Metni (TR)</label>
+                                <textarea class="form-control" name="ecom_slide2_text_tr" rows="2">{{ $settings['ecom_slide2_text_tr'] ?? 'Özel El Üfleme Cam Sanatı Eserleri ve Hermès İpek Dokuma Aksesuarlar' }}</textarea>
+                            </div>
+                            <div class="form-group">
+                                <label class="form-label">Açıklama Metni (EN)</label>
+                                <textarea class="form-control" name="ecom_slide2_text_en" rows="2">{{ $settings['ecom_slide2_text_en'] ?? 'Exclusive Handblown Glassware Masterpieces and Hermès Silk Woven Accessories' }}</textarea>
+                            </div>
+                            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;">
+                                <div class="form-group">
+                                    <label class="form-label">Buton Yazısı (TR)</label>
+                                    <input type="text" class="form-control" name="ecom_slide2_btn_tr" value="{{ $settings['ecom_slide2_btn_tr'] ?? 'Ürünleri Keşfet' }}">
+                                </div>
+                                <div class="form-group">
+                                    <label class="form-label">Buton Yazısı (EN)</label>
+                                    <input type="text" class="form-control" name="ecom_slide2_btn_en" value="{{ $settings['ecom_slide2_btn_en'] ?? 'Discover Products' }}">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label">Slide 2 Arka Plan Arka Görseli</label>
+                            <div class="img-preview-container" style="height: calc(100% - 25px); margin-top: 0; flex-direction: column; align-items: flex-start; justify-content: center;">
+                                <img class="img-preview" src="{{ asset($settings['ecom_slide2_img'] ?? 'foto.img/otel_hero.jpg') }}" alt="Slide 2 Image" style="width: 100%; height: 160px; object-fit: cover;">
+                                <input type="file" name="ecom_slide2_img" accept="image/*" style="margin-top: 0.8rem;">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- SLIDE 3 -->
+                <div style="background: rgba(255, 255, 255, 0.02); border: 1px solid var(--border-color); padding: 1.5rem; border-radius: var(--radius-md); margin-bottom: 1.5rem;">
+                    <h5 style="color: var(--primary); font-size: 1.05rem; margin-bottom: 1rem;"><i class="fas fa-images"></i> Vitrin Slide 3</h5>
+                    <div style="display: grid; grid-template-columns: 1.3fr 1fr; gap: 1.5rem;">
+                        <div>
+                            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;">
+                                <div class="form-group">
+                                    <label class="form-label">Üst Kategori Etiketi (TR)</label>
+                                    <input type="text" class="form-control" name="ecom_slide3_eye_tr" value="{{ $settings['ecom_slide3_eye_tr'] ?? 'VIP SEYAHAT & KONAKLAMA' }}">
+                                </div>
+                                <div class="form-group">
+                                    <label class="form-label">Üst Kategori Etiketi (EN)</label>
+                                    <input type="text" class="form-control" name="ecom_slide3_eye_en" value="{{ $settings['ecom_slide3_eye_en'] ?? 'VIP TRAVEL & ACCOMMODATION' }}">
+                                </div>
+                            </div>
+                            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;">
+                                <div class="form-group">
+                                    <label class="form-label">Slide Ana Başlık (TR)</label>
+                                    <input type="text" class="form-control" name="ecom_slide3_title_tr" value="{{ $settings['ecom_slide3_title_tr'] ?? 'Bodrum Sunset Villa & Kapadokya Turu' }}">
+                                </div>
+                                <div class="form-group">
+                                    <label class="form-label">Slide Ana Başlık (EN)</label>
+                                    <input type="text" class="form-control" name="ecom_slide3_title_en" value="{{ $settings['ecom_slide3_title_en'] ?? 'Bodrum Sunset Villa & Cappadocia Tour' }}">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="form-label">Açıklama Metni (TR)</label>
+                                <textarea class="form-control" name="ecom_slide3_text_tr" rows="2">{{ $settings['ecom_slide3_text_tr'] ?? 'Özel Havuzlu Lüks Villa Tatili, Mavi Yolculuk ve VIP Havalimanı Karşılama' }}</textarea>
+                            </div>
+                            <div class="form-group">
+                                <label class="form-label">Açıklama Metni (EN)</label>
+                                <textarea class="form-control" name="ecom_slide3_text_en" rows="2">{{ $settings['ecom_slide3_text_en'] ?? 'Private Pool Luxury Villa Vacation, Blue Cruise and VIP Airport Greeting' }}</textarea>
+                            </div>
+                            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;">
+                                <div class="form-group">
+                                    <label class="form-label">Buton Yazısı (TR)</label>
+                                    <input type="text" class="form-control" name="ecom_slide3_btn_tr" value="{{ $settings['ecom_slide3_btn_tr'] ?? 'Paketleri İncele' }}">
+                                </div>
+                                <div class="form-group">
+                                    <label class="form-label">Buton Yazısı (EN)</label>
+                                    <input type="text" class="form-control" name="ecom_slide3_btn_en" value="{{ $settings['ecom_slide3_btn_en'] ?? 'Explore Packages' }}">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label">Slide 3 Arka Plan Arka Görseli</label>
+                            <div class="img-preview-container" style="height: calc(100% - 25px); margin-top: 0; flex-direction: column; align-items: flex-start; justify-content: center;">
+                                <img class="img-preview" src="{{ asset($settings['ecom_slide3_img'] ?? 'foto.img/bodrum.jpg') }}" alt="Slide 3 Image" style="width: 100%; height: 160px; object-fit: cover;">
+                                <input type="file" name="ecom_slide3_img" accept="image/*" style="margin-top: 0.8rem;">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
             </div>
+
 
             <!-- Form Submit -->
             <div style="border-top: 1px solid var(--border-color); padding-top: 1.5rem; display: flex; justify-content: flex-end; margin-top: 2rem;">

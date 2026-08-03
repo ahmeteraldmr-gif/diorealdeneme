@@ -292,6 +292,36 @@ class SettingController extends Controller
             'yat_route_btn_tr',
             'yat_route_btn_en',
             'yat_route_btn_link',
+
+            // Product Page Showcase Slider 1
+            'ecom_slide1_eye_tr',
+            'ecom_slide1_eye_en',
+            'ecom_slide1_title_tr',
+            'ecom_slide1_title_en',
+            'ecom_slide1_text_tr',
+            'ecom_slide1_text_en',
+            'ecom_slide1_btn_tr',
+            'ecom_slide1_btn_en',
+
+            // Product Page Showcase Slider 2
+            'ecom_slide2_eye_tr',
+            'ecom_slide2_eye_en',
+            'ecom_slide2_title_tr',
+            'ecom_slide2_title_en',
+            'ecom_slide2_text_tr',
+            'ecom_slide2_text_en',
+            'ecom_slide2_btn_tr',
+            'ecom_slide2_btn_en',
+
+            // Product Page Showcase Slider 3
+            'ecom_slide3_eye_tr',
+            'ecom_slide3_eye_en',
+            'ecom_slide3_title_tr',
+            'ecom_slide3_title_en',
+            'ecom_slide3_text_tr',
+            'ecom_slide3_text_en',
+            'ecom_slide3_btn_tr',
+            'ecom_slide3_btn_en',
         ];
 
         foreach ($fields as $field) {
@@ -317,7 +347,12 @@ class SettingController extends Controller
             'yat_hero_img',
             'yat_intro_img',
             'yat_route_img',
+
+            'ecom_slide1_img',
+            'ecom_slide2_img',
+            'ecom_slide3_img',
         ];
+
 
 
         foreach ($imageFields as $imgField) {

@@ -931,46 +931,71 @@
         <div id="autoShowcaseSlider" style="position: relative; height: 420px; border-radius: 24px; overflow: hidden; box-shadow: 0 20px 45px rgba(0,0,0,0.14);">
             
             <!-- Slide 1 -->
-            <div class="showcase-slide" style="position: absolute; inset: 0; opacity: 1; transition: opacity 0.8s ease-in-out; background-image: url('{{ asset('foto.img/hero_4k.jpg') }}'); background-size: cover; background-position: center;">
+            <div class="showcase-slide" style="position: absolute; inset: 0; opacity: 1; transition: opacity 0.8s ease-in-out; background-image: url('{{ asset($settings["ecom_slide1_img"] ?? "foto.img/hero_4k.jpg") }}'); background-size: cover; background-position: center;">
                 <div class="showcase-slide-inner">
-                    <span style="font-size: 0.85rem; letter-spacing: 0.25em; color: #c8a96e; font-weight: 700; text-transform: uppercase; margin-bottom: 0.6rem;">PORSELEN & ÇATAL BIÇAK KOLEKSİYONU</span>
-                    <h2 style="font-family: var(--font-display, serif); font-size: clamp(1.8rem, 3.5vw, 3.2rem); font-weight: 400; margin-bottom: 0.8rem; line-height: 1.2;">Royal Altın İşlemeli Yemek Takımları</h2>
-                    <p style="font-size: 1.1rem; opacity: 0.9; max-width: 600px; margin-bottom: 2rem; line-height: 1.6;">24 Parça Fine Bone China Porselen, Kristal Şarap Kadehleri ve Saf İpek Kırlent Koleksiyonu</p>
+                    <span style="font-size: 0.85rem; letter-spacing: 0.25em; color: #c8a96e; font-weight: 700; text-transform: uppercase; margin-bottom: 0.6rem;">
+                        <span class="lang-text-tr">{{ $settings['ecom_slide1_eye_tr'] ?? 'PORSELEN & ÇATAL BIÇAK KOLEKSİYONU' }}</span>
+                        <span class="lang-text-en">{{ $settings['ecom_slide1_eye_en'] ?? 'PORCELAIN & CUTLERY COLLECTION' }}</span>
+                    </span>
+                    <h2 style="font-family: var(--font-display, serif); font-size: clamp(1.8rem, 3.5vw, 3.2rem); font-weight: 400; margin-bottom: 0.8rem; line-height: 1.2;" class="lang-text-tr">{{ $settings['ecom_slide1_title_tr'] ?? 'Royal Altın İşlemeli Yemek Takımları' }}</h2>
+                    <h2 style="font-family: var(--font-display, serif); font-size: clamp(1.8rem, 3.5vw, 3.2rem); font-weight: 400; margin-bottom: 0.8rem; line-height: 1.2;" class="lang-text-en">{{ $settings['ecom_slide1_title_en'] ?? 'Royal Gold Embossed Dinnerware' }}</h2>
+
+                    <p style="font-size: 1.1rem; opacity: 0.9; max-width: 600px; margin-bottom: 2rem; line-height: 1.6;" class="lang-text-tr">{{ $settings['ecom_slide1_text_tr'] ?? '24 Parça Fine Bone China Porselen, Kristal Şarap Kadehleri ve Saf İpek Kırlent Koleksiyonu' }}</p>
+                    <p style="font-size: 1.1rem; opacity: 0.9; max-width: 600px; margin-bottom: 2rem; line-height: 1.6;" class="lang-text-en">{{ $settings['ecom_slide1_text_en'] ?? '24 Piece Fine Bone China Porcelain, Crystal Wine Glasses and Pure Silk Cushion Collection' }}</p>
                     <div>
                         <button type="button" onclick="selectCategory('cat-1', 'Mutfak & Yemek Takımları', document.querySelector('.left-dropdown-item'))" style="background: #c8a96e; color: #111; border: none; padding: 0.9rem 2.2rem; border-radius: 40px; font-weight: 600; font-size: 0.9rem; cursor: pointer; text-transform: uppercase; letter-spacing: 0.1em; transition: all 0.3s ease; box-shadow: 0 8px 25px rgba(200, 169, 110, 0.4);">
-                            Koleksiyonu İncele <i class="fa-solid fa-arrow-right" style="margin-left: 0.4rem;"></i>
+                            <span class="lang-text-tr">{{ $settings['ecom_slide1_btn_tr'] ?? 'Koleksiyonu İncele' }}</span>
+                            <span class="lang-text-en">{{ $settings['ecom_slide1_btn_en'] ?? 'Explore Collection' }}</span>
+                            <i class="fa-solid fa-arrow-right" style="margin-left: 0.4rem;"></i>
                         </button>
                     </div>
                 </div>
             </div>
 
             <!-- Slide 2 -->
-            <div class="showcase-slide" style="position: absolute; inset: 0; opacity: 0; transition: opacity 0.8s ease-in-out; background-image: url('{{ asset('foto.img/otel_hero.jpg') }}'); background-size: cover; background-position: center;">
+            <div class="showcase-slide" style="position: absolute; inset: 0; opacity: 0; transition: opacity 0.8s ease-in-out; background-image: url('{{ asset($settings["ecom_slide2_img"] ?? "foto.img/otel_hero.jpg") }}'); background-size: cover; background-position: center;">
                 <div class="showcase-slide-inner">
-                    <span style="font-size: 0.85rem; letter-spacing: 0.25em; color: #c8a96e; font-weight: 700; text-transform: uppercase; margin-bottom: 0.6rem;">EV & LÜKS DEKORASYON</span>
-                    <h2 style="font-family: var(--font-display, serif); font-size: clamp(1.8rem, 3.5vw, 3.2rem); font-weight: 400; margin-bottom: 0.8rem; line-height: 1.2;">Baccarat Kristal Kadehler & Murano Vazo</h2>
-                    <p style="font-size: 1.1rem; opacity: 0.9; max-width: 600px; margin-bottom: 2rem; line-height: 1.6;">Özel El Üfleme Cam Sanatı Eserleri ve Hermès İpek Dokuma Aksesuarlar</p>
+                    <span style="font-size: 0.85rem; letter-spacing: 0.25em; color: #c8a96e; font-weight: 700; text-transform: uppercase; margin-bottom: 0.6rem;">
+                        <span class="lang-text-tr">{{ $settings['ecom_slide2_eye_tr'] ?? 'EV & LÜKS DEKORASYON' }}</span>
+                        <span class="lang-text-en">{{ $settings['ecom_slide2_eye_en'] ?? 'HOME & LUXURY DECORATION' }}</span>
+                    </span>
+                    <h2 style="font-family: var(--font-display, serif); font-size: clamp(1.8rem, 3.5vw, 3.2rem); font-weight: 400; margin-bottom: 0.8rem; line-height: 1.2;" class="lang-text-tr">{{ $settings['ecom_slide2_title_tr'] ?? 'Baccarat Kristal Kadehler & Murano Vazo' }}</h2>
+                    <h2 style="font-family: var(--font-display, serif); font-size: clamp(1.8rem, 3.5vw, 3.2rem); font-weight: 400; margin-bottom: 0.8rem; line-height: 1.2;" class="lang-text-en">{{ $settings['ecom_slide2_title_en'] ?? 'Baccarat Crystal Glasses & Murano Vase' }}</h2>
+
+                    <p style="font-size: 1.1rem; opacity: 0.9; max-width: 600px; margin-bottom: 2rem; line-height: 1.6;" class="lang-text-tr">{{ $settings['ecom_slide2_text_tr'] ?? 'Özel El Üfleme Cam Sanatı Eserleri ve Hermès İpek Dokuma Aksesuarlar' }}</p>
+                    <p style="font-size: 1.1rem; opacity: 0.9; max-width: 600px; margin-bottom: 2rem; line-height: 1.6;" class="lang-text-en">{{ $settings['ecom_slide2_text_en'] ?? 'Exclusive Handblown Glassware Masterpieces and Hermès Silk Woven Accessories' }}</p>
                     <div>
                         <button type="button" onclick="selectCategory('cat-2', 'Ev & Lüks Dekorasyon', document.querySelector('.left-dropdown-item'))" style="background: #ffffff; color: #111; border: none; padding: 0.9rem 2.2rem; border-radius: 40px; font-weight: 600; font-size: 0.9rem; cursor: pointer; text-transform: uppercase; letter-spacing: 0.1em; transition: all 0.3s ease; box-shadow: 0 8px 25px rgba(255, 255, 255, 0.3);">
-                            Ürünleri Keşfet <i class="fa-solid fa-arrow-right" style="margin-left: 0.4rem;"></i>
+                            <span class="lang-text-tr">{{ $settings['ecom_slide2_btn_tr'] ?? 'Ürünleri Keşfet' }}</span>
+                            <span class="lang-text-en">{{ $settings['ecom_slide2_btn_en'] ?? 'Discover Products' }}</span>
+                            <i class="fa-solid fa-arrow-right" style="margin-left: 0.4rem;"></i>
                         </button>
                     </div>
                 </div>
             </div>
 
             <!-- Slide 3 -->
-            <div class="showcase-slide" style="position: absolute; inset: 0; opacity: 0; transition: opacity 0.8s ease-in-out; background-image: url('{{ asset('foto.img/bodrum.jpg') }}'); background-size: cover; background-position: center;">
+            <div class="showcase-slide" style="position: absolute; inset: 0; opacity: 0; transition: opacity 0.8s ease-in-out; background-image: url('{{ asset($settings["ecom_slide3_img"] ?? "foto.img/bodrum.jpg") }}'); background-size: cover; background-position: center;">
                 <div class="showcase-slide-inner">
-                    <span style="font-size: 0.85rem; letter-spacing: 0.25em; color: #c8a96e; font-weight: 700; text-transform: uppercase; margin-bottom: 0.6rem;">VIP SEYAHAT & KONAKLAMA</span>
-                    <h2 style="font-family: var(--font-display, serif); font-size: clamp(1.8rem, 3.5vw, 3.2rem); font-weight: 400; margin-bottom: 0.8rem; line-height: 1.2;">Bodrum Sunset Villa & Kapadokya Turu</h2>
-                    <p style="font-size: 1.1rem; opacity: 0.9; max-width: 600px; margin-bottom: 2rem; line-height: 1.6;">Özel Havuzlu Lüks Villa Tatili, Mavi Yolculuk ve VIP Havalimanı Karşılama</p>
+                    <span style="font-size: 0.85rem; letter-spacing: 0.25em; color: #c8a96e; font-weight: 700; text-transform: uppercase; margin-bottom: 0.6rem;">
+                        <span class="lang-text-tr">{{ $settings['ecom_slide3_eye_tr'] ?? 'VIP SEYAHAT & KONAKLAMA' }}</span>
+                        <span class="lang-text-en">{{ $settings['ecom_slide3_eye_en'] ?? 'VIP TRAVEL & ACCOMMODATION' }}</span>
+                    </span>
+                    <h2 style="font-family: var(--font-display, serif); font-size: clamp(1.8rem, 3.5vw, 3.2rem); font-weight: 400; margin-bottom: 0.8rem; line-height: 1.2;" class="lang-text-tr">{{ $settings['ecom_slide3_title_tr'] ?? 'Bodrum Sunset Villa & Kapadokya Turu' }}</h2>
+                    <h2 style="font-family: var(--font-display, serif); font-size: clamp(1.8rem, 3.5vw, 3.2rem); font-weight: 400; margin-bottom: 0.8rem; line-height: 1.2;" class="lang-text-en">{{ $settings['ecom_slide3_title_en'] ?? 'Bodrum Sunset Villa & Cappadocia Tour' }}</h2>
+
+                    <p style="font-size: 1.1rem; opacity: 0.9; max-width: 600px; margin-bottom: 2rem; line-height: 1.6;" class="lang-text-tr">{{ $settings['ecom_slide3_text_tr'] ?? 'Özel Havuzlu Lüks Villa Tatili, Mavi Yolculuk ve VIP Havalimanı Karşılama' }}</p>
+                    <p style="font-size: 1.1rem; opacity: 0.9; max-width: 600px; margin-bottom: 2rem; line-height: 1.6;" class="lang-text-en">{{ $settings['ecom_slide3_text_en'] ?? 'Private Pool Luxury Villa Vacation, Blue Cruise and VIP Airport Greeting' }}</p>
                     <div>
                         <button type="button" onclick="selectCategory('cat-3', 'Konaklama Paketleri', document.querySelector('.left-dropdown-item'))" style="background: #c8a96e; color: #111; border: none; padding: 0.9rem 2.2rem; border-radius: 40px; font-weight: 600; font-size: 0.9rem; cursor: pointer; text-transform: uppercase; letter-spacing: 0.1em; transition: all 0.3s ease; box-shadow: 0 8px 25px rgba(200, 169, 110, 0.4);">
-                            Paketleri İncele <i class="fa-solid fa-arrow-right" style="margin-left: 0.4rem;"></i>
+                            <span class="lang-text-tr">{{ $settings['ecom_slide3_btn_tr'] ?? 'Paketleri İncele' }}</span>
+                            <span class="lang-text-en">{{ $settings['ecom_slide3_btn_en'] ?? 'Explore Packages' }}</span>
+                            <i class="fa-solid fa-arrow-right" style="margin-left: 0.4rem;"></i>
                         </button>
                     </div>
                 </div>
             </div>
+
 
             <!-- Slide Dots Indicator -->
             <div style="position: absolute; bottom: 1.8rem; right: 3rem; display: flex; gap: 0.7rem; z-index: 10;">
