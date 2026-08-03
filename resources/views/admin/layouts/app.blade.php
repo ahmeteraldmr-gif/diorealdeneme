@@ -166,12 +166,18 @@
                 </li>
                 @endadminCan
                 @adminCan('settings')
+                <li class="sidebar-item">
+                    <a href="{{ route('admin.settings.index') }}#tab-pages">
+                        <i class="fas fa-images"></i> Sayfa Kapakları & Metinler
+                    </a>
+                </li>
                 <li class="sidebar-item {{ Request::routeIs('admin.settings.*') ? 'active' : '' }}">
                     <a href="{{ route('admin.settings.index') }}">
                         <i class="fas fa-sliders-h"></i> Hakkımızda & Genel Ayarlar
                     </a>
                 </li>
                 @endadminCan
+
             </ul>
         </div>
 

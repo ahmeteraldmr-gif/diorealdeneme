@@ -64,6 +64,39 @@
         </div>
     </div>
 
+    <!-- Quick Access Section for Page Headers, Covers & Route Planning -->
+    <div class="panel-card" style="border: 1px solid rgba(200, 169, 110, 0.3); background: rgba(200, 169, 110, 0.05); margin-top: 2rem;">
+        <h3 class="panel-card-title" style="color: var(--primary); font-size: 1.2rem; margin-bottom: 1rem;">
+            <i class="fas fa-magic" style="margin-right: 0.5rem;"></i> Hızlı Erişim: Sayfa Kapakları, Güzergah Planlaması & Tanıtım Metinleri
+        </h3>
+        <p style="color: var(--text-muted); font-size: 0.9rem; margin-bottom: 1.5rem;">
+            İstediğiniz sayfanın başlık, görsel ve buton ayarlarını doğrudan düzenlemek için aşağıdaki hızlı erişim butonlarına tıklayabilirsiniz:
+        </p>
+
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 1rem;">
+            <a href="{{ route('admin.settings.index') }}#tab-pages" class="btn btn-outline" style="text-align: left; display: flex; flex-direction: column; align-items: flex-start; padding: 1.2rem; gap: 0.4rem; height: auto;">
+                <strong style="color: var(--white); font-size: 1rem;">🗺️ Güzergah Planlaması & Rota Planlat</strong>
+                <span style="font-size: 0.8rem; color: var(--text-muted);">"Her yolculuk size özel...", Rota Planlat butonu & görseller</span>
+            </a>
+
+            <a href="{{ route('admin.settings.index') }}#tab-pages" class="btn btn-outline" style="text-align: left; display: flex; flex-direction: column; align-items: flex-start; padding: 1.2rem; gap: 0.4rem; height: auto;">
+                <strong style="color: var(--white); font-size: 1rem;">🍽️ Restoranlar & "Yemek Bir Sanattır"</strong>
+                <span style="font-size: 0.8rem; color: var(--text-muted);">Üst görsel, tanıtım metinleri & Masaları Keşfet butonu</span>
+            </a>
+
+            <a href="{{ route('admin.settings.index') }}#tab-pages" class="btn btn-outline" style="text-align: left; display: flex; flex-direction: column; align-items: flex-start; padding: 1.2rem; gap: 0.4rem; height: auto;">
+                <strong style="color: var(--white); font-size: 1rem;">🏨 Oteller Kapak & Tanıtım Metni</strong>
+                <span style="font-size: 0.8rem; color: var(--text-muted);">"Her konaklamanın bir hikayesi vardır" & Oteller üst kapak resmi</span>
+            </a>
+
+            <a href="{{ route('admin.hotels.index') }}" class="btn btn-outline" style="text-align: left; display: flex; flex-direction: column; align-items: flex-start; padding: 1.2rem; gap: 0.4rem; height: auto;">
+                <strong style="color: var(--white); font-size: 1rem;">🏨 01 Reschio vb. Otel Kartları</strong>
+                <span style="font-size: 0.8rem; color: var(--text-muted);">Otellerin resimlerini, isimlerini ve açıklamalarını düzenle</span>
+            </a>
+        </div>
+    </div>
+
+
     <!-- Recent Items Sections -->
     <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(450px, 1fr)); gap: 2rem;">
         
