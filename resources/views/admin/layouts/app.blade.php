@@ -48,8 +48,36 @@
             }
         }
         window.toggleSidebar = doToggleSidebar;
+
+        function switchLanguageTab(lang) {
+            var tabs = document.querySelectorAll('.lang-tab');
+            tabs.forEach(function(tab) {
+                var tabLang = tab.getAttribute('data-lang') || (tab.getAttribute('onclick') && tab.getAttribute('onclick').includes('en') ? 'en' : 'tr');
+                if (tabLang === lang) {
+                    tab.classList.add('active');
+                } else {
+                    tab.classList.remove('active');
+                }
+            });
+
+            var panes = document.querySelectorAll('.lang-pane');
+            panes.forEach(function(pane) {
+                var paneLang = pane.getAttribute('data-lang');
+                if (paneLang === lang) {
+                    pane.classList.add('active');
+                    pane.style.setProperty('display', 'block', 'important');
+                } else {
+                    pane.classList.remove('active');
+                    pane.style.setProperty('display', 'none', 'important');
+                }
+            });
+        }
+        window.switchLanguageTab = switchLanguageTab;
+        window.switchTab = switchLanguageTab;
+        window.switchLang = switchLanguageTab;
     </script>
 </head>
+
 <body>
 
     <!-- Sidebar Overlay (Mobile) -->

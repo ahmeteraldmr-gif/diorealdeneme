@@ -50,7 +50,7 @@
             <div class="lang-pane" data-lang="en">
                 <div class="form-group">
                     <label class="form-label" for="title_en">Guide Title (EN)</label>
-                    <input type="text" name="title[en]" id="title_en" class="form-control" value="{{ old('title.en', $guide->title['en'] ?? '') }}" required>
+                    <input type="text" name="title[en]" id="title_en" class="form-control" value="{{ old('title.en', $guide->title['en'] ?? '') }}">
                 </div>
                 
                 <div class="form-group">
@@ -60,9 +60,10 @@
                 
                 <div class="form-group">
                     <label class="form-label" for="desc_en">Description (EN)</label>
-                    <textarea name="desc[en]" id="desc_en" class="form-control" required style="min-height: 180px;">{{ old('desc.en', $guide->desc['en'] ?? '') }}</textarea>
+                    <textarea name="desc[en]" id="desc_en" class="form-control" style="min-height: 180px;">{{ old('desc.en', $guide->desc['en'] ?? '') }}</textarea>
                 </div>
             </div>
+
 
             <!-- Shared General Content -->
             <hr style="border: 0; border-top: 1px solid var(--border-color); margin: 2rem 0;">
