@@ -394,7 +394,8 @@
     @php
         $showVideoCover = !empty($yat->show_video_on_cover) && (!empty($yat->video_file) || !empty($yat->video_url));
         $yatImg = !empty($yat->img) ? $yat->img : 'foto.img/yat_hero.jpg';
-        $yatImgUrl = str_starts_with($yatImg, 'data:') || str_starts_with($yatImg, 'http') ? $yatImg : asset($yatImg);
+        $yatImgUrl = str_starts_with($yatImg, 'data:') || str_starts_with($yatImg, 'http') ? $yatImg : dioreal_img($yatImg, 'foto.img/yat_hero.jpg');
+
     @endphp
     <div class="page-hero" style="@if(!$showVideoCover) background-image: url('{{ $yatImgUrl }}'); @endif">
         @if($showVideoCover)

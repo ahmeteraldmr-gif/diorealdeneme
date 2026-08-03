@@ -22,6 +22,30 @@ if (!function_exists('format_whatsapp')) {
     }
 }
 
+if (!function_exists('dioreal_img')) {
+    /**
+     * Resolves local image asset or falls back to live dioreal.com media host
+     */
+    function dioreal_img(?string $path, string $default = 'foto.img/hero_4k.jpg'): string
+    {
+        if (empty($path)) {
+            return asset($default);
+        }
+
+        $cleanPath = ltrim($path, '/');
+        if (file_exists(public_path($cleanPath))) {
+            return asset($cleanPath);
+        }
+
+        if (str_starts_with($cleanPath, 'uploads/') || str_starts_with($cleanPath, 'foto.img/')) {
+            return 'https://dioreal.com/' . $cleanPath;
+        }
+
+        return asset($cleanPath);
+    }
+}
+
+
 if (!function_exists('make_slug')) {
     /**
      * Generates Turkish-character safe URL slugs

@@ -429,8 +429,9 @@
     <!-- Page Hero -->
     @php
         $showVideoCover = !empty($otel->show_video_on_cover) && (!empty($otel->video_file) || !empty($otel->video_url));
-        $otelImg = !empty($otel->img) ? $otel->img : 'foto.img/etkinlik_hero.jpg';
-        $otelImgUrl = str_starts_with($otelImg, 'data:') || str_starts_with($otelImg, 'http') ? $otelImg : asset($otelImg);
+        $otelImg = !empty($otel->img) ? $otel->img : 'foto.img/otel_hero.jpg';
+        $otelImgUrl = str_starts_with($otelImg, 'data:') || str_starts_with($otelImg, 'http') ? $otelImg : dioreal_img($otelImg, 'foto.img/otel_hero.jpg');
+
     @endphp
     <div class="page-hero" style="@if(!$showVideoCover) background-image: url('{{ $otelImgUrl }}'); @endif">
         @if($showVideoCover)

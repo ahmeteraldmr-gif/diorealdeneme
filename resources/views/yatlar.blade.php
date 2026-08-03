@@ -262,7 +262,8 @@
             @foreach($yatlar as $y)
                 <div class="card yacht-card reveal visible">
                     <div class="yacht-img-container">
-                        <img src="{{ !empty($y->img) ? asset($y->img) : asset('foto.img/yat_ozgur.jpg') }}" onerror="this.onerror=null;this.src='{{ asset('foto.img/yat_ozgur.jpg') }}';" alt="{{ $y->name['tr'] ?? '' }}" class="card-img" style="width: 100%; height: 100%; object-fit: cover;">
+                        <img src="{{ dioreal_img($y->img, 'foto.img/yat_ozgur.jpg') }}" onerror="this.onerror=null;this.src='{{ asset('foto.img/yat_ozgur.jpg') }}';" alt="{{ $y->name['tr'] ?? '' }}" class="card-img" style="width: 100%; height: 100%; object-fit: cover;">
+
 
                     </div>
                     <div class="card-body yacht-card-body">

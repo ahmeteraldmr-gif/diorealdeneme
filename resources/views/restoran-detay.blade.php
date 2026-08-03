@@ -416,8 +416,9 @@
     <!-- Page Hero -->
     @php
         $showVideoCover = !empty($restoran->show_video_on_cover) && (!empty($restoran->video_file) || !empty($restoran->video_url));
-        $restImg = !empty($restoran->img) ? $restoran->img : 'foto.img/etkinlik_hero.jpg';
-        $restImgUrl = str_starts_with($restImg, 'data:') || str_starts_with($restImg, 'http') ? $restImg : asset($restImg);
+        $restImg = !empty($restoran->img) ? $restoran->img : 'foto.img/rest_intro.jpg';
+        $restImgUrl = str_starts_with($restImg, 'data:') || str_starts_with($restImg, 'http') ? $restImg : dioreal_img($restImg, 'foto.img/rest_intro.jpg');
+
     @endphp
     <div class="page-hero" style="@if(!$showVideoCover) background-image: url('{{ $restImgUrl }}'); @endif">
         @if($showVideoCover)

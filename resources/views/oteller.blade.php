@@ -401,8 +401,9 @@
                                 <iframe src="{{ $embedUrl }}" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" style="width: 100%; height: 100%; object-fit: cover; pointer-events: none; transform: scale(1.35); position: absolute; inset: 0; border: none;"></iframe>
                             @endif
                         @else
-                            <img src="{{ !empty($otel->img) ? asset($otel->img) : asset('foto.img/otel_hero.jpg') }}" onerror="this.onerror=null;this.src='{{ asset('foto.img/otel_hero.jpg') }}';" alt="{{ $otel->name['tr'] ?? '' }}" class="hotel-row-image" style="object-fit: cover;">
+                            <img src="{{ dioreal_img($otel->img, 'foto.img/otel_hero.jpg') }}" onerror="this.onerror=null;this.src='{{ asset('foto.img/otel_hero.jpg') }}';" alt="{{ $otel->name['tr'] ?? '' }}" class="hotel-row-image" style="object-fit: cover;">
                         @endif
+
 
                     </div>
                     <div class="hotel-info-col">
