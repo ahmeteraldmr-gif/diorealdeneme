@@ -408,7 +408,7 @@
 
                 @foreach($otherGuides as $item)
                     <a href="{{ route('rehber.detay', $item->slug_tr ?: ($item->slug_en ?: $item->id)) }}" class="jd-related-item">
-                        <img src="{{ asset($item->img) }}" alt="{{ $item->title['tr'] ?? '' }}">
+                        <img src="{{ dioreal_img($item->img, 'foto.img/bodrum.jpg') }}" alt="{{ $item->title['tr'] ?? '' }}">
                         <div>
                             <div class="jd-related-name">
                                 <span class="lang-text-tr">{{ $item->title['tr'] ?? '' }}</span>
