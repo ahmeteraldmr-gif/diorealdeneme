@@ -55,7 +55,7 @@
         .bd-hero-bg {
             position: absolute;
             inset: 0;
-            background-image: url('{{ asset($settings["otel_hero_img"] ?? "foto.img/otel_hero.jpg") }}');
+            background-image: url('{{ dioreal_img($settings["otel_hero_img"] ?? "", "foto.img/otel_hero.jpg") }}');
             background-size: cover;
             background-position: center;
             transform: scale(1.03);
