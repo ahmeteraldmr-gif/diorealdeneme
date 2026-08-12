@@ -154,81 +154,59 @@
     <section class="hero">
         <div class="hero-slider">
             <div class="hero-slide active"
-                style="background-image:url('{{ asset(!empty($settings['hero_slide_1']) ? $settings['hero_slide_1'] : 'foto.img/hero_4k.jpg') }}')">
+                style="background-image:url('{{ dioreal_img($settings['hero_slide_1'] ?? '', 'foto.img/hero_4k.jpg') }}')">
             </div>
             <div class="hero-slide"
-                style="background-image:url('{{ asset(!empty($settings['hero_slide_2']) ? $settings['hero_slide_2'] : 'foto.img/hero_slide_2.jpg') }}')">
+                style="background-image:url('{{ dioreal_img($settings['hero_slide_2'] ?? '', 'foto.img/hero_slide_2.jpg') }}')">
             </div>
             <div class="hero-slide"
-                style="background-image:url('{{ asset(!empty($settings['hero_slide_3']) ? $settings['hero_slide_3'] : 'foto.img/hero_slide_3.jpg') }}')">
+                style="background-image:url('{{ dioreal_img($settings['hero_slide_3'] ?? '', 'foto.img/hero_slide_3.jpg') }}')">
             </div>
         </div>
         <div class="hero-overlay"></div>
         <div class="hero-content">
             <h1 class="hero-title reveal">
-                <span class="lang-text-tr">Türkiye ve dünyada seçkin<br />deneyimlerin kapısını aralıyoruz.</span>
-                <span class="lang-text-en">Opening doors to exclusive<br />experiences globally.</span>
+                <span class="lang-text-tr">{{ $settings['hero_title_tr'] ?? 'DIOREAL' }}</span>
+                <span class="lang-text-en">{{ $settings['hero_title_en'] ?? 'DIOREAL' }}</span>
             </h1>
             <div class="hero-cta-group reveal" style="transition-delay: 0.2s;">
-                <a href="https://wa.me/{{ format_whatsapp($settings['whatsapp'] ?? '905320000000') }}" target="_blank" class="btn btn-outline whatsapp-cta" data-i18n="btn_contact">İletişime Geç</a>
+                <a href="https://wa.me/{{ format_whatsapp($settings['whatsapp'] ?? '905449157011') }}" target="_blank" class="btn btn-outline whatsapp-cta" data-i18n="btn_contact" style="background:transparent!important;border:2px solid rgba(255,255,255,0.75)!important;color:#fff!important;box-shadow:0 4px 20px rgba(0,0,0,0.18)!important;backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);">İletişime Geç</a>
             </div>
         </div>
     </section>
 
-    <!-- OLD: Marquee -->
-    <div class="marquee">
-        <div class="marquee-track">
-            <!-- SET A -->
-            <div class="marquee-item"><span data-i18n="dest_istanbul">İstanbul</span> <span class="marquee-dot">◆</span></div>
-            <div class="marquee-item"><span data-i18n="dest_bodrum">Bodrum</span> <span class="marquee-dot">◆</span></div>
-            <div class="marquee-item"><span data-i18n="dest_fethiye">Fethiye</span> <span class="marquee-dot">◆</span></div>
-            <div class="marquee-item"><span data-i18n="dest_kapadokya">Kapadokya</span> <span class="marquee-dot">◆</span></div>
-            <div class="marquee-item"><span data-i18n="dest_cesme">Çeşme</span> <span class="marquee-dot">◆</span></div>
-            <div class="marquee-item"><span data-i18n="dest_kas">Kaş</span> <span class="marquee-dot">◆</span></div>
-            <div class="marquee-item"><span data-i18n="dest_datca">Datça</span> <span class="marquee-dot">◆</span></div>
-            <!-- SET B -->
-            <div class="marquee-item"><span data-i18n="dest_istanbul">İstanbul</span> <span class="marquee-dot">◆</span></div>
-            <div class="marquee-item"><span data-i18n="dest_bodrum">Bodrum</span> <span class="marquee-dot">◆</span></div>
-            <div class="marquee-item"><span data-i18n="dest_fethiye">Fethiye</span> <span class="marquee-dot">◆</span></div>
-            <div class="marquee-item"><span data-i18n="dest_kapadokya">Kapadokya</span> <span class="marquee-dot">◆</span></div>
-            <div class="marquee-item"><span data-i18n="dest_cesme">Çeşme</span> <span class="marquee-dot">◆</span></div>
-            <div class="marquee-item"><span data-i18n="dest_kas">Kaş</span> <span class="marquee-dot">◆</span></div>
-            <div class="marquee-item"><span data-i18n="dest_datca">Datça</span> <span class="marquee-dot">◆</span></div>
-            <!-- SET C -->
-            <div class="marquee-item"><span data-i18n="dest_istanbul">İstanbul</span> <span class="marquee-dot">◆</span></div>
-            <div class="marquee-item"><span data-i18n="dest_bodrum">Bodrum</span> <span class="marquee-dot">◆</span></div>
-            <div class="marquee-item"><span data-i18n="dest_fethiye">Fethiye</span> <span class="marquee-dot">◆</span></div>
-            <div class="marquee-item"><span data-i18n="dest_kapadokya">Kapadokya</span> <span class="marquee-dot">◆</span></div>
-            <div class="marquee-item"><span data-i18n="dest_cesme">Çeşme</span> <span class="marquee-dot">◆</span></div>
-            <div class="marquee-item"><span data-i18n="dest_kas">Kaş</span> <span class="marquee-dot">◆</span></div>
-            <div class="marquee-item"><span data-i18n="dest_datca">Datça</span> <span class="marquee-dot">◆</span></div>
-            <!-- SET D -->
-            <div class="marquee-item"><span data-i18n="dest_istanbul">İstanbul</span> <span class="marquee-dot">◆</span></div>
-            <div class="marquee-item"><span data-i18n="dest_bodrum">Bodrum</span> <span class="marquee-dot">◆</span></div>
-            <div class="marquee-item"><span data-i18n="dest_fethiye">Fethiye</span> <span class="marquee-dot">◆</span></div>
-            <div class="marquee-item"><span data-i18n="dest_kapadokya">Kapadokya</span> <span class="marquee-dot">◆</span></div>
-            <div class="marquee-item"><span data-i18n="dest_cesme">Çeşme</span> <span class="marquee-dot">◆</span></div>
-            <div class="marquee-item"><span data-i18n="dest_kas">Kaş</span> <span class="marquee-dot">◆</span></div>
-            <div class="marquee-item"><span data-i18n="dest_datca">Datça</span> <span class="marquee-dot">◆</span></div>
+    <!-- Marquee - Clickable Cities -->
+    <div class="marquee" style="position:relative;z-index:2;">
+        <div class="marquee-track" style="pointer-events:auto;">
+            @for($set = 0; $set < 4; $set++)
+            <div class="marquee-item"><a href="{{ route('destinasyon.detay', 'istanbul') }}" class="marquee-link" style="color: rgba(255, 255, 255, 0.22) !important; text-decoration: none !important;"><span data-i18n="dest_istanbul" style="color: inherit !important;">İstanbul</span></a> <span class="marquee-dot">◆</span></div>
+            <div class="marquee-item"><a href="{{ route('destinasyon.detay', 'bodrum') }}" class="marquee-link" style="color: rgba(255, 255, 255, 0.22) !important; text-decoration: none !important;"><span data-i18n="dest_bodrum" style="color: inherit !important;">Bodrum</span></a> <span class="marquee-dot">◆</span></div>
+            <div class="marquee-item"><a href="{{ route('destinasyon.detay', 'fethiye') }}" class="marquee-link" style="color: rgba(255, 255, 255, 0.22) !important; text-decoration: none !important;"><span data-i18n="dest_fethiye" style="color: inherit !important;">Fethiye</span></a> <span class="marquee-dot">◆</span></div>
+            <div class="marquee-item"><a href="{{ route('destinasyon.detay', 'kapadokya') }}" class="marquee-link" style="color: rgba(255, 255, 255, 0.22) !important; text-decoration: none !important;"><span data-i18n="dest_kapadokya" style="color: inherit !important;">Kapadokya</span></a> <span class="marquee-dot">◆</span></div>
+            <div class="marquee-item"><a href="{{ route('destinasyon.detay', 'cesme') }}" class="marquee-link" style="color: rgba(255, 255, 255, 0.22) !important; text-decoration: none !important;"><span data-i18n="dest_cesme" style="color: inherit !important;">Çeşme</span></a> <span class="marquee-dot">◆</span></div>
+            <div class="marquee-item"><a href="{{ route('destinasyon.detay', 'kas') }}" class="marquee-link" style="color: rgba(255, 255, 255, 0.22) !important; text-decoration: none !important;"><span data-i18n="dest_kas" style="color: inherit !important;">Kaş</span></a> <span class="marquee-dot">◆</span></div>
+            <div class="marquee-item"><a href="{{ route('destinasyon.detay', 'datca') }}" class="marquee-link" style="color: rgba(255, 255, 255, 0.22) !important; text-decoration: none !important;"><span data-i18n="dest_datca" style="color: inherit !important;">Datça</span></a> <span class="marquee-dot">◆</span></div>
+            @endfor
         </div>
     </div>
 
-    <!-- NEW ABOUT SECTION (BLACK TOMATO STYLE) -->
+    <!-- NEW ABOUT SECTION (BLACK TOMATO STYLE - BU AYIN SEÇKİSİ) -->
     <section class="bt-about-section" id="hakkimizda" style="padding: 7rem 5rem; text-align: center; background: var(--white);">
         <div style="max-width: 800px; margin: 0 auto 5rem;">
-            <h2 style="font-family: var(--font-condensed); font-size: 2.5rem; letter-spacing: 0.1em; text-transform: uppercase; margin-bottom: 2rem; color: var(--near-black);">
-                <span class="lang-text-tr">{{ $settings['man_eyebrow_tr'] ?? 'BU AYIN SEÇKİNLERİ' }}</span>
+            <h2 style="font-family: var(--font-display); font-size: 3rem; font-weight: 400; letter-spacing: 0.05em; text-transform: uppercase; margin-bottom: 2rem; color: var(--near-black);">
+                <span class="lang-text-tr">{{ $settings['man_eyebrow_tr'] ?? 'BU AYIN SEÇKİSİ' }}</span>
                 <span class="lang-text-en">{{ $settings['man_eyebrow_en'] ?? "THIS MONTH'S SELECTION" }}</span>
             </h2>
             <p style="font-size: 1.1rem; line-height: 1.8; color: var(--dark-gray);">
-                <span class="lang-text-tr">{{ $settings['man_p1_tr'] ?? 'Sizler için özenle seçtiğimiz bu ayın en trend otel, restoran, yat ve plaj lokasyonlarının ardındaki eşsiz hikayeleri keşfedin. Sıradanlığın ötesinde anılar biriktirmeniz için tasarlanmış özel deneyimler.' }}</span>
-                <span class="lang-text-en">{{ $settings['man_p1_en'] ?? "Explore the unique stories behind this month's trending hotels, restaurants, yachts, and beach spots carefully selected for you. Bespoke experiences designed for you to gather memories beyond the ordinary." }}</span>
+                <span class="lang-text-tr">{{ $settings['man_p1_tr'] ?? 'Sizler için özenle seçtiğimiz bu ayın en trend otel, restoran, yat ve plaj lokasyonlarının ardındaki eşsiz hikayeleri keşfedin.' }}</span>
+                <span class="lang-text-en">{{ $settings['man_p1_en'] ?? "Explore the unique stories behind this month's trending hotels, restaurants, yachts, and beach spots carefully selected for you." }}</span>
             </p>
         </div>
+
         <div class="bt-about-grid" style="display: grid; gap: 2rem; text-align: left;">
             <!-- Trend Otel -->
             <div class="bt-about-card" style="aspect-ratio: 3/4; position: relative; overflow: hidden; background: var(--near-black); cursor: pointer; transition: transform 0.4s;">
-                <img src="{{ asset(!empty($settings['trend_otel_img']) ? $settings['trend_otel_img'] : 'foto.img/about_safari.jpg') }}" alt="Trend Otel" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.8s ease;">
+                <img src="{{ dioreal_img($settings['trend_otel_img'] ?? '', 'foto.img/about_safari.jpg') }}" alt="Trend Otel" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.8s ease;">
                 <div style="position: absolute; bottom: 0; left: 0; right: 0; padding: 2rem; background: linear-gradient(transparent, rgba(0,0,0,0.85)); color: white; pointer-events: none;">
                     <div style="font-size: 0.75rem; letter-spacing: 0.2em; text-transform: uppercase; margin-bottom: 0.5rem; color: rgba(255,255,255,0.8);">
                         <span class="lang-text-tr">Trend Otel</span>
@@ -246,7 +224,7 @@
             </div>
             <!-- Trend Restoran -->
             <div class="bt-about-card" style="aspect-ratio: 3/4; position: relative; overflow: hidden; background: var(--near-black); cursor: pointer; transition: transform 0.4s;">
-                <img src="{{ asset(!empty($settings['trend_rest_img']) ? $settings['trend_rest_img'] : 'foto.img/rest_mikla.jpg') }}" alt="Trend Restoran" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.8s ease;">
+                <img src="{{ dioreal_img($settings['trend_rest_img'] ?? '', 'foto.img/rest_mikla.jpg') }}" alt="Trend Restoran" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.8s ease;">
                 <div style="position: absolute; bottom: 0; left: 0; right: 0; padding: 2rem; background: linear-gradient(transparent, rgba(0,0,0,0.85)); color: white; pointer-events: none;">
                     <div style="font-size: 0.75rem; letter-spacing: 0.2em; text-transform: uppercase; margin-bottom: 0.5rem; color: rgba(255,255,255,0.8);">
                         <span class="lang-text-tr">Trend Restoran</span>
@@ -264,7 +242,7 @@
             </div>
             <!-- Trend Yat -->
             <div class="bt-about-card" style="aspect-ratio: 3/4; position: relative; overflow: hidden; background: var(--near-black); cursor: pointer; transition: transform 0.4s;">
-                <img src="{{ asset(!empty($settings['trend_yat_img']) ? $settings['trend_yat_img'] : 'foto.img/about_yacht.jpg') }}" alt="Trend Yat" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.8s ease;">
+                <img src="{{ dioreal_img($settings['trend_yat_img'] ?? '', 'foto.img/about_yacht.jpg') }}" alt="Trend Yat" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.8s ease;">
                 <div style="position: absolute; bottom: 0; left: 0; right: 0; padding: 2rem; background: linear-gradient(transparent, rgba(0,0,0,0.85)); color: white; pointer-events: none;">
                     <div style="font-size: 0.75rem; letter-spacing: 0.2em; text-transform: uppercase; margin-bottom: 0.5rem; color: rgba(255,255,255,0.8);">
                         <span class="lang-text-tr">Trend Yat</span>
@@ -282,7 +260,7 @@
             </div>
             <!-- Trend Beach -->
             <div class="bt-about-card" style="aspect-ratio: 3/4; position: relative; overflow: hidden; background: var(--near-black); cursor: pointer; transition: transform 0.4s;">
-                <img src="{{ asset(!empty($settings['trend_beach_img']) ? $settings['trend_beach_img'] : 'foto.img/bodrum.jpg') }}" alt="Trend Beach" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.8s ease;">
+                <img src="{{ dioreal_img($settings['trend_beach_img'] ?? '', 'foto.img/bodrum.jpg') }}" alt="Trend Beach" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.8s ease;">
                 <div style="position: absolute; bottom: 0; left: 0; right: 0; padding: 2rem; background: linear-gradient(transparent, rgba(0,0,0,0.85)); color: white; pointer-events: none;">
                     <div style="font-size: 0.75rem; letter-spacing: 0.2em; text-transform: uppercase; margin-bottom: 0.5rem; color: rgba(255,255,255,0.8);">
                         <span class="lang-text-tr">Trend Beach</span>
@@ -346,7 +324,7 @@
                         @foreach($destinations['turkiye'] as $dest)
                             <a href="{{ route('destinasyon.detay', $dest->slug_tr ?: ($dest->slug_en ?: $dest->id)) }}" class="dest-card-h" style="display: block; text-decoration: none; color: inherit;">
                                 <div class="dest-img-container">
-                                    <div class="dest-img" style="background-image:url('{{ asset(!empty($dest->img) ? $dest->img : 'foto.img/amalfi.jpg') }}'); position: absolute; inset: 0; background-size: cover; background-position: center; transition: transform 0.9s cubic-bezier(0.25, 0.46, 0.45, 0.94);"></div>
+                                    <div class="dest-img" style="background-image:url('{{ dioreal_img($dest->img ?? '', 'foto.img/amalfi.jpg') }}'); position: absolute; inset: 0; background-size: cover; background-position: center; transition: transform 0.9s cubic-bezier(0.25, 0.46, 0.45, 0.94);"></div>
                                 </div>
                                 <div class="dest-info-ext">
                                     <div class="dest-region">
@@ -407,7 +385,7 @@
                                 @foreach($destinations[$type] as $dest)
                                     <a href="{{ route('destinasyon.detay', $dest->slug_tr ?: ($dest->slug_en ?: $dest->id)) }}" class="dest-card-h" style="display: block; text-decoration: none; color: inherit;">
                                         <div class="dest-img-container">
-                                            <div class="dest-img" style="background-image:url('{{ asset(!empty($dest->img) ? $dest->img : 'foto.img/amalfi.jpg') }}'); position: absolute; inset: 0; background-size: cover; background-position: center; transition: transform 0.9s cubic-bezier(0.25, 0.46, 0.45, 0.94);"></div>
+                                            <div class="dest-img" style="background-image:url('{{ dioreal_img($dest->img ?? '', 'foto.img/amalfi.jpg') }}'); position: absolute; inset: 0; background-size: cover; background-position: center; transition: transform 0.9s cubic-bezier(0.25, 0.46, 0.45, 0.94);"></div>
                                         </div>
                                         <div class="dest-info-ext">
                                             <div class="dest-region">
@@ -433,7 +411,7 @@
                                 @foreach($destinations[$type] as $dest)
                                     <a href="{{ route('destinasyon.detay', $dest->slug_tr ?: ($dest->slug_en ?: $dest->id)) }}" class="dest-card-h" style="display: block; text-decoration: none; color: inherit;">
                                         <div class="dest-img-container">
-                                            <div class="dest-img" style="background-image:url('{{ asset(!empty($dest->img) ? $dest->img : 'foto.img/amalfi.jpg') }}'); position: absolute; inset: 0; background-size: cover; background-position: center; transition: transform 0.9s cubic-bezier(0.25, 0.46, 0.45, 0.94);"></div>
+                                            <div class="dest-img" style="background-image:url('{{ dioreal_img($dest->img ?? '', 'foto.img/amalfi.jpg') }}'); position: absolute; inset: 0; background-size: cover; background-position: center; transition: transform 0.9s cubic-bezier(0.25, 0.46, 0.45, 0.94);"></div>
                                         </div>
                                         <div class="dest-info-ext">
                                             <div class="dest-region">
