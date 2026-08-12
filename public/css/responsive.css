@@ -209,6 +209,27 @@ img, video, iframe, svg {
 }
 
 /* ════════════════════════════════════════════════════════════════
+   1024px — TABLET & MOBIL NAV GUARDIAN 
+   ════════════════════════════════════════════════════════════════ */
+@media (max-width: 1024px) {
+    nav {
+        padding: 1.2rem 2rem !important;
+    }
+    nav.scrolled {
+        padding: 0.8rem 2rem !important;
+    }
+    .nav-links {
+        display: none !important;
+    }
+    .desk-lang {
+        display: none !important;
+    }
+    .hamburger {
+        display: flex !important;
+    }
+}
+
+/* ════════════════════════════════════════════════════════════════
    768px — STANDART MOBİL / TABLET 
    ════════════════════════════════════════════════════════════════ */
 @media (max-width: 768px) {
@@ -220,20 +241,11 @@ img, video, iframe, svg {
     nav.scrolled {
         padding: 0.8rem 1.2rem !important;
     }
-    .nav-links {
-        display: none !important;
-    }
-    .desk-lang {
-        display: none !important;
-    }
     .nav-logo .logo-text {
         font-size: 1.3rem !important;
     }
     .nav-right {
         gap: 1.5rem !important;
-    }
-    .hamburger {
-        display: flex !important;
     }
 
     /* ── HERO ── */

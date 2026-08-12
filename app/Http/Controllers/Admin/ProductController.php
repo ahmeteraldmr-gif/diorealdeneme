@@ -18,6 +18,8 @@ class ProductController extends Controller
         }
         $filename = time() . '_' . uniqid() . '.' . $file->getClientOriginalExtension();
         $file->move($destinationPath, $filename);
+        $fullPath = $destinationPath . '/' . $filename;
+        \App\Helpers\ImageOptimizer::optimize($fullPath);
         return $folder . '/' . $filename;
     }
 
