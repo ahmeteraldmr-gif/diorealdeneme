@@ -116,15 +116,15 @@
     </div>
 
 
-    <div class="page-hero" style="background-image:url('{{ asset($settings['about_hero_img'] ?? 'foto.img/hero_4k.jpg') }}');">
+    <div class="page-hero" style="background-image:url('{{ dioreal_img($settings['about_hero_img'] ?? '', 'foto.img/hero_4k.jpg') }}');">
         <div class="page-hero-content">
             <span class="page-eyebrow">
                 <span class="lang-text-tr">{{ $settings['about_hero_eyebrow_tr'] ?? 'Biz Kimiz' }}</span>
                 <span class="lang-text-en">{{ $settings['about_hero_eyebrow_en'] ?? 'Who We Are' }}</span>
             </span>
             <h1 class="page-title">
-                <span class="lang-text-tr">{!! $settings['about_hero_title_tr'] ?? '<em>Dioreal</em> Dijital' !!}</span>
-                <span class="lang-text-en">{!! $settings['about_hero_title_en'] ?? '<em>Dioreal</em> Digital' !!}</span>
+                <span class="lang-text-tr">{!! $settings['about_hero_title_tr'] ?? 'Seyahate Başka Bir Yerden Bakmak' !!}</span>
+                <span class="lang-text-en">{!! $settings['about_hero_title_en'] ?? 'A Different Perspective on Travel' !!}</span>
             </h1>
         </div>
     </div>
@@ -137,20 +137,20 @@
                     <span class="lang-text-en">{{ $settings['about_story_eyebrow_en'] ?? 'Our Story' }}</span>
                 </span>
                 <h2 class="content-title">
-                    <span class="lang-text-tr">{!! $settings['about_story_title_tr'] ?? '15 yıldır lüks <em>seyahatin</em> sesi' !!}</span>
-                    <span class="lang-text-en">{!! $settings['about_story_title_en'] ?? 'Voice of luxury <em>travel</em> for 15 years' !!}</span>
+                    <span class="lang-text-tr">{!! $settings['about_story_title_tr'] ?? 'Türk Rivierası’ndan Dünyaya Açılan Bir Seyahat Seçkisi' !!}</span>
+                    <span class="lang-text-en">{!! $settings['about_story_title_en'] ?? 'A Travel Selection Born on the Turkish Riviera' !!}</span>
                 </h2>
                 <div class="lang-text-tr">
-                    <p class="content-body">{!! nl2br(e($settings['about_story_p1_tr'] ?? '2010 yılında İstanbul\'da kurulan Dioreal Dijital, Türkiye\'nin öncü lüks seyahat ve yaşam tarzı medya platformuna dönüşmüştür. Seçkin destinasyonlar, premium markalar ve doğru kitleyi bir araya getiren köprü olmak misyonuyla kurulduk.')) !!}</p>
-                    <p class="content-body">{!! nl2br(e($settings['about_story_p2_tr'] ?? 'Her destinasyonda bizzat bulunarak, her oteli bizatihi deneyimleyerek ve her markayı özenle seçerek güvenilir bir referans noktası haline geldik.')) !!}</p>
+                    <p class="content-body">{!! nl2br(e($settings['about_story_p1_tr'] ?? 'DIOREAL, Türkiye’nin eşsiz kıyı kültürünü uluslararası bir bakış açısıyla dünyaya anlatmak ve seyahati yalnızca gidilecek yerlerin ötesinde, bütüncül bir deneyim olarak ele almak amacıyla kuruldu.')) !!}</p>
+                    <p class="content-body">{!! nl2br(e($settings['about_story_p2_tr'] ?? 'Türk Rivierası çıkış noktamız; dünya ise rotamız. Otelleri, restoranları, yatları ve destinasyonları yalnızca tanıtmıyor; her birini kültürü, mimarisi, gastronomisi, doğası ve taşıdığı hikâyeyle birlikte editoryal bir seçkinin parçası olarak ele alıyoruz.')) !!}</p>
                 </div>
                 <div class="lang-text-en">
-                    <p class="content-body">{!! nl2br(e($settings['about_story_p1_en'] ?? 'Founded in Istanbul in 2010, Dioreal Digital has evolved into Turkey\'s leading luxury travel and lifestyle media platform.')) !!}</p>
-                    <p class="content-body">{!! nl2br(e($settings['about_story_p2_en'] ?? 'By personally visiting every destination and experiencing every hotel firsthand, we\'ve become a trusted reference.')) !!}</p>
+                    <p class="content-body">{!! nl2br(e($settings['about_story_p1_en'] ?? 'DIOREAL was founded to introduce Türkiye’s distinctive coastal culture to the world through an international perspective and to approach travel as a complete experience extending far beyond the places we visit.')) !!}</p>
+                    <p class="content-body">{!! nl2br(e($settings['about_story_p2_en'] ?? 'The Turkish Riviera is our starting point; the world is our route. We do more than present hotels, restaurants, yachts and destinations—we explore each through its culture, architecture, gastronomy, natural setting and story, bringing them together within a carefully considered editorial selection.')) !!}</p>
                 </div>
             </div>
             <div class="reveal" style="transition-delay:0.2s">
-                <img src="{{ asset($settings['about_story_img'] ?? 'foto.img/about_yacht.jpg') }}" alt="Hakkımızda" style="width:100%;aspect-ratio:4/3;object-fit:cover;">
+                <img src="{{ dioreal_img($settings['about_story_img'] ?? '', 'uploads/settings/1785331414_6a69fed6944c8.png') }}" alt="Hakkımızda" style="width:100%;aspect-ratio:4/3;object-fit:cover;">
             </div>
         </div>
     </section>
@@ -162,8 +162,8 @@
                 <span class="lang-text-en">By Numbers</span>
             </span>
             <h2 class="content-title">
-                <span class="lang-text-tr">{!! $settings['about_stats_title_tr'] ?? '15 Yılın <em>Mirası</em>' !!}</span>
-                <span class="lang-text-en">{!! $settings['about_stats_title_en'] ?? 'Legacy of <em>15 Years</em>' !!}</span>
+                <span class="lang-text-tr">{!! $settings['about_stats_title_tr'] ?? 'DIOREAL Dünyası' !!}</span>
+                <span class="lang-text-en">{!! $settings['about_stats_title_en'] ?? 'The World of DIOREAL' !!}</span>
             </h2>
         </div>
         <div class="stat-row reveal" style="justify-content:center;">
@@ -175,21 +175,21 @@
                 </span>
             </div>
             <div class="stat-item">
-                <span class="stat-num">{{ $settings['about_stat2_num'] ?? '2M+' }}</span>
+                <span class="stat-num">{{ $settings['about_stat2_num'] ?? '1M' }}</span>
                 <span class="stat-label">
                     <span class="lang-text-tr">{{ $settings['about_stat2_label_tr'] ?? 'Aylık Okuyucu' }}</span>
                     <span class="lang-text-en">{{ $settings['about_stat2_label_en'] ?? 'Monthly Readers' }}</span>
                 </span>
             </div>
             <div class="stat-item">
-                <span class="stat-num">{{ $settings['about_stat3_num'] ?? '300+' }}</span>
+                <span class="stat-num">{{ $settings['about_stat3_num'] ?? '100+' }}</span>
                 <span class="stat-label">
                     <span class="lang-text-tr">{{ $settings['about_stat3_label_tr'] ?? 'Marka Ortağı' }}</span>
                     <span class="lang-text-en">{{ $settings['about_stat3_label_en'] ?? 'Brand Partners' }}</span>
                 </span>
             </div>
             <div class="stat-item">
-                <span class="stat-num">{{ $settings['about_stat4_num'] ?? '15' }}</span>
+                <span class="stat-num">{{ $settings['about_stat4_num'] ?? '10' }}</span>
                 <span class="stat-label">
                     <span class="lang-text-tr">{{ $settings['about_stat4_label_tr'] ?? 'Yıllık Deneyim' }}</span>
                     <span class="lang-text-en">{{ $settings['about_stat4_label_en'] ?? 'Years of Experience' }}</span>
@@ -210,16 +210,16 @@
                     <span class="lang-text-en">{!! $settings['about_mission_title_en'] ?? 'For meaningful <em>experiences</em>' !!}</span>
                 </h2>
                 <div class="lang-text-tr">
-                    <p class="content-body">{!! nl2br(e($settings['about_mission_p1_tr'] ?? 'Sadece güzel yerler göstermiyoruz. Seyahatin ruhunu, bir destinasyonun gerçek özünü, yerel kültürün derinliğini aktarıyoruz. Her içeriğimiz bizzat yaşadığımız deneyimlerin dürüst bir yansımasıdır.')) !!}</p>
-                    <p class="content-body">{!! nl2br(e($settings['about_mission_p2_tr'] ?? 'Okuyucularımız bize güvenir, markalarımız bize inanır, destinasyonlar bizi ortaklık arar çünkü söylediğimiz her şey gerçek.')) !!}</p>
+                    <p class="content-body">{!! nl2br(e($settings['about_mission_p1_tr'] ?? 'DIOREAL, seyahati yalnızca gidilecek yerlerin toplamı olarak değil; kültürün, mimarinin, gastronominin, tarihin ve insan hikâyelerinin bir araya geldiği bütüncül bir deneyim olarak ele alır.')) !!}</p>
+                    <p class="content-body">{!! nl2br(e($settings['about_mission_p2_tr'] ?? 'Misyonumuz, Türkiye’nin eşsiz kıyı kültürünü ve Türk Rivierası’nı uluslararası bir bakış açısıyla dünyaya anlatırken, dünyanın en ilham verici destinasyonlarını da aynı editoryal özen ve estetik anlayışla keşfetmektir.')) !!}</p>
                 </div>
                 <div class="lang-text-en">
-                    <p class="content-body">{!! nl2br(e($settings['about_mission_p1_en'] ?? 'We don\'t just show beautiful places. We convey the true essence of a destination.')) !!}</p>
-                    <p class="content-body">{!! nl2br(e($settings['about_mission_p2_en'] ?? 'Our readers trust us, our readers believe in us, and destinations seek partnerships because everything we say is authentic.')) !!}</p>
+                    <p class="content-body">{!! nl2br(e($settings['about_mission_p1_en'] ?? 'DIOREAL approaches travel not simply as a collection of places to visit, but as a complete experience shaped by culture, architecture, gastronomy, history and human stories.')) !!}</p>
+                    <p class="content-body">{!! nl2br(e($settings['about_mission_p2_en'] ?? 'Our mission is to bring Türkiye’s distinctive coastal culture and the Turkish Riviera to the world through an international perspective, while exploring the world’s most inspiring destinations with the same editorial care and aesthetic vision.')) !!}</p>
                 </div>
             </div>
             <div class="reveal" style="transition-delay:0.2s">
-                <img src="{{ asset($settings['about_mission_img'] ?? 'foto.img/about_safari.jpg') }}" alt="Misyon" style="width:100%;aspect-ratio:4/3;object-fit:cover;">
+                <img src="{{ dioreal_img($settings['about_mission_img'] ?? '', 'foto.img/about_safari.jpg') }}" alt="Misyon" style="width:100%;aspect-ratio:4/3;object-fit:cover;">
             </div>
         </div>
     </section>
