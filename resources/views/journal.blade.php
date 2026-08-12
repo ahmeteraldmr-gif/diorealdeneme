@@ -117,10 +117,16 @@
     </div>
 
 
-    <div class="page-hero" style="background-image:url('{{ asset('foto.img/amalfi.jpg') }}');">
+    <div class="page-hero" style="background-image:url('{{ dioreal_img($settings["journal_hero_img"] ?? "", "foto.img/amalfi.jpg") }}');">
         <div class="page-hero-content">
-            <span class="page-eyebrow" data-i18n="journal_hero_eye">Hikayeler & İçgörüler</span>
-            <h1 class="page-title" data-i18n="nav_journal">Dioreal <em>Journal</em></h1>
+            <span class="page-eyebrow">
+                <span class="lang-text-tr">{{ $settings['journal_hero_eyebrow_tr'] ?? 'Hikayeler & İçgörüler' }}</span>
+                <span class="lang-text-en">{{ $settings['journal_hero_eyebrow_en'] ?? 'Stories & Insights' }}</span>
+            </span>
+            <h1 class="page-title">
+                <span class="lang-text-tr">{!! $settings['journal_hero_title_tr'] ?? 'Dioreal <em>Journal</em>' !!}</span>
+                <span class="lang-text-en">{!! $settings['journal_hero_title_en'] ?? 'Dioreal <em>Journal</em>' !!}</span>
+            </h1>
         </div>
     </div>
 
@@ -130,7 +136,7 @@
             @if($featured = $journals->first())
                 <div class="journal-featured">
                     <a href="{{ route('journal.detay', $featured->slug_tr ?: ($featured->slug_en ?: $featured->id)) }}">
-                        <img src="{{ asset($featured->img) }}" alt="{{ $featured->title['tr'] ?? '' }}" style="cursor: pointer;">
+                        <img src="{{ dioreal_img($featured->img, 'foto.img/amalfi.jpg') }}" alt="{{ $featured->title['tr'] ?? '' }}" style="cursor: pointer;">
                     </a>
                     <div class="journal-featured-info">
                         <span class="card-tag">
