@@ -116,10 +116,16 @@
     </div>
 
 
-    <div class="page-hero" style="background-image:url('foto.img/kapadokya.jpg');">
+    <div class="page-hero" style="background-image:url('{{ dioreal_img($settings["guide_hero_img"] ?? "", "foto.img/kapadokya.jpg") }}');">
         <div class="page-hero-content">
-            <span class="page-eyebrow" data-i18n="guide_hero_eye">Keşfet & Öğren</span>
-            <h1 class="page-title" data-i18n="nav_guide">Destinasyon<em>lar</em></h1>
+            <span class="page-eyebrow">
+                <span class="lang-text-tr">{{ $settings['guide_hero_eyebrow_tr'] ?? 'Keşfet & Öğren' }}</span>
+                <span class="lang-text-en">{{ $settings['guide_hero_eyebrow_en'] ?? 'Discover & Learn' }}</span>
+            </span>
+            <h1 class="page-title">
+                <span class="lang-text-tr">{!! $settings['guide_hero_title_tr'] ?? 'Destinasyon<em>lar</em>' !!}</span>
+                <span class="lang-text-en">{!! $settings['guide_hero_title_en'] ?? 'Destinat<em>ions</em>' !!}</span>
+            </h1>
         </div>
     </div>
 
