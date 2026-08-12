@@ -116,7 +116,7 @@
     </div>
 
 
-    <div class="page-hero" style="background-image: url('{{ asset($settings["rest_hero_img"] ?? "foto.img/rest_hero.jpg") }}');">
+    <div class="page-hero" style="background-image: url('{{ dioreal_img($settings["rest_hero_img"] ?? "", "foto.img/rest_hero.jpg") }}');">
         <div class="page-hero-content">
             <span class="page-eyebrow">
                 <span class="lang-text-tr">{{ $settings['rest_hero_eyebrow_tr'] ?? 'Gastronomi Deneyimi' }}</span>
@@ -147,7 +147,7 @@
 
             </div>
             <div class="reveal" style="transition-delay:0.2s">
-                <img src="{{ asset($settings['rest_intro_img'] ?? 'foto.img/rest_intro.jpg') }}" alt="Restaurant" style="width:100%;aspect-ratio:4/3;object-fit:cover;">
+                <img src="{{ dioreal_img($settings['rest_intro_img'] ?? '', 'foto.img/rest_intro.jpg') }}" alt="Restaurant" style="width:100%;aspect-ratio:4/3;object-fit:cover;">
             </div>
         </div>
     </section>
