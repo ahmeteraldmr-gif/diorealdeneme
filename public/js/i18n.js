@@ -164,8 +164,11 @@ const DEFAULT_CONTENT = {
 const updateLang = (lang) => {
     document.documentElement.setAttribute('lang', lang);
     document.querySelectorAll('[data-i18n]').forEach(el => {
+        // Do not overwrite elements that contain dual-language Blade spans
+        if (el.querySelector('.lang-text-tr, .lang-text-en')) return;
+
         const key = el.getAttribute('data-i18n');
-        if (DEFAULT_CONTENT[key]) {
+        if (DEFAULT_CONTENT[key] && DEFAULT_CONTENT[key][lang]) {
             el.innerHTML = DEFAULT_CONTENT[key][lang];
         }
     });

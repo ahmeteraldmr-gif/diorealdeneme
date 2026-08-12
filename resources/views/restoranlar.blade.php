@@ -155,8 +155,14 @@
 
     <section class="content-section alt" id="restoranlar">
         <div style="text-align:center;margin-bottom:4rem;">
-            <span class="content-eyebrow" style="display:block;" data-i18n="rest_col_eye">Koleksiyon</span>
-            <h2 class="content-title" style="font-size:clamp(2rem,4vw,3rem);" data-i18n="rest_col_title">Öne Çıkan <em>Masalar</em></h2>
+            <span class="content-eyebrow" style="display:block;">
+                <span class="lang-text-tr">{{ $settings['rest_col_eyebrow_tr'] ?? 'Koleksiyon' }}</span>
+                <span class="lang-text-en">{{ $settings['rest_col_eyebrow_en'] ?? 'Collection' }}</span>
+            </span>
+            <h2 class="content-title" style="font-size:clamp(2rem,4vw,3rem);">
+                <span class="lang-text-tr">{!! $settings['rest_col_title_tr'] ?? 'Öne Çıkan <em>Masalar</em>' !!}</span>
+                <span class="lang-text-en">{!! $settings['rest_col_title_en'] ?? 'Featured <em>Tables</em>' !!}</span>
+            </h2>
         </div>
         <div class="card-grid" id="restCardsGrid">
             @foreach($restoranlar as $r)

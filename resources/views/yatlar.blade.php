@@ -257,8 +257,14 @@
 
     <section class="content-section alt" id="yatlar">
         <div style="text-align: center; margin-bottom: 4rem;">
-            <span class="content-eyebrow" style="display: block;" data-i18n="yacht_fleet_eye">Filo</span>
-            <h2 class="content-title" style="font-size: clamp(2rem, 4vw, 3rem);" data-i18n="yacht_fleet_title">Premium <em>Yat Filomuz</em></h2>
+            <span class="content-eyebrow" style="display: block;">
+                <span class="lang-text-tr">{{ $settings['yacht_fleet_eyebrow_tr'] ?? 'Filo' }}</span>
+                <span class="lang-text-en">{{ $settings['yacht_fleet_eyebrow_en'] ?? 'Fleet' }}</span>
+            </span>
+            <h2 class="content-title" style="font-size: clamp(2rem, 4vw, 3rem);">
+                <span class="lang-text-tr">{!! $settings['yacht_fleet_title_tr'] ?? 'Premium <em>Yat Filomuz</em>' !!}</span>
+                <span class="lang-text-en">{!! $settings['yacht_fleet_title_en'] ?? 'Our Premium <em>Yacht Fleet</em>' !!}</span>
+            </h2>
         </div>
         <div class="card-grid" style="grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 3rem;">
             @foreach($yatlar as $y)

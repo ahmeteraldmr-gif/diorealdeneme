@@ -263,8 +263,14 @@
     <section class="content-section">
         <div style="max-width:1200px;margin:0 auto;padding:0 2rem;">
             <div style="text-align:center;margin-bottom:4rem;" class="reveal">
-                <span class="content-eyebrow" style="display:block;" data-i18n="event_intro_eye">Bu Sezon</span>
-                <h2 class="content-title" data-i18n="event_intro_title">Kaçırılmayacak <em>Anlar</em></h2>
+                <span class="content-eyebrow" style="display:block;">
+                    <span class="lang-text-tr">{{ $settings['event_intro_eyebrow_tr'] ?? 'Bu Sezon' }}</span>
+                    <span class="lang-text-en">{{ $settings['event_intro_eyebrow_en'] ?? 'This Season' }}</span>
+                </span>
+                <h2 class="content-title">
+                    <span class="lang-text-tr">{!! $settings['event_intro_title_tr'] ?? 'Kaçırılmayacak <em>Anlar</em>' !!}</span>
+                    <span class="lang-text-en">{!! $settings['event_intro_title_en'] ?? 'Unmissable <em>Moments</em>' !!}</span>
+                </h2>
             </div>
             <div class="event-card-grid">
                 @foreach($etkinlikler as $e)

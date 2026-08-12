@@ -160,9 +160,18 @@
     </style>
     <section class="content-section">
         <div style="text-align:center;max-width:700px;margin:0 auto 5rem;" class="reveal">
-            <span class="content-eyebrow" style="display:block;" data-i18n="guide_exp_eye">Uzman Tavsiyeleri</span>
-            <h2 class="content-title" data-i18n="guide_exp_title">Doğru kararları <em>kolayca</em> verin</h2>
-            <p class="content-body" data-i18n="guide_exp_p1">Deneyimli seyahat editörlerimizin hazırladığı destinasyon rehberleri, pratik ipuçları ve sezonluk önerilerle seyahat planlamanızı kolaylaştırıyoruz.</p>
+            <span class="content-eyebrow" style="display:block;">
+                <span class="lang-text-tr">{{ $settings['guide_exp_eyebrow_tr'] ?? 'Uzman Tavsiyeleri' }}</span>
+                <span class="lang-text-en">{{ $settings['guide_exp_eyebrow_en'] ?? 'Expert Advice' }}</span>
+            </span>
+            <h2 class="content-title">
+                <span class="lang-text-tr">{!! $settings['guide_exp_title_tr'] ?? 'Doğru kararları <em>kolayca</em> verin' !!}</span>
+                <span class="lang-text-en">{!! $settings['guide_exp_title_en'] ?? 'Make informed decisions <em>with ease</em>' !!}</span>
+            </h2>
+            <p class="content-body">
+                <span class="lang-text-tr">{{ $settings['guide_exp_text_tr'] ?? 'Deneyimli seyahat editörlerimizin hazırladığı destinasyon rehberleri, pratik ipuçları ve sezonluk önerilerle seyahat planlamanızı kolaylaştırıyoruz.' }}</span>
+                <span class="lang-text-en">{{ $settings['guide_exp_text_en'] ?? 'We simplify your travel planning with destination guides, practical tips, and seasonal recommendations prepared by our experienced travel editors.' }}</span>
+            </p>
         </div>
         <div class="card-grid">
             @foreach($rehberler as $g)

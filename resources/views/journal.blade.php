@@ -184,7 +184,10 @@
 
         <!-- More Articles -->
         @if($journals->count() > 5)
-            <h2 class="content-title reveal" style="margin-bottom:2.5rem;" data-i18n="journal_latest_title">Son <em>Yazılar</em></h2>
+            <h2 class="content-title reveal" style="margin-bottom:2.5rem;">
+                <span class="lang-text-tr">{!! $settings['journal_latest_title_tr'] ?? 'Son <em>Yazılar</em>' !!}</span>
+                <span class="lang-text-en">{!! $settings['journal_latest_title_en'] ?? 'Latest <em>Articles</em>' !!}</span>
+            </h2>
             <div class="card-grid">
                 @foreach($journals->slice(5) as $index => $item)
                     <a href="{{ route('journal.detay', $item->slug_tr ?: ($item->slug_en ?: $item->id)) }}" class="card reveal" style="transition-delay:{{ ($index % 3) * 0.1 }}s; text-decoration: none; color: inherit; display: block;">
