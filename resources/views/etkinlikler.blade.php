@@ -117,10 +117,16 @@
     </div>
 
 
-    <div class="page-hero" style="background-image:url('foto.img/etkinlik_hero.jpg');">
+    <div class="page-hero" style="background-image:url('{{ dioreal_img($settings["event_hero_img"] ?? "", "foto.img/etkinlik_hero.jpg") }}');">
         <div class="page-hero-content">
-            <span class="page-eyebrow" data-i18n="event_hero_eye">Takvim 2026</span>
-            <h1 class="page-title" data-i18n="nav_events">Seçkin <em>Etkinlikler</em></h1>
+            <span class="page-eyebrow">
+                <span class="lang-text-tr">{{ $settings['event_hero_eyebrow_tr'] ?? 'Takvim 2026' }}</span>
+                <span class="lang-text-en">{{ $settings['event_hero_eyebrow_en'] ?? 'Calendar 2026' }}</span>
+            </span>
+            <h1 class="page-title">
+                <span class="lang-text-tr">{!! $settings['event_hero_title_tr'] ?? 'Seçkin <em>Etkinlikler</em>' !!}</span>
+                <span class="lang-text-en">{!! $settings['event_hero_title_en'] ?? 'Exclusive <em>Events</em>' !!}</span>
+            </h1>
         </div>
     </div>
 
