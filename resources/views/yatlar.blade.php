@@ -220,7 +220,7 @@
     </div>
 
 
-    <div class="page-hero" style="background-image: url('{{ asset($settings["yat_hero_img"] ?? "foto.img/yat_manzara.jpg") }}');">
+    <div class="page-hero" style="background-image: url('{{ dioreal_img($settings["yat_hero_img"] ?? "", "foto.img/yat_manzara.jpg") }}');">
         <div class="page-hero-content">
             <span class="page-eyebrow">
                 <span class="lang-text-tr">{{ $settings['yat_hero_eyebrow_tr'] ?? 'Akdeniz\'de Özgürlük' }}</span>
@@ -250,7 +250,7 @@
                 </a>
             </div>
             <div class="reveal" style="transition-delay: 0.2s;">
-                <img src="{{ asset($settings['yat_intro_img'] ?? 'foto.img/yat_ozgur.jpg') }}" alt="Özel Yat" style="width:100%; aspect-ratio: 4/3; object-fit: cover;">
+                <img src="{{ dioreal_img($settings['yat_intro_img'] ?? '', 'foto.img/yat_ozgur.jpg') }}" alt="Özel Yat" style="width:100%; aspect-ratio: 4/3; object-fit: cover;">
             </div>
         </div>
     </section>
@@ -265,8 +265,6 @@
                 <div class="card yacht-card reveal visible">
                     <div class="yacht-img-container">
                         <img src="{{ dioreal_img($y->img, 'foto.img/yat_ozgur.jpg') }}" onerror="this.onerror=null;this.src='{{ asset('foto.img/yat_ozgur.jpg') }}';" alt="{{ $y->name['tr'] ?? '' }}" class="card-img" style="width: 100%; height: 100%; object-fit: cover;">
-
-
                     </div>
                     <div class="card-body yacht-card-body">
                         <span class="card-tag lang-text-tr">{{ $y->tag["tr"] ?? "" }}</span>
@@ -305,7 +303,7 @@
                 <p class="content-body lang-text-en">{{ $settings['yat_route_text_en'] ?? "Blue voyages from Bodrum to Marmaris, Aegean island tours, or epic routes stretching from the Mediterranean to the Adriatic." }}</p>
 
                 @php
-                    $routeLink = !empty($settings['yat_route_btn_link']) ? $settings['yat_route_btn_link'] : 'https://wa.me/' . format_whatsapp($settings['whatsapp'] ?? '');
+                    $routeLink = !empty($settings['yat_route_btn_link']) ? $settings['yat_route_btn_link'] : 'https://wa.me/' . format_whatsapp($settings['whatsapp'] ?? '905449157011');
                 @endphp
                 <a href="{{ $routeLink }}" target="_blank" class="btn btn-outline">
                     <span class="lang-text-tr">{{ $settings['yat_route_btn_tr'] ?? 'Rota Planlat' }}</span>
@@ -313,7 +311,7 @@
                 </a>
             </div>
             <div class="reveal" style="transition-delay: 0.2s;">
-                <img src="{{ asset($settings['yat_route_img'] ?? 'foto.img/yat_rota.jpg') }}" alt="Yat Rotası" style="width:100%; aspect-ratio: 4/3; object-fit: cover;">
+                <img src="{{ dioreal_img($settings['yat_route_img'] ?? '', 'foto.img/yat_rota.jpg') }}" alt="Yat Rotası" style="width:100%; aspect-ratio: 4/3; object-fit: cover;">
             </div>
         </div>
     </section>
