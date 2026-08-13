@@ -48,7 +48,10 @@
             <p style="color: var(--text-muted); font-size: 0.85rem; margin-bottom: 1.25rem;">Bu kullanıcının yönetim panelinde hangi bölümlere erişebileceğini seçin.</p>
             
             <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 1rem;" id="checkboxes-container">
-                @foreach($permissionsList as $key => $label)
+                @php
+                    $permList = $permissionsList ?? ['hotels' => 'Oteller (Hotels)', 'restaurants' => 'Restoranlar (Restaurants)', 'yachts' => 'Yatlar (Yachts)', 'guides' => 'Gezi Rehberi (Travel Guide)', 'events' => 'Etkinlikler (Events)', 'journals' => 'Journal', 'settings' => 'Genel Ayarlar (Settings)', 'users' => 'Kullanıcı Yönetimi (User Management)', 'destinations' => 'Anasayfa Destinasyonları (Destinations)'];
+                @endphp
+                @foreach($permList as $key => $label)
                     <div style="display: flex; align-items: center; gap: 0.5rem; background: rgba(255,255,255,0.02); padding: 0.8rem 1rem; border-radius: var(--radius-sm); border: 1px solid var(--border-color);">
                         <input type="checkbox" name="permissions[]" value="{{ $key }}" id="perm_{{ $key }}" {{ is_array(old('permissions')) && in_array($key, old('permissions')) ? 'checked' : '' }} style="width: 17px; height: 17px; accent-color: var(--primary); cursor: pointer;">
                         <label for="perm_{{ $key }}" style="color: var(--text-main); font-size: 0.9rem; cursor: pointer; user-select: none;">{{ $label }}</label>

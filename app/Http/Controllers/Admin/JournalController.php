@@ -117,6 +117,12 @@ class JournalController extends Controller
         return view('admin.journals.edit', compact('journal', 'destinations'));
     }
 
+    public function edit(Journal $journal)
+    {
+        $destinations = \App\Models\Destination::all();
+        return view('admin.journals.edit', compact('journal', 'destinations'));
+    }
+
     public function update(Request $request, Journal $journal)
     {
         $request->validate([

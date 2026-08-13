@@ -74,7 +74,10 @@
                         <label class="form-label" for="type">Kategori Grubu</label>
                         <select name="type" id="type" class="form-control" required>
                             <option value="">Seçiniz</option>
-                            @foreach($types as $value => $label)
+                            @php
+                                $typesList = $types ?? ['turkiye' => "Türkiye'nin Ruhu", 'yurtdisi_popular' => 'Yurtdışı - En Popüler', 'yurtdisi_traveller' => 'Yurtdışı - Gezgine Göre', 'yurtdisi_month' => 'Yurtdışı - Aya Göre', 'yurtdisi_spotlight' => 'Yurtdışı - Vitrindekiler'];
+                            @endphp
+                            @foreach($typesList as $value => $label)
                                 <option value="{{ $value }}" {{ old('type', $destination->type) == $value ? 'selected' : '' }}>{{ $label }}</option>
                             @endforeach
                         </select>

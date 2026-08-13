@@ -226,7 +226,7 @@
             </div>
         @endif
 
-        @if ($errors->any())
+        @if (isset($errors) && $errors->any())
             <div class="alert alert-error">
                 <i class="fas fa-exclamation-circle"></i>
                 <ul>

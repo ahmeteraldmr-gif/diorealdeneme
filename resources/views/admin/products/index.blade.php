@@ -35,7 +35,7 @@
                         </tr>
                     </thead>
                     <tbody>
-                        @forelse($showcases as $sc)
+                        @forelse($showcases ?? collect([]) as $sc)
                             <tr>
                                 <td>
                                     <img src="{{ str_starts_with($sc->image, 'http') || str_starts_with($sc->image, 'foto.img') ? asset($sc->image) : dioreal_img($sc->image, 'foto.img/hero_4k.jpg') }}" alt="Slide Image" style="width: 80px; height: 50px; object-fit: cover; border-radius: 6px; border: 1px solid rgba(0,0,0,0.1);">

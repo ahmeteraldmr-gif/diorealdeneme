@@ -16,7 +16,7 @@
         </a>
     </div>
 
-    @if ($errors->any())
+    @if (isset($errors) && $errors->any())
         <div style="background: rgba(239, 68, 68, 0.1); border: 1px solid rgba(239, 68, 68, 0.2); padding: 1rem; border-radius: var(--radius-sm); margin-bottom: 1.5rem; color: #ef4444;">
             <ul style="margin: 0; padding-left: 1.25rem;">
                 @foreach ($errors->all() as $error)
@@ -59,7 +59,10 @@
             <p style="color: var(--text-muted); font-size: 0.85rem; margin-bottom: 1.25rem;">Bu kullanıcının yönetim panelinde hangi bölümlere erişebileceğini seçin.</p>
             
             <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 1rem;" id="checkboxes-container">
-                @foreach($permissionsList as $key => $label)
+                @php
+                    $permList = $permissionsList ?? ['hotels' => 'Oteller (Hotels)', 'restaurants' => 'Restoranlar (Restaurants)', 'yachts' => 'Yatlar (Yachts)', 'guides' => 'Gezi Rehberi (Travel Guide)', 'events' => 'Etkinlikler (Events)', 'journals' => 'Journal', 'settings' => 'Genel Ayarlar (Settings)', 'users' => 'Kullanıcı Yönetimi (User Management)', 'destinations' => 'Anasayfa Destinasyonları (Destinations)'];
+                @endphp
+                @foreach($permList as $key => $label)
                     @php
                         $hasPerm = is_array(old('permissions', $user->permissions)) && in_array($key, old('permissions', $user->permissions));
                     @endphp

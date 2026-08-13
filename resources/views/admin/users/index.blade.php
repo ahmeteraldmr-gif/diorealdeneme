@@ -16,7 +16,7 @@
         </a>
     </div>
 
-    @if ($errors->has('delete_error'))
+    @if (isset($errors) && $errors->has('delete_error'))
         <div class="alert alert-error" style="margin-bottom: 1.5rem; background: rgba(248, 113, 113, 0.1); color: var(--error); border: 1px solid rgba(248, 113, 113, 0.2); padding: 1rem; border-radius: var(--radius-md); display: flex; align-items: center; gap: 0.5rem;">
             <i class="fas fa-exclamation-circle"></i>
             <span>{{ $errors->first('delete_error') }}</span>

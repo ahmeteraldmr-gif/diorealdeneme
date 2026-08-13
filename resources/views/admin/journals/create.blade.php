@@ -83,7 +83,7 @@
                         <label class="form-label" for="destination_id">İlişkili Ülke / Destinasyon</label>
                         <select name="destination_id" id="destination_id" class="form-control">
                             <option value="">-- Ülke Seçin (İsteğe Bağlı) --</option>
-                            @foreach($destinations as $dest)
+                            @foreach($destinations ?? \App\Models\Destination::all() as $dest)
                                 <option value="{{ $dest->id }}" {{ old('destination_id') == $dest->id ? 'selected' : '' }}>
                                     {{ $dest->name['tr'] ?? '' }}
                                 </option>
