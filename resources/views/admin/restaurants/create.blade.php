@@ -171,7 +171,7 @@
                     <label class="form-label" for="destination_name">Ülke / Destinasyon</label>
                     <input type="text" name="destination_name" id="destination_name" class="form-control" placeholder="Örn: Bodrum (Boş bırakabilir veya yeni yazabilirsiniz)" value="{{ old('destination_name') }}" list="destination_list">
                     <datalist id="destination_list">
-                        @foreach($destinations as $dest)
+                        @foreach($destinations ?? \App\Models\Destination::all() as $dest)
                             <option value="{{ $dest->name['tr'] ?? '' }}"></option>
                         @endforeach
                     </datalist>

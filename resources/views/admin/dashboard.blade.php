@@ -11,7 +11,7 @@
         <div class="stat-card">
             <div>
                 <span class="stat-card-title">Oteller</span>
-                <div class="stat-card-value">{{ $stats['hotels'] }}</div>
+                <div class="stat-card-value">{{ $stats['hotels'] ?? \App\Models\Hotel::count() }}</div>
             </div>
             <div class="stat-card-icon">
                 <i class="fas fa-hotel"></i>
@@ -20,7 +20,7 @@
         <div class="stat-card">
             <div>
                 <span class="stat-card-title">Restoranlar</span>
-                <div class="stat-card-value">{{ $stats['restaurants'] }}</div>
+                <div class="stat-card-value">{{ $stats['restaurants'] ?? \App\Models\Restaurant::count() }}</div>
             </div>
             <div class="stat-card-icon">
                 <i class="fas fa-utensils"></i>
@@ -29,7 +29,7 @@
         <div class="stat-card">
             <div>
                 <span class="stat-card-title">Yatlar</span>
-                <div class="stat-card-value">{{ $stats['yachts'] }}</div>
+                <div class="stat-card-value">{{ $stats['yachts'] ?? \App\Models\Yacht::count() }}</div>
             </div>
             <div class="stat-card-icon">
                 <i class="fas fa-ship"></i>
@@ -38,7 +38,7 @@
         <div class="stat-card">
             <div>
                 <span class="stat-card-title">Gezi Rehberleri</span>
-                <div class="stat-card-value">{{ $stats['guides'] }}</div>
+                <div class="stat-card-value">{{ $stats['guides'] ?? \App\Models\Guide::count() }}</div>
             </div>
             <div class="stat-card-icon">
                 <i class="fas fa-map-marked-alt"></i>
@@ -47,7 +47,7 @@
         <div class="stat-card">
             <div>
                 <span class="stat-card-title">Etkinlikler</span>
-                <div class="stat-card-value">{{ $stats['events'] }}</div>
+                <div class="stat-card-value">{{ $stats['events'] ?? \App\Models\Event::count() }}</div>
             </div>
             <div class="stat-card-icon">
                 <i class="fas fa-calendar-alt"></i>
@@ -56,7 +56,7 @@
         <div class="stat-card">
             <div>
                 <span class="stat-card-title">Journal Yazıları</span>
-                <div class="stat-card-value">{{ $stats['journals'] }}</div>
+                <div class="stat-card-value">{{ $stats['journals'] ?? \App\Models\Journal::count() }}</div>
             </div>
             <div class="stat-card-icon">
                 <i class="fas fa-newspaper"></i>
@@ -116,7 +116,7 @@
                         </tr>
                     </thead>
                     <tbody>
-                        @forelse($recentHotels as $hotel)
+                        @forelse($recentHotels ?? \App\Models\Hotel::latest()->take(5)->get() as $hotel)
                             <tr>
                                 <td>
                                     <img src="{{ dioreal_img($hotel->img, 'foto.img/otel_hero.jpg') }}" onerror="this.onerror=null;this.src='{{ asset('foto.img/otel_hero.jpg') }}';" alt="" class="table-img">
@@ -155,7 +155,7 @@
                         </tr>
                     </thead>
                     <tbody>
-                        @forelse($recentRestaurants as $restaurant)
+                        @forelse($recentRestaurants ?? \App\Models\Restaurant::latest()->take(5)->get() as $restaurant)
                             <tr>
                                 <td>
                                     <img src="{{ dioreal_img($restaurant->img, 'foto.img/rest_hero.jpg') }}" onerror="this.onerror=null;this.src='{{ asset('foto.img/rest_hero.jpg') }}';" alt="" class="table-img">
