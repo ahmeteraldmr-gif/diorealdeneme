@@ -69,15 +69,14 @@
             </a>
         </div>
         <ul class="nav-links">
-            <li><a href="{{ route('hakkimizda') }}" data-i18n="nav_about">Hakkımızda</a></li>
-            <li><a href="{{ route('oteller') }}" data-i18n="nav_hotels">Oteller</a></li>
-            <li><a href="{{ route('yatlar') }}" data-i18n="nav_yachts">Yatlar</a></li>
-            <li><a href="{{ route('restoranlar') }}" data-i18n="nav_restaurants">Restoranlar</a></li>
-            <li><a href="{{ route('urunler') }}">Ürünler</a></li>
-            <li><a href="{{ route('gezi-rehberi') }}" data-i18n="nav_guide">Gezi Rehberi</a></li>
-
-            <li><a href="{{ route('etkinlikler') }}" class="active-page" data-i18n="nav_events">Etkinlikler</a></li>
-            <li><a href="{{ route('journal') }}" data-i18n="nav_journal">Journal</a></li>
+            <li><a href="{{ route('hakkimizda') }}"><span class="lang-text-tr">Hakkımızda</span><span class="lang-text-en">About Us</span></a></li>
+            <li><a href="{{ route('oteller') }}"><span class="lang-text-tr">Oteller</span><span class="lang-text-en">Hotels</span></a></li>
+            <li><a href="{{ route('yatlar') }}"><span class="lang-text-tr">Yatlar</span><span class="lang-text-en">Yachts</span></a></li>
+            <li><a href="{{ route('restoranlar') }}"><span class="lang-text-tr">Restoranlar</span><span class="lang-text-en">Restaurants</span></a></li>
+            <li><a href="{{ route('urunler') }}"><span class="lang-text-tr">Ürünler</span><span class="lang-text-en">Products</span></a></li>
+            <li><a href="{{ route('gezi-rehberi') }}"><span class="lang-text-tr">Gezi Rehberi</span><span class="lang-text-en">Travel Guide</span></a></li>
+            <li><a href="{{ route('etkinlikler') }}" class="active-page"><span class="lang-text-tr">Etkinlikler</span><span class="lang-text-en">Events</span></a></li>
+            <li><a href="{{ route('journal') }}"><span class="lang-text-tr">Journal</span><span class="lang-text-en">Journal</span></a></li>
         </ul>
         <div class="nav-right" style="display: flex; align-items: center; gap: 1.5rem;">
             <a href="{{ route('sepet') }}" class="cart-nav-link" title="Sepetiniz">
@@ -103,15 +102,15 @@
     </nav>
     <div class="fs-menu" id="fsMenu">
         <ul class="fs-links">
-            <li><a href="{{ route('hakkimizda') }}" data-i18n="nav_about">Hakkımızda</a></li>
-            <li><a href="{{ route('oteller') }}" data-i18n="nav_hotels">Oteller</a></li>
-            <li><a href="{{ route('yatlar') }}" data-i18n="nav_yachts">Yatlar</a></li>
-            <li><a href="{{ route('restoranlar') }}" data-i18n="nav_restaurants">Restoranlar</a></li>
-            <li><a href="{{ route('urunler') }}" data-i18n="nav_products">Ürünler</a></li>
+            <li><a href="{{ route('hakkimizda') }}"><span class="lang-text-tr">Hakkımızda</span><span class="lang-text-en">About Us</span></a></li>
+            <li><a href="{{ route('oteller') }}"><span class="lang-text-tr">Oteller</span><span class="lang-text-en">Hotels</span></a></li>
+            <li><a href="{{ route('yatlar') }}"><span class="lang-text-tr">Yatlar</span><span class="lang-text-en">Yachts</span></a></li>
+            <li><a href="{{ route('restoranlar') }}"><span class="lang-text-tr">Restoranlar</span><span class="lang-text-en">Restaurants</span></a></li>
+            <li><a href="{{ route('urunler') }}"><span class="lang-text-tr">Ürünler</span><span class="lang-text-en">Products</span></a></li>
             <div class="fs-divider"></div>
-            <li><a href="{{ route('gezi-rehberi') }}" data-i18n="nav_guide">Gezi Rehberi</a></li>
-            <li><a href="{{ route('etkinlikler') }}" data-i18n="nav_events">Etkinlikler</a></li>
-            <li><a href="{{ route('journal') }}" data-i18n="nav_journal">Journal</a></li>
+            <li><a href="{{ route('gezi-rehberi') }}"><span class="lang-text-tr">Gezi Rehberi</span><span class="lang-text-en">Travel Guide</span></a></li>
+            <li><a href="{{ route('etkinlikler') }}"><span class="lang-text-tr">Etkinlikler</span><span class="lang-text-en">Events</span></a></li>
+            <li><a href="{{ route('journal') }}"><span class="lang-text-tr">Journal</span><span class="lang-text-en">Journal</span></a></li>
             <li style="font-size:1.5rem;font-family:var(--font-display);margin-top:2rem;"><span id="lang-tr-fs" class="lang-btn active">TR</span> | <span id="lang-en-fs" class="lang-btn">EN</span></li>
         </ul>
     </div>
@@ -326,5 +325,3 @@
     <script src="{{ asset('js/cart.js') }}?v={{ time() }}"></script>
 </body>
 </html>
-
-
