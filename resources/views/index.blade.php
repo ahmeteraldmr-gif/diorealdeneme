@@ -98,15 +98,14 @@
             </a>
         </div>
         <ul class="nav-links">
-            <li><a href="{{ route('hakkimizda') }}" data-i18n="nav_about">Hakkımızda</a></li>
-            <li><a href="{{ route('oteller') }}" data-i18n="nav_hotels">Oteller</a></li>
-            <li><a href="{{ route('yatlar') }}" data-i18n="nav_yachts">Yatlar</a></li>
-            <li><a href="{{ route('restoranlar') }}" data-i18n="nav_restaurants">Restoranlar</a></li>
-            <li><a href="{{ route('urunler') }}">Ürünler</a></li>
-            <li><a href="{{ route('gezi-rehberi') }}" data-i18n="nav_guide">Gezi Rehberi</a></li>
-
-            <li><a href="{{ route('etkinlikler') }}" data-i18n="nav_events">Etkinlikler</a></li>
-            <li><a href="{{ route('journal') }}" data-i18n="nav_journal">Journal</a></li>
+            <li><a href="{{ route('hakkimizda') }}"><span class="lang-text-tr">Hakkımızda</span><span class="lang-text-en">About Us</span></a></li>
+            <li><a href="{{ route('oteller') }}"><span class="lang-text-tr">Oteller</span><span class="lang-text-en">Hotels</span></a></li>
+            <li><a href="{{ route('yatlar') }}"><span class="lang-text-tr">Yatlar</span><span class="lang-text-en">Yachts</span></a></li>
+            <li><a href="{{ route('restoranlar') }}"><span class="lang-text-tr">Restoranlar</span><span class="lang-text-en">Restaurants</span></a></li>
+            <li><a href="{{ route('urunler') }}"><span class="lang-text-tr">Ürünler</span><span class="lang-text-en">Products</span></a></li>
+            <li><a href="{{ route('gezi-rehberi') }}"><span class="lang-text-tr">Gezi Rehberi</span><span class="lang-text-en">Travel Guide</span></a></li>
+            <li><a href="{{ route('etkinlikler') }}"><span class="lang-text-tr">Etkinlikler</span><span class="lang-text-en">Events</span></a></li>
+            <li><a href="{{ route('journal') }}"><span class="lang-text-tr">Journal</span><span class="lang-text-en">Journal</span></a></li>
         </ul>
         <div class="nav-right" style="display: flex; align-items: center; gap: 1.5rem;">
             <a href="{{ route('sepet') }}" class="cart-nav-link" title="Sepetiniz">
@@ -134,15 +133,15 @@
     <!-- Fullscreen Nav -->
     <div class="fs-menu" id="fsMenu">
         <ul class="fs-links">
-            <li><a href="{{ route('hakkimizda') }}" data-i18n="nav_about">Hakkımızda</a></li>
-            <li><a href="{{ route('oteller') }}" data-i18n="nav_hotels">Oteller</a></li>
-            <li><a href="{{ route('yatlar') }}" data-i18n="nav_yachts">Yatlar</a></li>
-            <li><a href="{{ route('restoranlar') }}" data-i18n="nav_restaurants">Restoranlar</a></li>
-            <li><a href="{{ route('urunler') }}" data-i18n="nav_products">Ürünler</a></li>
+            <li><a href="{{ route('hakkimizda') }}"><span class="lang-text-tr">Hakkımızda</span><span class="lang-text-en">About Us</span></a></li>
+            <li><a href="{{ route('oteller') }}"><span class="lang-text-tr">Oteller</span><span class="lang-text-en">Hotels</span></a></li>
+            <li><a href="{{ route('yatlar') }}"><span class="lang-text-tr">Yatlar</span><span class="lang-text-en">Yachts</span></a></li>
+            <li><a href="{{ route('restoranlar') }}"><span class="lang-text-tr">Restoranlar</span><span class="lang-text-en">Restaurants</span></a></li>
+            <li><a href="{{ route('urunler') }}"><span class="lang-text-tr">Ürünler</span><span class="lang-text-en">Products</span></a></li>
             <div class="fs-divider"></div>
-            <li><a href="{{ route('gezi-rehberi') }}" data-i18n="nav_guide">Gezi Rehberi</a></li>
-            <li><a href="{{ route('etkinlikler') }}" data-i18n="nav_events">Etkinlikler</a></li>
-            <li><a href="{{ route('journal') }}" data-i18n="nav_journal">Journal</a></li>
+            <li><a href="{{ route('gezi-rehberi') }}"><span class="lang-text-tr">Gezi Rehberi</span><span class="lang-text-en">Travel Guide</span></a></li>
+            <li><a href="{{ route('etkinlikler') }}"><span class="lang-text-tr">Etkinlikler</span><span class="lang-text-en">Events</span></a></li>
+            <li><a href="{{ route('journal') }}"><span class="lang-text-tr">Journal</span><span class="lang-text-en">Journal</span></a></li>
             <li class="lang-switch" style="font-size: 1.5rem; font-family: var(--font-display); justify-content: center; margin-top:3rem;">
                 <span id="lang-tr-fs" class="lang-btn active">TR</span> | <span id="lang-en-fs" class="lang-btn">EN</span>
             </li>
@@ -150,7 +149,7 @@
     </div>
 
 
-    <!-- NEW: Dynamic Hero Area -->
+    <!-- DYNAMIC HERO AREA -->
     <section class="hero">
         <div class="hero-slider">
             <div class="hero-slide active"
@@ -170,7 +169,10 @@
                 <span class="lang-text-en">{{ $settings['hero_title_en'] ?? 'DIOREAL' }}</span>
             </h1>
             <div class="hero-cta-group reveal" style="transition-delay: 0.2s;">
-                <a href="https://wa.me/{{ format_whatsapp($settings['whatsapp'] ?? '905449157011') }}" target="_blank" class="btn btn-outline whatsapp-cta" data-i18n="btn_contact" style="background:transparent!important;border:2px solid rgba(255,255,255,0.75)!important;color:#fff!important;box-shadow:0 4px 20px rgba(0,0,0,0.18)!important;backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);">İletişime Geç</a>
+                <a href="https://wa.me/{{ format_whatsapp($settings['whatsapp'] ?? '905449157011') }}" target="_blank" class="btn btn-outline whatsapp-cta" style="background:transparent!important;border:2px solid rgba(255,255,255,0.75)!important;color:#fff!important;box-shadow:0 4px 20px rgba(0,0,0,0.18)!important;backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);">
+                    <span class="lang-text-tr">İletişime Geç</span>
+                    <span class="lang-text-en">Get in Touch</span>
+                </a>
             </div>
         </div>
     </section>
@@ -179,18 +181,18 @@
     <div class="marquee" style="position:relative;z-index:2;">
         <div class="marquee-track" style="pointer-events:auto;">
             @for($set = 0; $set < 4; $set++)
-            <div class="marquee-item"><a href="{{ route('destinasyon.detay', 'istanbul') }}" class="marquee-link" style="color: rgba(255, 255, 255, 0.22) !important; text-decoration: none !important;"><span data-i18n="dest_istanbul" style="color: inherit !important;">İstanbul</span></a> <span class="marquee-dot">◆</span></div>
-            <div class="marquee-item"><a href="{{ route('destinasyon.detay', 'bodrum') }}" class="marquee-link" style="color: rgba(255, 255, 255, 0.22) !important; text-decoration: none !important;"><span data-i18n="dest_bodrum" style="color: inherit !important;">Bodrum</span></a> <span class="marquee-dot">◆</span></div>
-            <div class="marquee-item"><a href="{{ route('destinasyon.detay', 'fethiye') }}" class="marquee-link" style="color: rgba(255, 255, 255, 0.22) !important; text-decoration: none !important;"><span data-i18n="dest_fethiye" style="color: inherit !important;">Fethiye</span></a> <span class="marquee-dot">◆</span></div>
-            <div class="marquee-item"><a href="{{ route('destinasyon.detay', 'kapadokya') }}" class="marquee-link" style="color: rgba(255, 255, 255, 0.22) !important; text-decoration: none !important;"><span data-i18n="dest_kapadokya" style="color: inherit !important;">Kapadokya</span></a> <span class="marquee-dot">◆</span></div>
-            <div class="marquee-item"><a href="{{ route('destinasyon.detay', 'cesme') }}" class="marquee-link" style="color: rgba(255, 255, 255, 0.22) !important; text-decoration: none !important;"><span data-i18n="dest_cesme" style="color: inherit !important;">Çeşme</span></a> <span class="marquee-dot">◆</span></div>
-            <div class="marquee-item"><a href="{{ route('destinasyon.detay', 'kas') }}" class="marquee-link" style="color: rgba(255, 255, 255, 0.22) !important; text-decoration: none !important;"><span data-i18n="dest_kas" style="color: inherit !important;">Kaş</span></a> <span class="marquee-dot">◆</span></div>
-            <div class="marquee-item"><a href="{{ route('destinasyon.detay', 'datca') }}" class="marquee-link" style="color: rgba(255, 255, 255, 0.22) !important; text-decoration: none !important;"><span data-i18n="dest_datca" style="color: inherit !important;">Datça</span></a> <span class="marquee-dot">◆</span></div>
+            <div class="marquee-item"><a href="{{ route('destinasyon.detay', 'istanbul') }}" class="marquee-link" style="color: rgba(255, 255, 255, 0.22) !important; text-decoration: none !important;"><span class="lang-text-tr" style="color: inherit !important;">İstanbul</span><span class="lang-text-en" style="color: inherit !important;">Istanbul</span></a> <span class="marquee-dot">◆</span></div>
+            <div class="marquee-item"><a href="{{ route('destinasyon.detay', 'bodrum') }}" class="marquee-link" style="color: rgba(255, 255, 255, 0.22) !important; text-decoration: none !important;"><span class="lang-text-tr" style="color: inherit !important;">Bodrum</span><span class="lang-text-en" style="color: inherit !important;">Bodrum</span></a> <span class="marquee-dot">◆</span></div>
+            <div class="marquee-item"><a href="{{ route('destinasyon.detay', 'fethiye') }}" class="marquee-link" style="color: rgba(255, 255, 255, 0.22) !important; text-decoration: none !important;"><span class="lang-text-tr" style="color: inherit !important;">Fethiye</span><span class="lang-text-en" style="color: inherit !important;">Fethiye</span></a> <span class="marquee-dot">◆</span></div>
+            <div class="marquee-item"><a href="{{ route('destinasyon.detay', 'kapadokya') }}" class="marquee-link" style="color: rgba(255, 255, 255, 0.22) !important; text-decoration: none !important;"><span class="lang-text-tr" style="color: inherit !important;">Kapadokya</span><span class="lang-text-en" style="color: inherit !important;">Cappadocia</span></a> <span class="marquee-dot">◆</span></div>
+            <div class="marquee-item"><a href="{{ route('destinasyon.detay', 'cesme') }}" class="marquee-link" style="color: rgba(255, 255, 255, 0.22) !important; text-decoration: none !important;"><span class="lang-text-tr" style="color: inherit !important;">Çeşme</span><span class="lang-text-en" style="color: inherit !important;">Cesme</span></a> <span class="marquee-dot">◆</span></div>
+            <div class="marquee-item"><a href="{{ route('destinasyon.detay', 'kas') }}" class="marquee-link" style="color: rgba(255, 255, 255, 0.22) !important; text-decoration: none !important;"><span class="lang-text-tr" style="color: inherit !important;">Kaş</span><span class="lang-text-en" style="color: inherit !important;">Kas</span></a> <span class="marquee-dot">◆</span></div>
+            <div class="marquee-item"><a href="{{ route('destinasyon.detay', 'datca') }}" class="marquee-link" style="color: rgba(255, 255, 255, 0.22) !important; text-decoration: none !important;"><span class="lang-text-tr" style="color: inherit !important;">Datça</span><span class="lang-text-en" style="color: inherit !important;">Datca</span></a> <span class="marquee-dot">◆</span></div>
             @endfor
         </div>
     </div>
 
-    <!-- NEW ABOUT SECTION (BLACK TOMATO STYLE - BU AYIN SEÇKİSİ) -->
+    <!-- ABOUT SECTION (BU AYIN SEÇKİSİ) -->
     <section class="bt-about-section" id="hakkimizda" style="padding: 7rem 5rem; text-align: center; background: var(--white);">
         <div style="max-width: 800px; margin: 0 auto 5rem;">
             <h2 style="font-family: var(--font-display); font-size: 3rem; font-weight: 400; letter-spacing: 0.05em; text-transform: uppercase; margin-bottom: 2rem; color: var(--near-black);">
@@ -281,14 +283,23 @@
     
 
     
-    <!-- NEW: Destinations (Türkiye) - BLACK TOMATO PHOTO 1 LAYOUT -->
+    <!-- Destinations (Türkiye) -->
     <section class="dest-section bt-horizontal-scroll" id="turkiye" style="background: var(--white); padding: 4rem 0 5rem 0; text-align: center; overflow: hidden; display: flex; flex-direction: column; align-items: center;">
         <div class="dest-section-header">
             <div style="text-align: left;">
-                <span style="font-size: 0.75rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--mid-gray);" data-i18n="dest_tr_eyebrow">SEYAHATLERİMİZİ KEŞFEDİN</span>
-                <h2 style="font-family: var(--font-display); font-size: 3rem; color: var(--near-black); margin-top: 0.5rem; font-weight: 400;"><span data-i18n="dest_tr_title">Türkiye'nin</span> <em style="font-style: italic; font-weight: 300;" data-i18n="dest_tr_it">Ruhu</em></h2>
+                <span style="font-size: 0.75rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--mid-gray);">
+                    <span class="lang-text-tr">SEYAHATLERİMİZİ KEŞFEDİN</span>
+                    <span class="lang-text-en">EXPLORE OUR JOURNEYS</span>
+                </span>
+                <h2 style="font-family: var(--font-display); font-size: 3rem; color: var(--near-black); margin-top: 0.5rem; font-weight: 400;">
+                    <span class="lang-text-tr">Türkiye'nin <em style="font-style: italic; font-weight: 300;">Ruhu</em></span>
+                    <span class="lang-text-en">The Soul of <em style="font-style: italic; font-weight: 300;">Turkey</em></span>
+                </h2>
             </div>
-            <p class="dest-section-desc" data-i18n="dest_tr_desc">Benzersiz deneyimlerin ilham veren hikayesi</p>
+            <p class="dest-section-desc">
+                <span class="lang-text-tr">Benzersiz deneyimlerin ilham veren hikayesi</span>
+                <span class="lang-text-en">The inspiring story of unique experiences</span>
+            </p>
         </div>
 
         @if(isset($destinations['turkiye']) && count($destinations['turkiye']) > 0)
@@ -298,21 +309,21 @@
                         @foreach($destinations['turkiye'] as $dest)
                             <a href="{{ route('destinasyon.detay', $dest->slug_tr ?: ($dest->slug_en ?: $dest->id)) }}" class="dest-card-h" style="display: block; text-decoration: none; color: inherit;">
                                 <div class="dest-img-container">
-                                    <div class="dest-img" style="background-image:url('{{ asset(!empty($dest->img) ? $dest->img : 'foto.img/amalfi.jpg') }}'); position: absolute; inset: 0; background-size: cover; background-position: center; transition: transform 0.9s cubic-bezier(0.25, 0.46, 0.45, 0.94);"></div>
+                                    <div class="dest-img" style="background-image:url('{{ dioreal_img($dest->img ?? '', 'foto.img/amalfi.jpg') }}'); position: absolute; inset: 0; background-size: cover; background-position: center; transition: transform 0.9s cubic-bezier(0.25, 0.46, 0.45, 0.94);"></div>
                                 </div>
                                 <div class="dest-info-ext">
                                     <div class="dest-region">
-                                        <span class="lang-tr-text">{{ $dest->region['tr'] ?? '' }}</span>
-                                        <span class="lang-en-text">{{ $dest->region['en'] ?? '' }}</span>
+                                        <span class="lang-text-tr">{{ $dest->region['tr'] ?? '' }}</span>
+                                        <span class="lang-text-en">{{ $dest->region['en'] ?? '' }}</span>
                                     </div>
                                     <div class="dest-name-grid">
-                                        <span class="lang-tr-text">{{ $dest->name['tr'] ?? '' }}</span>
-                                        <span class="lang-en-text">{{ $dest->name['en'] ?? '' }}</span>
+                                        <span class="lang-text-tr">{{ $dest->name['tr'] ?? '' }}</span>
+                                        <span class="lang-text-en">{{ $dest->name['en'] ?? '' }}</span>
                                     </div>
                                     <div class="dest-btn-wrapper" style="margin-top: 0.8rem;">
                                         <span class="btn-dest-explore">
-                                            <span class="lang-tr-text">İncele</span>
-                                            <span class="lang-en-text">View</span>
+                                            <span class="lang-text-tr">İncele</span>
+                                            <span class="lang-text-en">View</span>
                                             <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="transition: transform 0.3s ease;"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
                                         </span>
                                     </div>
@@ -328,17 +339,17 @@
                                 </div>
                                 <div class="dest-info-ext">
                                     <div class="dest-region">
-                                        <span class="lang-tr-text">{{ $dest->region['tr'] ?? '' }}</span>
-                                        <span class="lang-en-text">{{ $dest->region['en'] ?? '' }}</span>
+                                        <span class="lang-text-tr">{{ $dest->region['tr'] ?? '' }}</span>
+                                        <span class="lang-text-en">{{ $dest->region['en'] ?? '' }}</span>
                                     </div>
                                     <div class="dest-name-grid">
-                                        <span class="lang-tr-text">{{ $dest->name['tr'] ?? '' }}</span>
-                                        <span class="lang-en-text">{{ $dest->name['en'] ?? '' }}</span>
+                                        <span class="lang-text-tr">{{ $dest->name['tr'] ?? '' }}</span>
+                                        <span class="lang-text-en">{{ $dest->name['en'] ?? '' }}</span>
                                     </div>
                                     <div class="dest-btn-wrapper" style="margin-top: 0.8rem;">
                                         <span class="btn-dest-explore">
-                                            <span class="lang-tr-text">İncele</span>
-                                            <span class="lang-en-text">View</span>
+                                            <span class="lang-text-tr">İncele</span>
+                                            <span class="lang-text-en">View</span>
                                             <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="transition: transform 0.3s ease;"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
                                         </span>
                                     </div>
@@ -350,21 +361,36 @@
             </div>
         @else
             <div style="color: var(--mid-gray); padding: 2rem;">
-                <span class="lang-tr-text">Henüz destinasyon eklenmedi.</span>
-                <span class="lang-en-text">No destinations added yet.</span>
+                <span class="lang-text-tr">Henüz destinasyon eklenmedi.</span>
+                <span class="lang-text-en">No destinations added yet.</span>
             </div>
         @endif
     </section>
 
-    <!-- NEW: Destinations (Yurtdışı) - BLACK TOMATO PHOTO 1 LAYOUT (START YOUR JOURNEY) -->
+    <!-- Destinations (Yurtdışı) -->
     <section class="dest-section bt-horizontal-scroll" id="yurtdisi" style="background: var(--white); padding: 7rem 0 7rem 0; text-align: center; overflow: hidden; display: flex; flex-direction: column; align-items: center;">
-        <h2 class="dest-main-title" data-i18n="dest_en_main">YOLCULUĞUNUZA BAŞLAYIN</h2>
+        <h2 class="dest-main-title">
+            <span class="lang-text-tr">YOLCULUĞUNUZA BAŞLAYIN</span>
+            <span class="lang-text-en">START YOUR JOURNEY</span>
+        </h2>
         
         <ul class="bt-tabs-nav">
-            <li class="active" data-type="yurtdisi_popular" data-i18n="tab_popular">EN POPÜLER</li>
-            <li data-type="yurtdisi_traveller" data-i18n="tab_traveller">GEZGİNE GÖRE</li>
-            <li data-type="yurtdisi_month" data-i18n="tab_month">AYA GÖRE</li>
-            <li data-type="yurtdisi_spotlight" data-i18n="tab_spotlight">VİTRİNDEKİLER</li>
+            <li class="active" data-type="yurtdisi_popular">
+                <span class="lang-text-tr">EN POPÜLER</span>
+                <span class="lang-text-en">MOST POPULAR</span>
+            </li>
+            <li data-type="yurtdisi_traveller">
+                <span class="lang-text-tr">GEZGİNE GÖRE</span>
+                <span class="lang-text-en">BY TRAVELLER</span>
+            </li>
+            <li data-type="yurtdisi_month">
+                <span class="lang-text-tr">AYA GÖRE</span>
+                <span class="lang-text-en">BY MONTH</span>
+            </li>
+            <li data-type="yurtdisi_spotlight">
+                <span class="lang-text-tr">VİTRİNDEKİLER</span>
+                <span class="lang-text-en">SPOTLIGHT</span>
+            </li>
         </ul>
 
         @php
@@ -389,17 +415,17 @@
                                         </div>
                                         <div class="dest-info-ext">
                                             <div class="dest-region">
-                                                <span class="lang-tr-text">{{ $dest->region['tr'] ?? '' }}</span>
-                                                <span class="lang-en-text">{{ $dest->region['en'] ?? '' }}</span>
+                                                <span class="lang-text-tr">{{ $dest->region['tr'] ?? '' }}</span>
+                                                <span class="lang-text-en">{{ $dest->region['en'] ?? '' }}</span>
                                             </div>
                                             <div class="dest-name-grid">
-                                                <span class="lang-tr-text">{{ $dest->name['tr'] ?? '' }}</span>
-                                                <span class="lang-en-text">{{ $dest->name['en'] ?? '' }}</span>
+                                                <span class="lang-text-tr">{{ $dest->name['tr'] ?? '' }}</span>
+                                                <span class="lang-text-en">{{ $dest->name['en'] ?? '' }}</span>
                                             </div>
                                             <div class="dest-btn-wrapper" style="margin-top: 0.8rem;">
                                                 <span class="btn-dest-explore">
-                                                    <span class="lang-tr-text">İncele</span>
-                                                    <span class="lang-en-text">View</span>
+                                                    <span class="lang-text-tr">İncele</span>
+                                                    <span class="lang-text-en">View</span>
                                                     <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="transition: transform 0.3s ease;"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
                                                 </span>
                                             </div>
@@ -415,17 +441,17 @@
                                         </div>
                                         <div class="dest-info-ext">
                                             <div class="dest-region">
-                                                <span class="lang-tr-text">{{ $dest->region['tr'] ?? '' }}</span>
-                                                <span class="lang-en-text">{{ $dest->region['en'] ?? '' }}</span>
+                                                <span class="lang-text-tr">{{ $dest->region['tr'] ?? '' }}</span>
+                                                <span class="lang-text-en">{{ $dest->region['en'] ?? '' }}</span>
                                             </div>
                                             <div class="dest-name-grid">
-                                                <span class="lang-tr-text">{{ $dest->name['tr'] ?? '' }}</span>
-                                                <span class="lang-en-text">{{ $dest->name['en'] ?? '' }}</span>
+                                                <span class="lang-text-tr">{{ $dest->name['tr'] ?? '' }}</span>
+                                                <span class="lang-text-en">{{ $dest->name['en'] ?? '' }}</span>
                                             </div>
                                             <div class="dest-btn-wrapper" style="margin-top: 0.8rem;">
                                                 <span class="btn-dest-explore">
-                                                    <span class="lang-tr-text">İncele</span>
-                                                    <span class="lang-en-text">View</span>
+                                                    <span class="lang-text-tr">İncele</span>
+                                                    <span class="lang-text-en">View</span>
                                                     <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="transition: transform 0.3s ease;"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
                                                 </span>
                                             </div>
@@ -437,16 +463,15 @@
                     </div>
                 @else
                     <div style="color: var(--mid-gray); padding: 2rem;">
-                        <span class="lang-tr-text">Henüz destinasyon eklenmedi.</span>
-                        <span class="lang-en-text">No destinations added yet.</span>
+                        <span class="lang-text-tr">Henüz destinasyon eklenmedi.</span>
+                        <span class="lang-text-en">No destinations added yet.</span>
                     </div>
                 @endif
             </div>
         @endforeach
     </section>
 
-    <!-- NEW: Collaborations Grid -->
-    <!-- NEW: Collaborations Grid (Black Tomato Style) -->
+    <!-- Collaborations Grid -->
     <style>
         .bt-logos-wrapper {
             margin-top: 4rem;
@@ -479,8 +504,14 @@
     <section class="collabs" id="referanslar" style="text-align: center; padding: 7rem 5rem; background: var(--white); border-top: 1px solid rgba(0,0,0,0.05);">
         <div class="section-header reveal" style="justify-content: center; margin-bottom: 2rem;">
             <div>
-                <h2 class="section-title" data-i18n="collab_title" style="font-family: var(--font-condensed); font-size: 2.5rem; letter-spacing: 0.1em; text-transform: uppercase; margin-bottom: 1rem; color: var(--near-black); text-align: center;">MARKA & İŞ BİRLİKLERİ</h2>
-                <p style="color: var(--mid-gray); font-size: 0.8rem; letter-spacing: 0.15em; text-transform: uppercase;">Güvenilir Partnerlerimiz</p>
+                <h2 class="section-title" style="font-family: var(--font-condensed); font-size: 2.5rem; letter-spacing: 0.1em; text-transform: uppercase; margin-bottom: 1rem; color: var(--near-black); text-align: center;">
+                    <span class="lang-text-tr">MARKA & İŞ BİRLİKLERİ</span>
+                    <span class="lang-text-en">BRANDS & PARTNERSHIPS</span>
+                </h2>
+                <p style="color: var(--mid-gray); font-size: 0.8rem; letter-spacing: 0.15em; text-transform: uppercase;">
+                    <span class="lang-text-tr">Güvenilir Partnerlerimiz</span>
+                    <span class="lang-text-en">Our Trusted Partners</span>
+                </p>
             </div>
         </div>
         <div class="bt-logos-wrapper reveal" id="refsGrid" style="transition-delay: 0.2s;">
@@ -492,50 +523,83 @@
         </div>
     </section>
 
-    <!-- OLD: Process (Süreç) -->
+    <!-- Process (Süreç) -->
     <section class="process">
         <div class="section-header reveal">
             <div>
-                <span class="section-label" data-i18n="proc_eyebrow">Metodoloji</span>
-                <h2 class="section-title"><span data-i18n="proc_title">Nasıl</span> <em data-i18n="proc_it">Çalışıyoruz?</em></h2>
+                <span class="section-label">
+                    <span class="lang-text-tr">Metodoloji</span>
+                    <span class="lang-text-en">Methodology</span>
+                </span>
+                <h2 class="section-title">
+                    <span class="lang-text-tr">Nasıl <em>Çalışıyoruz?</em></span>
+                    <span class="lang-text-en">How We <em>Work</em></span>
+                </h2>
             </div>
         </div>
         <div class="process-steps">
             <div class="process-step reveal">
                 <div class="step-dot"></div>
                 <div class="step-n">01</div>
-                <h3 class="step-h" data-i18n="proc_h1">Hayal Kurun</h3>
-                <p class="step-p" data-i18n="proc_p1">Bize rüya seyahatinizi anlatın. Hayallerinizi özgürce paylaşın.</p>
+                <h3 class="step-h">
+                    <span class="lang-text-tr">Hayal Kurun</span>
+                    <span class="lang-text-en">Dream Big</span>
+                </h3>
+                <p class="step-p">
+                    <span class="lang-text-tr">Bize rüya seyahatinizi anlatın. Hayallerinizi özgürce paylaşın.</span>
+                    <span class="lang-text-en">Tell us about your dream trip. Share your desires freely.</span>
+                </p>
             </div>
             <div class="process-step reveal" style="transition-delay: 0.1s;">
                 <div class="step-dot"></div>
                 <div class="step-n">02</div>
-                <h3 class="step-h" data-i18n="proc_h2">Tasarlayalım</h3>
-                <p class="step-p" data-i18n="proc_p2">Uzman ekibimiz size özel, detaylı bir program hazırlar.</p>
+                <h3 class="step-h">
+                    <span class="lang-text-tr">Tasarlayalım</span>
+                    <span class="lang-text-en">We Design</span>
+                </h3>
+                <p class="step-p">
+                    <span class="lang-text-tr">Uzman ekibimiz size özel, detaylı bir program hazırlar.</span>
+                    <span class="lang-text-en">Our expert team creates a bespoke, detailed itinerary for you.</span>
+                </p>
             </div>
             <div class="process-step reveal" style="transition-delay: 0.2s;">
                 <div class="step-dot"></div>
                 <div class="step-n">03</div>
-                <h3 class="step-h" data-i18n="proc_h3">Mükemmelleştirin</h3>
-                <p class="step-p" data-i18n="proc_p3">Her detayı birlikte gözden geçiririz. Tamamı ince ayrıntısına kadar planlanır.</p>
+                <h3 class="step-h">
+                    <span class="lang-text-tr">Mükemmelleştirin</span>
+                    <span class="lang-text-en">Perfect It</span>
+                </h3>
+                <p class="step-p">
+                    <span class="lang-text-tr">Her detayı birlikte gözden geçiririz. Tamamı ince ayrıntısına kadar planlanır.</span>
+                    <span class="lang-text-en">We review every detail together until it matches your vision.</span>
+                </p>
             </div>
             <div class="process-step reveal" style="transition-delay: 0.3s;">
                 <div class="step-dot"></div>
                 <div class="step-n">04</div>
-                <h3 class="step-h" data-i18n="proc_h4">Yola Çıkın</h3>
-                <p class="step-p" data-i18n="proc_p4">Tüm organizasyon hazır. Geri kalanı tamamen bizde.</p>
+                <h3 class="step-h">
+                    <span class="lang-text-tr">Yola Çıkın</span>
+                    <span class="lang-text-en">Set Off</span>
+                </h3>
+                <p class="step-p">
+                    <span class="lang-text-tr">Tüm organizasyon hazır. Geri kalanı tamamen bizde.</span>
+                    <span class="lang-text-en">Everything is prepared. Simply enjoy your journey.</span>
+                </p>
             </div>
         </div>
     </section>
 
-    <!-- OLD: Testimonial -->
+    <!-- Testimonial -->
     <section class="testi">
         <div class="reveal">
-            <blockquote class="testi-quote" data-i18n="testi_quote">
-                "Dioreal Dijital ile yaptığımız iş birliği, markamızın global vizyonunu tam olarak yansıtan benzersiz
-                bir deneyimdi. Detaylara gösterilen özen büyüleyiciydi."
+            <blockquote class="testi-quote">
+                <span class="lang-text-tr">"Dioreal Dijital ile yaptığımız iş birliği, markamızın global vizyonunu tam olarak yansıtan benzersiz bir deneyimdi. Detaylara gösterilen özen büyüleyiciydi."</span>
+                <span class="lang-text-en">"Collaborating with Dioreal Digital was a unique experience reflecting our brand's global vision. The attention to detail was fascinating."</span>
             </blockquote>
-            <p class="testi-author" data-i18n="testi_author">— Seçkin İş Ortakları</p>
+            <p class="testi-author">
+                <span class="lang-text-tr">— Seçkin İş Ortakları</span>
+                <span class="lang-text-en">— Exclusive Partners</span>
+            </p>
         </div>
     </section>
 
