@@ -32,7 +32,7 @@ class PopulateSlugsSeeder extends Seeder
         return Str::slug($text);
     }
 
-    public static function runSlugs()
+    public function run(): void
     {
         $models = [
             Hotel::class,

@@ -65,5 +65,7 @@ class DatabaseSeeder extends Seeder
         // Run resource content import
         $this->call(JsonToDbSeeder::class);
         $this->call(DestinationSeeder::class);
+        $this->call(ProductSeeder::class);
+        $this->call(PopulateSlugsSeeder::class);
     }
 }
