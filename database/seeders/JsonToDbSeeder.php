@@ -61,6 +61,16 @@ class JsonToDbSeeder extends Seeder
                         if (empty($item['seo_description_tr']) && $trDesc) $item['seo_description_tr'] = Str::limit(strip_tags($trDesc), 155);
                         if (empty($item['seo_description_en']) && $enDesc) $item['seo_description_en'] = Str::limit(strip_tags($enDesc), 155);
 
+                        foreach (['name', 'title', 'tag', 'month', 'loc', 'desc', 'long_desc', 'content', 'gallery'] as $arrayKey) {
+                            if (isset($item[$arrayKey]) && is_array($item[$arrayKey])) {
+                                $item[$arrayKey] = json_encode($item[$arrayKey], JSON_UNESCAPED_UNICODE);
+                            }
+                        }
+
+                        $dummyModel = new $modelClass();
+                        $tableColumns = array_flip(\Illuminate\Support\Facades\Schema::getColumnListing($dummyModel->getTable()));
+                        $item = array_intersect_key($item, $tableColumns);
+
                         try {
                             if (!empty($item['id'])) {
                                 $modelClass::updateOrCreate(['id' => $item['id']], $item);
@@ -77,10 +87,14 @@ class JsonToDbSeeder extends Seeder
                             }
                         }
                     }
-                    $this->command->info("Migrated {$file} into " . class_basename($modelClass));
+                    if ($this->command) {
+                        $this->command->info("Migrated {$file} into " . class_basename($modelClass));
+                    }
                 }
             } else {
-                $this->command->warn("File not found: {$file}");
+                if ($this->command) {
+                    $this->command->warn("File not found: {$file}");
+                }
             }
         }
     }
