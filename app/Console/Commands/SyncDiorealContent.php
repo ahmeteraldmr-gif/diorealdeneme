@@ -61,7 +61,10 @@ class SyncDiorealContent extends Command
         // 4. Download any missing DB images
         $this->downloadMissingImages($context, $basePublic);
 
-        // 5. Seed DB cleanly using JsonToDbSeeder
+        // 5. Fix permissions on public folders for web server access (0755 / 0644)
+        $this->fixPermissions($basePublic);
+
+        // 6. Seed DB cleanly using JsonToDbSeeder
         $this->info("Updating database tables...");
         try {
             $seeder = new JsonToDbSeeder();
@@ -368,5 +371,27 @@ class SyncDiorealContent extends Command
             @chmod($destPath, 0644);
             $this->info("Downloaded image [200 OK]: {$url}");
         }
+    }
+
+    private function fixPermissions($basePublic)
+    {
+        $dirs = [$basePublic . '/foto.img', $basePublic . '/uploads'];
+        foreach ($dirs as $dirPath) {
+            if (file_exists($dirPath)) {
+                @chmod($dirPath, 0755);
+                $iterator = new \RecursiveIteratorIterator(
+                    new \RecursiveDirectoryIterator($dirPath, \RecursiveDirectoryIterator::SKIP_DOTS),
+                    \RecursiveIteratorIterator::SELF_FIRST
+                );
+                foreach ($iterator as $item) {
+                    if ($item->isDir()) {
+                        @chmod($item->getPathname(), 0755);
+                    } else {
+                        @chmod($item->getPathname(), 0644);
+                    }
+                }
+            }
+        }
+        $this->info("Public folder permissions updated to 0755/0644.");
     }
 }
