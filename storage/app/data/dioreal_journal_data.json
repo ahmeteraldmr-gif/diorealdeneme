@@ -1,6 +1,8 @@
 [
     {
-        "date": "04.09.2026",
+        "id": 1,
+        "slug_tr": "neden-hala-seyahat-ediyoruz",
+        "slug_en": "neden-hala-seyahat-ediyoruz-en",
         "title": {
             "tr": "Neden Hâlâ Seyahat Ediyoruz?",
             "en": "Why Do We Still Travel?"
@@ -11,136 +13,116 @@
         },
         "img": "foto.img/amalfi.jpg",
         "desc": {
-            "tr": "<p>Dünyayı görmek artık hiç olmadığı kadar kolay. Peki her şeyi ekranlarımızdan keşfedebildiğimiz bir çağda neden hâlâ yola çıkıyoruz? Bu yazı, seyahatin...</p>",
-            "en": "<p>Seeing the world has never been easier. But in an age where we can explore almost everything through our screens, why do we still choose to travel? Th...</p>"
+            "tr": "Dünyayı görmek artık hiç olmadığı kadar kolay. Peki her şeyi ekranlarımızdan keşfedebildiğimiz bir çağda neden hâlâ yola çıkıyoruz? Bu yazı, seyahatin...",
+            "en": "Seeing the world has never been easier. But in an age where we can explore almost everything through our screens, why do we still choose to travel? Th..."
         },
-        "slug_tr": "6",
-        "slug_en": "6-en",
-        "seo_title_tr": "Neden Hâlâ Seyahat Ediyoruz? | Dioreal Dijital Lüks Yaşam Platformu",
-        "seo_title_en": "Why Do We Still Travel? | Dioreal Digital Luxury Platform",
-        "seo_description_tr": "Dünyayı görmek artık hiç olmadığı kadar kolay. Peki her şeyi ekranlarımızdan keşfedebildiğimiz bir çağda neden hâlâ yola çıkıyoruz? Bu yazı, seyahatin...",
-        "seo_description_en": "Seeing the world has never been easier. But in an age where we can explore almost everything through our screens, why do we still choose to travel? Th...",
-        "gallery": [],
-        "video_file": null,
-        "video_url": null,
-        "show_video_on_cover": false,
-        "og_image": null,
-        "seo_noindex": 0
+        "date": "2026-07-25",
+        "is_featured": true,
+        "content": {
+            "tr": "<p>Dünyanın hiç olmadığı kadar ulaşılabilir olduğu bir çağda yaşıyoruz. Birkaç dokunuşla kıtalar arasında uçabiliyor, daha gitmeden otelleri gezebiliyor, restoranların menülerini inceleyebiliyor ve dünyanın en uzak köşelerini telefon ekranımızdan keşfedebiliyoruz. Haritalar cebimizde, çevirmenler avucumuzda, deneyimler ise sosyal medyada sayısız kez karşımıza çıkıyor.\nPeki, her şeyi önceden görebildiğimiz bir dünyada neden hâlâ yola çıkıyoruz? Belki de seyahat hiçbir zaman yalnızca yeni bir yer görmekle ilgili değildi. Bir şehir, yalnızca sokaklardan ve binalardan ibaret değildir. Onu anlamlı kılan, sabahın ilk ışığında uyanan sessizliği, bir kafeden yükselen kahve kokusu, akşamüstü denizden esen rüzgârı ve hiç tanımadığınız insanların günlük hayatıdır. Bunların hiçbiri bir fotoğraf karesine tam olarak sığmaz. Çünkü seyahat, görülen bir şeyden çok hissedilen bir deneyimdir. Modern hayat hız üzerine kurulu. Takvimler dolu, bildirimler hiç susmuyor ve günler çoğu zaman birbirine benziyor. Yolculuk ise bu döngüyü kısa da olsa kırıyor. Saat yavaşlıyor, yürüyüşler uzuyor, kahvaltılar aceleyle yapılmıyor ve insan ilk kez gerçekten etrafına bakmaya başlıyor. Belki de seyahatin en büyük armağanı, bize yeniden dikkat etmeyi öğretmesidir. Eskiden insanlar daha fazla ülke görmek için seyahat ediyordu. Bugünün gezgini ise daha anlamlı anılar biriktirmek istiyor. Bir şehri koşarak tüketmek yerine onun ritmine uyum sağlamayı tercih ediyor. Yerel bir pazarda dolaşmak, küçük bir aile işletmesinde akşam yemeği yemek, gün doğumunu sessizce izlemek ya da hiç planlanmamış bir sokağa sapmak artık birçok kişi için en değerli deneyimler arasında yer alıyor. Lüksün tanımı da değişiyor. Artık yalnızca gösterişli oteller, özel transferler veya pahalı restoranlar değil; zaman ayırabilmek, kalabalıklardan uzaklaşabilmek ve gerçekten dinlenebilmek de büyük bir ayrıcalık olarak görülüyor. Sessizlik, alan, doğallık ve sadelik yeni nesil seyahatin en değerli unsurları hâline geliyor. Belki de bu yüzden bazı yolculuklar hafızamızdan hiç silinmiyor. Çünkü hatırladığımız şey çoğu zaman bir bina ya da manzara değil; orada hissettiklerimiz oluyor. Bir meydanda çalan sokak müziği, yağmurdan sonra taş sokakların kokusu, denizin sabah saatlerindeki sakinliği ya da gün batımında kurulan uzun bir sofranın sıcaklığı... İnsan belleği, manzaralardan çok duyguları saklıyor. DIOREAL&#039;in yolculuğu da tam bu düşünceden doğdu. Dünyayı yalnızca gidilecek yerlerin listesi olarak görmek istemiyoruz. Her destinasyonun bir ruhu, her otelin bir hikâyesi, her restoranın bir kültürü ve her yolculuğun insanda bıraktığı görünmez bir izi olduğuna inanıyoruz. Bu yüzden amacımız sadece nerede kalacağınızı ya da ne göreceğinizi anlatmak değil; bir yeri neden hatırlayacağınızı da gösterebilmek. Belki de hâlâ seyahat ediyoruz çünkü dünya değişmeye devam ediyor. Ama ondan da önemlisi, her yolculukta biraz biz değişiyoruz. Ve bazen, eve dönüşün en güzel yanı; geride bıraktığımız şehir değil, yol boyunca keşfettiğimiz yeni hâlimiz oluyor.</p>",
+            "en": "<p>We live in an age where the world has never been more accessible. With just a few taps, we can fly across continents, browse hotels before we arrive, explore restaurant menus, and discover even the most remote corners of the planet from the screens in our hands. Maps fit into our pockets, translators travel with us, and countless experiences unfold before us online long before we ever set foot in a destination. So why do we still travel in a world where everything seems to be within reach? Perhaps travel was never simply about discovering a new place. A city is never just its streets or its architecture. What gives it meaning is the quiet of an early morning, the aroma of coffee drifting from a neighborhood café, the sea breeze at sunset, and the rhythm of everyday life shared by people we&#039;ve never met. None of these moments can truly be captured in a photograph, because travel is not something we merely see—it is something we feel. Modern life is built on speed. Our calendars are full, notifications never stop, and days often blend into one another. Travel interrupts that rhythm. Time begins to slow. Walks become longer, breakfasts are no longer rushed, and we find ourselves paying attention again. Perhaps the greatest gift of travel is that it teaches us how to notice the world once more. There was a time when people traveled simply to visit more countries. Today&#039;s traveler seeks something different. Rather than collecting destinations, they collect meaningful moments. Wandering through a local market, sharing dinner at a family-owned restaurant, watching the sunrise in silence, or turning into an unfamiliar street without a plan has become far more valuable than ticking another place off a list. The meaning of luxury is changing as well. It is no longer defined only by grand hotels, private transfers, or expensive restaurants. Having time, finding silence, escaping the crowds, and being fully present have become the greatest luxuries of all. Space, simplicity, authenticity, and stillness are shaping a new philosophy of travel. Perhaps that is why certain journeys never leave us. We rarely remember only the buildings or the landscapes we remember how a place made us feel. The melody of a street musician, the scent of rain on old stone streets, the calm of the sea at dawn, or the warmth of a long dinner as the sun disappears beyond the horizon. Memory holds on to emotions far longer than it does to images. That is also the idea behind DIOREAL. We believe the world is more than a collection of destinations. Every place has a soul. Every hotel has a story. Every restaurant reflects a culture. Every journey leaves an invisible mark on the traveler. Our purpose is not only to tell you where to stay, what to eat, or what to see—it is to help you understand why a place deserves to be remembered. Perhaps we still travel because the world continues to change. But more importantly, every journey changes us. And sometimes, the most beautiful part of coming home is not the place we left behind, but the person we became along the way.</p>"
+        }
     },
     {
-        "date": "2026-07-10",
+        "id": 2,
+        "slug_tr": "7",
+        "slug_en": "7-en",
         "title": {
             "tr": "Bir Şehri Sabah Saatlerinde Keşfetmenin Büyüsü",
             "en": "The Magic of Exploring a City at Sunrise"
         },
         "tag": {
-            "tr": "",
-            "en": ""
+            "tr": "Seyahat Felsefesi",
+            "en": "Travel Philosophy"
         },
         "img": "foto.img/norvec.jpg",
         "desc": {
-            "tr": "",
-            "en": ""
+            "tr": "Bir Şehri Sabah Saatlerinde Keşfetmenin Büyüsü",
+            "en": "The Magic of Exploring a City at Sunrise"
         },
-        "slug_tr": "7",
-        "slug_en": "7-en",
-        "seo_title_tr": "Bir Şehri Sabah Saatlerinde Keşfetmenin Büyüsü | Dioreal Dijital Lüks Yaşam Platformu",
-        "seo_title_en": "The Magic of Exploring a City at Sunrise | Dioreal Digital Luxury Platform",
-        "seo_description_tr": "",
-        "seo_description_en": "",
-        "gallery": [],
-        "video_file": null,
-        "video_url": null,
-        "show_video_on_cover": false,
-        "og_image": null,
-        "seo_noindex": 0
+        "date": "2026-07-10",
+        "is_featured": false,
+        "content": {
+            "tr": "<p>Her şehrin iki yüzü vardır. Biri milyonlarca insanın bildiği, fotoğrafladığı ve paylaştığı yüzüdür. Diğeri ise yalnızca erken uyananların tanıdığı sessiz hâlidir.\nŞehirler sabahın ilk saatlerinde bambaşka insanlar gibi davranır. Gün henüz başlamamıştır. Kaldırımlar boş, sokaklar sakindir. Kafeler ilk kahvelerini hazırlarken fırınlardan yükselen taze ekmek kokusu sokaklara karışır. Temizlik görevlileri günü sessizce karşılar, dükkân sahipleri kepenklerini açar ve güneş, taş binaların arasından ağır ağır yükselmeye başlar.\nİşte tam o anda şehir, turistlere değil; gerçekten görmek isteyenlere kendini gösterir.\nBirçok insan bir destinasyonu öğle saatlerinde tanır. Meydanlar kalabalıktır, müzelerin önünde uzun kuyruklar vardır, telefon kameraları hiç durmadan çalışır. Oysa sabah erken saatlerde aynı meydanlar neredeyse tamamen size aittir. Adımlarınız daha yavaşlar, sesler daha belirgin hâle gelir ve şehrin gerçek ritmini ilk kez duymaya başlarsınız. Paris&#039;te gün doğarken Seine Nehri&#039;nin kıyısında yürümek, şehrin neden yüzyıllardır sanatçılara ilham verdiğini anlatır. Kyoto&#039;da tapınak bahçelerine sabah sisinin çöküşünü izlemek, zamanın gerçekten yavaşlayabileceğini hissettirir. İstanbul&#039;da Boğaz&#039;ın üzerine düşen ilk ışıklar martıların sesiyle birleştiğinde şehir, günün geri kalanından tamamen farklı bir karaktere bürünür. Roma&#039;da dar taş sokaklardan geçerken henüz açılmamış meydanlar, tarihle baş başa kalmanın ne demek olduğunu hatırlatır. Sabah saatleri yalnızca fotoğraf çekmek için en güzel zaman değildir. Aynı zamanda bir şehrin gündelik yaşamına en yakın olduğunuz anlardır. Çalışmaya giden insanlar, köşe başındaki küçük kahveciler, pazara hazırlanan esnaf ve güne yeni başlayan mahalleler… Turistik bir gösteriden çok gerçek hayatın kendisini izlersiniz. Belki de bu yüzden birçok deneyimli gezgin alarmını tatilde bile erken kurar. Çünkü bilirler ki bir şehri tanımak için yalnızca görmek yetmez; uyanışına tanıklık etmek gerekir. Sabahın serinliği geçip kalabalıklar sokakları doldurduğunda şehir başka bir ritme geçer. Oysa erken saatlerde geçirilen birkaç saat, günün geri kalanına bambaşka bir derinlik kazandırır. Aynı sokakları daha sonra yeniden yürüdüğünüzde, artık onları sadece ziyaret etmiş olmazsınız; onlarla tanışmış olursunuz. Belki de bu yüzden en unutulmaz yolculuklar, en erken başlayanlardır. Bir sonraki seyahatinizde alarmınızı bir saat daha erken kurmayı deneyin. Belki de o şehir size anlatacağı en güzel hikâyeyi, herkes hâlâ uyurken fısıldayacaktır.</p>",
+            "en": "<p>Every city has two faces. One is the version millions of people know, photograph, and share. The other belongs only to those who wake before the world does. Cities become entirely different in the early hours of the morning. The day has not yet begun. Sidewalks are quiet, streets are almost empty, and cafés are preparing their first cups of coffee while the aroma of freshly baked bread drifts from neighborhood bakeries. Shopkeepers slowly raise their shutters, street cleaners greet the day in silence, and the first rays of sunlight gently find their way between historic buildings. It is in these moments that a city reveals itself—not to tourists, but to those who truly wish to see it. Most travelers experience a destination at its busiest. Squares are crowded, museums have long queues, and cameras never stop clicking. Yet just a few hours earlier, those very same places belong almost entirely to you. Your pace slows, familiar sounds become more noticeable, and for the first time you begin to hear the city&#039;s true rhythm. Walking along the Seine at sunrise explains why Paris has inspired artists for centuries. Watching the morning mist settle over temple gardens in Kyoto reminds you that time really can slow down. As the first light falls across the Bosphorus in Istanbul and seagulls greet the morning sky, the city reveals a quieter, more intimate personality. In Rome, wandering through ancient stone streets before the crowds arrive feels like sharing the city with history itself. Early mornings are not simply the best time for photography—they are the best time to witness everyday life. Commuters begin their day, neighborhood cafés welcome their first guests, market vendors prepare fresh produce, and local communities slowly come to life. Instead of watching a destination perform for visitors, you experience the city exactly as it is. Perhaps that is why experienced travelers rarely sleep late while exploring somewhere new. They understand that seeing a city is not enough. To truly know it, you must witness the moment it wakes. As the morning unfolds and the streets begin to fill, the city&#039;s rhythm changes completely. Yet those quiet hours before the crowds arrive give every destination a sense of depth that remains with you long after the journey ends. When you return to those same streets later in the day, you no longer feel like a visitor—you feel connected to the place itself. Perhaps that is why the most unforgettable journeys are often the ones that begin the earliest. On your next trip, try setting your alarm just one hour earlier. The city may be waiting to tell you its most beautiful story while everyone else is still asleep.</p>"
+        }
     },
     {
-        "date": "2026-07-10",
+        "id": 3,
+        "slug_tr": "8",
+        "slug_en": "8-en",
         "title": {
             "tr": "Bir Otel Odasını Unutulmaz Yapan Şey Nedir?",
             "en": "What Makes a Hotel Room Unforgettable?"
         },
         "tag": {
-            "tr": "",
-            "en": ""
+            "tr": "Seyahat Felsefesi",
+            "en": "Travel Philosophy"
         },
         "img": "foto.img/sahra.jpg",
         "desc": {
-            "tr": "",
-            "en": ""
+            "tr": "Bir Otel Odasını Unutulmaz Yapan Şey Nedir?",
+            "en": "What Makes a Hotel Room Unforgettable?"
         },
-        "slug_tr": "8",
-        "slug_en": "8-en",
-        "seo_title_tr": "Bir Otel Odasını Unutulmaz Yapan Şey Nedir? | Dioreal Dijital Lüks Yaşam Platformu",
-        "seo_title_en": "What Makes a Hotel Room Unforgettable? | Dioreal Digital Luxury Platform",
-        "seo_description_tr": "",
-        "seo_description_en": "",
-        "gallery": [],
-        "video_file": null,
-        "video_url": null,
-        "show_video_on_cover": false,
-        "og_image": null,
-        "seo_noindex": 0
+        "date": "2026-07-10",
+        "is_featured": false,
+        "content": {
+            "tr": "<p>Bazı otellerden ayrıldıktan yıllar sonra bile oda numarasını unutursunuz. Ama sabah perdeyi açtığınızda gördüğünüz manzarayı asla... Denizin üzerine düşen ilk ışığı. Odanın içine yayılan sessizliği. Lobiden geçerken hissettiğiniz o kendine özgü kokuyu. Ve hiçbir şey düşünmeden, yalnızca bulunduğunuz anın içinde kaldığınız birkaç dakikayı. İşte tam o anda anlıyoruz ki unutulmaz olan oda değil, o odanın bize hissettirdikleridir.\nUzun yıllar boyunca lüks konaklama daha büyük süitler, daha fazla yıldız ve daha gösterişli mekânlarla tanımlandı. Oysa bugün dünyanın en seçkin otelleri bambaşka bir anlayışın peşinden gidiyor. Onlar misafirlerine yalnızca kusursuz bir hizmet sunmayı değil, hafızalarında yer edecek bir deneyim tasarlamayı amaçlıyor. Bu deneyim çoğu zaman fark edilmeyen ayrıntılarla başlıyor. Sabah güneşinin yatağa düşme açısı… Pencerenin çerçevelediği manzara… Doğal taşın dokusu… Koridorlarda duyulan sessizlik… Lobide çalan müziğin ritmi… Ve insanı yavaşlamaya davet eden görünmez bir atmosfer. İyi tasarlanmış bir otelde hiçbir ayrıntı tesadüf değildir. Mimari yalnızca estetik üretmez; duygu üretir. Bir yapı bulunduğu coğrafyaya ne kadar saygı duyuyorsa, misafir de kendini o kadar ait hisseder. Bu yüzden en başarılı oteller çevrelerini değiştirmeye çalışmaz. Onlar doğayı, ışığı, tarihi ve yerel kültürü içeri davet eder. Okyanus kıyısındaki bir villa ufuk çizgisiyle bütünleşir. Dağların arasındaki bir resort manzarayı çerçeveler. Tarihi bir şehirde yükselen bir otel ise geçmişi dekor olarak kullanmaz; onunla uyum içinde yaşar. Misafirperverlik de aynı sadeliğin içinde anlam kazanır. Gerçek lüks, sürekli karşınızda duran bir hizmet değildir. İhtiyacınızı siz söylemeden hisseden, mahremiyetinizi koruyan ve her şeyin zahmetsizce akmasını sağlayan görünmez bir özen hâlidir. En iyi servis, çoğu zaman fark edilmeyen servistir. Bugün bu deneyimin bir parçası daha var: dijital estetik. Bir otelle ilk karşılaşmamız artık resepsiyonda değil, ekranlarımızda gerçekleşiyor. Bir fotoğraf, birkaç saniyelik bir video ya da gün batımında çekilmiş tek bir kare, bazen aylar sürecek bir yolculuğun başlangıcına dönüşebiliyor. Bu yüzden çağımızın en iyi otelleri yalnızca yaşanacak mekânlar değil; aynı zamanda güçlü bir görsel kimlik taşıyan, zamansız bir estetik anlayışını temsil eden yaşam alanlarıdır. Mimari, ışık, sanat eserleri, peyzaj, gastronomi ve hatta servis ritmi tek bir hikâyenin parçaları hâline gelir. Dijital dünyada dikkat çekmek kolaydır; yıllar sonra bile aynı zarafeti koruyabilmek ise gerçek ustalıktır. Belki de bu yüzden bazı otelleri isimleriyle değil, hissettirdikleriyle hatırlarız. Bir terasa açılan sessiz sabah… Denize karşı içilen ilk kahve… Gün batımında altın renge dönen bir cephe… Gece boyunca açık bırakılan balkon kapısından içeri giren tuzlu rüzgâr… Bunların hiçbiri rezervasyon onayında yazmaz. Ama yolculuk bittikten sonra bizimle birlikte eve dönen tam da bu anlardır. Çünkü dünyanın en iyi otelleri oda satmaz. Onlar, uzun yıllar boyunca unutulmayacak anılar tasarlar.</p>",
+            "en": "<p>Years after a journey has ended, you rarely remember the room number. But you remember the view beyond the curtains when you opened them that first morning. The way the sunrise filled the room. The silence. The scent that lingered in the lobby. The first coffee on a private terrace overlooking the sea. And that rare feeling of having nowhere else to be. That is when you realize something important: what stays with us is never the room itself, but the way it made us feel.\nFor decades, luxury hospitality was defined by grandeur. Larger suites, higher floors, flawless service, and increasingly spectacular facilities became the language of luxury. Today, however, the world&#039;s finest hotels are pursuing something far more meaningful. They are not simply creating places to stay. They are designing experiences that deserve to be remembered. Those experiences often begin with details that most guests never consciously notice. The angle at which morning light reaches the bed. A perfectly framed view beyond the window. The warmth of natural stone beneath your feet. The quiet rhythm of a thoughtfully designed lobby. The subtle fragrance that becomes inseparable from the memory of your stay. Nothing is accidental. Every element exists for a reason. Architecture is no longer simply about aesthetics—it is about emotion. The finest hotels do not compete with their surroundings; they become part of them. A villa suspended above the ocean feels like an extension of the sea itself. A mountain retreat embraces the silence of the landscape. A historic palace respects the city around it rather than trying to overshadow it. The greatest luxury is often found in harmony. Hospitality follows the same philosophy. Exceptional service is rarely the loudest. It anticipates rather than interrupts. It understands without being asked. It creates comfort without drawing attention to itself. When every interaction feels effortless, true hospitality becomes almost invisible. That invisible quality is what guests remember long after they leave. In recent years, another dimension has become equally important: digital aesthetics. Long before arriving at reception, travelers encounter a hotel through a screen. A single photograph, a cinematic video, or the way natural light falls across an interior can inspire a journey months before a reservation is ever made. The world&#039;s most distinguished hotels understand this. Their architecture, interior design, landscape, art collections, table settings, and even the rhythm of breakfast service contribute to a visual identity that is instantly recognizable yet never overstated. Creating attention is easy. Creating timelessness is infinitely more difficult. That is why the finest hotels are not built around trends but around character. Every detail tells the same story, from the materials chosen by the architect to the final farewell at departure. Perhaps this is why we rarely remember great hotels by their room categories. Instead, we remember a quiet terrace at sunrise. The sound of waves entering through an open balcony door. The golden light that lingered across the walls at sunset. The calm that made time seem to move more slowly. None of these moments appear in a booking confirmation. Yet they are the memories we carry home. Because the world&#039;s greatest hotels do not simply offer rooms. They create experiences that stay with us long after the journey has ended.</p>"
+        }
     },
     {
-        "date": "2026-07-25",
+        "id": 4,
+        "slug_tr": "yolculuk-bir-yere-gitmek-degil-baska-birine-donusmektir",
+        "slug_en": "yolculuk-bir-yere-gitmek-degil-baska-birine-donusmektir-en",
         "title": {
             "tr": "Yolculuk, Bir Yere Gitmek Değil; Başka Birine Dönüşmektir",
             "en": "A Journey Is Not About Going Somewhere; It's About Becoming Someone Else"
         },
         "tag": {
-            "tr": "",
-            "en": ""
+            "tr": "Seyahat Felsefesi",
+            "en": "Travel Philosophy"
         },
         "img": "uploads/journals/1784019795_6a55fb5300479.png",
         "desc": {
-            "tr": "",
-            "en": ""
+            "tr": "Yolculuk, Bir Yere Gitmek Değil; Başka Birine Dönüşmektir",
+            "en": "A Journey Is Not About Going Somewhere; It's About Becoming Someone Else"
         },
-        "slug_tr": "yolculuk-bir-yere-gitmek-degil-baska-birine-donusmektir",
-        "slug_en": "yolculuk-bir-yere-gitmek-degil-baska-birine-donusmektir-en",
-        "seo_title_tr": "Yolculuk, Bir Yere Gitmek Değil; Başka Birine Dönüşmektir | Dioreal Dijital Lüks Yaşam Platformu",
-        "seo_title_en": "A Journey Is Not About Going Somewhere; It's About Becoming Someone Else | Dioreal Digital Luxury Platform",
-        "seo_description_tr": "",
-        "seo_description_en": "",
-        "gallery": [],
-        "video_file": null,
-        "video_url": null,
-        "show_video_on_cover": false,
-        "og_image": null,
-        "seo_noindex": 0
+        "date": "2026-07-25",
+        "is_featured": false,
+        "content": {
+            "tr": "<p>İnsan yola çıkarken aslında bir şehir aramaz. Kendinde eksik kalan bir parçanın izini sürer.</p>\n<p>Belki bu yüzden bazı yolculuklar yıllarca planlanır ama hiçbir şey hissettirmez; bazıları ise bir sabah alınan tek yön biletle hayatın en unutulmaz anısına dönüşür. Çünkü seyahatin değeri gidilen kilometreyle değil, insanda bıraktığı değişimle ölçülür.</p>\n<p>Bugün seyahat etmek hiç olmadığı kadar kolay. Birkaç dokunuşla dünyanın herhangi bir köşesine ulaşmak mümkün. Fakat aynı kolaylık, yolculuğun anlamını da yavaş yavaş değiştirdi. Birçok insan artık şehirleri görmek için değil, onları tüketmek için geziyor. Listeler hazırlanıyor, popüler noktalar işaretleniyor, fotoğraflar çekiliyor ve birkaç gün sonra yeni bir destinasyona geçiliyor.</p>\n<p>Oysa gerçek yolculuk acele etmez.</p>\n<p>Bir şehri anlamak için önce onun ritmine karışmak gerekir. Sabah kahvesini nerede içtiğini, akşam sokaklarının nasıl sessizleştiğini, insanların neden aynı meydanda buluştuğunu, hangi kokuların o şehrin hafızasına dönüştüğünü fark etmek gerekir.</p>\n<p>Çünkü şehirler binalardan değil, alışkanlıklardan oluşur.</p>\n<p>Paris yalnızca Eyfel Kulesi değildir. Kyoto yalnızca tapınaklar değildir. İstanbul yalnızca Ayasofya değildir. Onları benzersiz yapan, yüzyıllar boyunca biriken kültür, gündelik yaşam ve insan hikâyeleridir.</p>\n<p>Gerçek gezgin, önce bakmayı öğrenir.</p>\n<p>Bir sokağın neden dar olduğunu, bir evin neden beyaza boyandığını, bir ağacın neden meydanın tam ortasında bırakıldığını merak eder. Çünkü her ayrıntı, o coğrafyanın yüzyıllardır yazdığı hikâyenin küçük bir cümlesidir.</p>\n<p>Belki de bu yüzden en unutulmaz yolculuklar, planlananlar değil; insanın kendini zamana bıraktığı anlardır. Kaybolduğu bir sokak, hiç bilmediği bir kasabada yediği öğle yemeği, tanımadığı biriyle kurduğu kısa bir sohbet ya da gün batımını sessizce izlediği bir bank...</p>\n<p>Yolculuğun gerçek değeri, fotoğraf albümünde değil; insanın karakterinde bıraktığı izlerde yaşar.</p>\n<p>DIOREAL için seyahat, bir ulaşım biçimi değildir.</p>\n<p>Bir şehri tüketmeden tanımaya çalışmak, doğaya misafir gibi yaklaşmak, yerel kültürü olduğu gibi kabul etmek ve her yolculuktan biraz daha farklı bir insan olarak dönebilmektir.</p>\n<p>Çünkü bazı insanlar dünyayı görmek için seyahat eder.</p>\n<p>Bazıları ise dünyayı anlayabilmek için.</p>\n<p>Ve çoğu zaman ikisi aynı yol değildir.</p>",
+            "en": "<p>People rarely set out in search of a city. More often, they begin a journey in search of a missing part of themselves.</p>\n<p>Perhaps that is why some trips are planned for years yet leave almost no impression, while others begin with a one-way ticket on an ordinary morning and become unforgettable memories. The true value of travel is measured not by the distance covered, but by the person we become along the way.</p>\n<p>Travel has never been easier than it is today. With just a few taps, we can reach almost any corner of the world. Yet this convenience has slowly changed the meaning of travel itself. Many people no longer travel to understand places; they travel to consume them. Checklists are completed, famous landmarks are photographed, and a few days later another destination replaces the last.</p>\n<p>Real journeys, however, are never rushed.</p>\n<p>To understand a city, you must first find its rhythm. Notice where people stop for their morning coffee, how its streets grow quiet after sunset, why the same square has remained the heart of local life for generations, and which scents have become part of its collective memory.</p>\n<p>Cities are not built by their architecture alone.</p>\n<p>They are shaped by habits, traditions, and the stories of the people who have called them home.</p>\n<p>Paris is more than the Eiffel Tower. Kyoto is more than its temples. Istanbul is more than Hagia Sophia. What makes these places extraordinary is the culture that has evolved over centuries, the rituals of everyday life, and the countless human stories woven into their identity.</p>\n<p>A true traveler learns to observe before anything else.</p>\n<p>They wonder why a street is narrow, why a house is painted white, why an ancient tree still stands in the center of a square. Every detail is a sentence in a story that has been written across generations.</p>\n<p>Perhaps that is why the most memorable journeys are rarely the ones that are perfectly planned. They are the moments when we allow ourselves to slow down: getting lost in unfamiliar streets, sharing lunch in a small town we&#039;ve never heard of, exchanging a brief conversation with a stranger, or quietly watching the sun disappear beyond the horizon.</p>\n<p>The true value of a journey is never found in a photo album.</p>\n<p>It lives in the quiet changes it leaves within us.</p>\n<p>For DIOREAL, travel is not simply a way of moving from one place to another.</p>\n<p>It is about discovering a destination without consuming it, approaching nature with humility, embracing local culture with respect, and returning home as a slightly different person than the one who first set out.</p>\n<p>Some people travel to see the world.</p>\n<p>Others travel to understand it.</p>\n<p>And more often than not, those are two very different journeys.</p>"
+        }
     },
     {
-        "date": "2026-07-25",
+        "id": 5,
+        "slug_tr": "bir-sehir-nasil-okunur",
+        "slug_en": "bir-sehir-nasil-okunur-en",
         "title": {
             "tr": "Bir Şehir Nasıl Okunur?",
             "en": "How to Read a City"
         },
         "tag": {
-            "tr": "",
-            "en": ""
+            "tr": "Seyahat Felsefesi",
+            "en": "Travel Philosophy"
         },
         "img": "uploads/journals/1784020142_6a55fcae131ce.png",
         "desc": {
-            "tr": "",
-            "en": ""
+            "tr": "Bir Şehir Nasıl Okunur?",
+            "en": "How to Read a City"
         },
-        "slug_tr": "bir-sehir-nasil-okunur",
-        "slug_en": "bir-sehir-nasil-okunur-en",
-        "seo_title_tr": "Bir Şehir Nasıl Okunur? | Dioreal Dijital Lüks Yaşam Platformu",
-        "seo_title_en": "How to Read a City | Dioreal Digital Luxury Platform",
-        "seo_description_tr": "",
-        "seo_description_en": "",
-        "gallery": [],
-        "video_file": null,
-        "video_url": null,
-        "show_video_on_cover": false,
-        "og_image": null,
-        "seo_noindex": 0
+        "date": "2026-07-25",
+        "is_featured": false,
+        "content": {
+            "tr": "<p>Bir şehri tanımak için haritaya bakmak yeterli değildir.</p>\n<p>Haritalar size yolları gösterir; şehirler ise ancak yüründükçe kendini anlatır. Aynı sokaktan binlerce insan geçebilir ama herkes aynı şehri görmez. Çünkü şehirler yalnızca görülen değil, okunan yerlerdir.</p>\n<p>İlk kez gittiğiniz bir destinasyonda çoğu insan simge yapıların peşine düşer. En yüksek kuleye çıkar, en ünlü meydana gider, en çok fotoğraf çekilen noktada birkaç dakika geçirir ve şehri gördüğünü düşünür.</p>\n<p>Oysa bir şehri gerçekten tanımak, kartpostallardan başlamaz.</p>\n<p>Önce coğrafyasını anlamak gerekir. Bir nehrin neden tam oradan geçtiğini, bir limanın neden o koyda kurulduğunu, dağların rüzgârı nasıl yönlendirdiğini bilmeden o şehrin hikâyesi eksik kalır. Çünkü doğa, şehirlerin ilk mimarıdır.</p>\n<p>Sonra tarihe kulak vermek gerekir.</p>\n<p>Hiçbir şehir bir günde kurulmadı. Her meydan, her sur, her köprü ve her taş, kendinden önce yaşayan insanların bıraktığı bir izdir. Bugün gördüğümüz şehirler, yüzyıllar boyunca üst üste eklenmiş hayatların ortak eseridir.</p>\n<p>Fakat bir şehri yalnızca geçmişiyle okumak da yetmez.</p>\n<p>Sabahın ilk saatlerinde fırınların önündeki sessiz telaş, öğle vakti dolan küçük kafeler, okuldan çıkan çocukların doldurduğu sokaklar, akşamüstü sahilde yürüyen insanlar... Bunlar, bir şehrin yaşayan cümleleridir.</p>\n<p>Bir destinasyonun karakteri, en çok gündelik yaşamında saklıdır.</p>\n<p>Bu yüzden iyi bir gezgin yalnızca müzeleri gezmez; pazarları dolaşır, mahalle aralarına girer, yerel kahvelerde oturur, toplu taşımaya biner ve şehrin insanlarını izler. Çünkü gerçek kültür, çoğu zaman turistik rotaların birkaç sokak ötesinde başlar.</p>\n<p>Mimari de bir şehrin sessiz dilidir.</p>\n<p>Çatılar iklime göre şekillenir. Pencereler güneşe göre açılır. Meydanlar insanların nasıl yaşadığını anlatır. Dar sokaklar gölgeyi korur, geniş bulvarlar gücü simgeler. Her yapı, inşa edildiği dönemin ihtiyaçlarını ve hayallerini taşır.</p>\n<p>Sonra mutfağı gelir.</p>\n<p>Bir şehir, sofrasında da konuşur. Aynı coğrafyada yetişen ürünler, aynı iklimin şekillendirdiği tarifler ve kuşaktan kuşağa aktarılan yemekler, o toplumun hafızasının bir parçasıdır. Yerel bir sofrada geçirilen bir saat, bazen uzun bir tarih dersinden daha fazlasını anlatabilir.</p>\n<p>Ve sonunda insan şunu fark eder:</p>\n<p>Bir şehri görmek ile onu anlamak arasında büyük bir fark vardır.</p>\n<p>Görmek birkaç gün sürer.</p>\n<p>Anlamak ise bazen yıllar alır.</p>\n<p>DIOREAL için her destinasyon, yalnızca ziyaret edilecek bir nokta değil; okunmayı bekleyen yaşayan bir hikâyedir. Çünkü en iyi yolculuklar, daha fazla yer görmekten değil, gördüğümüz yerleri daha derin anlamaktan doğar.</p>",
+            "en": "<p>A map alone is never enough to understand a city.</p>\n<p>Maps show you the roads, but cities reveal themselves only to those who walk them. Thousands of people may pass through the same street, yet no two will see the same city. Because cities are not only meant to be seen—they are meant to be read.</p>\n<p>When visiting a destination for the first time, most travelers chase its iconic landmarks. They climb the tallest tower, visit the most famous square, spend a few minutes at the city&#039;s most photographed viewpoint, and leave believing they have seen the place.</p>\n<p>But truly understanding a city never begins with postcards.</p>\n<p>It begins with geography. Unless you understand why a river flows where it does, why a harbor was built in a particular bay, or how the surrounding mountains shape the wind, the city&#039;s story remains incomplete. Nature is, after all, the first architect of every city.</p>\n<p>Then comes history.</p>\n<p>No city was built in a single day. Every square, every fortress, every bridge, and every stone carries the traces of those who came before us. The cities we see today are the result of countless generations layering their lives upon the same ground.</p>\n<p>Yet history alone is not enough.</p>\n<p>The quiet bustle outside neighborhood bakeries at sunrise, cafés filling with conversation at noon, children spilling into the streets after school, people strolling along the waterfront as evening approaches—these are the living sentences of a city.</p>\n<p>The true character of a destination is hidden in its everyday life.</p>\n<p>That is why thoughtful travelers do more than visit museums. They wander through local markets, explore residential neighborhoods, linger in small cafés, take public transportation, and simply observe the rhythm of daily life. Because authentic culture often begins just a few streets away from the tourist routes.</p>\n<p>Architecture is the silent language of a city.</p>\n<p>Roofs are shaped by climate. Windows are placed to welcome light. Public squares reveal how communities live together. Narrow streets preserve shade, while grand boulevards often reflect power and ambition. Every building carries the needs, dreams, and identity of the era in which it was created.</p>\n<p>Then comes cuisine.</p>\n<p>A city also tells its story through its table. Local ingredients, recipes shaped by climate, and dishes passed down through generations become part of a community&#039;s collective memory. Sometimes, an hour spent around a local table reveals more than an entire history lesson.</p>\n<p>And eventually, one realization becomes impossible to ignore.</p>\n<p>There is a profound difference between seeing a city and understanding it.</p>\n<p>Seeing takes only a few days.</p>\n<p>Understanding can take years.</p>\n<p>For DIOREAL, every destination is more than a place to visit—it is a living story waiting to be read. The greatest journeys are not defined by how many places we see, but by how deeply we come to understand the ones we do.</p>"
+        }
     },
     {
-        "date": "04.09.2026",
+        "id": 6,
+        "slug_tr": "yavas-seyahat-sanati",
+        "slug_en": "yavas-seyahat-sanati-en",
         "title": {
             "tr": "Yavaş Seyahat Sanatı",
             "en": "The Art of Slow Travel"
@@ -149,26 +131,22 @@
             "tr": "Seyahat Felsefesi | 2026-07-25",
             "en": "Travel Philosophy | 2026-07-25"
         },
-        "img": "foto.img/amalfi.jpg",
+        "img": "uploads/journals/1784020367_6a55fd8f41e60.png",
         "desc": {
-            "tr": "<p>Modern dünyada hız, seyahatin de ölçüsü hâline geldi. Oysa bazı destinasyonlar, ancak yavaşladığınızda kendini gösterir. Bir şehri gerçekten keşfetmek, görülecek yerlerin sayısıyla değil; orada geçirdiğiniz anların derinliğiyle ilgilidir.</p>",
-            "en": "<p>Modern travel has become a race against time. Yet some destinations reveal their true character only when you slow down. The beauty of a journey is measured not by how many places you visit, but by how deeply you experience each one.</p>"
+            "tr": "Modern dünyada hız, seyahatin de ölçüsü hâline geldi. Oysa bazı destinasyonlar, ancak yavaşladığınızda kendini gösterir. Bir şehri gerçekten keşfetmek, görülecek yerlerin sayısıyla değil; orada geçirdiğiniz anların derinliğiyle ilgilidir.",
+            "en": "Modern travel has become a race against time. Yet some destinations reveal their true character only when you slow down. The beauty of a journey is measured not by how many places you visit, but by how deeply you experience each one."
         },
-        "slug_tr": "yavas-seyahat-sanati",
-        "slug_en": "yavas-seyahat-sanati-en",
-        "seo_title_tr": "Yavaş Seyahat Sanatı | Dioreal Dijital Lüks Yaşam Platformu",
-        "seo_title_en": "The Art of Slow Travel | Dioreal Digital Luxury Platform",
-        "seo_description_tr": "Modern dünyada hız, seyahatin de ölçüsü hâline geldi. Oysa bazı destinasyonlar, ancak yavaşladığınızda kendini gösterir. Bir şehri gerçekten keşfetmek, gör...",
-        "seo_description_en": "Modern travel has become a race against time. Yet some destinations reveal their true character only when you slow down. The beauty of a journey is measure...",
-        "gallery": [],
-        "video_file": null,
-        "video_url": null,
-        "show_video_on_cover": false,
-        "og_image": null,
-        "seo_noindex": 0
+        "date": "2026-07-25",
+        "is_featured": false,
+        "content": {
+            "tr": "<p>Bir şehir, acele edenlere en güzel yüzünü göstermez.</p>\n<p>Modern seyahat anlayışı, mümkün olduğunca çok yer görmeyi başarı olarak kabul ediyor. Sabah başka bir şehirde uyanmak, öğlen farklı bir ülkede kahve içmek, akşam ise yeni bir uçuşa yetişmek... Programlar doluyor, haritalar işaretleniyor ve sonunda geriye yalnızca binlerce fotoğraf kalıyor.</p>\n<p>Fakat hafızamız, hızla tüketilen anıları uzun süre saklayamaz.</p>\n<p>Belki de bu yüzden bazı yolculukların üzerinden yıllar geçse bile tek bir günü bile hatırlayamayız. Çünkü aslında orada bulunmuş, fakat gerçekten yaşamamışızdır.</p>\n<p>Yavaş seyahat, daha az görmek anlamına gelmez.</p>\n<p>Tam tersine, daha derin görebilmektir.</p>\n<p>Bir sabah aynı kafeye ikinci kez gitmek... Garsonun sizi hatırlaması... Aynı fırından yeniden ekmek almak... Gün batımını izlemek için rastgele değil, en sevdiğiniz bankı seçmek... Bir şehrin size yabancı olmaktan çıkmaya başladığı anlar bunlardır.</p>\n<p>Her destinasyonun kendi ritmi vardır.</p>\n<p>Lizbon yokuşlarında yürürken acele edemezsiniz. Kyoto&#039;nun tapınaklarında sessizlik yolculuğun bir parçasıdır. Toskana&#039;nın tepelerinde manzara, otomobil camından değil; yavaşlayan adımların arasından güzelleşir. Bodrum&#039;un koyları ise en çok sabah erken saatlerde ya da gün batımında gerçek karakterini gösterir.</p>\n<p>Doğa da sabırsız insanlara kendini kolay kolay açmaz.</p>\n<p>Bir gölün üzerindeki sisin dağılmasını beklemek, dalgaların kıyıya bıraktığı sesi dinlemek ya da rüzgârın zeytin ağaçları arasında dolaşmasını seyretmek... Bunların hiçbiri hızla geçilen bir programın parçası olamaz.</p>\n<p>Yavaşlamak, ayrıntıları görünür kılar.</p>\n<p>Bir kapının tokmağı, eski bir taş duvardaki izler, pencereden sarkan sardunyalar, sokaktan yükselen ekmek kokusu... Bir şehrin ruhu çoğu zaman büyük meydanlarda değil, fark edilmeyi bekleyen küçük ayrıntılarda yaşar.</p>\n<p>Belki de en güzel anılar, hiçbir planın içinde olmayanlardır.</p>\n<p>Kaybolduğunuz bir sokak, beklenmedik bir sohbet, küçük bir aile işletmesinde yenen öğle yemeği ya da yağmurdan kaçarken keşfedilen eski bir kitapçı...</p>\n<p>İşte gerçek yolculuk tam da burada başlar.</p>\n<p>DIOREAL için seyahat, görülecek yerleri çoğaltmak değil; yaşanacak anları derinleştirmektir.</p>\n<p>Çünkü sonunda hatırladığımız şey, kaç şehir gördüğümüz değil; hangi şehirlerin bize dokunduğudur.</p>",
+            "en": "<p>A city rarely reveals its finest self to those who rush through it.</p>\n<p>Modern travel often celebrates quantity over depth. Waking up in one city, having lunch in another country, and catching another flight before sunset has become a symbol of successful travel. It fills itineraries and photo galleries, but not always our memories.</p>\n<p>Our minds rarely hold on to experiences that were never truly lived.</p>\n<p>Perhaps that is why years later we sometimes struggle to remember places we once visited. We were there—but we never truly experienced them.</p>\n<p>Slow travel does not mean seeing less.</p>\n<p>It means seeing more deeply.</p>\n<p>Returning to the same café the next morning. Being recognized by the barista. Buying bread from the same bakery twice. Choosing your favorite bench to watch the sunset instead of searching for the next attraction. These are the moments when a destination slowly begins to feel familiar.</p>\n<p>Every place has its own rhythm.</p>\n<p>You cannot rush through Lisbon&#039;s hills. Silence is part of the journey in Kyoto&#039;s temples. Tuscany reveals its beauty not through a car window, but through unhurried footsteps among its vineyards. Along Bodrum&#039;s coastline, the true character of the sea appears in the quiet hours of early morning and at sunset.</p>\n<p>Nature, too, rewards patience.</p>\n<p>Waiting for the mist to lift from a lake, listening to waves reaching the shore, or watching the wind move through ancient olive trees—none of these moments belong to a hurried itinerary.</p>\n<p>Slowing down makes details visible.</p>\n<p>An old door knocker. The weathered stones of a centuries-old wall. Geraniums hanging from a window. The aroma of fresh bread drifting through narrow streets. The soul of a city often lives not in its famous landmarks, but in the quiet details waiting to be noticed.</p>\n<p>The most meaningful memories are often the ones we never planned.</p>\n<p>A street where you accidentally got lost. An unexpected conversation with a local. Lunch at a small family-owned restaurant. An old bookshop discovered while taking shelter from the rain.</p>\n<p>This is where real travel begins.</p>\n<p>For DIOREAL, travel is not about adding more destinations to a list—it is about giving greater meaning to every moment along the way.</p>\n<p>Because in the end, we rarely remember how many cities we visited.</p>\n<p>We remember the ones that quietly changed us.</p>"
+        }
     },
     {
-        "date": "04.09.2026",
+        "id": 7,
+        "slug_tr": "neden-bazi-sehirler-unutulmaz",
+        "slug_en": "neden-bazi-sehirler-unutulmaz-en",
         "title": {
             "tr": "Neden Bazı Şehirler Unutulmaz?",
             "en": "Why Do Some Cities Stay With Us Forever?"
@@ -177,26 +155,22 @@
             "tr": "Seyahat Felsefesi | 2026-07-25",
             "en": "Travel Philosophy | 2026-07-25"
         },
-        "img": "foto.img/amalfi.jpg",
+        "img": "uploads/journals/1784020573_6a55fe5db55ea.png",
         "desc": {
-            "tr": "<p>Dünyada görülecek binlerce şehir var; fakat hepsi aynı hikâyeyi anlatmıyor. Bir destinasyonu değerli kılan, popüler olması değil, insana unutamayacağı bir deneyim sunabilmesidir.</p>",
-            "en": "<p>There are thousands of destinations to explore, but not all of them tell the same story. What makes a place truly remarkable is not its popularity, but its ability to leave a lasting impression on those who experience it.</p>"
+            "tr": "Dünyada görülecek binlerce şehir var; fakat hepsi aynı hikâyeyi anlatmıyor. Bir destinasyonu değerli kılan, popüler olması değil, insana unutamayacağı bir deneyim sunabilmesidir.",
+            "en": "There are thousands of destinations to explore, but not all of them tell the same story. What makes a place truly remarkable is not its popularity, but its ability to leave a lasting impression on those who experience it."
         },
-        "slug_tr": "neden-bazi-sehirler-unutulmaz",
-        "slug_en": "neden-bazi-sehirler-unutulmaz-en",
-        "seo_title_tr": "Neden Bazı Şehirler Unutulmaz? | Dioreal Dijital Lüks Yaşam Platformu",
-        "seo_title_en": "Why Do Some Cities Stay With Us Forever? | Dioreal Digital Luxury Platform",
-        "seo_description_tr": "Dünyada görülecek binlerce şehir var; fakat hepsi aynı hikâyeyi anlatmıyor. Bir destinasyonu değerli kılan, popüler olması değil, insana unutamayacağı bir...",
-        "seo_description_en": "There are thousands of destinations to explore, but not all of them tell the same story. What makes a place truly remarkable is not its popularity, but its...",
-        "gallery": [],
-        "video_file": null,
-        "video_url": null,
-        "show_video_on_cover": false,
-        "og_image": null,
-        "seo_noindex": 0
+        "date": "2026-07-25",
+        "is_featured": false,
+        "content": {
+            "tr": "<p>Hayatımız boyunca yüzlerce şehri ziyaret edebiliriz.</p>\n<p>Fakat yıllar sonra hafızamızda yalnızca birkaç tanesi yaşamaya devam eder.</p>\n<p>İlginç olan, bunların her zaman en büyük, en pahalı ya da en popüler destinasyonlar olmamasıdır. Bazen küçük bir balıkçı kasabası, bazen sessiz bir dağ köyü, bazen de adını daha önce hiç duymadığımız bir sokak, yıllarca zihnimizde kalabilir.</p>\n<p>Çünkü şehirleri unutulmaz yapan şey, yalnızca güzellikleri değildir.</p>\n<p>Her güçlü destinasyonun kendine özgü bir karakteri vardır.</p>\n<p>Bazıları denizle yaşar.</p>\n<p>Bazıları dağlarla nefes alır.</p>\n<p>Bazıları yüzyıllardır değişmeyen geleneklerini korurken, bazıları geleceği tasarlayan modern fikirlerle şekillenir.</p>\n<p>Bir şehrin kimliği, yalnızca binalarında değil; seslerinde, kokularında, ışığında ve insanlarının gündelik yaşamında saklıdır.</p>\n<p>Sabah açılan küçük bir fırın...</p>\n<p>Liman boyunca yürüyen yaşlı balıkçılar...</p>\n<p>Akşam aynı meydanda buluşan insanlar...</p>\n<p>Bir çanın sesi ya da uzaktan yükselen ezan...</p>\n<p>İşte hafızamız bunları kaydeder.</p>\n<p>Bir destinasyonu gerçekten özel yapan şey, insanın orada kendini ait hissedebilmesidir.</p>\n<p>Bu aidiyet bazen tek bir kafede başlar.</p>\n<p>Bazen gün batımını izlediğiniz bir bankta...</p>\n<p>Bazen de hiç tanımadığınız biriyle yaptığınız kısa bir sohbet sırasında.</p>\n<p>Şehirler yalnızca taşlardan inşa edilmez.</p>\n<p>Onları yaşayan insanlar, doğa, tarih ve kültür birlikte şekillendirir.</p>\n<p>Bu yüzden aynı mimariye sahip iki şehir bile birbirine benzemez.</p>\n<p>Çünkü ruhları farklıdır.</p>\n<p>Belki de gerçek lüks, daha fazla yer görmek değildir.</p>\n<p>Gerçek lüks; bir şehrin ritmini anlayacak kadar uzun kalabilmek, onun sessiz ayrıntılarını fark edebilmek ve ayrılırken yanınızda yalnızca fotoğraflar değil, hatıralar da götürebilmektir.</p>\n<p>DIOREAL, destinasyonlara tam da bu gözle bakar.</p>\n<p>Popüler oldukları için değil; karakter sahibi oldukları için.</p>\n<p>Çünkü bazı şehirler görülür.</p>\n<p>Bazıları ise ömür boyu hatırlanır.</p>",
+            "en": "<p>Over the course of a lifetime, we may visit hundreds of cities.</p>\n<p>Yet years later, only a handful remain vividly alive in our memories.</p>\n<p>Interestingly, they are not always the largest, the most luxurious, or the most famous destinations. Sometimes it is a quiet fishing village, a peaceful mountain town, or an unfamiliar street that stays with us long after the journey has ended.</p>\n<p>Because beauty alone is not what makes a city unforgettable.</p>\n<p>Every remarkable destination possesses its own distinct character.</p>\n<p>Some are defined by the sea.</p>\n<p>Others breathe through their mountains.</p>\n<p>Some preserve traditions that have endured for centuries, while others are shaped by ideas that look toward the future.</p>\n<p>A city&#039;s identity is found not only in its buildings, but also in its sounds, its scents, its light, and the rhythm of everyday life.</p>\n<p>The aroma of bread from a neighborhood bakery at sunrise.</p>\n<p>Fishermen walking slowly along the harbor.</p>\n<p>People gathering in the same square every evening.</p>\n<p>The ringing of church bells or the distant call to prayer.</p>\n<p>These are the moments our memories quietly preserve.</p>\n<p>What truly makes a destination extraordinary is the feeling of belonging it creates.</p>\n<p>Sometimes that feeling begins in a small café.</p>\n<p>Sometimes on a bench overlooking the sunset.</p>\n<p>Sometimes during a brief conversation with someone you&#039;ve just met.</p>\n<p>Cities are never built from stone alone.</p>\n<p>They are shaped by people, nature, history, and culture together.</p>\n<p>That is why two cities with similar architecture can feel entirely different.</p>\n<p>Their souls are unique.</p>\n<p>Perhaps true luxury is not about seeing more places.</p>\n<p>Perhaps it is staying long enough to understand a city&#039;s rhythm, noticing its quiet details, and leaving with memories rather than simply photographs.</p>\n<p>This is how DIOREAL chooses its destinations.</p>\n<h3>Not because they are popular—</h3>\n<p>But because they have a story worth remembering.</p>"
+        }
     },
     {
-        "date": "04.09.2026",
+        "id": 8,
+        "slug_tr": "yolculuk-gitmeden-once-baslar",
+        "slug_en": "yolculuk-gitmeden-once-baslar-en",
         "title": {
             "tr": "Yolculuk, Gitmeden Önce Başlar",
             "en": "Every Journey Begins Before You Leave"
@@ -205,26 +179,22 @@
             "tr": "Seyahat Felsefesi | 2026-07-25",
             "en": "Travel Philosophy | 2026-07-25"
         },
-        "img": "foto.img/amalfi.jpg",
+        "img": "uploads/journals/1784020760_6a55ff184f1c5.png",
         "desc": {
-            "tr": "<p>En iyi yolculuklar havaalanında değil, merak ettiğiniz ilk soruyla başlar. Bir destinasyonu gitmeden önce tanımak, orada geçireceğiniz zamanı daha zengin, daha anlamlı ve daha unutulmaz hâle getirir.</p>",
-            "en": "<p>The best journeys begin long before you arrive. Learning about a destination before you travel enriches every moment you spend there, transforming a simple visit into a meaningful experience.</p>"
+            "tr": "En iyi yolculuklar havaalanında değil, merak ettiğiniz ilk soruyla başlar. Bir destinasyonu gitmeden önce tanımak, orada geçireceğiniz zamanı daha zengin, daha anlamlı ve daha unutulmaz hâle getirir.",
+            "en": "The best journeys begin long before you arrive. Learning about a destination before you travel enriches every moment you spend there, transforming a simple visit into a meaningful experience."
         },
-        "slug_tr": "yolculuk-gitmeden-once-baslar",
-        "slug_en": "yolculuk-gitmeden-once-baslar-en",
-        "seo_title_tr": "Yolculuk, Gitmeden Önce Başlar | Dioreal Dijital Lüks Yaşam Platformu",
-        "seo_title_en": "Every Journey Begins Before You Leave | Dioreal Digital Luxury Platform",
-        "seo_description_tr": "En iyi yolculuklar havaalanında değil, merak ettiğiniz ilk soruyla başlar. Bir destinasyonu gitmeden önce tanımak, orada geçireceğiniz zamanı daha zengin,...",
-        "seo_description_en": "The best journeys begin long before you arrive. Learning about a destination before you travel enriches every moment you spend there, transforming a simple...",
-        "gallery": [],
-        "video_file": null,
-        "video_url": null,
-        "show_video_on_cover": false,
-        "og_image": null,
-        "seo_noindex": 0
+        "date": "2026-07-25",
+        "is_featured": false,
+        "content": {
+            "tr": "<p>Bir yolculuk satın alınabilir.</p>\n<p>Ama keşif satın alınamaz.</p>\n<p>Bugün bir uçak bileti almak, otel rezervasyonu yapmak ya da dünyanın herhangi bir köşesine ulaşmak hiç olmadığı kadar kolay. Fakat kolaylaşan ulaşım, çoğu zaman merak etme alışkanlığımızı da elimizden aldı.</p>\n<p>Birçok insan bir şehre, o şehir hakkında neredeyse hiçbir şey bilmeden gidiyor.</p>\n<p>Oysa yolculuğun en heyecanlı bölümü bazen valiz hazırlamadan çok önce başlar.</p>\n<p>Bir şehrin tarihini okumak...</p>\n<p>Eski haritalarına bakmak...</p>\n<p>Yerel mutfağını araştırmak...</p>\n<p>Orada yaşayan insanların günlük hayatını izlemek...</p>\n<p>Bütün bunlar, henüz yola çıkmadan destinasyonla ilk bağınızı kurar.</p>\n<p>Bir şehri tanımaya çalıştığınızda, vardığınızda artık yabancı olmazsınız.</p>\n<p>Bir meydanın neden o kadar önemli olduğunu bilirsiniz.</p>\n<p>Karşınıza çıkan bir yapının hangi medeniyetlerden izler taşıdığını fark edersiniz.</p>\n<p>Sipariş ettiğiniz yemeğin yalnızca bir tarif değil, yüzyılların birikimi olduğunu anlarsınız.</p>\n<p>Böylece seyahat, tüketilen bir deneyim olmaktan çıkar.</p>\n<p>Bir öğrenme yolculuğuna dönüşür.</p>\n<p>Merak eden gezgin daha çok görmez.</p>\n<p>Daha doğru görür.</p>\n<p>Çünkü bilgi, bakışı değiştirir.</p>\n<p>Aynı sokakta yürüyen iki insanın gördüğü şehir hiçbir zaman aynı değildir. Biri yalnızca binaları görür; diğeri o binaların ardındaki hikâyeleri.</p>\n<p>İşte bu fark, sıradan bir tatille unutulmaz bir yolculuk arasındaki en büyük ayrımdır.</p>\n<p>DIOREAL&#039;in her destinasyonu hazırlarken gösterdiği titizlik de buradan gelir.</p>\n<p>Bir oteli anlatmadan önce bulunduğu coğrafyayı anlamak...</p>\n<p>Bir restorandan bahsetmeden önce mutfağının kökenini araştırmak...</p>\n<p>Bir plajı önermeden önce o kıyının tarihini öğrenmek...</p>\n<p>Çünkü hiçbir yer, bulunduğu hikâyeden bağımsız değildir.</p>\n<p>Gerçek yolculuk, ilk adımı attığınız gün değil; ilk soruyu sorduğunuz gün başlar.</p>",
+            "en": "<p>A trip can be purchased.</p>\n<p>Discovery cannot.</p>\n<p>Today, booking a flight or reserving a hotel is easier than ever. Reaching almost any destination in the world takes only a few clicks. Yet as travel has become more convenient, curiosity has often been left behind.</p>\n<p>Many people arrive in a city knowing almost nothing about it.</p>\n<p>Yet the most exciting part of a journey often begins long before a suitcase is packed.</p>\n<p>Reading about a city&#039;s history.</p>\n<p>Studying old maps.</p>\n<p>Exploring its culinary traditions.</p>\n<p>Learning how local people live their everyday lives.</p>\n<p>These small acts create your first connection with a destination before you ever arrive.</p>\n<p>When you take the time to understand a place, it no longer feels unfamiliar.</p>\n<p>You know why a square became the heart of the city.</p>\n<p>You recognize the civilizations reflected in its architecture.</p>\n<p>You realize that the meal before you is not simply food, but the result of generations of culture and tradition.</p>\n<p>Travel then becomes something more than movement.</p>\n<p>It becomes a process of learning.</p>\n<p>Curious travelers do not necessarily see more.</p>\n<p>They simply see more clearly.</p>\n<p>Knowledge changes perspective.</p>\n<p>Two people can walk down the same street and experience completely different cities. One notices the buildings. The other discovers the stories they contain.</p>\n<p>That difference separates an ordinary holiday from a truly unforgettable journey.</p>\n<p>This philosophy shapes every destination DIOREAL presents.</p>\n<p>Before introducing a hotel, we seek to understand the landscape that surrounds it.</p>\n<p>Before recommending a restaurant, we explore the history of its cuisine.</p>\n<p>Before highlighting a beach, we learn the story of the coastline itself.</p>\n<p>Because no place exists apart from its history.</p>\n<p>A journey does not begin on the day you depart.</p>\n<p>It begins the moment you become curious.</p>"
+        }
     },
     {
-        "date": "04.09.2026",
+        "id": 9,
+        "slug_tr": "iyi-bir-gezgin-ile-sadece-turist-arasindaki-fark",
+        "slug_en": "iyi-bir-gezgin-ile-sadece-turist-arasindaki-fark-en",
         "title": {
             "tr": "İyi Bir Gezgin ile Sadece Turist Arasındaki Fark",
             "en": "The Difference Between a Traveler and a Tourist"
@@ -233,26 +203,22 @@
             "tr": "Seyahat Felsefesi | 2026-07-25",
             "en": "Travel Philosophy | 2026-07-25"
         },
-        "img": "foto.img/amalfi.jpg",
+        "img": "uploads/journals/1784022025_6a560409b71a0.png",
         "desc": {
-            "tr": "<p>Her yolculuk yalnızca yeni yerler keşfetmek değil, aynı zamanda misafir olduğumuz coğrafyalara saygı göstermektir. İyi bir gezgin, geride yalnızca ayak izini bırakır; gittiği yere ise daima değer katar.</p>",
-            "en": "<p>Every journey is more than discovering new places—it&#039;s about respecting the places that welcome us. A thoughtful traveler leaves little behind except footprints and takes away far more than photographs.</p>"
+            "tr": "Her yolculuk yalnızca yeni yerler keşfetmek değil, aynı zamanda misafir olduğumuz coğrafyalara saygı göstermektir. İyi bir gezgin, geride yalnızca ayak izini bırakır; gittiği yere ise daima değer katar.",
+            "en": "Every journey is more than discovering new places—it's about respecting the places that welcome us. A thoughtful traveler leaves little behind except footprints and takes away far more than photographs."
         },
-        "slug_tr": "iyi-bir-gezgin-ile-sadece-turist-arasindaki-fark",
-        "slug_en": "iyi-bir-gezgin-ile-sadece-turist-arasindaki-fark-en",
-        "seo_title_tr": "İyi Bir Gezgin ile Sadece Turist Arasındaki Fark | Dioreal Dijital Lüks Yaşam Platformu",
-        "seo_title_en": "The Difference Between a Traveler and a Tourist | Dioreal Digital Luxury Platform",
-        "seo_description_tr": "Her yolculuk yalnızca yeni yerler keşfetmek değil, aynı zamanda misafir olduğumuz coğrafyalara saygı göstermektir. İyi bir gezgin, geride yalnızca ayak izi...",
-        "seo_description_en": "Every journey is more than discovering new places—it's about respecting the places that welcome us. A thoughtful traveler leaves little behind except footp...",
-        "gallery": [],
-        "video_file": null,
-        "video_url": null,
-        "show_video_on_cover": false,
-        "og_image": null,
-        "seo_noindex": 0
+        "date": "2026-07-25",
+        "is_featured": false,
+        "content": {
+            "tr": "<p>Dünyayı görmek kolaydır.</p>\n<p>Dünyaya saygı duymak ise öğrenilen bir davranıştır.</p>\n<p>Her yıl milyonlarca insan aynı şehirlere, aynı plajlara ve aynı tarihi yapılara gidiyor. Fakat herkes o yerlerden aynı izlenimle ayrılmıyor. Çünkü bir destinasyona nasıl baktığımız kadar, ona nasıl davrandığımız da önemlidir.</p>\n<p>Turist, bir yeri tüketir.</p>\n<p>Gezgin ise onu anlamaya çalışır.</p>\n<p>Aradaki fark bazen çok küçük ayrıntılarda saklıdır.</p>\n<p>Yerel halkın yaşadığı mahalleleri yalnızca fotoğraf çekilecek dekorlar olarak görmemek...</p>\n<p>Sessiz olunması gereken bir ibadethanede fısıldayarak konuşmak...</p>\n<p>Doğada hiçbir iz bırakmadan ayrılmak...</p>\n<p>Yerel üreticiden alışveriş yapmak...</p>\n<p>Bir restoranda acele etmek yerine o mutfağın hikâyesini merak etmek...</p>\n<p>İşte bütün bunlar, iyi bir gezginin karakterini oluşturur.</p>\n<p>Bir destinasyon bize ait değildir.</p>\n<p>Biz yalnızca kısa süreliğine onun misafiriyiz.</p>\n<p>Bu nedenle her yolculuk küçük bir sorumluluk da taşır.</p>\n<p>Bir patikada yere çöp atmamak...</p>\n<p>Tarihi yapılara isim kazımamak...</p>\n<p>Yerel kültürü kendi alışkanlıklarımıza benzetmeye çalışmamak...</p>\n<p>Doğayı yalnızca güzel bir manzara olarak değil, korunması gereken ortak bir miras olarak görmek...</p>\n<p>Gerçek seyahat kültürü tam da burada başlar.</p>\n<p>İyi bir gezgin gittiği yerde iz bırakmaya çalışmaz.</p>\n<p>Aksine, bulunduğu yere mümkün olduğunca az yük olur.</p>\n<p>Çünkü dünyanın en güzel destinasyonları, onları ziyaret eden insanların gösterdiği özen sayesinde varlığını sürdürebilir.</p>\n<p>DIOREAL&#039;in yolculuğa bakışı da budur.</p>\n<p>Bir destinasyon yalnızca görülecek bir yer değildir.</p>\n<p>Korunması gereken bir kültür, paylaşılması gereken bir hikâye ve gelecek nesillere aktarılması gereken ortak bir mirastır.</p>\n<p>İyi yolculuklar yalnızca güzel anılar bırakmaz.</p>\n<p>Gidilen yerlere de saygı bırakır.</p>",
+            "en": "<p>Seeing the world is easy.</p>\n<p>Respecting it is something we learn.</p>\n<p>Every year, millions of people visit the same cities, beaches, and historic landmarks. Yet no two people leave with the same experience. Because how we treat a destination is just as important as what we see there.</p>\n<p>A tourist consumes a place.</p>\n<p>A traveler seeks to understand it.</p>\n<p>The difference often lies in the smallest details.</p>\n<p>Viewing local neighborhoods as communities rather than photo backdrops.</p>\n<p>Speaking quietly in places of worship.</p>\n<p>Leaving nature exactly as it was found.</p>\n<p>Supporting local artisans and businesses.</p>\n<p>Taking time to understand the story behind a meal instead of rushing through it.</p>\n<p>These simple choices define a thoughtful traveler.</p>\n<p>No destination belongs to us.</p>\n<p>We are only temporary guests.</p>\n<p>Every journey therefore carries a quiet responsibility.</p>\n<p>Leave no litter behind.</p>\n<p>Protect historic sites instead of marking them.</p>\n<p>Respect local customs rather than expecting them to reflect your own.</p>\n<p>See nature not only as scenery, but as a shared heritage that deserves care.</p>\n<p>This is where meaningful travel begins.</p>\n<p>A thoughtful traveler does not try to leave a mark.</p>\n<p>Instead, they try to leave as little impact as possible.</p>\n<p>The world&#039;s most extraordinary destinations continue to exist because generations of travelers have chosen to protect them.</p>\n<p>This is the philosophy that guides DIOREAL.</p>\n<p>A destination is never just a place to visit.</p>\n<p>It is a culture to respect, a story to share, and a legacy to preserve for those who will arrive after us.</p>\n<p>The finest journeys leave behind more than memories.</p>\n<p>They leave behind respect.</p>"
+        }
     },
     {
-        "date": "04.09.2026",
+        "id": 10,
+        "slug_tr": "once-sehir-sonra-otel",
+        "slug_en": "once-sehir-sonra-otel-en",
         "title": {
             "tr": "Önce Şehir, Sonra Otel",
             "en": "The City Comes Before the Hotel"
@@ -261,26 +227,22 @@
             "tr": "Seyahat Felsefesi | 2026-07-25",
             "en": "Seyahat Felsefesi | 2026-07-25"
         },
-        "img": "foto.img/amalfi.jpg",
+        "img": "uploads/journals/1784022348_6a56054c08846.png",
         "desc": {
-            "tr": "<p>Bir destinasyonu seçerken çoğu zaman ilk baktığımız şey otel oluyor. Oysa iyi bir otel, ancak doğru şehrin içinde anlam kazanır. Çünkü asıl yolculuk, konakladığınız odada değil; kapısından çıktığınız anda başlar.</p>",
-            "en": "<p>For many travelers, choosing a destination begins with finding the right hotel. Yet even the finest hotel gains meaning only through the city that surrounds it. The real journey starts the moment you step outside its doors.</p>"
+            "tr": "Bir destinasyonu seçerken çoğu zaman ilk baktığımız şey otel oluyor. Oysa iyi bir otel, ancak doğru şehrin içinde anlam kazanır. Çünkü asıl yolculuk, konakladığınız odada değil; kapısından çıktığınız anda başlar.",
+            "en": "For many travelers, choosing a destination begins with finding the right hotel. Yet even the finest hotel gains meaning only through the city that surrounds it. The real journey starts the moment you step outside its doors."
         },
-        "slug_tr": "once-sehir-sonra-otel",
-        "slug_en": "once-sehir-sonra-otel-en",
-        "seo_title_tr": "Önce Şehir, Sonra Otel | Dioreal Dijital Lüks Yaşam Platformu",
-        "seo_title_en": "The City Comes Before the Hotel | Dioreal Digital Luxury Platform",
-        "seo_description_tr": "Bir destinasyonu seçerken çoğu zaman ilk baktığımız şey otel oluyor. Oysa iyi bir otel, ancak doğru şehrin içinde anlam kazanır. Çünkü asıl yolculuk, konak...",
-        "seo_description_en": "For many travelers, choosing a destination begins with finding the right hotel. Yet even the finest hotel gains meaning only through the city that surround...",
-        "gallery": [],
-        "video_file": null,
-        "video_url": null,
-        "show_video_on_cover": false,
-        "og_image": null,
-        "seo_noindex": 0
+        "date": "2026-07-25",
+        "is_featured": false,
+        "content": {
+            "tr": "<p>Bir destinasyonu anlatmaya nereden başlanır?</p>\n<p>Son yıllarda seyahat anlayışı büyük ölçüde değişti. Sosyal medya, rezervasyon platformları ve kısa videolar sayesinde birçok insan önce otelini seçiyor; ardından çevresinde görülecek birkaç yer arıyor.</p>\n<p>Oysa bu bakış açısı, yolculuğun yönünü tersine çeviriyor.</p>\n<p>Çünkü hiçbir otel tek başına bir destinasyon değildir.</p>\n<p>En iyi manzara, arkasında anlatacak bir coğrafya olduğunda anlam kazanır.</p>\n<p>En iyi restoran, ait olduğu mutfak kültürüyle birlikte değerlidir.</p>\n<p>En güzel plaj, onu çevreleyen doğa ve tarih sayesinde unutulmaz olur.</p>\n<p>Bir şehir, otellerinden çok daha büyüktür.</p>\n<p>Onu meydana getiren şey; dağları, kıyıları, sokakları, mimarisi, pazarları, müzeleri, insanları ve yüzyıllar boyunca oluşmuş kültürel hafızasıdır.</p>\n<p>İyi bir otel, bu hikâyenin yalnızca bir parçasıdır.</p>\n<p>Bu yüzden bir destinasyona gitmeden önce şu sorular daha önemlidir:</p>\n<p>Bu şehir neden burada kuruldu?</p>\n<p>İnsanları nasıl bir yaşam sürdürüyor?</p>\n<p>Hangi medeniyetler burada iz bıraktı?</p>\n<p>Denizi, rüzgârı, ışığı ve doğası nasıl bir karakter oluşturuyor?</p>\n<p>Yerel mutfak hangi hikâyeyi anlatıyor?</p>\n<p>Bu soruların cevaplarını bildiğinizde, kaldığınız otel de bambaşka görünmeye başlar.</p>\n<p>Pencereden baktığınız manzara artık yalnızca güzel değildir.</p>\n<p>Ne gördüğünüzü bilirsiniz.</p>\n<p>Bir restoran artık yalnızca iyi yemek sunmaz.</p>\n<p>O mutfağın hangi kültürün devamı olduğunu anlarsınız.</p>\n<p>Bir yürüyüş yolu yalnızca spor rotası değildir.</p>\n<p>Yüzyıllardır insanların kullandığı bir güzergâh olduğunu fark edersiniz.</p>\n<p>İşte gerçek seyahat burada başlar.</p>\n<p>Konaklama, yolculuğun merkezinde değil; onun doğal bir parçasıdır.</p>\n<p>DIOREAL&#039;in editoryal yaklaşımı da bu düşünce üzerine kuruludur.</p>\n<p>Önce destinasyonu anlatır.</p>\n<p>Sonra doğasını...</p>\n<p>Tarihini...</p>\n<p>Kültürünü...</p>\n<p>İnsanlarını...</p>\n<p>Ve ancak bütün bunlardan sonra, o hikâyenin en doğru otellerini, restoranlarını ve deneyimlerini önerir.</p>\n<p>Çünkü iyi bir otel sizi rahat ettirir.</p>\n<p>Ama iyi bir şehir sizi değiştirir.</p>",
+            "en": "<p>Where should the story of a destination begin?</p>\n<p>In recent years, travel has changed dramatically. Social media, booking platforms, and short-form videos have encouraged many people to choose a hotel first and only then search for places to visit nearby.</p>\n<p>Yet this approach reverses the true direction of travel.</p>\n<p>No hotel is a destination on its own.</p>\n<p>The finest view matters because of the landscape behind it.</p>\n<p>An exceptional restaurant is meaningful because it belongs to a culinary tradition.</p>\n<p>A beautiful beach becomes unforgettable because of the nature, history, and culture that surround it.</p>\n<p>A city is always greater than its hotels.</p>\n<p>Its identity is shaped by mountains, coastlines, streets, architecture, markets, museums, local communities, and centuries of shared history.</p>\n<p>A remarkable hotel is simply one chapter of that much larger story.</p>\n<p>Before choosing where to stay, perhaps we should ask different questions.</p>\n<p>Why was this city founded here?</p>\n<p>How do its people live?</p>\n<p>Which civilizations shaped its identity?</p>\n<p>How have its sea, mountains, climate, and light influenced its character?</p>\n<p>What story does its cuisine tell?</p>\n<p>Once you understand those answers, everything else begins to change.</p>\n<p>The view from your hotel window becomes more than beautiful.</p>\n<p>It becomes meaningful.</p>\n<p>A restaurant becomes more than a place to eat.</p>\n<p>It becomes part of a living cultural tradition.</p>\n<p>A walking trail becomes more than a route.</p>\n<p>It becomes a path followed by generations before you.</p>\n<p>This is where meaningful travel begins.</p>\n<p>Accommodation is never the destination.</p>\n<p>It is simply one part of the journey.</p>\n<p>This philosophy lies at the heart of DIOREAL.</p>\n<p>We begin with the destination.</p>\n<p>Its landscapes.</p>\n<p>Its history.</p>\n<p>Its culture.</p>\n<p>Its people.</p>\n<p>Only then do we recommend the hotels, restaurants, and experiences that truly belong there.</p>\n<p>Because a great hotel offers comfort.</p>\n<p>A great city changes the way you see the world.</p>"
+        }
     },
     {
-        "date": "04.09.2026",
+        "id": 11,
+        "slug_tr": "neden-bazi-yolculuklari-hic-unutmayiz",
+        "slug_en": "neden-bazi-yolculuklari-hic-unutmayiz-en",
         "title": {
             "tr": "Neden Bazı Yolculukları Hiç Unutmayız?",
             "en": "Why Do Some Journeys Stay With Us Forever?"
@@ -289,26 +251,22 @@
             "tr": "Seyahat Felsefesi | 2026-07-25",
             "en": "Travel Psychology | 2026-07-25"
         },
-        "img": "foto.img/amalfi.jpg",
+        "img": "uploads/journals/1784022561_6a560621e5cad.png",
         "desc": {
-            "tr": "<p>Bazı şehirleri yıllar sonra bile tüm ayrıntılarıyla hatırlarız; bazılarını ise döndüğümüz gün unutmaya başlarız. Aradaki fark, gördüklerimizden çok hissettiklerimizde saklıdır.</p>",
-            "en": "<p>Some places remain vivid in our minds for decades, while others begin to fade the moment we leave. The difference lies not in what we saw, but in what we truly felt.</p>"
+            "tr": "Bazı şehirleri yıllar sonra bile tüm ayrıntılarıyla hatırlarız; bazılarını ise döndüğümüz gün unutmaya başlarız. Aradaki fark, gördüklerimizden çok hissettiklerimizde saklıdır.",
+            "en": "Some places remain vivid in our minds for decades, while others begin to fade the moment we leave. The difference lies not in what we saw, but in what we truly felt."
         },
-        "slug_tr": "neden-bazi-yolculuklari-hic-unutmayiz",
-        "slug_en": "neden-bazi-yolculuklari-hic-unutmayiz-en",
-        "seo_title_tr": "Neden Bazı Yolculukları Hiç Unutmayız? | Dioreal Dijital Lüks Yaşam Platformu",
-        "seo_title_en": "Why Do Some Journeys Stay With Us Forever? | Dioreal Digital Luxury Platform",
-        "seo_description_tr": "Bazı şehirleri yıllar sonra bile tüm ayrıntılarıyla hatırlarız; bazılarını ise döndüğümüz gün unutmaya başlarız. Aradaki fark, gördüklerimizden çok hissett...",
-        "seo_description_en": "Some places remain vivid in our minds for decades, while others begin to fade the moment we leave. The difference lies not in what we saw, but in what we t...",
-        "gallery": [],
-        "video_file": null,
-        "video_url": null,
-        "show_video_on_cover": false,
-        "og_image": null,
-        "seo_noindex": 0
+        "date": "2026-07-25",
+        "is_featured": false,
+        "content": {
+            "tr": "<p>İnsan hafızası ilginç çalışır.</p>\n<p>Her gün yüzlerce ayrıntı görürüz. Sokaklar, yüzler, binalar, tabelalar... Çoğu birkaç gün içinde silinir. Fakat bazı anlar vardır; üzerinden yıllar geçse bile aynı canlılıkla zihnimizde yaşamaya devam eder.</p>\n<p>İlk kez gördüğünüz bir gün batımı...</p>\n<p>Dar bir sokakta duyduğunuz keman sesi...</p>\n<p>Yağmurdan kaçarken sığındığınız küçük bir kitapçı...</p>\n<p>Sabah erkenden açılan bir fırından yükselen ekmek kokusu...</p>\n<p>Aslında hatırladığımız şey şehirler değildir.</p>\n<p>Onlarla kurduğumuz bağdır.</p>\n<p>Bir destinasyonu unutulmaz yapan, kaç müze gezdiğimiz ya da kaç fotoğraf çektiğimiz değildir. Hafızamız, bilgi kadar duyguyu da kaydeder.</p>\n<p>Bu yüzden bazen tek bir an, bütün bir yolculuğun önüne geçer.</p>\n<h3>Bir yabancının size gülümsemesi…</h3>\n<h3>Hiç beklemediğiniz bir manzara…</h3>\n<h3>Sessiz bir meydanda otururken hissettiğiniz huzur…</h3>\n<p>Bunlar planlanamaz.</p>\n<p>Satın alınamaz.</p>\n<p>Ve çoğu zaman tekrar edilemez.</p>\n<p>İyi yolculukların ortak bir özelliği vardır.</p>\n<p>Size yalnızca yeni bir yer göstermezler.</p>\n<p>Yeni bir duygu da öğretirler.</p>\n<h3>Belki sabrı…</h3>\n<h3>Belki sadeliği…</h3>\n<h3>Belki sessizliği…</h3>\n<h3>Belki de ait olmadığınız bir yerde bile kendinizi evinizde hissedebilmeyi…</h3>\n<p>İşte bu yüzden aynı destinasyona iki kişi gidip bambaşka hikâyelerle dönebilir.</p>\n<p>Çünkü şehirler herkese aynı şeyi vermez.</p>\n<p>Her insan, yanında taşıdığı merak, dikkat ve ruh hâli kadarını görebilir.</p>\n<p>Yolculuk biraz da iç dünyamızın aynasıdır.</p>\n<p>Belki de en güzel seyahat hatıraları, fotoğraf albümlerinde değil; yıllar sonra beklenmedik bir koku, bir melodi ya da gün batımıyla yeniden canlanan anılarda yaşar.</p>\n<p>DIOREAL için seyahatin gerçek değeri tam da buradadır.</p>\n<p>Bazı şehirler sizi eğlendirir.</p>\n<p>Bazıları sizi dinlendirir.</p>\n<p>Bazıları ise siz fark etmeden hayatınıza karışır.</p>\n<p>Ve yıllar sonra dönüp baktığınızda, aslında en uzun yolculuğun gittiğiniz yere değil, kendinize doğru olduğunu anlarsınız.</p>",
+            "en": "<p>Human memory works in remarkable ways.</p>\n<p>Every day we encounter countless details—streets, faces, buildings, signs. Most disappear within days. Yet certain moments remain with us for years, vivid as if they happened yesterday.</p>\n<p>The first sunset you watched in an unfamiliar place.</p>\n<p>The sound of a violin echoing through a narrow street.</p>\n<p>A small bookshop where you found shelter from the rain.</p>\n<p>The aroma of fresh bread drifting from a neighborhood bakery at dawn.</p>\n<p>What we remember is rarely the city itself.</p>\n<p>It is the connection we formed with it.</p>\n<p>A destination is not defined by the number of museums we visited or photographs we took. Memory preserves emotions as much as facts.</p>\n<p>Sometimes a single moment becomes the entire journey.</p>\n<p>A stranger&#039;s smile.</p>\n<p>An unexpected view.</p>\n<p>The quiet peace of sitting alone in an unfamiliar square.</p>\n<p>These moments cannot be planned.</p>\n<p>They cannot be purchased.</p>\n<p>And they can rarely be recreated.</p>\n<p>The finest journeys all share something in common.</p>\n<p>They offer more than a new place.</p>\n<p>They teach us a new feeling.</p>\n<p>Perhaps patience.</p>\n<p>Perhaps simplicity.</p>\n<p>Perhaps silence.</p>\n<p>Or perhaps the comforting realization that home can sometimes be found far away from where we live.</p>\n<p>That is why two people can visit the same destination and return with entirely different stories.</p>\n<p>Cities never reveal the same version of themselves to everyone.</p>\n<p>We see only as much as our curiosity, attention, and openness allow.</p>\n<p>In many ways, every journey becomes a reflection of ourselves.</p>\n<p>Perhaps our greatest travel memories are not stored in photo albums, but awakened years later by a familiar scent, a distant melody, or the color of a sunset.</p>\n<p>This is where DIOREAL believes the true value of travel exists.</p>\n<p>Some places entertain us.</p>\n<p>Some allow us to rest.</p>\n<p>Others quietly become part of who we are.</p>\n<h3>And years later, we realize that the longest journey was never toward a destination—</h3>\n<p>It was always toward ourselves.</p>"
+        }
     },
     {
-        "date": "04.09.2026",
+        "id": 12,
+        "slug_tr": "bir-sehrin-ruhunu-kim-insa-eder",
+        "slug_en": "bir-sehrin-ruhunu-kim-insa-eder-en",
         "title": {
             "tr": "Bir Şehrin Ruhunu Kim İnşa Eder?",
             "en": "Who Builds the Soul of a City?"
@@ -317,26 +275,22 @@
             "tr": "Şehir Kültürü | 2026-07-25",
             "en": "City Culture | 2026-07-25"
         },
-        "img": "foto.img/amalfi.jpg",
+        "img": "uploads/journals/1784022797_6a56070d5e6c9.png",
         "desc": {
-            "tr": "<p>Bazı şehirler ilk bakışta etkiler, bazıları ise zamanla kendini anlatır. Bir kentin gerçek kimliği, anıtlarında değil; sabah açılan dükkânlarında, meydanlarında ve gündelik yaşamın içinde saklıdır.</p>",
-            "en": "<p>Some cities impress you at first sight, while others reveal themselves slowly over time. A city&#039;s true identity is found not in its monuments, but in its streets, its people, and the rhythm of everyday life.</p>"
+            "tr": "Bazı şehirler ilk bakışta etkiler, bazıları ise zamanla kendini anlatır. Bir kentin gerçek kimliği, anıtlarında değil; sabah açılan dükkânlarında, meydanlarında ve gündelik yaşamın içinde saklıdır.",
+            "en": "Some cities impress you at first sight, while others reveal themselves slowly over time. A city's true identity is found not in its monuments, but in its streets, its people, and the rhythm of everyday life."
         },
-        "slug_tr": "bir-sehrin-ruhunu-kim-insa-eder",
-        "slug_en": "bir-sehrin-ruhunu-kim-insa-eder-en",
-        "seo_title_tr": "Bir Şehrin Ruhunu Kim İnşa Eder? | Dioreal Dijital Lüks Yaşam Platformu",
-        "seo_title_en": "Who Builds the Soul of a City? | Dioreal Digital Luxury Platform",
-        "seo_description_tr": "Bazı şehirler ilk bakışta etkiler, bazıları ise zamanla kendini anlatır. Bir kentin gerçek kimliği, anıtlarında değil; sabah açılan dükkânlarında, meydanla...",
-        "seo_description_en": "Some cities impress you at first sight, while others reveal themselves slowly over time. A city's true identity is found not in its monuments, but in its s...",
-        "gallery": [],
-        "video_file": null,
-        "video_url": null,
-        "show_video_on_cover": false,
-        "og_image": null,
-        "seo_noindex": 0
+        "date": "2026-07-25",
+        "is_featured": false,
+        "content": {
+            "tr": "<p>Bir şehir denildiğinde aklımıza önce binalar gelir.</p>\n<p>Yüksek kuleler...</p>\n<p>Tarihi yapılar...</p>\n<p>Ünlü meydanlar...</p>\n<p>Oysa bunların hiçbiri tek başına bir şehri şehir yapmaz.</p>\n<p>Çünkü şehirler, mimariden önce insanlarla kurulur.</p>\n<p>Sabah gün ağarmadan dükkânını açan fırıncı...</p>\n<p>Her sabah aynı bankta gazetesini okuyan yaşlı adam...</p>\n<p>Mahalle pazarında yıllardır aynı tezgâhı kuran esnaf...</p>\n<p>Okul çıkışında aynı sokakta buluşan çocuklar...</p>\n<p>Bir şehrin hafızası işte bu küçük tekrarlarla oluşur.</p>\n<p>Meydanlar yalnızca taş döşemeler değildir.</p>\n<p>İnsanların buluştuğu, kutlama yaptığı, yas tuttuğu ve birlikte yaşadığı ortak alanlardır.</p>\n<p>Bu yüzden dünyanın en güzel meydanlarını güzel yapan şey, onları çevreleyen yapılar kadar orada yaşanan hayattır.</p>\n<p>Şehirlerin sesi de vardır.</p>\n<p>İstanbul&#039;da vapur düdüğü...</p>\n<p>Lizbon&#039;da tramvayın raylarda çıkardığı ses...</p>\n<p>Kyoto&#039;da tapınak çanları...</p>\n<p>Marrakeş&#039;te çarşının uğultusu...</p>\n<p>Bazı şehirleri gözünüz kapalı bile tanıyabilirsiniz.</p>\n<p>Çünkü hafızamız yalnızca görüntüleri değil, sesleri de saklar.</p>\n<p>Bir şehrin kokusu da vardır.</p>\n<p>Yeni pişmiş ekmek...</p>\n<p>Deniz tuzu...</p>\n<p>Yağmurdan sonra ıslanan taş sokaklar...</p>\n<p>Kahve...</p>\n<p>Baharat...</p>\n<p>Bazen tek bir koku, yıllar önce yaptığınız bir yolculuğu birkaç saniyede geri getirir.</p>\n<p>Sonra ışığı gelir.</p>\n<p>Bazı şehirlerde gün batımı altın rengindedir.</p>\n<p>Bazılarında mavi saat uzar.</p>\n<p>Bazılarında ise sis, bütün manzarayı değiştirir.</p>\n<p>Fotoğrafçılar buna ışık der.</p>\n<p>Gezginler ise karakter.</p>\n<p>Çünkü aynı bina, farklı şehirlerde bambaşka görünür.</p>\n<p>İşte bu yüzden şehirleri yalnızca mimarileriyle değerlendirmek eksik kalır.</p>\n<p>Onları yaşayan insanlar, sesleri, kokuları, ışıkları ve ritimleri birlikte şehir yapar.</p>\n<p>DIOREAL, bir destinasyona bakarken önce bunları görmeye çalışır.</p>\n<p>Çünkü bir şehrin ruhu, haritalarda değil; hayatın aktığı yerlerde yaşar.</p>",
+            "en": "<p>Who Builds the Soul of a City?</p>\n<p>When we think of a city, we often picture its buildings first.</p>\n<p>Towering skylines.</p>\n<p>Historic landmarks.</p>\n<p>Famous squares.</p>\n<p>Yet none of these alone creates the identity of a place.</p>\n<p>Cities are built by people long before they are defined by architecture.</p>\n<p>The baker opening the shop before sunrise.</p>\n<p>The elderly man reading his newspaper on the same bench every morning.</p>\n<p>The market vendor who has stood in the same place for decades.</p>\n<p>Children filling familiar streets after school.</p>\n<p>A city&#039;s memory is created through these quiet repetitions.</p>\n<p>Public squares are more than open spaces.</p>\n<p>They are places where people celebrate, mourn, gather, and build community.</p>\n<p>That is why the world&#039;s most beautiful squares are remembered not only for their architecture, but for the life they contain.</p>\n<p>Cities also have their own sounds.</p>\n<p>The ferry horns of Istanbul.</p>\n<p>The trams of Lisbon.</p>\n<p>Temple bells in Kyoto.</p>\n<p>The lively markets of Marrakesh.</p>\n<p>Sometimes we could recognize a city with our eyes closed.</p>\n<p>Because memory stores sound as vividly as sight.</p>\n<p>Cities have their own scents as well.</p>\n<p>Freshly baked bread.</p>\n<p>Sea salt carried by the wind.</p>\n<p>Rain on old stone streets.</p>\n<p>Coffee.</p>\n<p>Spices.</p>\n<p>Sometimes a single fragrance is enough to bring an entire journey back to life.</p>\n<p>Then there is light.</p>\n<p>Some cities glow in golden sunsets.</p>\n<p>Others linger in the soft blue hour.</p>\n<p>Some are transformed by morning mist.</p>\n<p>Photographers call it light.</p>\n<p>Travelers call it character.</p>\n<p>The same building can feel completely different depending on where it stands.</p>\n<p>This is why architecture alone can never define a city.</p>\n<p>Its people, sounds, aromas, light, and daily rhythm together create its soul.</p>\n<p>This is what DIOREAL seeks first in every destination.</p>\n<h3>Because the soul of a city is never found on a map—</h3>\n<p>It lives wherever life is being lived.</p>"
+        }
     },
     {
-        "date": "04.09.2026",
+        "id": 13,
+        "slug_tr": "bir-sehrin-oturma-odasi",
+        "slug_en": "bir-sehrin-oturma-odasi-en",
         "title": {
             "tr": "Bir Şehrin Oturma Odası",
             "en": "The Living Room of a City"
@@ -345,26 +299,22 @@
             "tr": "Şehir Kültürü | 2026-07-25",
             "en": "City Culture | 2026-07-25"
         },
-        "img": "foto.img/amalfi.jpg",
+        "img": "uploads/journals/1784023058_6a5608121eae3.png",
         "desc": {
-            "tr": "<p>Bir şehri anlamak istiyorsanız, önce insanların nerede durduğuna bakın. Meydanlar, kafeler ve pazarlar yalnızca buluşma noktaları değil; bir kentin gündelik yaşamını, kültürünü ve karakterini en doğal hâliyle yansıtan ortak yaşam alanlarıdır.</p>",
-            "en": "<p>If you want to understand a city, watch where its people choose to gather. Squares, cafés, and markets are more than public spaces—they are where a city&#039;s culture, character, and everyday life unfold naturally.</p>"
+            "tr": "Bir şehri anlamak istiyorsanız, önce insanların nerede durduğuna bakın. Meydanlar, kafeler ve pazarlar yalnızca buluşma noktaları değil; bir kentin gündelik yaşamını, kültürünü ve karakterini en doğal hâliyle yansıtan ortak yaşam alanlarıdır.",
+            "en": "If you want to understand a city, watch where its people choose to gather. Squares, cafés, and markets are more than public spaces—they are where a city's culture, character, and everyday life unfold naturally."
         },
-        "slug_tr": "bir-sehrin-oturma-odasi",
-        "slug_en": "bir-sehrin-oturma-odasi-en",
-        "seo_title_tr": "Bir Şehrin Oturma Odası | Dioreal Dijital Lüks Yaşam Platformu",
-        "seo_title_en": "The Living Room of a City | Dioreal Digital Luxury Platform",
-        "seo_description_tr": "Bir şehri anlamak istiyorsanız, önce insanların nerede durduğuna bakın. Meydanlar, kafeler ve pazarlar yalnızca buluşma noktaları değil; bir kentin gündeli...",
-        "seo_description_en": "If you want to understand a city, watch where its people choose to gather. Squares, cafés, and markets are more than public spaces—they are where a city's...",
-        "gallery": [],
-        "video_file": null,
-        "video_url": null,
-        "show_video_on_cover": false,
-        "og_image": null,
-        "seo_noindex": 0
+        "date": "2026-07-25",
+        "is_featured": false,
+        "content": {
+            "tr": "<p>Her evin bir oturma odası vardır.</p>\n<p>İnsanların bir araya geldiği, sohbet ettiği, misafir ağırladığı ve hayatın paylaşıldığı bir yer...</p>\n<p>Şehirlerin de vardır.</p>\n<p>Sadece duvarları yoktur.</p>\n<p>Onların oturma odaları meydanlardır.</p>\n<p>Kafelerdir.</p>\n<p>Semt pazarlarıdır.</p>\n<p>Limanlardır.</p>\n<p>Parklardır.</p>\n<p>Bir şehri tanımak istiyorsanız önce bu alanlarda biraz zaman geçirin.</p>\n<p>Çünkü gündelik hayat, turistik rotalardan çok önce burada başlar.</p>\n<p>Sabah kahvesini aynı masada içen insanlar...</p>\n<p>Gazetesini okuyan emekliler...</p>\n<p>Çocuklarını parka getiren aileler...</p>\n<p>Okula yetişmeye çalışan öğrenciler...</p>\n<p>Hafta sonu pazarda alışveriş yapan komşular...</p>\n<p>Bütün bunlar size hiçbir müzenin anlatamayacağı kadar çok şey anlatır.</p>\n<p>Meydanlar, şehirlerin hafızasıdır.</p>\n<p>Kutlamalar orada yapılır.</p>\n<p>Protestolar orada gerçekleşir.</p>\n<p>Bayramlar orada yaşanır.</p>\n<p>Yeni yıl orada karşılanır.</p>\n<p>Bir toplumun ortak duyguları çoğu zaman aynı meydanda buluşur.</p>\n<p>Kafeler ise şehrin en sessiz anlatıcılarıdır.</p>\n<p>Paris&#039;te saatlerce tek bir kahveyle oturan insanlar...</p>\n<p>İstanbul&#039;da çay eşliğinde uzayan sohbetler...</p>\n<p>Roma&#039;da ayakta içilen hızlı bir espresso...</p>\n<p>Viyana&#039;da gazeteler arasında kaybolan uzun sabahlar...</p>\n<p>Her şehir, kahvesini farklı içer.</p>\n<p>Ve aslında kendini de öyle anlatır.</p>\n<p>Pazarlar ise bir destinasyonun en dürüst aynasıdır.</p>\n<p>Turistler için değil...</p>\n<p>O şehirde yaşayan insanlar için kurulurlar.</p>\n<p>Hangi sebzelerin mevsiminde olduğunu...</p>\n<p>İnsanların ne pişirdiğini...</p>\n<p>Hangi ürünlerin değerli olduğunu...</p>\n<p>En iyi orada öğrenirsiniz.</p>\n<p>Belki de bu yüzden bir şehri tanımanın en iyi yolu, hiçbir plan yapmadan bir meydana oturmak, küçük bir kafede vakit geçirmek ve yerel pazarı dolaşmaktır.</p>\n<p>Çünkü şehirler, en çok gündelik hayatın içinde kendileri olurlar.</p>\n<p>DIOREAL, destinasyonları değerlendirirken yalnızca görülecek yerleri değil, yaşanacak anları da önemser.</p>\n<p>Çünkü bir şehir, onu gezerken değil; onun ritmine karıştığınızda hafızanızda yer eder.</p>",
+            "en": "<p>Every home has a living room.</p>\n<p>A place where people gather, talk, welcome guests, and share everyday life.</p>\n<p>Cities have one too.</p>\n<p>Only theirs has no walls.</p>\n<p>Their living rooms are public squares.</p>\n<p>Cafés.</p>\n<p>Neighborhood markets.</p>\n<p>Harbors.</p>\n<p>Parks.</p>\n<p>If you truly want to understand a city, spend time in these places.</p>\n<p>Because this is where daily life begins—long before any tourist itinerary.</p>\n<p>People enjoying their morning coffee at the same table every day.</p>\n<p>Retirees reading the newspaper.</p>\n<p>Families gathering in the park.</p>\n<p>Students rushing to school.</p>\n<p>Neighbors shopping at the weekend market.</p>\n<p>These ordinary moments reveal more about a city than many museums ever could.</p>\n<p>Public squares are the memory of a city.</p>\n<p>They host celebrations.</p>\n<p>Protests.</p>\n<p>Festivals.</p>\n<p>New Year&#039;s countdowns.</p>\n<p>Moments of joy and moments of grief.</p>\n<p>A community&#039;s shared emotions are often written in its squares.</p>\n<p>Cafés are the city&#039;s quiet storytellers.</p>\n<p>The slow conversations over coffee in Paris.</p>\n<p>Long tea gatherings in Istanbul.</p>\n<p>A quick espresso at the counter in Rome.</p>\n<p>Unhurried mornings in Vienna with newspapers and coffee.</p>\n<p>Every city has its own coffee culture.</p>\n<p>And through it, it quietly reveals its identity.</p>\n<p>Markets are perhaps the most honest reflection of a destination.</p>\n<p>They are not created for visitors.</p>\n<p>They exist for the people who live there.</p>\n<p>They reveal what is in season.</p>\n<p>What families cook.</p>\n<p>Which products are treasured.</p>\n<p>What everyday life truly looks like.</p>\n<p>Perhaps the best way to understand a city is simply to sit in one of its squares, spend an afternoon in a neighborhood café, and wander through its local market without any schedule at all.</p>\n<p>Because cities are most authentic when they are simply living.</p>\n<p>This is why DIOREAL values not only the places worth seeing, but also the moments worth experiencing.</p>\n<h3>A city is remembered not when you walk through it—</h3>\n<p>But when you begin to live at its rhythm.</p>"
+        }
     },
     {
-        "date": "04.09.2026",
+        "id": 14,
+        "slug_tr": "sehrin-en-guzel-yeri-rehber-kitaplarda-yazmaz",
+        "slug_en": "sehrin-en-guzel-yeri-rehber-kitaplarda-yazmaz-en",
         "title": {
             "tr": "Şehrin En Güzel Yeri, Rehber Kitaplarda Yazmaz",
             "en": "The Best Place in a City Is Rarely in the Guidebook"
@@ -373,26 +323,22 @@
             "tr": "Şehir Kültürü | 2026-07-25",
             "en": "City Culture | 2026-07-25"
         },
-        "img": "foto.img/amalfi.jpg",
+        "img": "uploads/journals/1784023280_6a5608f0923a4.png",
         "desc": {
-            "tr": "<p>Bir şehrin en çok fotoğrafı çekilen yeri, her zaman en unutulmaz yeri değildir. Bazen bir yolculuğun en değerli anları, haritalarda işaretlenmeyen sokaklarda ve plansız keşiflerde saklıdır.</p>",
-            "en": "<p>The most photographed place in a city is not always the most memorable. Sometimes, the finest moments of a journey are found in the streets no guidebook highlights and in discoveries that were never planned.</p>"
+            "tr": "Bir şehrin en çok fotoğrafı çekilen yeri, her zaman en unutulmaz yeri değildir. Bazen bir yolculuğun en değerli anları, haritalarda işaretlenmeyen sokaklarda ve plansız keşiflerde saklıdır.",
+            "en": "The most photographed place in a city is not always the most memorable. Sometimes, the finest moments of a journey are found in the streets no guidebook highlights and in discoveries that were never planned."
         },
-        "slug_tr": "sehrin-en-guzel-yeri-rehber-kitaplarda-yazmaz",
-        "slug_en": "sehrin-en-guzel-yeri-rehber-kitaplarda-yazmaz-en",
-        "seo_title_tr": "Şehrin En Güzel Yeri, Rehber Kitaplarda Yazmaz | Dioreal Dijital Lüks Yaşam Platformu",
-        "seo_title_en": "The Best Place in a City Is Rarely in the Guidebook | Dioreal Digital Luxury Platform",
-        "seo_description_tr": "Bir şehrin en çok fotoğrafı çekilen yeri, her zaman en unutulmaz yeri değildir. Bazen bir yolculuğun en değerli anları, haritalarda işaretlenmeyen sokaklar...",
-        "seo_description_en": "The most photographed place in a city is not always the most memorable. Sometimes, the finest moments of a journey are found in the streets no guidebook hi...",
-        "gallery": [],
-        "video_file": null,
-        "video_url": null,
-        "show_video_on_cover": false,
-        "og_image": null,
-        "seo_noindex": 0
+        "date": "2026-07-25",
+        "is_featured": false,
+        "content": {
+            "tr": "<p>Her şehrin bir vitrini vardır.</p>\n<h3>Kartpostallara basılan meydanlar…</h3>\n<h3>Sosyal medyada milyonlarca kez paylaşılan manzaralar…</h3>\n<h3>Önünde uzun kuyruklar oluşan simge yapılar…</h3>\n<p>Elbette görülmeye değerdirler.</p>\n<p>Fakat bir şehri yalnızca vitriniyle tanımak, bir kitabı yalnızca kapağına bakarak değerlendirmeye benzer.</p>\n<p>Asıl hikâye, çoğu zaman birkaç sokak ötede başlar.</p>\n<h3>Bir sabah rastgele saptığınız dar bir sokakta…</h3>\n<h3>Mahalle sakinlerinin kahvaltı yaptığı küçük bir fırında…</h3>\n<h3>Haritalarda adı bile yazmayan eski bir meydanda…</h3>\n<h3>Ya da denizi izleyen sessiz bir bankta…</h3>\n<p>İnsan yolculuktan döndüğünde en çok bunları anlatır.</p>\n<p>Çünkü keşfetmenin en güzel yanı, beklemediğiniz bir güzellikle karşılaşmaktır.</p>\n<p>Bunu hiçbir algoritma planlayamaz.</p>\n<p>Hiçbir liste garanti edemez.</p>\n<p>Bir şehrin gerçek karakteri, çoğu zaman turistlerin en yoğun olduğu yerlerde değil; hayatın olağan akışını sürdürdüğü mahallelerde yaşar.</p>\n<h3>Çamaşırların hâlâ pencereler arasında kurutulduğu sokaklarda…</h3>\n<h3>Esnafın birbirini adıyla çağırdığı çarşılarda…</h3>\n<h3>Çocukların top oynadığı küçük meydanlarda…</h3>\n<h3>Yaşlıların her akşam aynı banka oturduğu parklarda…</h3>\n<p>İşte şehir, en çok burada kendisi olur.</p>\n<p>Belki de bu yüzden en iyi gezginler, programlarında her zaman boşluk bırakır.</p>\n<h3>Plansız yürüyüşler için…</h3>\n<h3>Yanlış sokağa girmek için…</h3>\n<h3>Bir kafede beklenenden uzun oturabilmek için…</h3>\n<p>Çünkü bazen yolculuğun en değerli keşfi, aramayı bıraktığınız anda karşınıza çıkar.</p>\n<p>Bu, turistik yerleri görmemek gerektiği anlamına gelmez.</p>\n<h3>Aksine…</h3>\n<p>Onları gördükten sonra şehre biraz daha yaklaşmak gerekir.</p>\n<h3>Merkezden uzaklaşmak…</h3>\n<h3>Yan sokaklara dönmek…</h3>\n<h3>Yerel insanların gittiği yerlere gitmek…</h3>\n<p>Bir şehri gerçekten tanımak istiyorsanız, onun günlük hayatına misafir olmalısınız.</p>\n<p>DIOREAL&#039;in destinasyon anlayışı da tam olarak budur.</p>\n<p>En ünlü meydanları anlatır.</p>\n<p>En önemli müzeleri önerir.</p>\n<p>En iyi restoranları seçer.</p>\n<p>Ama bütün bunların yanında, bir şehrin ruhunu oluşturan küçük ayrıntıları da arar.</p>\n<p>Çünkü yıllar sonra hafızanızda kalan şey, çoğu zaman en ünlü yapı değil; tesadüfen keşfettiğiniz o küçük sokaktır.</p>\n<p>Ve belki de bir şehrin en güzel yeri gerçekten hiçbir rehber kitapta yazmıyordur.</p>",
+            "en": "<p>Every city has a showcase.</p>\n<p>The squares printed on postcards.</p>\n<p>The viewpoints shared millions of times on social media.</p>\n<p>The landmarks that attract endless queues of visitors.</p>\n<p>They deserve their reputation.</p>\n<p>But knowing a city only through its highlights is like judging a book by its cover.</p>\n<p>The real story often begins just a few streets away.</p>\n<p>Down a quiet alley you discovered by chance.</p>\n<p>Inside a neighborhood bakery where locals gather every morning.</p>\n<p>In an old square that doesn&#039;t even appear on most maps.</p>\n<p>Or on a peaceful bench overlooking the sea.</p>\n<p>These are the moments people remember long after they return home.</p>\n<p>Because the greatest joy of travel is discovering something you never expected to find.</p>\n<p>No algorithm can plan it.</p>\n<p>No checklist can promise it.</p>\n<p>The true character of a city is rarely found where crowds are largest.</p>\n<p>It lives where everyday life quietly continues.</p>\n<p>In streets where laundry still hangs between windows.</p>\n<p>In markets where shopkeepers greet each other by name.</p>\n<p>In small squares where children play football after school.</p>\n<p>In parks where familiar faces gather on the same bench every evening.</p>\n<p>This is where a city feels most authentic.</p>\n<p>Perhaps that is why experienced travelers always leave space in their itinerary.</p>\n<p>Time for an unplanned walk.</p>\n<p>Time to take the wrong street.</p>\n<p>Time to stay longer than expected in a neighborhood café.</p>\n<p>Because the most meaningful discoveries often appear the moment you stop looking for them.</p>\n<p>This does not mean famous landmarks should be ignored.</p>\n<p>Quite the opposite.</p>\n<p>See them.</p>\n<p>Then move a little farther.</p>\n<p>Turn into the side streets.</p>\n<p>Follow the places where local life naturally unfolds.</p>\n<p>If you truly want to know a city, you must become a quiet guest in its everyday rhythm.</p>\n<p>This is the philosophy behind every destination DIOREAL presents.</p>\n<p>We introduce the iconic squares.</p>\n<p>Recommend the essential museums.</p>\n<p>Curate the finest restaurants.</p>\n<p>But we also search for the small details that give a city its soul.</p>\n<p>Because years later, what you remember is rarely the famous monument.</p>\n<p>It is the little street you found by accident.</p>\n<p>And perhaps the most beautiful place in every city is the one no guidebook has ever managed to describe.</p>"
+        }
     },
     {
-        "date": "04.09.2026",
+        "id": 15,
+        "slug_tr": "iyi-yolculuklar-iyi-secimlerle-baslar",
+        "slug_en": "iyi-yolculuklar-iyi-secimlerle-baslar-en",
         "title": {
             "tr": "İyi Yolculuklar, İyi Seçimlerle Başlar",
             "en": "Every Great Journey Begins with Thoughtful Choices"
@@ -401,26 +347,22 @@
             "tr": "Seyahat Kültürü | 2026-07-25",
             "en": "Travel Culture | 2026-07-25"
         },
-        "img": "foto.img/amalfi.jpg",
+        "img": "uploads/journals/1784023554_6a560a0216b8a.png",
         "desc": {
-            "tr": "<p>Bazı yolculuklar daha çok yer gösterir, bazıları ise daha doğru anlar yaşatır. Seyahatin kalitesi çoğu zaman gidilen yerlerle değil, yapılan seçimlerle şekillenir.</p>",
-            "en": "<p>Some journeys are measured by the number of places they include, while others are remembered for the moments they create. More often than not, the quality of a journey is shaped by the choices made along the way.</p>"
+            "tr": "Bazı yolculuklar daha çok yer gösterir, bazıları ise daha doğru anlar yaşatır. Seyahatin kalitesi çoğu zaman gidilen yerlerle değil, yapılan seçimlerle şekillenir.",
+            "en": "Some journeys are measured by the number of places they include, while others are remembered for the moments they create. More often than not, the quality of a journey is shaped by the choices made along the way."
         },
-        "slug_tr": "iyi-yolculuklar-iyi-secimlerle-baslar",
-        "slug_en": "iyi-yolculuklar-iyi-secimlerle-baslar-en",
-        "seo_title_tr": "İyi Yolculuklar, İyi Seçimlerle Başlar | Dioreal Dijital Lüks Yaşam Platformu",
-        "seo_title_en": "Every Great Journey Begins with Thoughtful Choices | Dioreal Digital Luxury Platform",
-        "seo_description_tr": "Bazı yolculuklar daha çok yer gösterir, bazıları ise daha doğru anlar yaşatır. Seyahatin kalitesi çoğu zaman gidilen yerlerle değil, yapılan seçimlerle şek...",
-        "seo_description_en": "Some journeys are measured by the number of places they include, while others are remembered for the moments they create. More often than not, the quality...",
-        "gallery": [],
-        "video_file": null,
-        "video_url": null,
-        "show_video_on_cover": false,
-        "og_image": null,
-        "seo_noindex": 0
+        "date": "2026-07-25",
+        "is_featured": false,
+        "content": {
+            "tr": "<p>Bir yolculuğu unutulmaz yapan şey, her zaman gidilen yer değildir.</p>\n<p>Bazen aynı şehirde iki insan bambaşka deneyimlerle döner.</p>\n<p>Çünkü aradaki fark, çoğu zaman seçimlerde saklıdır.</p>\n<h3>Hangi mevsimde gittiğiniz…</h3>\n<h3>Günün hangi saatinde sokağa çıktığınız…</h3>\n<h3>Hangi masaya oturduğunuz…</h3>\n<h3>Yemeği nasıl sipariş ettiğiniz…</h3>\n<h3>Hatta hiçbir şey yapmamayı seçtiğiniz bir öğleden sonra…</h3>\n<p>Bütün bunlar, yolculuğun yönünü sessizce değiştirir.</p>\n<p>İyi seçimler, çoğu zaman dikkat çekmez.</p>\n<p>Fakat yıllar sonra hatırlanan ayrıntılar genellikle onlardır.</p>\n<h3>Sabah henüz şehir uyanmadan yürümek…</h3>\n<h3>Bir müzeye ilk ziyaretçiler arasında girmek…</h3>\n<h3>Gün batımını kalabalığın toplandığı noktadan değil, biraz daha uzaktan izlemek…</h3>\n<h3>Mevsimin en taze ürününün sofraya gelişini beklemek…</h3>\n<h3>Bir şehrin ritmine ayak uydurmak yerine, onun ritmini dinlemek…</h3>\n<p>Bunların hiçbiri büyük kararlar değildir.</p>\n<p>Ama hepsi büyük farklar yaratır.</p>\n<p>Deneyimin değeri, çoğu zaman görünmeyen ayrıntılarda saklıdır.</p>\n<p>İyi bir masa, yalnızca manzarasıyla hatırlanmaz.</p>\n<h3>Işığıyla…</h3>\n<h3>Sessizliğiyle…</h3>\n<h3>Garsonun doğru anda masaya yaklaşmasıyla…</h3>\n<p>Bir otel yalnızca odasıyla değil; sabah penceresini açtığınızda duyduğunuz ilk sesle hafızanızda yer eder.</p>\n<p>Bazı şehirler ilk bakışta kendini gösterir.</p>\n<p>Bazıları ise sabır ister.</p>\n<p>Onları anlamak için acele etmemek gerekir.</p>\n<p>Çünkü her destinasyonun kendine ait bir zamanı vardır.</p>\n<p>İyi yolculuklar, bu zamanı yakalayabilenlerin hafızasında yaşar.</p>\n<p>Belki de seyahatin en güzel yanı budur.</p>\n<p>Her şeyi görmek mümkün değildir.</p>\n<p>Ama doğru şeyi, doğru anda deneyimlemek mümkündür.</p>\n<p>DIOREAL&#039;in her önerisi bu düşünceyle hazırlanır.</p>\n<p>Bir yere yalnızca nasıl gidileceğini değil; ne zaman gidileceğini, nerede durulacağını ve hangi ayrıntının yolculuğu bambaşka bir deneyime dönüştüreceğini araştırır.</p>\n<p>Çünkü bazen bütün yolculuğu değiştiren şey, büyük planlar değil; yerinde yapılmış küçük seçimlerdir.</p>",
+            "en": "<p>What makes a journey unforgettable is not always the destination itself.</p>\n<p>Two people can visit the very same city and return with entirely different memories.</p>\n<p>More often than not, the difference lies in the choices they make.</p>\n<p>The season they choose to travel.</p>\n<p>The hour they step into the streets.</p>\n<p>The table where they decide to sit.</p>\n<p>The way they order a meal.</p>\n<p>Even an afternoon they intentionally leave without plans.</p>\n<p>These quiet decisions shape the journey in ways we rarely notice at the time.</p>\n<p>The finest choices are often the least obvious.</p>\n<p>Yet years later, they are the details we remember most.</p>\n<p>Walking through a city before it fully wakes.</p>\n<p>Being among the first visitors to enter a museum.</p>\n<p>Watching the sunset from a peaceful corner rather than the busiest viewpoint.</p>\n<p>Waiting for the season&#039;s freshest ingredients to arrive at the table.</p>\n<p>Allowing yourself to follow the rhythm of a place instead of trying to control it.</p>\n<p>None of these are dramatic decisions.</p>\n<p>Yet each of them changes the experience.</p>\n<p>The value of a journey is often hidden in details that go unnoticed by most people.</p>\n<p>A memorable table is remembered not only for its view, but for its light, its atmosphere, and the quiet confidence of impeccable service.</p>\n<p>A hotel stays with us not because of its room alone, but because of the first sound we hear when opening the window in the morning.</p>\n<p>Some cities reveal themselves immediately.</p>\n<p>Others reward patience.</p>\n<p>They ask to be discovered slowly, in their own time.</p>\n<p>Every destination has its own rhythm.</p>\n<p>The journeys we remember are the ones that allow us to move with it.</p>\n<p>Perhaps that is the true beauty of travel.</p>\n<p>We can never experience everything.</p>\n<p>But we can experience the right thing at the right moment.</p>\n<p>Every recommendation DIOREAL makes begins with this belief.</p>\n<p>Not simply where to go, but when to go, where to pause, and which small details have the power to transform an ordinary journey into one that stays with us for years.</p>\n<h3>Because sometimes, it is not the grand plans that define a journey—</h3>\n<p>It is the quiet choices made along the way.</p>"
+        }
     },
     {
-        "date": "04.09.2026",
+        "id": 16,
+        "slug_tr": "ayni-sehir-dort-farkli-hikaye",
+        "slug_en": "ayni-sehir-dort-farkli-hikaye-en",
         "title": {
             "tr": "Aynı Şehir, Dört Farklı Hikâye",
             "en": "One City, Four Different Stories"
@@ -429,26 +371,22 @@
             "tr": "Şehir Kültürü | 2026-07-25",
             "en": "City Culture | 2026-07-25"
         },
-        "img": "foto.img/amalfi.jpg",
+        "img": "uploads/journals/1784024240_6a560cb053653.png",
         "desc": {
-            "tr": "<p>Aynı şehir, günün farklı saatlerinde bambaşka yüzlerini gösterir. Bir destinasyonu gerçekten tanımak, yalnızca nereye gittiğinizle değil; oraya ne zaman vardığınızla da ilgilidir.</p>",
-            "en": "<p>The same city can feel entirely different from one hour to the next. Truly understanding a destination is shaped not only by where you go, but by when you choose to be there.</p>"
+            "tr": "Aynı şehir, günün farklı saatlerinde bambaşka yüzlerini gösterir. Bir destinasyonu gerçekten tanımak, yalnızca nereye gittiğinizle değil; oraya ne zaman vardığınızla da ilgilidir.",
+            "en": "The same city can feel entirely different from one hour to the next. Truly understanding a destination is shaped not only by where you go, but by when you choose to be there."
         },
-        "slug_tr": "ayni-sehir-dort-farkli-hikaye",
-        "slug_en": "ayni-sehir-dort-farkli-hikaye-en",
-        "seo_title_tr": "Aynı Şehir, Dört Farklı Hikâye | Dioreal Dijital Lüks Yaşam Platformu",
-        "seo_title_en": "One City, Four Different Stories | Dioreal Digital Luxury Platform",
-        "seo_description_tr": "Aynı şehir, günün farklı saatlerinde bambaşka yüzlerini gösterir. Bir destinasyonu gerçekten tanımak, yalnızca nereye gittiğinizle değil; oraya ne zaman va...",
-        "seo_description_en": "The same city can feel entirely different from one hour to the next. Truly understanding a destination is shaped not only by where you go, but by when you...",
-        "gallery": [],
-        "video_file": null,
-        "video_url": null,
-        "show_video_on_cover": false,
-        "og_image": null,
-        "seo_noindex": 0
+        "date": "2026-07-25",
+        "is_featured": false,
+        "content": {
+            "tr": "<p>Saat sabah 07.00.</p>\n<p>Venedik&#039;te San Marco Meydanı neredeyse sessizdir.</p>\n<p>Temizlik görevlileri geceyi toplar.</p>\n<p>Kafeler ilk sandalyelerini dışarı çıkarır.</p>\n<p>Martılar, henüz kalabalık başlamadan taşların üzerinde dolaşır.</p>\n<p>Biraz sonra dünyanın en çok fotoğraflanan meydanlarından biri olacak bu yer, birkaç dakika daha yalnızca Venediklilere aittir.</p>\n<p>Aynı meydan.</p>\n<p>Saat 11.30.</p>\n<p>Fotoğraf makinelerinin sesi konuşmaların önüne geçmiştir.</p>\n<p>Haritalar açılır.</p>\n<p>Rehberler farklı dillerde aynı hikâyeyi anlatır.</p>\n<p>Kuyruklar uzar.</p>\n<p>İnsanlar meydanı görür.</p>\n<p>Ama meydan artık kendini göstermez.</p>\n<p>Saat 18.45.</p>\n<p>Güneş alçalmaya başladığında ışık değişir.</p>\n<p>Taşlar daha sıcak bir renge bürünür.</p>\n<p>Kalabalık yavaş yavaş dağılır.</p>\n<p>Bir kemancı, meydana doğru yürüyen insanların temposunu fark etmeden değiştirmeye başlar.</p>\n<p>Şehir yeniden nefes alır.</p>\n<p>Gece.</p>\n<p>Son vapurlar da ayrıldıktan sonra meydan tekrar sessizleşir.</p>\n<p>Adımların sesi artık yankılanır.</p>\n<p>Denizden gelen tuz kokusu daha belirgindir.</p>\n<p>Bir şehir, gün boyunca dört kez değişmiştir.</p>\n<p>Ve aslında değişen şehir değildir.</p>\n<p>Onu deneyimleme biçimimizdir.</p>\n<p>Bunun için Venedik&#039;e gitmeye gerek yok.</p>\n<p>Paris&#039;te de böyledir.</p>\n<p>Kyoto&#039;da da.</p>\n<p>İstanbul&#039;da da.</p>\n<p>Bodrum&#039;da da.</p>\n<p>Kapalıçarşı sabah dükkânlar açılırken başka bir hikâye anlatır.</p>\n<p>Öğle saatlerinde bambaşka bir ritme bürünür.</p>\n<p>Akşamüstü ise yüzyıllardır süren ticaretin yavaşlayan nefesini hissedersiniz.</p>\n<p>Tokyo&#039;daki Tsukiji çevresinde gün henüz doğmadan başlayan hareketlilik, öğleden sonra yerini sakinliğe bırakır.</p>\n<p>Toskana&#039;da üzüm bağları öğle güneşinde etkileyicidir; fakat gün batımında ışık, tepelerin çizgilerini yeniden çizer.</p>\n<p>Işık değişir.</p>\n<p>Ses değişir.</p>\n<p>Koku değişir.</p>\n<p>İnsanlar değişir.</p>\n<p>Şehir de değişmiş gibi görünür.</p>\n<p>İşte bu yüzden iyi planlanmış bir yolculuk, yalnızca nerelere gidileceğini değil; günün hangi saatinde nerede olunacağını da düşünür.</p>\n<p>Bazı müzeler açıldığı ilk saatte gezilmelidir.</p>\n<p>Bazı sokaklar yağmurdan sonra güzelleşir.</p>\n<p>Bazı restoranlara gün batımından önce oturmak gerekir.</p>\n<p>Bazı kıyılar ise güneş doğmadan önce bütün sessizliğini korur.</p>\n<p>Bu ayrıntılar bir programın dipnotu değildir.</p>\n<p>Yolculuğun kendisidir.</p>\n<p>Çünkü deneyimler yalnızca mekânlardan oluşmaz.</p>\n<p>Mekân, zaman ve atmosfer bir araya geldiğinde hafızada yer eden anlar ortaya çıkar.</p>\n<p>Belki de bu yüzden yıllar sonra bir şehri hatırladığımızda, önce saatini hatırlarız.</p>\n<h3>Sabahın serinliğini…</h3>\n<h3>Akşamüstü ışığını…</h3>\n<h3>Gece taş sokaklarda yankılanan adımlarımızı…</h3>\n<p>DIOREAL için bir destinasyon yalnızca gidilecek yerlerden oluşmaz.</p>\n<p>Doğru zamanda yaşanmış anlardan oluşur.</p>\n<p>Ve bazen bir yolculuğu unutulmaz yapan şey, nereye gittiğiniz değil; o şehrin size kendini göstermek için seçtiği saattir.</p>",
+            "en": "<p>It is 7:00 in the morning.</p>\n<p>St. Mark&#039;s Square in Venice is almost silent.</p>\n<p>The cleaning crews are finishing their work.</p>\n<p>Café chairs are being placed outside for the day ahead.</p>\n<p>Seagulls wander across the stones before the crowds arrive.</p>\n<p>In less than an hour, this will become one of the most photographed squares in the world.</p>\n<p>For a few precious moments, however, it still belongs to Venice itself.</p>\n<p>The same square.</p>\n<p>11:30 a.m.</p>\n<p>The sound of cameras now competes with conversation.</p>\n<p>Maps unfold.</p>\n<p>Guides tell the same stories in different languages.</p>\n<p>Queues begin to form.</p>\n<p>People see the square.</p>\n<p>But the square no longer reveals itself.</p>\n<p>6:45 p.m.</p>\n<p>As the sun drops lower, the light changes.</p>\n<p>The stone begins to glow with warmer tones.</p>\n<p>The crowds slowly disperse.</p>\n<p>A violinist quietly alters the rhythm of those crossing the piazza without anyone noticing.</p>\n<p>The city begins to breathe again.</p>\n<p>Night.</p>\n<p>After the last vaporetto departs, silence returns.</p>\n<p>Footsteps echo across the paving stones.</p>\n<p>The scent of salt carried from the lagoon becomes more noticeable.</p>\n<p>One city has seemed to transform four times in a single day.</p>\n<p>Yet perhaps the city never changed at all.</p>\n<p>Only the way it was experienced.</p>\n<p>This is not unique to Venice.</p>\n<p>The same rhythm exists in Paris.</p>\n<p>In Kyoto.</p>\n<p>In Istanbul.</p>\n<p>In Bodrum.</p>\n<p>The Grand Bazaar tells one story as its doors open in the morning.</p>\n<p>Another at midday.</p>\n<p>And by late afternoon, you begin to feel the slower rhythm of a marketplace that has traded for centuries.</p>\n<p>Around Tokyo&#039;s Tsukiji district, the energy belongs to dawn, while Tuscany&#039;s vineyards reveal an entirely different beauty as the evening light reshapes every hillside.</p>\n<p>The light changes.</p>\n<p>The sounds change.</p>\n<p>The scents change.</p>\n<p>The people change.</p>\n<p>And suddenly, the city feels different too.</p>\n<p>This is why a thoughtfully planned journey is about more than deciding where to go.</p>\n<p>It is about knowing when to be there.</p>\n<p>Some museums deserve to be visited the moment they open.</p>\n<p>Some streets become beautiful only after the rain.</p>\n<p>Some restaurant tables reveal their magic before sunset.</p>\n<p>Some coastlines are at their finest before the first rays of daylight touch the sea.</p>\n<p>These are not minor details.</p>\n<p>They are the journey itself.</p>\n<p>Because memorable experiences are never created by place alone.</p>\n<p>They are created where place, time, and atmosphere meet.</p>\n<p>Perhaps that is why, years later, we rarely remember only the destination.</p>\n<p>We remember the hour.</p>\n<p>The cool air of early morning.</p>\n<p>The warmth of late afternoon light.</p>\n<p>The echo of our footsteps through quiet streets after dark.</p>\n<p>For DIOREAL, a destination is never defined only by where you go.</p>\n<p>It is defined by the moments that happen at exactly the right time.</p>\n<h3>Sometimes, what makes a journey unforgettable is not the place itself—</h3>\n<p>But the hour in which the city chose to reveal it.</p>"
+        }
     },
     {
-        "date": "04.09.2026",
+        "id": 17,
+        "slug_tr": "her-pencere-ayni-sehre-bakmaz",
+        "slug_en": "her-pencere-ayni-sehre-bakmaz-en",
         "title": {
             "tr": "Her Pencere Aynı Şehre Bakmaz.",
             "en": "Not Every Window Looks at the Same City"
@@ -457,26 +395,22 @@
             "tr": "Konaklama Kültürü | 2026-07-25",
             "en": "Hospitality Culture | 2026-07-25"
         },
-        "img": "foto.img/amalfi.jpg",
+        "img": "uploads/journals/1784034809_6a5635f93082f.png",
         "desc": {
-            "tr": "<p>Bir oteli unutulmaz yapan şey her zaman en yüksek katı, en geniş süiti ya da en gösterişli lobisi değildir. Bazen bütün yolculuğunuzu değiştiren ayrıntı, rezervasyon ekranında fark etmeden geçtiğiniz tek bir oda seçeneğidir.</p>",
-            "en": "<p>An unforgettable hotel is not always defined by its highest floor, largest suite, or grandest lobby. Sometimes, the detail that transforms an entire journey is the very room choice most travelers overlook.</p>"
+            "tr": "Bir oteli unutulmaz yapan şey her zaman en yüksek katı, en geniş süiti ya da en gösterişli lobisi değildir. Bazen bütün yolculuğunuzu değiştiren ayrıntı, rezervasyon ekranında fark etmeden geçtiğiniz tek bir oda seçeneğidir.",
+            "en": "An unforgettable hotel is not always defined by its highest floor, largest suite, or grandest lobby. Sometimes, the detail that transforms an entire journey is the very room choice most travelers overlook."
         },
-        "slug_tr": "her-pencere-ayni-sehre-bakmaz",
-        "slug_en": "her-pencere-ayni-sehre-bakmaz-en",
-        "seo_title_tr": "Her Pencere Aynı Şehre Bakmaz. | Dioreal Dijital Lüks Yaşam Platformu",
-        "seo_title_en": "Not Every Window Looks at the Same City | Dioreal Digital Luxury Platform",
-        "seo_description_tr": "Bir oteli unutulmaz yapan şey her zaman en yüksek katı, en geniş süiti ya da en gösterişli lobisi değildir. Bazen bütün yolculuğunuzu değiştiren ayrıntı, r...",
-        "seo_description_en": "An unforgettable hotel is not always defined by its highest floor, largest suite, or grandest lobby. Sometimes, the detail that transforms an entire journe...",
-        "gallery": [],
-        "video_file": null,
-        "video_url": null,
-        "show_video_on_cover": false,
-        "og_image": null,
-        "seo_noindex": 0
+        "date": "2026-07-25",
+        "is_featured": false,
+        "content": {
+            "tr": "<p>Bir otelin internet sayfasını açtığınızda dikkatinizi ilk çeken şey genellikle oda kategorileri olur.</p>\n<p>Deluxe.</p>\n<p>Junior Suite.</p>\n<p>Executive.</p>\n<p>Presidential.</p>\n<p>İsimler büyüdükçe, daha iyi bir deneyimin de sizi beklediğini düşünürsünüz.</p>\n<p>Oysa dünyanın en iyi otellerinde çalışan concierge ekipleri ve genel müdürler, aynı soruyla karşılaştıklarında çoğu zaman bambaşka bir cevap verir.</p>\n<p>&quot;En iyi oda hangisi?&quot;</p>\n<p>Verdikleri cevap çoğu zaman bir oda numarasıdır.</p>\n<p>Çünkü onlar metrekareyi değil, deneyimi düşünür.</p>\n<p>Bazı odalar sabah güneşini ilk alan taraftadır.</p>\n<p>Bazıları, gün boyunca değişen ışığı en doğal hâliyle içeri taşır.</p>\n<p>Bazıları bahçeye bakar; kuş sesleri alarmdan önce uyanır.</p>\n<p>Bazıları ise denize bakmasına rağmen gün boyunca rüzgâr aldığı için balkonunda uzun süre oturulmaz.</p>\n<p>Manzara tek başına yeterli değildir.</p>\n<p>Manzaraya nasıl baktığınız da önemlidir.</p>\n<p>İyi oteller bunu bilir.</p>\n<p>Bu yüzden birçok tarihî otelde, en çok talep gören odalar en büyük olanlar değildir.</p>\n<p>Örneğin Venedik&#039;teki bazı tarihî saray otellerinde, Büyük Kanal&#039;a bakan odalar kadar, arka taraftaki sessiz avlu odalarını özellikle isteyen misafirler vardır. Sabahları yalnızca çan seslerinin ve açılan pencerelerin duyulduğu bu odalar, şehrin gösterişli yüzünden çok gündelik hayatını hissettirir.</p>\n<p>Paris&#039;te ise Seine Nehri manzaralı bir oda her zaman en anlamlı tercih olmayabilir. Bazı gezginler, küçük bir meydana ya da Haussmann apartmanlarının çatılarına bakan odaları seçer. Çünkü o pencere, şehrin kartpostalını değil; sabah ekmek almaya çıkan Parislileri gösterir.</p>\n<p>Kyoto&#039;daki geleneksel ryokanlarda odanın değeri, kaç metrekare olduğuyla ölçülmez. Tatami üzerine düşen sabah ışığı, bahçedeki akçaağacın mevsime göre değişen rengi ve açık bırakılan shoji kapılarından içeri süzülen sessizlik, konaklamanın en önemli parçalarıdır.</p>\n<p>Doğru oda, bazen sizi dış dünyadan biraz uzaklaştırır.</p>\n<p>Bazen de şehrin tam ortasına, hiçbir kalabalığa karışmadan bağlar.</p>\n<p>Bu yüzden deneyimli gezginler rezervasyon yapmadan önce yalnızca oda tipine bakmaz.</p>\n<p>Binanın yönünü inceler.</p>\n<p>Güneşin hangi taraftan doğduğunu araştırır.</p>\n<p>Asansöre yakın mı, uzak mı olduğunu sorar.</p>\n<p>Yan odaların bağlantılı olup olmadığını öğrenir.</p>\n<p>Bahçede düğün düzenlenip düzenlenmediğini merak eder.</p>\n<p>Çünkü iyi bir konaklama, tesadüflerin değil; dikkatle verilmiş kararların sonucudur.</p>\n<p>İyi oteller de bunu bilir.</p>\n<p>Bu nedenle bazen internet sitesinde gördüğünüz oda ile size önerilen oda aynı değildir. Deneyimli bir rezervasyon ekibi ya da iyi bir concierge, seyahatinizin amacını anladığında size katalogdaki en pahalı seçeneği değil, size en uygun olanı önerebilir.</p>\n<h3>Belki balayı için sessiz bir köşe…</h3>\n<h3>Belki gün doğumunu seven biri için doğuya bakan bir pencere…</h3>\n<h3>Belki de yaz sıcağında öğleden sonra gölgede kalan bir teras…</h3>\n<p>İşte gerçek fark burada başlar.</p>\n<p>Bir oda, yalnızca uyuduğunuz yer değildir.</p>\n<p>Yolculuğunuzun ilk ve son manzarasıdır.</p>\n<p>Her sabah açtığınız pencere, o şehre dair ilk cümlenizi yazar.</p>\n<p>Her gece kapattığınız perde ise o günün son satırını.</p>\n<p>DIOREAL bir oteli değerlendirirken oda kategorilerinden önce şu soruyu sorar:</p>\n<p>**Bu otel, bulunduğu şehri en güzel hangi pencereden gösteriyor?**</p>\n<p>Çünkü bazen bir yolculuğu değiştiren şey, daha büyük bir oda değildir.</p>\n<p>Doğru penceredir.</p>",
+            "en": "<p># The Best Room Is Not Always the Most Expensive One</p>\n<p>When browsing a hotel&#039;s website, room categories are often the first thing we notice.</p>\n<p>Deluxe.</p>\n<p>Junior Suite.</p>\n<p>Executive.</p>\n<p>Presidential.</p>\n<p>The larger the title, the easier it is to assume the experience will be better.</p>\n<p>Yet ask the concierge or general manager of a truly exceptional hotel which room they would choose, and the answer is often surprisingly different.</p>\n<p>Not a category.</p>\n<p>A room number.</p>\n<p>Because they think in experiences, not square metres.</p>\n<p>Some rooms welcome the first light of morning.</p>\n<p>Others capture the changing colour of the afternoon.</p>\n<p>Some overlook quiet gardens where birdsong arrives before the day begins.</p>\n<p>Others may face the sea, yet remain too exposed to wind for a peaceful evening on the terrace.</p>\n<p>A view alone is never enough.</p>\n<p>What matters is how you experience it.</p>\n<p>The finest hotels understand this instinctively.</p>\n<p>In many historic Venetian palaces, for example, seasoned guests sometimes choose peaceful courtyard rooms over those facing the Grand Canal. Instead of passing gondolas, they wake to church bells, opening windows, and the quiet rhythm of local life.</p>\n<p>In Paris, a room overlooking the Seine is not always the most memorable. Some travelers prefer a view across a small square or the zinc rooftops of Haussmann buildings, where the city reveals itself through ordinary mornings rather than postcard perfection.</p>\n<p>In Kyoto&#039;s traditional ryokan, value is measured differently. Morning light falling across tatami mats, the changing colours of a maple tree beyond the garden, and the silence filtering through shoji screens become part of the stay itself.</p>\n<p>The right room can gently separate you from the outside world.</p>\n<p>Or connect you to a city without placing you in the middle of its noise.</p>\n<p>Experienced travelers rarely book a room based on category alone.</p>\n<p>They study the orientation of the building.</p>\n<p>They ask where the morning light arrives.</p>\n<p>They learn whether rooms connect to neighbouring suites.</p>\n<p>They ask about seasonal events, nearby gardens, or evening activity.</p>\n<p>Because exceptional stays are rarely accidental.</p>\n<p>They are the result of thoughtful decisions.</p>\n<p>The finest hotels know this well.</p>\n<p>That is why an experienced reservations team or concierge may recommend a room that is not the most expensive—but the one most perfectly suited to the journey you are about to take.</p>\n<p>Perhaps a quiet corner for a honeymoon.</p>\n<p>Perhaps an east-facing window for someone who never misses sunrise.</p>\n<p>Perhaps a shaded terrace during the height of summer.</p>\n<p>This is where remarkable hospitality begins.</p>\n<p>A hotel room is never simply a place to sleep.</p>\n<p>It is the first view that welcomes your morning.</p>\n<p>And the last image that stays with you before the lights go out.</p>\n<p>At DIOREAL, we ask a different question before recommending any hotel:</p>\n<p>**Which window allows this city to reveal itself at its very best?**</p>\n<p>Because sometimes, what transforms a journey is not a larger room.</p>\n<p>It is simply the right window.</p>"
+        }
     },
     {
-        "date": "04.09.2026",
+        "id": 18,
+        "slug_tr": "bir-otelin-kalbi-lobisidir",
+        "slug_en": "bir-otelin-kalbi-lobisidir-en",
         "title": {
             "tr": "Bir Otelin Kalbi, Lobisidir.",
             "en": "The Heart of a Hotel Is Its Lobby"
@@ -485,22 +419,16 @@
             "tr": "Konaklama Kültürü | 2026-07-25",
             "en": "Hospitality Culture | 2026-07-25"
         },
-        "img": "foto.img/amalfi.jpg",
+        "img": "uploads/journals/1784035093_6a5637159c380.png",
         "desc": {
-            "tr": "<p>Bazı mekânlar yalnızca içinden geçmeniz için tasarlanır. Bazıları ise sizi yavaşlatır. İyi bir otelin lobisi, konaklamanın başladığı yer değil; o şehrin ilk cümlesidir.</p>",
-            "en": "<p>Some spaces are designed simply to be passed through. Others invite you to slow down. In a remarkable hotel, the lobby is not where your stay begins—it is the first sentence of the city.</p>"
+            "tr": "Bazı mekânlar yalnızca içinden geçmeniz için tasarlanır. Bazıları ise sizi yavaşlatır. İyi bir otelin lobisi, konaklamanın başladığı yer değil; o şehrin ilk cümlesidir.",
+            "en": "Some spaces are designed simply to be passed through. Others invite you to slow down. In a remarkable hotel, the lobby is not where your stay begins—it is the first sentence of the city."
         },
-        "slug_tr": "bir-otelin-kalbi-lobisidir",
-        "slug_en": "bir-otelin-kalbi-lobisidir-en",
-        "seo_title_tr": "Bir Otelin Kalbi, Lobisidir. | Dioreal Dijital Lüks Yaşam Platformu",
-        "seo_title_en": "The Heart of a Hotel Is Its Lobby | Dioreal Digital Luxury Platform",
-        "seo_description_tr": "Bazı mekânlar yalnızca içinden geçmeniz için tasarlanır. Bazıları ise sizi yavaşlatır. İyi bir otelin lobisi, konaklamanın başladığı yer değil; o şehrin il...",
-        "seo_description_en": "Some spaces are designed simply to be passed through. Others invite you to slow down. In a remarkable hotel, the lobby is not where your stay begins—it is...",
-        "gallery": [],
-        "video_file": null,
-        "video_url": null,
-        "show_video_on_cover": false,
-        "og_image": null,
-        "seo_noindex": 0
+        "date": "2026-07-25",
+        "is_featured": false,
+        "content": {
+            "tr": "<p>Birçok insan otele geldiğinde doğruca odasına çıkmak ister.</p>\n<p>Valiz bırakılır.</p>\n<p>Kart alınır.</p>\n<p>Asansöre yönelinir.</p>\n<p>Lobi ise yalnızca geçilen bir alan gibi görülür.</p>\n<p>Oysa iyi oteller, en çok burada başlar.</p>\n<p>Bir lobi, mimarinin gösteriş yaptığı yer değildir.</p>\n<p>Karşılama hissinin kurulduğu yerdir.</p>\n<h3>Daha kapı açılır açılmaz duyduğunuz ilk müzik…</h3>\n<h3>Taze çiçeklerin kokusu…</h3>\n<h3>Doğal ışığın zemine düşüşü…</h3>\n<h3>Karşılayan ekibin ses tonu…</h3>\n<p>İlk birkaç dakika, otelin geri kalanını nasıl hatırlayacağınızı sessizce belirler.</p>\n<p>Bunun bir nedeni vardır.</p>\n<p>Dünyanın en başarılı otel tasarımcıları, lobiyi yalnızca bir giriş alanı olarak düşünmez.</p>\n<p>Orası, otelin oturma odasıdır.</p>\n<h3>Sabah erken saatte kahvesini içen bir iş insanı…</h3>\n<h3>Şehri keşfetmeden önce haritasını açan bir gezgin…</h3>\n<h3>Akşamüstü buluşan iki arkadaş…</h3>\n<h3>Sessizce kitap okuyan biri…</h3>\n<p>Hepsi aynı mekânı farklı amaçlarla kullanır.</p>\n<p>İyi bir lobi, insanları acele ettirmez.</p>\n<p>Onlara kalmak için bir sebep sunar.</p>\n<p>Bu yüzden birçok ikonik otelin lobisi, yalnızca misafirlerin değil, o şehirde yaşayan insanların da buluşma noktasıdır.</p>\n<h3>Londra&#039;da bir öğleden sonra otel lobisinde yapılan bir toplantı…</h3>\n<h3>Milano&#039;da moda haftası boyunca kahve içmek için seçilen bir köşe…</h3>\n<h3>Tokyo&#039;da yağmurlu bir günde sessizce vakit geçirilen bir salon…</h3>\n<p>Buralar yalnızca otelin parçası değildir.</p>\n<p>Şehrin gündelik hayatının da parçasıdır.</p>\n<p>İyi tasarlanmış bir lobi, bulunduğu destinasyondan kopuk görünmez.</p>\n<h3>Kullanılan taşlar…</h3>\n<h3>Ahşabın tonu…</h3>\n<h3>Yerel sanat eserleri…</h3>\n<h3>Pencereden içeri giren ışık…</h3>\n<p>Hepsi dışarıdaki şehirle konuşur.</p>\n<p>Bir otelin kimliği, çoğu zaman odasından önce lobisinde hissedilir.</p>\n<p>Çünkü oda size ait bir alandır.</p>\n<p>Lobi ise herkesin paylaştığı ortak hafızadır.</p>\n<p>Yıllar sonra aynı otele döndüğünüzde önce o koltuğu hatırlarsınız.</p>\n<h3>Kahvenizi içtiğiniz köşeyi…</h3>\n<h3>Akşam üzeri pencereden süzülen ışığı…</h3>\n<h3>Ve içeri girerken hissettiğiniz tanıdıklığı…</h3>\n<p>İyi konaklama, kusursuz hizmetten önce doğru atmosfer kurabilmektir.</p>\n<p>İşte bu yüzden bazı oteller daha kapısından içeri adım attığınız anda hafızanızda yer etmeye başlar.</p>\n<p>DIOREAL için bir otelin lüksünü gösteren şey, avizesinin büyüklüğü değildir.</p>\n<p>İçeri girdiğinizde zamanın biraz yavaşladığını hissettirebilmesidir.</p>",
+            "en": "<p>Most guests arrive at a hotel with a single goal.</p>\n<p>Collect the key.</p>\n<p>Leave the luggage.</p>\n<p>Take the elevator.</p>\n<p>The lobby becomes little more than a space to pass through.</p>\n<p>Yet the finest hotels begin long before the room.</p>\n<p>A lobby is not a stage for architecture alone.</p>\n<p>It is where a sense of welcome quietly takes shape.</p>\n<p>The first music you hear as the doors open.</p>\n<p>The scent of fresh flowers.</p>\n<p>Natural light moving across the floor.</p>\n<p>The calm tone of the person greeting you.</p>\n<p>Those first few minutes often shape how the entire stay will be remembered.</p>\n<p>There is a reason for that.</p>\n<p>The world&#039;s most thoughtful hotel designers never see a lobby as an entrance hall.</p>\n<p>They see it as the hotel&#039;s living room.</p>\n<p>A business traveler having an early coffee.</p>\n<p>A visitor unfolding a city map before heading out.</p>\n<p>Two friends meeting in the afternoon.</p>\n<p>Someone reading in silence.</p>\n<p>Each person uses the same space differently.</p>\n<p>A well-designed lobby never asks people to hurry.</p>\n<p>It quietly gives them a reason to stay.</p>\n<p>That is why the lobbies of many iconic hotels belong not only to their guests, but also to the city itself.</p>\n<p>An afternoon meeting in London.</p>\n<p>A coffee during fashion week in Milan.</p>\n<p>A quiet hour escaping the rain in Tokyo.</p>\n<p>These places become part of everyday urban life.</p>\n<p>The finest lobbies never feel detached from their surroundings.</p>\n<p>The stone beneath your feet.</p>\n<p>The warmth of the wood.</p>\n<p>Works by local artists.</p>\n<p>The changing daylight entering through generous windows.</p>\n<p>Everything reflects the character of the destination beyond the doors.</p>\n<p>A hotel&#039;s identity is often felt in its lobby before it is experienced in its rooms.</p>\n<p>The room belongs to you.</p>\n<p>The lobby belongs to everyone&#039;s memory.</p>\n<p>Years later, you may not remember the room number.</p>\n<p>But you will remember the armchair where you sat.</p>\n<p>The corner where you enjoyed your morning coffee.</p>\n<p>The afternoon light across the floor.</p>\n<p>And the feeling of familiarity the moment you walked inside.</p>\n<p>Exceptional hospitality begins not with flawless service, but with an atmosphere that instantly puts you at ease.</p>\n<p>Perhaps that is why some hotels stay with us from the very first step through the door.</p>\n<p>At DIOREAL, the measure of a remarkable hotel is never the size of its chandelier.</p>\n<p>It is whether time seems to slow down the moment you enter.</p>"
+        }
     }
 ]
