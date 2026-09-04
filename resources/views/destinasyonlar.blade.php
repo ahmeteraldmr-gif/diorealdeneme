@@ -129,6 +129,91 @@
     </div>
 
     <style>
+        .guide-card-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2.5rem;
+            margin-top: 4rem;
+        }
+        .guide-card {
+            display: flex;
+            flex-direction: column;
+            background: transparent;
+            transition: transform 0.3s ease;
+        }
+        .guide-card:hover {
+            transform: translateY(-5px);
+        }
+        .guide-card-img-wrapper {
+            width: 100%;
+            aspect-ratio: 4/3;
+            border-radius: 8px;
+            overflow: hidden;
+            margin-bottom: 1.25rem;
+            display: block;
+        }
+        .guide-card-img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+        .guide-card:hover .guide-card-img {
+            transform: scale(1.04);
+        }
+        .guide-card-body {
+            display: flex;
+            flex-direction: column;
+            flex-grow: 1;
+        }
+        .guide-card-tag {
+            font-family: var(--font-body, 'Jost', sans-serif);
+            font-size: 0.75rem;
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+            color: var(--accent, #c8a96e);
+            margin-bottom: 0.5rem;
+            display: block;
+        }
+        .guide-card-title {
+            font-family: var(--font-display, 'Cormorant Garamond', serif);
+            font-size: 1.6rem;
+            font-weight: 400;
+            line-height: 1.25;
+            color: var(--near-black, #1a1816);
+            margin-bottom: 0.75rem;
+        }
+        .guide-card-desc {
+            font-family: var(--font-body, 'Jost', sans-serif);
+            font-size: 0.88rem;
+            line-height: 1.65;
+            color: var(--dark-gray, #666);
+            margin-bottom: 1.5rem;
+            display: -webkit-box;
+            -webkit-line-clamp: 3;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+        }
+        .guide-card-btn {
+            display: inline-block;
+            padding: 0.65rem 1.6rem;
+            border: 1px solid var(--near-black, #1a1816);
+            border-radius: 2px;
+            color: var(--near-black, #1a1816);
+            font-family: var(--font-body, 'Jost', sans-serif);
+            font-size: 0.75rem;
+            font-weight: 500;
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            background: transparent;
+            width: fit-content;
+        }
+        .guide-card-btn:hover {
+            background: var(--near-black, #1a1816);
+            color: #ffffff;
+        }
         .custom-pagination {
             display: flex;
             justify-content: center;
@@ -176,21 +261,11 @@
             background: var(--accent, #c8a96e);
             color: #fff;
         }
-        .btn-guide-explore {
-            display: inline-flex;
-            align-items: center;
-            gap: 0.5rem;
-            color: var(--accent, #c8a96e);
-            font-family: var(--font-body, 'Jost', sans-serif);
-            font-size: 0.85rem;
-            font-weight: 500;
-            letter-spacing: 0.05em;
-            text-transform: uppercase;
-            text-decoration: none;
-            transition: color 0.3s;
+        @media (max-width: 1024px) {
+            .guide-card-grid { grid-template-columns: repeat(2, 1fr); }
         }
-        .btn-guide-explore:hover {
-            color: var(--near-black, #1a1816);
+        @media (max-width: 640px) {
+            .guide-card-grid { grid-template-columns: 1fr; }
         }
     </style>
     <section class="content-section">
@@ -208,7 +283,7 @@
                 <span class="lang-text-en">{{ $settings['guide_exp_text_en'] ?? 'We simplify your travel planning with destination guides, practical tips, and seasonal recommendations prepared by our experienced travel editors.' }}</span>
             </p>
         </div>
-        <div class="card-grid">
+        <div class="guide-card-grid">
             @foreach($rehberler as $g)
                 @php
                     $imgUrl = dioreal_img($g->img, 'foto.img/bodrum.jpg');
@@ -221,32 +296,31 @@
                     $rawDescEn = !empty($g->desc["en"]) ? $g->desc["en"] : ($g->desc["tr"] ?? "");
                     $cleanDescTr = trim(preg_replace('/\s+/', ' ', strip_tags($rawDescTr)));
                     $cleanDescEn = trim(preg_replace('/\s+/', ' ', strip_tags($rawDescEn)));
-                    $descTr = \Illuminate\Support\Str::limit($cleanDescTr, 220);
-                    $descEn = \Illuminate\Support\Str::limit($cleanDescEn, 220);
+                    $descTr = \Illuminate\Support\Str::limit($cleanDescTr, 200);
+                    $descEn = \Illuminate\Support\Str::limit($cleanDescEn, 200);
                 @endphp
-                <div class="card reveal visible" style="display: flex; flex-direction: column;">
-                    <a href="{{ route('rehber.detay', $slug) }}" style="display: block; overflow: hidden; text-decoration: none;">
-                        <div class="card-img" style="background-image:url('{{ $imgUrl }}'); height: 260px; background-size: cover; background-position: center;"></div>
+                <div class="guide-card reveal visible">
+                    <a href="{{ route('rehber.detay', $slug) }}" class="guide-card-img-wrapper">
+                        <img src="{{ $imgUrl }}" onerror="this.onerror=null;this.src='{{ asset('foto.img/bodrum.jpg') }}';" alt="{{ $titleTr }}" class="guide-card-img">
                     </a>
-                    <div class="card-body" style="display: flex; flex-direction: column; flex-grow: 1; padding: 2rem 1.5rem;">
-                        <span class="card-tag lang-text-tr" style="margin-bottom: 0.5rem;">{{ $tagTr }}</span>
-                        <span class="card-tag lang-text-en" style="margin-bottom: 0.5rem;">{{ $tagEn }}</span>
+                    <div class="guide-card-body">
+                        <span class="guide-card-tag lang-text-tr">{{ $tagTr }}</span>
+                        <span class="guide-card-tag lang-text-en">{{ $tagEn }}</span>
                         
                         <a href="{{ route('rehber.detay', $slug) }}" style="text-decoration: none; color: inherit;">
-                            <h3 class="card-title lang-text-tr" style="font-size: 1.5rem; line-height: 1.3; margin-bottom: 0.75rem;">{{ $titleTr }}</h3>
-                            <h3 class="card-title lang-text-en" style="font-size: 1.5rem; line-height: 1.3; margin-bottom: 0.75rem;">{{ $titleEn }}</h3>
+                            <h3 class="guide-card-title lang-text-tr">{{ $titleTr }}</h3>
+                            <h3 class="guide-card-title lang-text-en">{{ $titleEn }}</h3>
                         </a>
                         
-                        <div style="margin-bottom: 1.5rem; flex-grow: 1;">
-                            <p class="card-desc lang-text-tr" style="color: var(--dark-gray); font-size: 0.9rem; line-height: 1.6; max-height: none; display: block;">{{ $descTr }}</p>
-                            <p class="card-desc lang-text-en" style="color: var(--dark-gray); font-size: 0.9rem; line-height: 1.6; max-height: none; display: block;">{{ $descEn }}</p>
+                        <div style="flex-grow: 1;">
+                            <p class="guide-card-desc lang-text-tr">{{ $descTr }}</p>
+                            <p class="guide-card-desc lang-text-en">{{ $descEn }}</p>
                         </div>
                         
-                        <div class="card-btn-wrapper" style="margin-top: auto; padding-top: 0.5rem;">
-                            <a href="{{ route('rehber.detay', $slug) }}" class="btn-guide-explore">
-                                <span class="lang-text-tr">Rehberi İncele</span>
-                                <span class="lang-text-en">View Guide</span>
-                                <i class="fas fa-arrow-right" style="font-size: 0.75rem;"></i>
+                        <div style="margin-top: auto; padding-top: 0.5rem;">
+                            <a href="{{ route('rehber.detay', $slug) }}" class="guide-card-btn">
+                                <span class="lang-text-tr">REHBERİ İNCELE</span>
+                                <span class="lang-text-en">VIEW GUIDE</span>
                             </a>
                         </div>
                     </div>
