@@ -9,6 +9,12 @@ use App\Http\Controllers\SitemapController;
 // Public Front-end Routes (clean URLs + legacy .html 301 redirects)
 Route::get('/sitemap.xml', [SitemapController::class, 'index'])->name('sitemap');
 
+Route::get('/sync-dioreal-now', function () {
+    $cmd = new \App\Console\Commands\SyncDiorealContent();
+    $cmd->handle();
+    return response('Dioreal sync and image download completed successfully!', 200);
+});
+
 Route::get('/', [PageController::class, 'index'])->name('home');
 Route::get('/index.html', function() {
     return redirect()->route('home', [], 301);
