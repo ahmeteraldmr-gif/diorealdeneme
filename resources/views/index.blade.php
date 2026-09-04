@@ -208,7 +208,7 @@
         <div class="bt-about-grid" style="display: grid; gap: 2rem; text-align: left;">
             <!-- Trend Otel -->
             <a href="{{ route('oteller') }}" class="bt-about-card" style="aspect-ratio: 3/4; position: relative; overflow: hidden; background: var(--near-black); cursor: pointer; transition: transform 0.4s; text-decoration: none; display: block;">
-                <img src="{{ dioreal_img($settings['trend_otel_img'] ?? '', 'foto.img/about_safari.webp') }}" alt="Trend Otel" loading="lazy" width="600" height="800" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.8s ease;">
+                <img src="{{ dioreal_img($settings['trend_otel_img'] ?? '', 'foto.img/about_safari.jpg') }}" onerror="this.onerror=null;this.src='{{ asset('foto.img/about_safari.jpg') }}';" alt="Trend Otel" loading="lazy" width="600" height="800" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.8s ease;">
                 <div style="position: absolute; bottom: 0; left: 0; right: 0; padding: 2rem; background: linear-gradient(transparent, rgba(0,0,0,0.85)); color: white; pointer-events: none;">
                     <div style="font-size: 0.75rem; letter-spacing: 0.2em; text-transform: uppercase; margin-bottom: 0.5rem; color: rgba(255,255,255,0.8);">
                         <span class="lang-text-tr">Trend Otel</span>
@@ -226,7 +226,7 @@
             </a>
             <!-- Trend Restoran -->
             <a href="{{ route('restoranlar') }}" class="bt-about-card" style="aspect-ratio: 3/4; position: relative; overflow: hidden; background: var(--near-black); cursor: pointer; transition: transform 0.4s; text-decoration: none; display: block;">
-                <img src="{{ dioreal_img($settings['trend_rest_img'] ?? '', 'foto.img/rest_mikla.webp') }}" alt="Trend Restoran" loading="lazy" width="600" height="800" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.8s ease;">
+                <img src="{{ dioreal_img($settings['trend_rest_img'] ?? '', 'foto.img/rest_mikla.jpg') }}" onerror="this.onerror=null;this.src='{{ asset('foto.img/rest_mikla.jpg') }}';" alt="Trend Restoran" loading="lazy" width="600" height="800" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.8s ease;">
                 <div style="position: absolute; bottom: 0; left: 0; right: 0; padding: 2rem; background: linear-gradient(transparent, rgba(0,0,0,0.85)); color: white; pointer-events: none;">
                     <div style="font-size: 0.75rem; letter-spacing: 0.2em; text-transform: uppercase; margin-bottom: 0.5rem; color: rgba(255,255,255,0.8);">
                         <span class="lang-text-tr">Trend Restoran</span>
@@ -244,7 +244,7 @@
             </a>
             <!-- Trend Yat -->
             <a href="{{ route('yatlar') }}" class="bt-about-card" style="aspect-ratio: 3/4; position: relative; overflow: hidden; background: var(--near-black); cursor: pointer; transition: transform 0.4s; text-decoration: none; display: block;">
-                <img src="{{ dioreal_img($settings['trend_yat_img'] ?? '', 'foto.img/about_yacht.webp') }}" alt="Trend Yat" loading="lazy" width="600" height="800" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.8s ease;">
+                <img src="{{ dioreal_img($settings['trend_yat_img'] ?? '', 'foto.img/about_yacht.jpg') }}" onerror="this.onerror=null;this.src='{{ asset('foto.img/about_yacht.jpg') }}';" alt="Trend Yat" loading="lazy" width="600" height="800" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.8s ease;">
                 <div style="position: absolute; bottom: 0; left: 0; right: 0; padding: 2rem; background: linear-gradient(transparent, rgba(0,0,0,0.85)); color: white; pointer-events: none;">
                     <div style="font-size: 0.75rem; letter-spacing: 0.2em; text-transform: uppercase; margin-bottom: 0.5rem; color: rgba(255,255,255,0.8);">
                         <span class="lang-text-tr">Trend Yat</span>
@@ -262,7 +262,7 @@
             </a>
             <!-- Trend Beach -->
             <a href="{{ route('gezi-rehberi') }}" class="bt-about-card" style="aspect-ratio: 3/4; position: relative; overflow: hidden; background: var(--near-black); cursor: pointer; transition: transform 0.4s; text-decoration: none; display: block;">
-                <img src="{{ dioreal_img($settings['trend_beach_img'] ?? '', 'foto.img/bodrum.webp') }}" alt="Trend Beach" loading="lazy" width="600" height="800" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.8s ease;">
+                <img src="{{ dioreal_img($settings['trend_beach_img'] ?? '', 'foto.img/bodrum.jpg') }}" onerror="this.onerror=null;this.src='{{ asset('foto.img/bodrum.jpg') }}';" alt="Trend Beach" loading="lazy" width="600" height="800" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.8s ease;">
                 <div style="position: absolute; bottom: 0; left: 0; right: 0; padding: 2rem; background: linear-gradient(transparent, rgba(0,0,0,0.85)); color: white; pointer-events: none;">
                     <div style="font-size: 0.75rem; letter-spacing: 0.2em; text-transform: uppercase; margin-bottom: 0.5rem; color: rgba(255,255,255,0.8);">
                         <span class="lang-text-tr">Trend Beach</span>
