@@ -1,61 +1,325 @@
 [
     {
-        "id": 4,
         "title": {
-            "tr": "Bodrum",
-            "en": "🇹🇷 Bodrum Destination Guide"
+            "tr": "Turunç",
+            "en": "Turunç"
         },
         "tag": {
-            "tr": "Halikarnassos’tan Bugüne, Ege’nin Yaşayan Hafızası",
-            "en": "From Halicarnassus to the Present Day: The Living Memory of the Aegean"
+            "tr": "Marmaris",
+            "en": "Marmaris"
         },
-        "img": "uploads/guides/1783977097_6a555489ef0ed.png",
+        "img": "uploads\/guides\/1787312316_6a8838bc00330.png",
         "desc": {
-            "tr": "Bodrum’a ilk kez gelenlerin rotası çoğu zaman doğrudan Yalıkavak Marina’ya, Türkbükü kıyılarına ya da yarımadanın popüler plajlarına çevrilir. Oysa Bodrum’un hikâyesi ne marinalarda ne de yaz sezonuyla birlikte açılan adreslerde başlar. Bu kıyılar, Antik Çağ’ın en önemli liman kentlerinden Halikarnassos’a ev sahipliği yaptı. Karya satrabı Mausolos burada dünyanın yedi harikasından biri kabul edilen anıt mezarını yükseltti; tarihçi Herodotos bu topraklarda doğdu; Saint Jean Şövalyeleri limanın girişine bugün Bodrum’un siluetini belirleyen kaleyi inşa etti. Yüzyıllar sonra balıkçılar, süngerciler, tekne ustaları, sanatçılar ve yazarlar aynı kıyılarda yeni bir yaşam kültürü kurdu.",
-            "en": "Many first-time visitors head straight to Yalıkavak Marina or popular beach clubs. Yet Bodrum's story goes far deeper. For nearly 2,500 years, this peninsula has been one of the Mediterranean's most vital maritime hubs. From the ancient stones of Halicarnassus to the medieval Castle of St. Peter, generations have marveled at these crystal-clear turquoise waters. Exploring Bodrum means discovering white-washed villages, olive groves, secluded coves, and world-class superyacht marinas."
+            "tr": "Çam Dağlarının Ardındaki Kıyı Köyü\r\n\r\nİçmeler’den sonra yol yükselmeye başlar. Kıyı bir süre gözden kaybolur; virajlar sıklaşır, kızılçamlar yolun iki tarafını kapatır ve Marmaris’in yapılaşmış sahil hattı geride kalır. Dağın öteki yamacına geçildiğinde deniz yeniden...",
+            "en": "Çam Dağlarının Ardındaki Kıyı Köyü\r\n\r\nİçmeler’den sonra yol yükselmeye başlar. Kıyı bir süre gözden kaybolur; virajlar sıklaşır, kızılçamlar yolun iki tarafını kapatır ve Marmaris’in yapılaşmış sahil hattı geride kalır. Dağın öteki yamacına geçildiğinde deniz yeniden..."
         },
-        "created_at": "2026-07-25T11:25:57.000000Z",
-        "updated_at": "2026-07-25T13:03:37.000000Z",
+        "slug_tr": "turunc-gezi-rehberi",
+        "slug_en": "turunc-gezi-rehberi-en",
+        "seo_title_tr": "Turunç | Dioreal Dijital Lüks Yaşam Platformu",
+        "seo_title_en": "Turunç | Dioreal Digital Luxury Platform",
+        "seo_description_tr": "Çam Dağlarının Ardındaki Kıyı Köyü\r\n\r\nİçmeler’den sonra yol yükselmeye başlar. Kıyı bir süre gözden kaybolur; virajlar sıklaşır, kızılçamlar yolun iki tara...",
+        "seo_description_en": "Çam Dağlarının Ardındaki Kıyı Köyü\r\n\r\nİçmeler’den sonra yol yükselmeye başlar. Kıyı bir süre gözden kaybolur; virajlar sıklaşır, kızılçamlar yolun iki tara...",
         "gallery": [],
         "video_file": null,
         "video_url": null,
         "show_video_on_cover": false,
-        "slug_tr": "bodrum",
-        "slug_en": "bodrum-destination-guide",
-        "seo_title_tr": "Bodrum | Dioreal Dijital Lüks Yaşam Platformu",
-        "seo_title_en": "🇹🇷 Bodrum Destination Guide | Dioreal Digital Luxury Platform",
-        "seo_description_tr": "Bodrum’a ilk kez gelenlerin rotası çoğu zaman doğrudan Yalıkavak Marina’ya, Türkbükü kıyılarına ya da yarımadanın popüler plajlarına çevrilir. Oysa Bodrum’un hikâyesi...",
-        "seo_description_en": "Many first-time visitors head straight to Yalıkavak Marina or popular beach clubs. Yet Bodrum's story goes far deeper...",
         "og_image": null,
         "seo_noindex": 0
     },
     {
-        "id": 5,
         "title": {
-            "tr": "Yalıkavak",
-            "en": "Yalıkavak"
+            "tr": "İçmeler",
+            "en": "İçmeler"
         },
         "tag": {
-            "tr": "Bodrum",
-            "en": "Bodrum"
+            "tr": "Marmaris",
+            "en": "Marmaris"
         },
-        "img": "uploads/guides/1783977470_6a5555fe5e2a6.png",
+        "img": "uploads\/guides\/1787310589_6a8831fd0816c.png",
         "desc": {
-            "tr": "Yalıkavak, sakin bir balıkçı köyünden Akdeniz'in önde gelen süper yat destinasyonlarından birine dönüştü. Yalıkavak Marina'ya, üst düzey gastronomiye ve lüks butiklere ev sahipliği yapan belde, modern ihtişamı Ege mirasıyla sorunsuz bir şekilde harmanlıyor. Yakındaki Sandima köyü taş evlerini, tarihi rüzgar değirmenlerini ve bakir kıyı koylarını keşfedin.",
-            "en": "Yalıkavak has transformed from a quiet fishing village into one of the Mediterranean's premier superyacht destinations. Home to Yalıkavak Marina, high-end gastronomy, and luxury boutiques, it seamlessly blends modern glamour with Aegean heritage. Explore nearby Sandima village stone houses, historic windmills, and pristine coastal coves."
+            "tr": "Dağların Arasında Açılan Marmaris Koyu\r\n\r\nMarmaris’ten batıya doğru ilerleyen sahil yolu, otellerin ve kıyı yaşamının arasından geçerek İçmeler’e ulaşır. Yol boyunca deniz bir tarafta, çamlarla kaplı yamaçlar diğer tarafta kalır. İçmeler’e yaklaşıldığında körfez daralır, dağlar...",
+            "en": "Dağların Arasında Açılan Marmaris Koyu\r\n\r\nMarmaris’ten batıya doğru ilerleyen sahil yolu, otellerin ve kıyı yaşamının arasından geçerek İçmeler’e ulaşır. Yol boyunca deniz bir tarafta, çamlarla kaplı yamaçlar diğer tarafta kalır. İçmeler’e yaklaşıldığında körfez daralır, dağlar..."
         },
-        "created_at": "2026-07-25T11:25:58.000000Z",
-        "updated_at": "2026-07-25T13:03:37.000000Z",
+        "slug_tr": "icmeler-gezi-rehberi",
+        "slug_en": "icmeler-gezi-rehberi-en",
+        "seo_title_tr": "İçmeler | Dioreal Dijital Lüks Yaşam Platformu",
+        "seo_title_en": "İçmeler | Dioreal Digital Luxury Platform",
+        "seo_description_tr": "Dağların Arasında Açılan Marmaris Koyu\r\n\r\nMarmaris’ten batıya doğru ilerleyen sahil yolu, otellerin ve kıyı yaşamının arasından geçerek İçmeler’e ulaşır. Y...",
+        "seo_description_en": "Dağların Arasında Açılan Marmaris Koyu\r\n\r\nMarmaris’ten batıya doğru ilerleyen sahil yolu, otellerin ve kıyı yaşamının arasından geçerek İçmeler’e ulaşır. Y...",
         "gallery": [],
         "video_file": null,
         "video_url": null,
         "show_video_on_cover": false,
-        "slug_tr": "yalikavak",
-        "slug_en": "yalikavak",
-        "seo_title_tr": "Yalıkavak | Dioreal Dijital Lüks Yaşam Platformu",
-        "seo_title_en": "Yalıkavak | Dioreal Digital Luxury Platform",
-        "seo_description_tr": "Yalıkavak, sakin bir balıkçı köyünden Akdeniz'in önde gelen süper yat destinasyonlarından birine dönüştü...",
-        "seo_description_en": "Yalıkavak has transformed from a quiet fishing village into one of the Mediterranean's premier superyacht destinations...",
+        "og_image": null,
+        "seo_noindex": 0
+    },
+    {
+        "title": {
+            "tr": "Marmaris",
+            "en": "Marmaris"
+        },
+        "tag": {
+            "tr": "Muğla",
+            "en": "Muğla"
+        },
+        "img": "uploads\/guides\/1787309752_6a882eb830c30.png",
+        "desc": {
+            "tr": "İki Denizin Arasında Kurulan Liman Şehri\r\n\r\nMarmaris’e kara yoluyla yaklaşırken şehir bir anda görünmez. Önce dağların arasından ilerleyen virajlar, kızılçamlarla kaplı yamaçlar ve giderek sıklaşan deniz işaretleri belirir. Son virajlardan birinin ardından körfez açılır: tekneler,...",
+            "en": "İki Denizin Arasında Kurulan Liman Şehri\r\n\r\nMarmaris’e kara yoluyla yaklaşırken şehir bir anda görünmez. Önce dağların arasından ilerleyen virajlar, kızılçamlarla kaplı yamaçlar ve giderek sıklaşan deniz işaretleri belirir. Son virajlardan birinin ardından körfez açılır: tekneler,..."
+        },
+        "slug_tr": "marmaris-gezi-rehberi",
+        "slug_en": "marmaris-gezi-rehberi-en",
+        "seo_title_tr": "Marmaris | Dioreal Dijital Lüks Yaşam Platformu",
+        "seo_title_en": "Marmaris | Dioreal Digital Luxury Platform",
+        "seo_description_tr": "İki Denizin Arasında Kurulan Liman Şehri\r\n\r\nMarmaris’e kara yoluyla yaklaşırken şehir bir anda görünmez. Önce dağların arasından ilerleyen virajlar, kızılç...",
+        "seo_description_en": "İki Denizin Arasında Kurulan Liman Şehri\r\n\r\nMarmaris’e kara yoluyla yaklaşırken şehir bir anda görünmez. Önce dağların arasından ilerleyen virajlar, kızılç...",
+        "gallery": [],
+        "video_file": null,
+        "video_url": null,
+        "show_video_on_cover": false,
+        "og_image": null,
+        "seo_noindex": 0
+    },
+    {
+        "title": {
+            "tr": "Göcek",
+            "en": "Göcek"
+        },
+        "tag": {
+            "tr": "Fethiye",
+            "en": "Fethiye"
+        },
+        "img": "uploads\/guides\/1787307415_6a882597dff85.png",
+        "desc": {
+            "tr": "On İki Adanın Arasında Bir Deniz Kasabası\r\n\r\nSabahın ilk saatlerinde Göcek kıyısında deniz neredeyse hareketsizdir. Tekneler, çamlarla çevrili körfezin içinde geceden kalma bir sessizlikle bekler; halatlar gerilir, güverteler yıkanır, kıyıdaki kafeler güne hazırlanır. Birkaç saat...",
+            "en": "On İki Adanın Arasında Bir Deniz Kasabası\r\n\r\nSabahın ilk saatlerinde Göcek kıyısında deniz neredeyse hareketsizdir. Tekneler, çamlarla çevrili körfezin içinde geceden kalma bir sessizlikle bekler; halatlar gerilir, güverteler yıkanır, kıyıdaki kafeler güne hazırlanır. Birkaç saat..."
+        },
+        "slug_tr": "gocek-gezi-rehberi",
+        "slug_en": "gocek-gezi-rehberi-en",
+        "seo_title_tr": "Göcek | Dioreal Dijital Lüks Yaşam Platformu",
+        "seo_title_en": "Göcek | Dioreal Digital Luxury Platform",
+        "seo_description_tr": "On İki Adanın Arasında Bir Deniz Kasabası\r\n\r\nSabahın ilk saatlerinde Göcek kıyısında deniz neredeyse hareketsizdir. Tekneler, çamlarla çevrili körfezin içi...",
+        "seo_description_en": "On İki Adanın Arasında Bir Deniz Kasabası\r\n\r\nSabahın ilk saatlerinde Göcek kıyısında deniz neredeyse hareketsizdir. Tekneler, çamlarla çevrili körfezin içi...",
+        "gallery": [],
+        "video_file": null,
+        "video_url": null,
+        "show_video_on_cover": false,
+        "og_image": null,
+        "seo_noindex": 0
+    },
+    {
+        "title": {
+            "tr": "Yanıklar",
+            "en": "Yanıklar"
+        },
+        "tag": {
+            "tr": "Fethiye",
+            "en": "Fethiye"
+        },
+        "img": "uploads\/guides\/1787301030_6a880ca60a3b7.png",
+        "desc": {
+            "tr": "Fethiye’nin Üreten Kıyı Ovası\r\n\r\nFethiye ile Göcek arasındaki yol, bölgenin en çok bilinen koylarına doğru ilerlerken Yanıklar’da farklı bir coğrafyadan geçer. Deniz birkaç kilometre ötede uzanır; fakat buranın karakterini yalnızca kıyı belirlemez. Tarlalar, meyve ağaçları,...",
+            "en": "Fethiye’nin Üreten Kıyı Ovası\r\n\r\nFethiye ile Göcek arasındaki yol, bölgenin en çok bilinen koylarına doğru ilerlerken Yanıklar’da farklı bir coğrafyadan geçer. Deniz birkaç kilometre ötede uzanır; fakat buranın karakterini yalnızca kıyı belirlemez. Tarlalar, meyve ağaçları,..."
+        },
+        "slug_tr": "yaniklar-gezi-rehberi",
+        "slug_en": "yaniklar-gezi-rehberi-en",
+        "seo_title_tr": "Yanıklar | Dioreal Dijital Lüks Yaşam Platformu",
+        "seo_title_en": "Yanıklar | Dioreal Digital Luxury Platform",
+        "seo_description_tr": "Fethiye’nin Üreten Kıyı Ovası\r\n\r\nFethiye ile Göcek arasındaki yol, bölgenin en çok bilinen koylarına doğru ilerlerken Yanıklar’da farklı bir coğrafyadan ge...",
+        "seo_description_en": "Fethiye’nin Üreten Kıyı Ovası\r\n\r\nFethiye ile Göcek arasındaki yol, bölgenin en çok bilinen koylarına doğru ilerlerken Yanıklar’da farklı bir coğrafyadan ge...",
+        "gallery": [],
+        "video_file": null,
+        "video_url": null,
+        "show_video_on_cover": false,
+        "og_image": null,
+        "seo_noindex": 0
+    },
+    {
+        "title": {
+            "tr": "Günlüklü Koyu",
+            "en": "Günlüklü Koyu"
+        },
+        "tag": {
+            "tr": "Fethiye",
+            "en": "Fethiye"
+        },
+        "img": "uploads\/guides\/1787300128_6a880920eae9d.png",
+        "desc": {
+            "tr": "Sığla Ormanının Denize Ulaştığı Yer\r\n\r\nGünlüklü Koyu’na giden yol, denizi göstermeden önce ormanı hissettirir.\r\n\r\nFethiye–Muğla kara yolundan ayrıldıktan sonra çevredeki hava yavaşça değişir. Güneş, ağaçların geniş yaprakları arasından parçalanarak zemine düşer. Toprak daha nemli, gölge...",
+            "en": "Sığla Ormanının Denize Ulaştığı Yer\r\n\r\nGünlüklü Koyu’na giden yol, denizi göstermeden önce ormanı hissettirir.\r\n\r\nFethiye–Muğla kara yolundan ayrıldıktan sonra çevredeki hava yavaşça değişir. Güneş, ağaçların geniş yaprakları arasından parçalanarak zemine düşer. Toprak daha nemli, gölge..."
+        },
+        "slug_tr": "gunluklu-koyu-gezi-rehberi",
+        "slug_en": "gunluklu-koyu-gezi-rehberi-en",
+        "seo_title_tr": "Günlüklü Koyu | Dioreal Dijital Lüks Yaşam Platformu",
+        "seo_title_en": "Günlüklü Koyu | Dioreal Digital Luxury Platform",
+        "seo_description_tr": "Sığla Ormanının Denize Ulaştığı Yer\r\n\r\nGünlüklü Koyu’na giden yol, denizi göstermeden önce ormanı hissettirir.\r\n\r\nFethiye–Muğla kara yolundan ayrıldıktan s...",
+        "seo_description_en": "Sığla Ormanının Denize Ulaştığı Yer\r\n\r\nGünlüklü Koyu’na giden yol, denizi göstermeden önce ormanı hissettirir.\r\n\r\nFethiye–Muğla kara yolundan ayrıldıktan s...",
+        "gallery": [],
+        "video_file": null,
+        "video_url": null,
+        "show_video_on_cover": false,
+        "og_image": null,
+        "seo_noindex": 0
+    },
+    {
+        "title": {
+            "tr": "Şövalye Adası",
+            "en": "Şövalye Adası"
+        },
+        "tag": {
+            "tr": "Fethiye",
+            "en": "Fethiye"
+        },
+        "img": "uploads\/guides\/1787249617_6a8743d1bf8df.png",
+        "desc": {
+            "tr": "Fethiye Körfezi’nin İçindeki Sessiz Yerleşim\r\n\r\nFethiye kıyısından denize baktığınızda Şövalye Adası, körfezin ortasında duran uzun ve dar bir kara parçası gibi görünür.\r\n\r\nŞehir merkezinden bakıldığında ufkun bir bölümünü kapatır. Çalış kıyısından ise karşı sahile geçilebilecek...",
+            "en": "Fethiye Körfezi’nin İçindeki Sessiz Yerleşim\r\n\r\nFethiye kıyısından denize baktığınızda Şövalye Adası, körfezin ortasında duran uzun ve dar bir kara parçası gibi görünür.\r\n\r\nŞehir merkezinden bakıldığında ufkun bir bölümünü kapatır. Çalış kıyısından ise karşı sahile geçilebilecek..."
+        },
+        "slug_tr": "sovalye-adasi-gezi-rehberi",
+        "slug_en": "sovalye-adasi-gezi-rehberi-en",
+        "seo_title_tr": "Şövalye Adası | Dioreal Dijital Lüks Yaşam Platformu",
+        "seo_title_en": "Şövalye Adası | Dioreal Digital Luxury Platform",
+        "seo_description_tr": "Fethiye Körfezi’nin İçindeki Sessiz Yerleşim\r\n\r\nFethiye kıyısından denize baktığınızda Şövalye Adası, körfezin ortasında duran uzun ve dar bir kara parçası...",
+        "seo_description_en": "Fethiye Körfezi’nin İçindeki Sessiz Yerleşim\r\n\r\nFethiye kıyısından denize baktığınızda Şövalye Adası, körfezin ortasında duran uzun ve dar bir kara parçası...",
+        "gallery": [],
+        "video_file": null,
+        "video_url": null,
+        "show_video_on_cover": false,
+        "og_image": null,
+        "seo_noindex": 0
+    },
+    {
+        "title": {
+            "tr": "Çalış Plajı",
+            "en": "Çalış Plajı"
+        },
+        "tag": {
+            "tr": "Fethiye",
+            "en": "Fethiye"
+        },
+        "img": "uploads\/guides\/1787249075_6a8741b311935.png",
+        "desc": {
+            "tr": "Fethiye’nin Gün Batımına Açılan Kıyısı\r\n\r\nFethiye’de deniz denildiğinde ilk akla gelen yer çoğu zaman Ölüdeniz’dir.\r\n\r\nDurgun lagün, korunaklı koy ve Babadağ’dan görülen kıvrımlı kıyı çizgisi, bölgenin dünya çapında tanınan görüntüsünü oluşturur. Çalış Plajı ise Fethiye’nin...",
+            "en": "Fethiye’nin Gün Batımına Açılan Kıyısı\r\n\r\nFethiye’de deniz denildiğinde ilk akla gelen yer çoğu zaman Ölüdeniz’dir.\r\n\r\nDurgun lagün, korunaklı koy ve Babadağ’dan görülen kıvrımlı kıyı çizgisi, bölgenin dünya çapında tanınan görüntüsünü oluşturur. Çalış Plajı ise Fethiye’nin..."
+        },
+        "slug_tr": "calis-plaji-gezi-rehberi",
+        "slug_en": "calis-plaji-gezi-rehberi-en",
+        "seo_title_tr": "Çalış Plajı | Dioreal Dijital Lüks Yaşam Platformu",
+        "seo_title_en": "Çalış Plajı | Dioreal Digital Luxury Platform",
+        "seo_description_tr": "Fethiye’nin Gün Batımına Açılan Kıyısı\r\n\r\nFethiye’de deniz denildiğinde ilk akla gelen yer çoğu zaman Ölüdeniz’dir.\r\n\r\nDurgun lagün, korunaklı koy ve Babad...",
+        "seo_description_en": "Fethiye’nin Gün Batımına Açılan Kıyısı\r\n\r\nFethiye’de deniz denildiğinde ilk akla gelen yer çoğu zaman Ölüdeniz’dir.\r\n\r\nDurgun lagün, korunaklı koy ve Babad...",
+        "gallery": [],
+        "video_file": null,
+        "video_url": null,
+        "show_video_on_cover": false,
+        "og_image": null,
+        "seo_noindex": 0
+    },
+    {
+        "title": {
+            "tr": "Babadağ",
+            "en": "Babadağ"
+        },
+        "tag": {
+            "tr": "Fethiye",
+            "en": "Fethiye"
+        },
+        "img": "uploads\/guides\/1787236725_6a8711756ac99.png",
+        "desc": {
+            "tr": "Fethiye’nin Gökyüzüne Açılan Coğrafyası\r\n\r\nÖlüdeniz’e kıyıdan baktığınızda manzaranın merkezinde deniz vardır.\r\n\r\nLagünün durgun mavisi, Belcekız Plajı’nın açık kıyısı ve ufka doğru ilerleyen tekneler ilk bakışta bütün dikkati kendine çeker. Fakat başınızı denizden kaldırıp arkanızı kıyıya...",
+            "en": "Fethiye’nin Gökyüzüne Açılan Coğrafyası\r\n\r\nÖlüdeniz’e kıyıdan baktığınızda manzaranın merkezinde deniz vardır.\r\n\r\nLagünün durgun mavisi, Belcekız Plajı’nın açık kıyısı ve ufka doğru ilerleyen tekneler ilk bakışta bütün dikkati kendine çeker. Fakat başınızı denizden kaldırıp arkanızı kıyıya..."
+        },
+        "slug_tr": "babadag-gezi-rehberi",
+        "slug_en": "babadag-gezi-rehberi-en",
+        "seo_title_tr": "Babadağ | Dioreal Dijital Lüks Yaşam Platformu",
+        "seo_title_en": "Babadağ | Dioreal Digital Luxury Platform",
+        "seo_description_tr": "Fethiye’nin Gökyüzüne Açılan Coğrafyası\r\n\r\nÖlüdeniz’e kıyıdan baktığınızda manzaranın merkezinde deniz vardır.\r\n\r\nLagünün durgun mavisi, Belcekız Plajı’nın...",
+        "seo_description_en": "Fethiye’nin Gökyüzüne Açılan Coğrafyası\r\n\r\nÖlüdeniz’e kıyıdan baktığınızda manzaranın merkezinde deniz vardır.\r\n\r\nLagünün durgun mavisi, Belcekız Plajı’nın...",
+        "gallery": [],
+        "video_file": null,
+        "video_url": null,
+        "show_video_on_cover": false,
+        "og_image": null,
+        "seo_noindex": 0
+    },
+    {
+        "title": {
+            "tr": "Gemile Koyu ve Gemile Adası",
+            "en": "Gemile Koyu ve Gemile Adası"
+        },
+        "tag": {
+            "tr": "Kayaköy, Fethiye, Muğla, Türkiye",
+            "en": "Kayaköy, Fethiye, Muğla, Türkiye"
+        },
+        "img": "uploads\/guides\/1787221730_6a86d6e249884.png",
+        "desc": {
+            "tr": "Denizin Taşıdığı Bizans Şehri\r\n\r\nGemile Koyu’na kara yolundan ulaştığınızda ilk gördüğünüz yer, çamların arasına yerleşmiş küçük ve korunaklı bir kıyıdır.\r\n\r\nDeniz sakin, koy doğal bir liman görünümünde, karşıdaki ada ise yüzerek ulaşılabilecek kadar yakın görünür....",
+            "en": "Denizin Taşıdığı Bizans Şehri\r\n\r\nGemile Koyu’na kara yolundan ulaştığınızda ilk gördüğünüz yer, çamların arasına yerleşmiş küçük ve korunaklı bir kıyıdır.\r\n\r\nDeniz sakin, koy doğal bir liman görünümünde, karşıdaki ada ise yüzerek ulaşılabilecek kadar yakın görünür...."
+        },
+        "slug_tr": "gemile-koyu-ve-gemile-adasi-gezi-rehberi",
+        "slug_en": "gemile-koyu-ve-gemile-adasi-gezi-rehberi-en",
+        "seo_title_tr": "Gemile Koyu ve Gemile Adası | Dioreal Dijital Lüks Yaşam Platformu",
+        "seo_title_en": "Gemile Koyu ve Gemile Adası | Dioreal Digital Luxury Platform",
+        "seo_description_tr": "Denizin Taşıdığı Bizans Şehri\r\n\r\nGemile Koyu’na kara yolundan ulaştığınızda ilk gördüğünüz yer, çamların arasına yerleşmiş küçük ve korunaklı bir kıyıdır....",
+        "seo_description_en": "Denizin Taşıdığı Bizans Şehri\r\n\r\nGemile Koyu’na kara yolundan ulaştığınızda ilk gördüğünüz yer, çamların arasına yerleşmiş küçük ve korunaklı bir kıyıdır....",
+        "gallery": [],
+        "video_file": null,
+        "video_url": null,
+        "show_video_on_cover": false,
+        "og_image": null,
+        "seo_noindex": 0
+    },
+    {
+        "title": {
+            "tr": "Kelebekler Vadisi",
+            "en": "Kelebekler Vadisi"
+        },
+        "tag": {
+            "tr": "Fethiye",
+            "en": "Fethiye"
+        },
+        "img": "uploads\/guides\/1786473367_6a7b6b97bcd6d.png",
+        "desc": {
+            "tr": "Kayalıkların Arasında Saklanan Yaşam\r\n\r\nKelebekler Vadisi’ni ilk kez görenlerin çoğu ona yukarıdan bakar.\r\n\r\nFaralya yolunun kıyısında, yüzlerce metre yüksekliğindeki sarp kayalıkların arasından denize açılan vadi; turkuaz suyu, açık renkli kumsalı ve derinlere doğru uzanan yeşil...",
+            "en": "Kayalıkların Arasında Saklanan Yaşam\r\n\r\nKelebekler Vadisi’ni ilk kez görenlerin çoğu ona yukarıdan bakar.\r\n\r\nFaralya yolunun kıyısında, yüzlerce metre yüksekliğindeki sarp kayalıkların arasından denize açılan vadi; turkuaz suyu, açık renkli kumsalı ve derinlere doğru uzanan yeşil..."
+        },
+        "slug_tr": "kelebekler-vadisi-gezi-rehberi",
+        "slug_en": "kelebekler-vadisi-gezi-rehberi-en",
+        "seo_title_tr": "Kelebekler Vadisi | Dioreal Dijital Lüks Yaşam Platformu",
+        "seo_title_en": "Kelebekler Vadisi | Dioreal Digital Luxury Platform",
+        "seo_description_tr": "Kayalıkların Arasında Saklanan Yaşam\r\n\r\nKelebekler Vadisi’ni ilk kez görenlerin çoğu ona yukarıdan bakar.\r\n\r\nFaralya yolunun kıyısında, yüzlerce metre yüks...",
+        "seo_description_en": "Kayalıkların Arasında Saklanan Yaşam\r\n\r\nKelebekler Vadisi’ni ilk kez görenlerin çoğu ona yukarıdan bakar.\r\n\r\nFaralya yolunun kıyısında, yüzlerce metre yüks...",
+        "gallery": [],
+        "video_file": null,
+        "video_url": null,
+        "show_video_on_cover": false,
+        "og_image": null,
+        "seo_noindex": 0
+    },
+    {
+        "title": {
+            "tr": "Kayaköy",
+            "en": "Kayaköy"
+        },
+        "tag": {
+            "tr": "Fethiye",
+            "en": "Fethiye"
+        },
+        "img": "uploads\/guides\/1786449369_6a7b0dd96a3ec.png",
+        "desc": {
+            "tr": "Taş Evlerin Arasında Kalan Hayat\r\n\r\nKayaköy’e ilk kez gelenlerin bakışı çoğunlukla yamaca çevrilir.\r\n\r\nPencereleri, çatıları ve kapıları olmayan yüzlerce taş ev; güneşin altında aynı yöne bakar. Dar yollar yapıların arasından yükselir, kiliselerin duvarları evlerin üzerinden...",
+            "en": "Taş Evlerin Arasında Kalan Hayat\r\n\r\nKayaköy’e ilk kez gelenlerin bakışı çoğunlukla yamaca çevrilir.\r\n\r\nPencereleri, çatıları ve kapıları olmayan yüzlerce taş ev; güneşin altında aynı yöne bakar. Dar yollar yapıların arasından yükselir, kiliselerin duvarları evlerin üzerinden..."
+        },
+        "slug_tr": "kayakoy-gezi-rehberi",
+        "slug_en": "kayakoy-gezi-rehberi-en",
+        "seo_title_tr": "Kayaköy | Dioreal Dijital Lüks Yaşam Platformu",
+        "seo_title_en": "Kayaköy | Dioreal Digital Luxury Platform",
+        "seo_description_tr": "Taş Evlerin Arasında Kalan Hayat\r\n\r\nKayaköy’e ilk kez gelenlerin bakışı çoğunlukla yamaca çevrilir.\r\n\r\nPencereleri, çatıları ve kapıları olmayan yüzlerce t...",
+        "seo_description_en": "Taş Evlerin Arasında Kalan Hayat\r\n\r\nKayaköy’e ilk kez gelenlerin bakışı çoğunlukla yamaca çevrilir.\r\n\r\nPencereleri, çatıları ve kapıları olmayan yüzlerce t...",
+        "gallery": [],
+        "video_file": null,
+        "video_url": null,
+        "show_video_on_cover": false,
         "og_image": null,
         "seo_noindex": 0
     }
