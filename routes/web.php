@@ -15,6 +15,39 @@ Route::get('/sync-dioreal-now', function () {
     return response('Dioreal sync and image download completed successfully!', 200);
 });
 
+Route::get('/foto.img/{file}', function ($file) {
+    $path = public_path('foto.img/' . ltrim($file, '/'));
+    if (!file_exists($path) || filesize($path) === 0) {
+        $path = public_path('foto.img/amalfi.jpg');
+    }
+    $mime = function_exists('mime_content_type') ? @mime_content_type($path) : 'image/jpeg';
+    return response()->file($path, ['Content-Type' => $mime ?: 'image/jpeg']);
+})->where('file', '.*');
+
+Route::get('/uploads/{path}', function ($path) {
+    $fullPath = public_path('uploads/' . ltrim($path, '/'));
+    if (!file_exists($fullPath) || filesize($fullPath) === 0) {
+        $remoteUrl = 'https://dioreal.com/uploads/' . ltrim($path, '/');
+        $dir = dirname($fullPath);
+        if (!file_exists($dir)) @mkdir($dir, 0775, true);
+        $ch = curl_init($remoteUrl);
+        curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+        curl_setopt($ch, CURLOPT_FOLLOWLOCATION, true);
+        curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
+        curl_setopt($ch, CURLOPT_SSL_VERIFYHOST, false);
+        $data = curl_exec($ch);
+        $code = curl_getinfo($ch, CURLINFO_HTTP_CODE);
+        curl_close($ch);
+        if ($code === 200 && !empty($data)) {
+            @file_put_contents($fullPath, $data);
+        } else {
+            $fullPath = public_path('foto.img/amalfi.jpg');
+        }
+    }
+    $mime = function_exists('mime_content_type') ? @mime_content_type($fullPath) : 'image/jpeg';
+    return response()->file($fullPath, ['Content-Type' => $mime ?: 'image/jpeg']);
+})->where('path', '.*');
+
 Route::get('/', [PageController::class, 'index'])->name('home');
 Route::get('/index.html', function() {
     return redirect()->route('home', [], 301);
