@@ -1,208 +1,250 @@
 [
     {
-        "id": 6,
-        "tag": {
-            "tr": "Tarihî Kale Oteli ve Özel Kır Malikanesi",
-            "en": "Historic Castle Hotel & Private Country Estate"
-        },
-        "img": "uploads\/hotels\/1783853064_6a5370081fe9b.jpeg",
-        "desc": {
-            "tr": "Toskana ile Umbria arasındaki tepelerde, 10. yüzyıldan kalan bir kalenin çevresine yayılan Reschio; mimari, tasarım, doğa ve binicilik kültürünü yaşayan bir kır malikanesinin gündelik ritmi içinde buluşturuyor.",
-            "en": "Set among the hills between Tuscany and Umbria, Reschio brings architecture, design, nature and equestrian culture together within the daily rhythm of a living country estate centred around a 10th-century castle."
-        },
-        "slug_tr": "reschio",
-        "slug_en": "reschio-en",
-        "created_at": "2026-07-25 11:25:49",
-        "updated_at": "2026-07-25 11:25:49",
-        "name": {
-            "tr": "Reschio",
-            "en": "Reschio"
-        },
-        "long_desc": {
-            "tr": "Toskana ile Umbria arasındaki tepelerde, 10. yüzyıldan kalan bir kalenin çevresine yayılan Reschio; mimari, tasarım, doğa ve binicilik kültürünü yaşayan bir kır malikanesinin gündelik ritmi içinde buluşturuyor.",
-            "en": "Set among the hills between Tuscany and Umbria, Reschio brings architecture, design, nature and equestrian culture together within the daily rhythm of a living country estate centred around a 10th-century castle."
-        },
-        "gallery": [
-            "uploads\/hotels\/1783853810_6a5372f2c05ef.jpeg",
-            "uploads\/hotels\/1783853810_6a5372f2c2470.jpeg",
-            "uploads\/hotels\/1783854436_6a53756451f91.jpeg"
-        ],
-        "seo_title_tr": "Reschio | Dioreal Dijital Lüks Yaşam Platformu",
-        "seo_title_en": "Reschio | Dioreal Digital Luxury Platform",
-        "seo_description_tr": "Toskana ile Umbria arasındaki tepelerde, 10. yüzyıldan kalan bir kalenin çevresine yayılan Reschio.",
-        "seo_description_en": "Set among the hills between Tuscany and Umbria, Reschio brings architecture, design, nature and equestrian culture together.",
-        "seo_noindex": 0
-    },
-    {
-        "id": 5,
-        "tag": {
-            "tr": "Tarihî Özel Kır Malikanesi ve Villa Oteli",
-            "en": "Historic Private Country Estate & Villa Retreat"
-        },
-        "img": "uploads\/hotels\/1783856805_6a537ea5a8f5d.jpeg",
-        "desc": {
-            "tr": "Umbria’nın ormanlar, zeytinlikler ve vadilerle çevrili geniş kırsalında yer alan Tenuta di Murlo; tarihî çiftlik evleri, kuleler ve şapellerden dönüştürülen özel villaları, faal tarımı ve kişiye özel hizmet anlayışıyla bağımsız bir İtalyan kır yaşamı sunuyor.",
-            "en": "Set across a vast Umbrian landscape of woodland, olive groves and valleys, Tenuta di Murlo offers an independent expression of Italian country life through private villas restored from historic farmhouses, towers and chapels, a working farm and highly personalised service."
-        },
-        "slug_tr": "tenuta-di-murlo",
-        "slug_en": "tenuta-di-murlo-en",
-        "created_at": "2026-07-25 11:25:51",
-        "updated_at": "2026-07-25 11:25:51",
-        "name": {
-            "tr": "Tenuta di Murlo",
-            "en": "Tenuta di Murlo"
-        },
-        "long_desc": {
-            "tr": "Umbria’nın ormanlar, zeytinlikler ve vadilerle çevrili geniş kırsalında yer alan Tenuta di Murlo; tarihî çiftlik evleri, kuleler ve şapellerden dönüştürülen özel villaları, faal tarımı ve kişiye özel hizmet anlayışıyla bağımsız bir İtalyan kır yaşamı sunuyor.",
-            "en": "Set across a vast Umbrian landscape of woodland, olive groves and valleys, Tenuta di Murlo offers an independent expression of Italian country life through private villas restored from historic farmhouses, towers and chapels, a working farm and highly personalised service."
-        },
-        "gallery": [
-            "uploads\/hotels\/1783858086_6a5383a6409bf.jpeg",
-            "uploads\/hotels\/1783858589_6a53859d70965.jpeg",
-            "uploads\/hotels\/1783858767_6a53864fc74d5.jpeg",
-            "uploads\/hotels\/1783858803_6a538673a3ac0.jpeg",
-            "uploads\/hotels\/1783858836_6a538694b30ab.jpeg"
-        ],
-        "seo_title_tr": "Tenuta di Murlo | Dioreal Dijital Lüks Yaşam Platformu",
-        "seo_title_en": "Tenuta di Murlo | Dioreal Digital Luxury Platform",
-        "seo_description_tr": "Umbria’nın ormanlar, zeytinlikler ve vadilerle çevrili geniş kırsalında yer alan Tenuta di Murlo.",
-        "seo_description_en": "Set across a vast Umbrian landscape of woodland, olive groves and valleys, Tenuta di Murlo.",
-        "seo_noindex": 0
-    },
-    {
-        "id": 4,
-        "tag": {
-            "tr": "Tarihî Kale, Termal Spa ve Bağ Oteli",
-            "en": "Historic Castle, Thermal Spa & Wine Resort"
-        },
-        "img": "uploads\/hotels\/1783859751_6a538a27b51aa.jpeg",
-        "desc": {
-            "tr": "Montalcino yakınlarında, UNESCO Dünya Mirası Val d’Orcia’ya hâkim bir tepenin üzerinde yükselen Castello di Velona; 11. yüzyıldan kalan kale mimarisini doğal termal sular, Brunello bağları ve Toskana gastronomisiyle bir araya getiriyor.",
-            "en": "Rising above the UNESCO-listed Val d’Orcia near Montalcino, Castello di Velona brings together the architecture of an 11th-century fortress, natural thermal waters, Brunello vineyards and the gastronomic traditions of Tuscany."
-        },
-        "slug_tr": "castello-di-velona",
-        "slug_en": "castello-di-velona-en",
-        "created_at": "2026-07-25 11:25:51",
-        "updated_at": "2026-07-25 11:25:51",
-        "name": {
-            "tr": "Castello di Velona",
-            "en": "Castello di Velona"
-        },
-        "long_desc": {
-            "tr": "Montalcino yakınlarında, UNESCO Dünya Mirası Val d’Orcia’ya hâkim bir tepenin üzerinde yükselen Castello di Velona; 11. yüzyıldan kalan kale mimarisini doğal termal sular, Brunello bağları ve Toskana gastronomisiyle bir araya getiriyor.",
-            "en": "Rising above the UNESCO-listed Val d’Orcia near Montalcino, Castello di Velona brings together the architecture of an 11th-century fortress, natural thermal waters, Brunello vineyards and the gastronomic traditions of Tuscany."
-        },
-        "gallery": [
-            "uploads\/hotels\/1783860054_6a538b567b812.jpeg",
-            "uploads\/hotels\/1783860605_6a538d7dbdb06.jpeg",
-            "uploads\/hotels\/1783860605_6a538d7dd0dd5.jpeg"
-        ],
-        "seo_title_tr": "Castello di Velona | Dioreal Dijital Lüks Yaşam Platformu",
-        "seo_title_en": "Castello di Velona | Dioreal Digital Luxury Platform",
-        "seo_description_tr": "Montalcino yakınlarında, UNESCO Dünya Mirası Val d’Orcia’ya hâkim bir tepenin üzerinde yükselen Castello di Velona.",
-        "seo_description_en": "Rising above the UNESCO-listed Val d’Orcia near Montalcino, Castello di Velona.",
-        "seo_noindex": 0
-    },
-    {
-        "id": 3,
-        "tag": {
-            "tr": "Tarihî Rönesans Villası ve Kır Oteli",
-            "en": "Historic Renaissance Villa & Country Hotel"
-        },
-        "img": "uploads\/hotels\/1783861129_6a538f894711a.jpeg",
-        "desc": {
-            "tr": "Toskana ile Umbria arasındaki kırsalda, Cortona yakınlarında yer alan Villa di Piazzano; geçmişi 15. yüzyıla uzanan Rönesans mimarisini botanik bahçeler, bölgesel gastronomi ve İtalyan kır yaşamının dingin ritmiyle buluşturan tarihî bir konaklama adresidir.",
-            "en": "Set in the countryside between Tuscany and Umbria, near Cortona, Villa di Piazzano brings together 15th-century Renaissance architecture, botanical gardens, regional gastronomy and the unhurried rhythm of Italian country life."
-        },
-        "slug_tr": "villa-di-piazzano",
-        "slug_en": "villa-di-piazzano-en",
-        "created_at": "2026-07-25 11:25:52",
-        "updated_at": "2026-07-25 11:25:52",
-        "name": {
-            "tr": "Villa di Piazzano",
-            "en": "Villa di Piazzano"
-        },
-        "long_desc": {
-            "tr": "Toskana ile Umbria arasındaki kırsalda, Cortona yakınlarında yer alan Villa di Piazzano; geçmişi 15. yüzyıla uzanan Rönesans mimarisini botanik bahçeler, bölgesel gastronomi ve İtalyan kır yaşamının dingin ritmiyle buluşturan tarihî bir konaklama adresidir.",
-            "en": "Set in the countryside between Tuscany and Umbria, near Cortona, Villa di Piazzano brings together 15th-century Renaissance architecture, botanical gardens, regional gastronomy and the unhurried rhythm of Italian country life."
-        },
-        "gallery": [
-            "uploads\/hotels\/1783861291_6a53902b09b59.jpeg",
-            "uploads\/hotels\/1783861447_6a5390c7c051a.jpeg"
-        ],
-        "seo_title_tr": "Villa di Piazzano | Dioreal Dijital Lüks Yaşam Platformu",
-        "seo_title_en": "Villa di Piazzano | Dioreal Digital Luxury Platform",
-        "seo_description_tr": "Toskana ile Umbria arasındaki kırsalda, Cortona yakınlarında yer alan Villa di Piazzano.",
-        "seo_description_en": "Set in the countryside between Tuscany and Umbria, near Cortona, Villa di Piazzano.",
-        "seo_noindex": 0
-    },
-    {
-        "id": 2,
-        "tag": {
-            "tr": "Yetişkinlere Özel Taş Butik Otel",
-            "en": "Adults-Only Stone Boutique Hotel"
-        },
-        "img": "uploads\/hotels\/1783861773_6a53920d2bb36.jpeg",
-        "desc": {
-            "tr": "Faralya’nın kayalık kıyısına taş evler, teraslar ve denize uzanan yüzme alanlarıyla yerleşen Nautical Hotel; Akdeniz manzarasını günün her anına taşıyan, yetişkinlere özel, sakin ve samimi bir kıyı otelidir.",
-            "en": "Set along Faralya’s rocky coastline with stone houses, secluded terraces and swimming areas opening towards the sea, Nautical Hotel is an intimate adults-only retreat that brings the Mediterranean into every moment of the day."
-        },
-        "slug_tr": "nautical",
-        "slug_en": "nautical-en",
-        "created_at": "2026-07-25 11:25:52",
-        "updated_at": "2026-07-25 11:25:52",
-        "name": {
-            "tr": "Nautical",
-            "en": "Nautical"
-        },
-        "long_desc": {
-            "tr": "Faralya’nın kayalık kıyısına taş evler, teraslar ve denize uzanan yüzme alanlarıyla yerleşen Nautical Hotel; Akdeniz manzarasını günün her anına taşıyan, yetişkinlere özel, sakin ve samimi bir kıyı otelidir.",
-            "en": "Set along Faralya’s rocky coastline with stone houses, secluded terraces and swimming areas opening towards the sea, Nautical Hotel is an intimate adults-only retreat that brings the Mediterranean into every moment of the day."
-        },
-        "gallery": [
-            "uploads\/hotels\/1783863013_6a5396e5e8328.jpeg",
-            "uploads\/hotels\/1783863047_6a539707e4e98.jpeg",
-            "uploads\/hotels\/1783863120_6a5397507f3fb.jpeg",
-            "uploads\/hotels\/1783863148_6a53976c929b4.jpeg",
-            "uploads\/hotels\/1783863189_6a53979569dcd.jpeg"
-        ],
-        "seo_title_tr": "Nautical | Dioreal Dijital Lüks Yaşam Platformu",
-        "seo_title_en": "Nautical | Dioreal Digital Luxury Platform",
-        "seo_description_tr": "Faralya’nın kayalık kıyısına taş evler, teraslar ve denize uzanan yüzme alanlarıyla yerleşen Nautical Hotel.",
-        "seo_description_en": "Set along Faralya’s rocky coastline with stone houses, secluded terraces and swimming areas.",
-        "seo_noindex": 0
-    },
-    {
         "id": 1,
-        "tag": {
-            "tr": "Yalnızca Yetişkinlere Özel Doğa Oteli",
-            "en": "Adults-Only Nature Retreat"
-        },
-        "img": "uploads\/hotels\/1783864529_6a539cd1410b8.jpeg",
-        "desc": {
-            "tr": "Faralya’nın çamlarla çevrili kıyısında, Akdeniz’e doğru açılan Perdue; doğayla kurduğu güçlü bağ, yalnızca yetişkinlere özel atmosferi ve gün batımını merkeze alan yaşam ritmiyle kalabalıklardan uzak bir konaklama deneyimi sunuyor.",
-            "en": "Set along Faralya’s pine-fringed coastline overlooking the Mediterranean, Perdue offers a secluded stay defined by its deep connection to nature, adults-only atmosphere and a rhythm of life centred around sunset."
-        },
+        "name": "{\"tr\":\"Perdue\",\"en\":\"Perdue\"}",
+        "tag": "{\"tr\":\"Yalnızca Yetişkinlere Özel Doğa Oteli\",\"en\":\"Adults-Only Nature Retreat\"}",
+        "img": "uploads/hotels/1783864529_6a539cd1410b8.jpeg",
+        "desc": "{\"tr\":\"Faralya’nın çamlarla çevrili kıyısında, Akdeniz’e doğru açılan Perdue; doğayla kurduğu güçlü bağ, yalnızca yetişkinlere özel atmosferi ve gün batımını merkeze alan yaşam ritmiyle kalabalıklardan uzak bir konaklama deneyimi sunuyor.\",\"en\":\"Set along Faralya’s pine-fringed coastline overlooking the Mediterranean, Perdue offers a secluded stay defined by its deep connection to nature, adults-only atmosphere and a rhythm of life centred around sunset.\"}",
+        "long_desc": "{\"tr\":\"Faralya’nın çamlarla çevrili kıyısında, Akdeniz’e doğru açılan Perdue; doğayla kurduğu güçlü bağ, yalnızca yetişkinlere özel atmosferi ve gün batımını merkeze alan yaşam ritmiyle kalabalıklardan uzak bir konaklama deneyimi sunuyor.\",\"en\":\"Set along Faralya’s pine-fringed coastline overlooking the Mediterranean, Perdue offers a secluded stay defined by its deep connection to nature, adults-only atmosphere and a rhythm of life centred around sunset.\"}",
+        "gallery": "[\"uploads\\/hotels\\/1783864888_6a539e3803a9d.jpeg\",\"uploads\\/hotels\\/1783864985_6a539e9979861.jpeg\"]",
+        "created_at": "2026-07-25T11:25:53.000000Z",
+        "updated_at": "2026-07-25T11:25:53.000000Z",
+        "destination_id": null,
+        "order": 0,
+        "is_archived": 0,
+        "video_file": null,
+        "video_url": null,
+        "show_video_on_cover": false,
+        "theme_color": "white",
+        "photo_layout": "left",
         "slug_tr": "perdue",
         "slug_en": "perdue-en",
-        "created_at": "2026-07-25 11:25:53",
-        "updated_at": "2026-07-25 11:25:53",
-        "name": {
-            "tr": "Perdue",
-            "en": "Perdue"
-        },
-        "long_desc": {
-            "tr": "Faralya’nın çamlarla çevrili kıyısında, Akdeniz’e doğru açılan Perdue; doğayla kurduğu güçlü bağ, yalnızca yetişkinlere özel atmosferi ve gün batımını merkeze alan yaşam ritmiyle kalabalıklardan uzak bir konaklama deneyimi sunuyor.",
-            "en": "Set along Faralya’s pine-fringed coastline overlooking the Mediterranean, Perdue offers a secluded stay defined by its deep connection to nature, adults-only atmosphere and a rhythm of life centred around sunset."
-        },
-        "gallery": [
-            "uploads\/hotels\/1783864888_6a539e3803a9d.jpeg",
-            "uploads\/hotels\/1783864985_6a539e9979861.jpeg"
-        ],
         "seo_title_tr": "Perdue | Dioreal Dijital Lüks Yaşam Platformu",
         "seo_title_en": "Perdue | Dioreal Digital Luxury Platform",
         "seo_description_tr": "Faralya’nın çamlarla çevrili kıyısında, Akdeniz’e doğru açılan Perdue.",
         "seo_description_en": "Set along Faralya’s pine-fringed coastline overlooking the Mediterranean, Perdue.",
-        "seo_noindex": 0
+        "og_image": null,
+        "seo_noindex": 0,
+        "location": null
+    },
+    {
+        "id": 2,
+        "name": "{\"tr\":\"Nautical\",\"en\":\"Nautical\"}",
+        "tag": "{\"tr\":\"Yetişkinlere Özel Taş Butik Otel\",\"en\":\"Adults-Only Stone Boutique Hotel\"}",
+        "img": "uploads/hotels/1783861773_6a53920d2bb36.jpeg",
+        "desc": "{\"tr\":\"Faralya’nın kayalık kıyısına taş evler, teraslar ve denize uzanan yüzme alanlarıyla yerleşen Nautical Hotel; Akdeniz manzarasını günün her anına taşıyan, yetişkinlere özel, sakin ve samimi bir kıyı otelidir.\",\"en\":\"Set along Faralya’s rocky coastline with stone houses, secluded terraces and swimming areas opening towards the sea, Nautical Hotel is an intimate adults-only retreat that brings the Mediterranean into every moment of the day.\"}",
+        "long_desc": "{\"tr\":\"Faralya’nın kayalık kıyısına taş evler, teraslar ve denize uzanan yüzme alanlarıyla yerleşen Nautical Hotel; Akdeniz manzarasını günün her anına taşıyan, yetişkinlere özel, sakin ve samimi bir kıyı otelidir.\",\"en\":\"Set along Faralya’s rocky coastline with stone houses, secluded terraces and swimming areas opening towards the sea, Nautical Hotel is an intimate adults-only retreat that brings the Mediterranean into every moment of the day.\"}",
+        "gallery": "[\"uploads\\/hotels\\/1783863013_6a5396e5e8328.jpeg\",\"uploads\\/hotels\\/1783863047_6a539707e4e98.jpeg\",\"uploads\\/hotels\\/1783863120_6a5397507f3fb.jpeg\",\"uploads\\/hotels\\/1783863148_6a53976c929b4.jpeg\",\"uploads\\/hotels\\/1783863189_6a53979569dcd.jpeg\"]",
+        "created_at": "2026-07-25T11:25:52.000000Z",
+        "updated_at": "2026-07-25T11:25:52.000000Z",
+        "destination_id": null,
+        "order": 0,
+        "is_archived": 0,
+        "video_file": null,
+        "video_url": null,
+        "show_video_on_cover": false,
+        "theme_color": "white",
+        "photo_layout": "left",
+        "slug_tr": "nautical",
+        "slug_en": "nautical-en",
+        "seo_title_tr": "Nautical | Dioreal Dijital Lüks Yaşam Platformu",
+        "seo_title_en": "Nautical | Dioreal Digital Luxury Platform",
+        "seo_description_tr": "Faralya’nın kayalık kıyısına taş evler, teraslar ve denize uzanan yüzme alanlarıyla yerleşen Nautical Hotel.",
+        "seo_description_en": "Set along Faralya’s rocky coastline with stone houses, secluded terraces and swimming areas.",
+        "og_image": null,
+        "seo_noindex": 0,
+        "location": null
+    },
+    {
+        "id": 3,
+        "name": "{\"tr\":\"Villa di Piazzano\",\"en\":\"Villa di Piazzano\"}",
+        "tag": "{\"tr\":\"Tarihî Rönesans Villası ve Kır Oteli\",\"en\":\"Historic Renaissance Villa & Country Hotel\"}",
+        "img": "uploads/hotels/1783861129_6a538f894711a.jpeg",
+        "desc": "{\"tr\":\"Toskana ile Umbria arasındaki kırsalda, Cortona yakınlarında yer alan Villa di Piazzano; geçmişi 15. yüzyıla uzanan Rönesans mimarisini botanik bahçeler, bölgesel gastronomi ve İtalyan kır yaşamının dingin ritmiyle buluşturan tarihî bir konaklama adresidir.\",\"en\":\"Set in the countryside between Tuscany and Umbria, near Cortona, Villa di Piazzano brings together 15th-century Renaissance architecture, botanical gardens, regional gastronomy and the unhurried rhythm of Italian country life.\"}",
+        "long_desc": "{\"tr\":\"Toskana ile Umbria arasındaki kırsalda, Cortona yakınlarında yer alan Villa di Piazzano; geçmişi 15. yüzyıla uzanan Rönesans mimarisini botanik bahçeler, bölgesel gastronomi ve İtalyan kır yaşamının dingin ritmiyle buluşturan tarihî bir konaklama adresidir.\",\"en\":\"Set in the countryside between Tuscany and Umbria, near Cortona, Villa di Piazzano brings together 15th-century Renaissance architecture, botanical gardens, regional gastronomy and the unhurried rhythm of Italian country life.\"}",
+        "gallery": "[\"uploads\\/hotels\\/1783861291_6a53902b09b59.jpeg\",\"uploads\\/hotels\\/1783861447_6a5390c7c051a.jpeg\"]",
+        "created_at": "2026-07-25T11:25:52.000000Z",
+        "updated_at": "2026-07-25T11:25:52.000000Z",
+        "destination_id": null,
+        "order": 0,
+        "is_archived": 0,
+        "video_file": null,
+        "video_url": null,
+        "show_video_on_cover": false,
+        "theme_color": "white",
+        "photo_layout": "left",
+        "slug_tr": "villa-di-piazzano",
+        "slug_en": "villa-di-piazzano-en",
+        "seo_title_tr": "Villa di Piazzano | Dioreal Dijital Lüks Yaşam Platformu",
+        "seo_title_en": "Villa di Piazzano | Dioreal Digital Luxury Platform",
+        "seo_description_tr": "Toskana ile Umbria arasındaki kırsalda, Cortona yakınlarında yer alan Villa di Piazzano.",
+        "seo_description_en": "Set in the countryside between Tuscany and Umbria, near Cortona, Villa di Piazzano.",
+        "og_image": null,
+        "seo_noindex": 0,
+        "location": null
+    },
+    {
+        "id": 4,
+        "name": "{\"tr\":\"Castello di Velona\",\"en\":\"Castello di Velona\"}",
+        "tag": "{\"tr\":\"Tarihî Kale, Termal Spa ve Bağ Oteli\",\"en\":\"Historic Castle, Thermal Spa & Wine Resort\"}",
+        "img": "uploads/hotels/1783859751_6a538a27b51aa.jpeg",
+        "desc": "{\"tr\":\"Montalcino yakınlarında, UNESCO Dünya Mirası Val d’Orcia’ya hâkim bir tepenin üzerinde yükselen Castello di Velona; 11. yüzyıldan kalan kale mimarisini doğal termal sular, Brunello bağları ve Toskana gastronomisiyle bir araya getiriyor.\",\"en\":\"Rising above the UNESCO-listed Val d’Orcia near Montalcino, Castello di Velona brings together the architecture of an 11th-century fortress, natural thermal waters, Brunello vineyards and the gastronomic traditions of Tuscany.\"}",
+        "long_desc": "{\"tr\":\"Montalcino yakınlarında, UNESCO Dünya Mirası Val d’Orcia’ya hâkim bir tepenin üzerinde yükselen Castello di Velona; 11. yüzyıldan kalan kale mimarisini doğal termal sular, Brunello bağları ve Toskana gastronomisiyle bir araya getiriyor.\",\"en\":\"Rising above the UNESCO-listed Val d’Orcia near Montalcino, Castello di Velona brings together the architecture of an 11th-century fortress, natural thermal waters, Brunello vineyards and the gastronomic traditions of Tuscany.\"}",
+        "gallery": "[\"uploads\\/hotels\\/1783860054_6a538b567b812.jpeg\",\"uploads\\/hotels\\/1783860605_6a538d7dbdb06.jpeg\",\"uploads\\/hotels\\/1783860605_6a538d7dd0dd5.jpeg\"]",
+        "created_at": "2026-07-25T11:25:51.000000Z",
+        "updated_at": "2026-07-25T11:25:51.000000Z",
+        "destination_id": null,
+        "order": 0,
+        "is_archived": 0,
+        "video_file": null,
+        "video_url": null,
+        "show_video_on_cover": false,
+        "theme_color": "white",
+        "photo_layout": "left",
+        "slug_tr": "castello-di-velona",
+        "slug_en": "castello-di-velona-en",
+        "seo_title_tr": "Castello di Velona | Dioreal Dijital Lüks Yaşam Platformu",
+        "seo_title_en": "Castello di Velona | Dioreal Digital Luxury Platform",
+        "seo_description_tr": "Montalcino yakınlarında, UNESCO Dünya Mirası Val d’Orcia’ya hâkim bir tepenin üzerinde yükselen Castello di Velona.",
+        "seo_description_en": "Rising above the UNESCO-listed Val d’Orcia near Montalcino, Castello di Velona.",
+        "og_image": null,
+        "seo_noindex": 0,
+        "location": null
+    },
+    {
+        "id": 5,
+        "name": "{\"tr\":\"Tenuta di Murlo\",\"en\":\"Tenuta di Murlo\"}",
+        "tag": "{\"tr\":\"Tarihî Özel Kır Malikanesi ve Villa Oteli\",\"en\":\"Historic Private Country Estate & Villa Retreat\"}",
+        "img": "uploads/hotels/1783856805_6a537ea5a8f5d.jpeg",
+        "desc": "{\"tr\":\"Umbria’nın ormanlar, zeytinlikler ve vadilerle çevrili geniş kırsalında yer alan Tenuta di Murlo; tarihî çiftlik evleri, kuleler ve şapellerden dönüştürülen özel villaları, faal tarımı ve kişiye özel hizmet anlayışıyla bağımsız bir İtalyan kır yaşamı sunuyor.\",\"en\":\"Set across a vast Umbrian landscape of woodland, olive groves and valleys, Tenuta di Murlo offers an independent expression of Italian country life through private villas restored from historic farmhouses, towers and chapels, a working farm and highly personalised service.\"}",
+        "long_desc": "{\"tr\":\"Umbria’nın ormanlar, zeytinlikler ve vadilerle çevrili geniş kırsalında yer alan Tenuta di Murlo; tarihî çiftlik evleri, kuleler ve şapellerden dönüştürülen özel villaları, faal tarımı ve kişiye özel hizmet anlayışıyla bağımsız bir İtalyan kır yaşamı sunuyor.\",\"en\":\"Set across a vast Umbrian landscape of woodland, olive groves and valleys, Tenuta di Murlo offers an independent expression of Italian country life through private villas restored from historic farmhouses, towers and chapels, a working farm and highly personalised service.\"}",
+        "gallery": "[\"uploads\\/hotels\\/1783858086_6a5383a6409bf.jpeg\",\"uploads\\/hotels\\/1783858589_6a53859d70965.jpeg\",\"uploads\\/hotels\\/1783858767_6a53864fc74d5.jpeg\",\"uploads\\/hotels\\/1783858803_6a538673a3ac0.jpeg\",\"uploads\\/hotels\\/1783858836_6a538694b30ab.jpeg\"]",
+        "created_at": "2026-07-25T11:25:51.000000Z",
+        "updated_at": "2026-07-25T11:25:51.000000Z",
+        "destination_id": null,
+        "order": 0,
+        "is_archived": 0,
+        "video_file": null,
+        "video_url": null,
+        "show_video_on_cover": false,
+        "theme_color": "white",
+        "photo_layout": "left",
+        "slug_tr": "tenuta-di-murlo",
+        "slug_en": "tenuta-di-murlo-en",
+        "seo_title_tr": "Tenuta di Murlo | Dioreal Dijital Lüks Yaşam Platformu",
+        "seo_title_en": "Tenuta di Murlo | Dioreal Digital Luxury Platform",
+        "seo_description_tr": "Umbria’nın ormanlar, zeytinlikler ve vadilerle çevrili geniş kırsalında yer alan Tenuta di Murlo.",
+        "seo_description_en": "Set across a vast Umbrian landscape of woodland, olive groves and valleys, Tenuta di Murlo.",
+        "og_image": null,
+        "seo_noindex": 0,
+        "location": null
+    },
+    {
+        "id": 6,
+        "name": "{\"tr\":\"Reschio\",\"en\":\"Reschio\"}",
+        "tag": "{\"tr\":\"Tarihî Kale Oteli ve Özel Kır Malikanesi\",\"en\":\"Historic Castle Hotel & Private Country Estate\"}",
+        "img": "uploads/hotels/1783853064_6a5370081fe9b.jpeg",
+        "desc": "{\"tr\":\"Toskana ile Umbria arasındaki tepelerde, 10. yüzyıldan kalan bir kalenin çevresine yayılan Reschio; mimari, tasarım, doğa ve binicilik kültürünü yaşayan bir kır malikanesinin gündelik ritmi içinde buluşturuyor.\",\"en\":\"Set among the hills between Tuscany and Umbria, Reschio brings architecture, design, nature and equestrian culture together within the daily rhythm of a living country estate centred around a 10th-century castle.\"}",
+        "long_desc": "{\"tr\":\"Toskana ile Umbria arasındaki tepelerde, 10. yüzyıldan kalan bir kalenin çevresine yayılan Reschio; mimari, tasarım, doğa ve binicilik kültürünü yaşayan bir kır malikanesinin gündelik ritmi içinde buluşturuyor.\",\"en\":\"Set among the hills between Tuscany and Umbria, Reschio brings architecture, design, nature and equestrian culture together within the daily rhythm of a living country estate centred around a 10th-century castle.\"}",
+        "gallery": "[\"uploads\\/hotels\\/1783853810_6a5372f2c05ef.jpeg\",\"uploads\\/hotels\\/1783853810_6a5372f2c2470.jpeg\",\"uploads\\/hotels\\/1783854436_6a53756451f91.jpeg\"]",
+        "created_at": "2026-07-25T11:25:49.000000Z",
+        "updated_at": "2026-07-25T11:25:49.000000Z",
+        "destination_id": null,
+        "order": 0,
+        "is_archived": 0,
+        "video_file": null,
+        "video_url": null,
+        "show_video_on_cover": false,
+        "theme_color": "white",
+        "photo_layout": "left",
+        "slug_tr": "reschio",
+        "slug_en": "reschio-en",
+        "seo_title_tr": "Reschio | Dioreal Dijital Lüks Yaşam Platformu",
+        "seo_title_en": "Reschio | Dioreal Digital Luxury Platform",
+        "seo_description_tr": "Toskana ile Umbria arasındaki tepelerde, 10. yüzyıldan kalan bir kalenin çevresine yayılan Reschio.",
+        "seo_description_en": "Set among the hills between Tuscany and Umbria, Reschio brings architecture, design, nature and equestrian culture together.",
+        "og_image": null,
+        "seo_noindex": 0,
+        "location": null
+    },
+    {
+        "id": 10,
+        "name": {
+            "tr": "Test Hotel Controller TR",
+            "en": "Test Hotel Controller EN"
+        },
+        "tag": {
+            "tr": "Lüks",
+            "en": "Luxury"
+        },
+        "img": "foto.img/otel_aman.jpg",
+        "desc": {
+            "tr": "Açıklama TR",
+            "en": "Desc EN"
+        },
+        "long_desc": [],
+        "gallery": [],
+        "created_at": "2026-08-14T12:25:58.000000Z",
+        "updated_at": "2026-08-14T12:25:58.000000Z",
+        "destination_id": null,
+        "order": 1,
+        "is_archived": 0,
+        "video_file": null,
+        "video_url": null,
+        "show_video_on_cover": false,
+        "theme_color": "white",
+        "photo_layout": "left",
+        "slug_tr": "test-hotel-controller-tr",
+        "slug_en": "test-hotel-controller-en",
+        "seo_title_tr": "Test Hotel Controller TR | Dioreal Dijital Lüks Yaşam Platformu",
+        "seo_title_en": "Test Hotel Controller EN | Dioreal Digital Luxury Platform",
+        "seo_description_tr": "Açıklama TR",
+        "seo_description_en": "Desc EN",
+        "og_image": null,
+        "seo_noindex": 0,
+        "location": {
+            "tr": "Bodrum",
+            "en": "Bodrum"
+        }
+    },
+    {
+        "id": 11,
+        "name": {
+            "tr": "Test Hotel Controller 1786710456_945",
+            "en": "Test Hotel Controller EN 1786710456_945"
+        },
+        "tag": {
+            "tr": "Lüks",
+            "en": "Luxury"
+        },
+        "img": "foto.img/otel_aman.jpg",
+        "desc": {
+            "tr": "Açıklama TR",
+            "en": "Desc EN"
+        },
+        "long_desc": [],
+        "gallery": [],
+        "created_at": "2026-08-14T12:27:36.000000Z",
+        "updated_at": "2026-08-14T12:27:36.000000Z",
+        "destination_id": null,
+        "order": 1,
+        "is_archived": 0,
+        "video_file": null,
+        "video_url": null,
+        "show_video_on_cover": false,
+        "theme_color": "white",
+        "photo_layout": "left",
+        "slug_tr": "test-hotel-controller-1786710456-945",
+        "slug_en": "test-hotel-controller-en-1786710456-945",
+        "seo_title_tr": "Test Hotel Controller 1786710456_945 | Dioreal Dijital Lüks Yaşam Platformu",
+        "seo_title_en": "Test Hotel Controller EN 1786710456_945 | Dioreal Digital Luxury Platform",
+        "seo_description_tr": "Açıklama TR",
+        "seo_description_en": "Desc EN",
+        "og_image": null,
+        "seo_noindex": 0,
+        "location": {
+            "tr": "Bodrum",
+            "en": "Bodrum"
+        }
     }
 ]
