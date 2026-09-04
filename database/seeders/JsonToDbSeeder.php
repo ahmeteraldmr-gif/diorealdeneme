@@ -71,19 +71,32 @@ class JsonToDbSeeder extends Seeder
                         $tableColumns = array_flip(\Illuminate\Support\Facades\Schema::getColumnListing($dummyModel->getTable()));
                         $item = array_intersect_key($item, $tableColumns);
 
+                        $match = [];
+                        if (!empty($item['slug_tr'])) {
+                            $match = ['slug_tr' => $item['slug_tr']];
+                        } elseif (!empty($item['slug_en'])) {
+                            $match = ['slug_en' => $item['slug_en']];
+                        } elseif (!empty($item['id'])) {
+                            $match = ['id' => $item['id']];
+                        }
+
+                        $saveData = $item;
+                        if (!empty($match['slug_tr']) || !empty($match['slug_en'])) {
+                            unset($saveData['id']);
+                        }
+
                         try {
-                            if (!empty($item['id'])) {
-                                $modelClass::updateOrCreate(['id' => $item['id']], $item);
+                            if (!empty($match)) {
+                                $modelClass::updateOrCreate($match, $saveData);
                             } else {
-                                $modelClass::create($item);
+                                $modelClass::create($saveData);
                             }
                         } catch (\Throwable $e) {
-                            if (isset($item['slug_tr'])) $item['slug_tr'] .= '-' . ($index + 1);
-                            if (isset($item['slug_en'])) $item['slug_en'] .= '-' . ($index + 1);
-                            if (!empty($item['id'])) {
-                                $modelClass::updateOrCreate(['id' => $item['id']], $item);
+                            if (isset($saveData['slug_en'])) $saveData['slug_en'] .= '-' . ($index + 1);
+                            if (!empty($match)) {
+                                $modelClass::updateOrCreate($match, $saveData);
                             } else {
-                                $modelClass::create($item);
+                                $modelClass::create($saveData);
                             }
                         }
                     }

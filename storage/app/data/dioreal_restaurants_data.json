@@ -5,13 +5,13 @@
             "tr": "Akdeniz ve Ege Mutfağı",
             "en": "Mediterranean & Aegean Cuisine Restaurant"
         },
-        "img": "uploads/restaurants/1783866475_6a53a46ba1c48.jpeg",
+        "img": "uploads\/restaurants\/1783866475_6a53a46ba1c48.jpeg",
         "desc": {
             "tr": "Gün batımının denize usulca karıştığı saatlerde Gümüşlük bambaşka bir kimliğe bürünür. Kıyıya kurulan sofralar Ege’nin dinginliğiyle birleşirken Melengeç Restaurant, bu atmosferi yıllardır aynı özenle yaşatan adreslerden biri olmaya devam ediyor.",
             "en": "As sunset gently melts into the sea, Gümüşlük takes on an entirely different character. Tables set along the shoreline meet the tranquillity of the Aegean, while Melengeç Restaurant remains one of the addresses that has preserved this atmosphere with the same care for years."
         },
         "slug_tr": "melengec-restaurant-3",
-        "slug_en": "melengec-restaurant-3",
+        "slug_en": "melengec-restaurant-3-en",
         "created_at": "2026-07-25 11:25:56",
         "updated_at": "2026-07-25 11:25:56",
         "name": {
@@ -23,11 +23,11 @@
             "en": "As sunset gently melts into the sea, Gümüşlük takes on an entirely different character. Tables set along the shoreline meet the tranquillity of the Aegean, while Melengeç Restaurant remains one of the addresses that has preserved this atmosphere with the same care for years."
         },
         "gallery": [
-            "uploads/restaurants/1783880772_6a53dc44b58a1.jpeg",
-            "uploads/restaurants/1783880805_6a53dc6540389.jpeg",
-            "uploads/restaurants/1783880839_6a53dc87adb88.jpeg",
-            "uploads/restaurants/1783880889_6a53dcb94c98a.jpeg",
-            "uploads/restaurants/1783880889_6a53dcb95050a.jpeg"
+            "uploads\/restaurants\/1783880772_6a53dc44b58a1.jpeg",
+            "uploads\/restaurants\/1783880805_6a53dc6540389.jpeg",
+            "uploads\/restaurants\/1783880839_6a53dc87adb88.jpeg",
+            "uploads\/restaurants\/1783880889_6a53dcb94c98a.jpeg",
+            "uploads\/restaurants\/1783880889_6a53dcb95050a.jpeg"
         ],
         "seo_title_tr": "Melengeç Restaurant | Dioreal Dijital Lüks Yaşam Platformu",
         "seo_title_en": "Melengeç Restaurant | Dioreal Digital Luxury Platform",
