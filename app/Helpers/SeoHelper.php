@@ -26,10 +26,11 @@ if (!function_exists('dioreal_img')) {
     /**
      * Resolves local image asset or returns fallback asset
      */
-    function dioreal_img(?string $path, string $default = 'foto.img/hero_4k.jpg'): string
+    function dioreal_img(?string $path, string $default = 'foto.img/amalfi.jpg'): string
     {
         if (empty($path)) {
-            return asset($default);
+            $cleanDefault = ltrim($default, '/');
+            return file_exists(public_path($cleanDefault)) ? asset($cleanDefault) : asset('foto.img/amalfi.jpg');
         }
 
         if (str_starts_with($path, 'http://') || str_starts_with($path, 'https://')) {
@@ -37,11 +38,16 @@ if (!function_exists('dioreal_img')) {
         }
 
         $cleanPath = ltrim($path, '/');
-        if (file_exists(public_path($cleanPath))) {
+        if (file_exists(public_path($cleanPath)) && filesize(public_path($cleanPath)) > 0) {
             return asset($cleanPath);
         }
 
-        return asset($cleanPath);
+        $cleanDefault = ltrim($default, '/');
+        if (file_exists(public_path($cleanDefault))) {
+            return asset($cleanDefault);
+        }
+
+        return asset('foto.img/amalfi.jpg');
     }
 }
 

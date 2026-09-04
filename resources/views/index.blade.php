@@ -309,7 +309,7 @@
                         @foreach($destinations['turkiye'] as $dest)
                             <a href="{{ route('destinasyon.detay', $dest->slug_tr ?: ($dest->slug_en ?: $dest->id)) }}" class="dest-card-h" style="display: block; text-decoration: none; color: inherit;">
                                 <div class="dest-img-container">
-                                    <div class="dest-img" style="background-image:url('{{ dioreal_img($dest->img ?? '', 'foto.img/amalfi.jpg') }}'); position: absolute; inset: 0; background-size: cover; background-position: center; transition: transform 0.9s cubic-bezier(0.25, 0.46, 0.45, 0.94);"></div>
+                                    <img src="{{ dioreal_img($dest->img ?? '', 'foto.img/amalfi.jpg') }}" onerror="this.onerror=null;this.src='{{ asset('foto.img/amalfi.jpg') }}';" alt="{{ $dest->name['tr'] ?? '' }}" class="dest-img" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; transition: transform 0.9s cubic-bezier(0.25, 0.46, 0.45, 0.94);">
                                 </div>
                                 <div class="dest-info-ext">
                                     <div class="dest-region">
@@ -335,7 +335,7 @@
                         @foreach($destinations['turkiye'] as $dest)
                             <a href="{{ route('destinasyon.detay', $dest->slug_tr ?: ($dest->slug_en ?: $dest->id)) }}" class="dest-card-h" style="display: block; text-decoration: none; color: inherit;">
                                 <div class="dest-img-container">
-                                    <div class="dest-img" style="background-image:url('{{ dioreal_img($dest->img ?? '', 'foto.img/amalfi.jpg') }}'); position: absolute; inset: 0; background-size: cover; background-position: center; transition: transform 0.9s cubic-bezier(0.25, 0.46, 0.45, 0.94);"></div>
+                                    <img src="{{ dioreal_img($dest->img ?? '', 'foto.img/amalfi.jpg') }}" onerror="this.onerror=null;this.src='{{ asset('foto.img/amalfi.jpg') }}';" alt="{{ $dest->name['tr'] ?? '' }}" class="dest-img" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; transition: transform 0.9s cubic-bezier(0.25, 0.46, 0.45, 0.94);">
                                 </div>
                                 <div class="dest-info-ext">
                                     <div class="dest-region">
@@ -411,7 +411,7 @@
                                 @foreach($destinations[$type] as $dest)
                                     <a href="{{ route('destinasyon.detay', $dest->slug_tr ?: ($dest->slug_en ?: $dest->id)) }}" class="dest-card-h" style="display: block; text-decoration: none; color: inherit;">
                                         <div class="dest-img-container">
-                                            <div class="dest-img" style="background-image:url('{{ dioreal_img($dest->img ?? '', 'foto.img/amalfi.jpg') }}'); position: absolute; inset: 0; background-size: cover; background-position: center; transition: transform 0.9s cubic-bezier(0.25, 0.46, 0.45, 0.94);"></div>
+                                            <img src="{{ dioreal_img($dest->img ?? '', 'foto.img/amalfi.jpg') }}" onerror="this.onerror=null;this.src='{{ asset('foto.img/amalfi.jpg') }}';" alt="{{ $dest->name['tr'] ?? '' }}" class="dest-img" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; transition: transform 0.9s cubic-bezier(0.25, 0.46, 0.45, 0.94);">
                                         </div>
                                         <div class="dest-info-ext">
                                             <div class="dest-region">
@@ -437,7 +437,7 @@
                                 @foreach($destinations[$type] as $dest)
                                     <a href="{{ route('destinasyon.detay', $dest->slug_tr ?: ($dest->slug_en ?: $dest->id)) }}" class="dest-card-h" style="display: block; text-decoration: none; color: inherit;">
                                         <div class="dest-img-container">
-                                            <div class="dest-img" style="background-image:url('{{ dioreal_img($dest->img ?? '', 'foto.img/amalfi.jpg') }}'); position: absolute; inset: 0; background-size: cover; background-position: center; transition: transform 0.9s cubic-bezier(0.25, 0.46, 0.45, 0.94);"></div>
+                                            <img src="{{ dioreal_img($dest->img ?? '', 'foto.img/amalfi.jpg') }}" onerror="this.onerror=null;this.src='{{ asset('foto.img/amalfi.jpg') }}';" alt="{{ $dest->name['tr'] ?? '' }}" class="dest-img" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; transition: transform 0.9s cubic-bezier(0.25, 0.46, 0.45, 0.94);">
                                         </div>
                                         <div class="dest-info-ext">
                                             <div class="dest-region">
