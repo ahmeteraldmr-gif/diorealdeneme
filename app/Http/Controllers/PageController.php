@@ -100,7 +100,7 @@ class PageController extends Controller
 
     public function geziRehberi()
     {
-        $rehberler = Guide::all();
+        $rehberler = Guide::paginate(9);
         $seo = get_page_seo('gezi-rehberi');
         $activeLang = get_active_locale();
         $canonical = route('gezi-rehberi', $activeLang === 'en' ? ['lang' => 'en'] : []);

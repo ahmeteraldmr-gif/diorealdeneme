@@ -387,9 +387,8 @@
         <!-- Main Article Content -->
         <article class="jd-article">
             <div class="jd-content">
-                <!-- We render long descriptions with paragraphs -->
-                <div class="lang-text-tr">{!! nl2br(!empty($rehber->desc['tr']) ? $rehber->desc['tr'] : ($rehber->desc['en'] ?? '')) !!}</div>
-                <div class="lang-text-en">{!! nl2br(!empty($rehber->desc['en']) ? $rehber->desc['en'] : ($rehber->desc['tr'] ?? '')) !!}</div>
+                <div class="lang-text-tr">{!! !empty($rehber->desc['tr']) ? $rehber->desc['tr'] : (is_string($rehber->desc ?? null) ? $rehber->desc : ($rehber->desc['en'] ?? '')) !!}</div>
+                <div class="lang-text-en">{!! !empty($rehber->desc['en']) ? $rehber->desc['en'] : (is_string($rehber->desc ?? null) ? $rehber->desc : ($rehber->desc['tr'] ?? '')) !!}</div>
             </div>
         </article>
 
