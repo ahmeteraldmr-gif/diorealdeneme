@@ -333,10 +333,11 @@ class SyncDiorealContent extends Command
         $models = [Guide::class, Event::class, Journal::class, Hotel::class, Yacht::class, Restaurant::class, Destination::class];
         foreach ($models as $mClass) {
             foreach ($mClass::all() as $item) {
-                if (!empty($item->img) && str_starts_with($item->img, 'uploads/')) {
-                    $dest = $basePublic . '/' . ltrim($item->img, '/');
-                    if (!file_exists($dest)) {
-                        $this->downloadImage('https://dioreal.com/' . ltrim($item->img, '/'), $dest, $context);
+                if (!empty($item->img)) {
+                    $imgClean = ltrim($item->img, '/');
+                    $dest = $basePublic . '/' . $imgClean;
+                    if (!file_exists($dest) || filesize($dest) === 0) {
+                        $this->downloadImage('https://dioreal.com/' . $imgClean, $dest, $context);
                     }
                 }
             }
@@ -345,18 +346,27 @@ class SyncDiorealContent extends Command
 
     private function downloadImage($url, $destPath, $context)
     {
-        if (file_exists($destPath)) return;
+        if (file_exists($destPath) && filesize($destPath) > 0) return;
 
         $dir = dirname($destPath);
         if (!file_exists($dir)) {
             @mkdir($dir, 0775, true);
         }
 
-        $data = @file_get_contents($url, false, $context);
-        if ($data) {
+        $ch = curl_init($url);
+        curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+        curl_setopt($ch, CURLOPT_FOLLOWLOCATION, true);
+        curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
+        curl_setopt($ch, CURLOPT_SSL_VERIFYHOST, false);
+        curl_setopt($ch, CURLOPT_USERAGENT, 'Mozilla/5.0 (Windows NT 10.0; Win64; x64)');
+        $data = curl_exec($ch);
+        $code = curl_getinfo($ch, CURLINFO_HTTP_CODE);
+        curl_close($ch);
+
+        if ($code === 200 && !empty($data)) {
             @file_put_contents($destPath, $data);
             @chmod($destPath, 0644);
-            $this->info("Downloaded image: {$url}");
+            $this->info("Downloaded image [200 OK]: {$url}");
         }
     }
 }
