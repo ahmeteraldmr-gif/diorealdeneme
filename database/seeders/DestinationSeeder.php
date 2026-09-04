@@ -12,6 +12,8 @@ class DestinationSeeder extends Seeder
      */
     public function run(): void
     {
+        Destination::query()->delete();
+
         $destinations = [
             // Türkiye'nin Ruhu (turkiye)
             [
