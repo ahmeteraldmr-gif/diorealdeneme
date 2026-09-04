@@ -205,8 +205,8 @@
                     <span class="lang-text-en">{{ $settings['about_mission_eyebrow_en'] ?? 'Our Mission' }}</span>
                 </span>
                 <h2 class="content-title">
-                    <span class="lang-text-tr">{!! $settings['about_mission_title_tr'] ?? 'Anlamlı <em>deneyimler</em> için' !!}</span>
-                    <span class="lang-text-en">{!! $settings['about_mission_title_en'] ?? 'For meaningful <em>experiences</em>' !!}</span>
+                    <span class="lang-text-tr">{!! $settings['about_mission_title_tr'] ?? 'Anlamlı deneyimler için' !!}</span>
+                    <span class="lang-text-en">{!! $settings['about_mission_title_en'] ?? 'For meaningful experiences' !!}</span>
                 </h2>
                 <div class="lang-text-tr">
                     <p class="content-body">{!! nl2br(e($settings['about_mission_p1_tr'] ?? 'DIOREAL, seyahati yalnızca gidilecek yerlerin toplamı olarak değil; kültürün, mimarinin, gastronominin, tarihin ve insan hikâyelerinin bir araya geldiği bütüncül bir deneyim olarak ele alır.')) !!}</p>

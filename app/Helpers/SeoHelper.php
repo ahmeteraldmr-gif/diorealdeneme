@@ -101,9 +101,9 @@ if (!function_exists('get_page_seo')) {
                 'desc_en'  => 'Discover curated destinations, hotels with character, restaurants, yachts and travel stories from Turkey to the world.',
             ],
             'hakkimizda' => [
-                'title_tr' => 'Hakkımızda — Dioreal Dijital Lüks Seyahat Medyası',
-                'title_en' => 'About Us — Dioreal Digital Luxury Travel Media',
-                'desc_tr'  => 'Dioreal Dijital hakkında daha fazla bilgi edinin: Seçkin destinasyonlar ve premium yaşam tarzını buluşturan yayıncılık vizyonumuz.',
+                'title_tr' => 'Hakkımızda — Dioreal Dijital Seyahat Medyası',
+                'title_en' => 'About Us — Dioreal Digital Travel Media',
+                'desc_tr'  => 'Dioreal Dijital hakkında daha fazla bilgi edinin: Seçkin destinasyonlar ve yaşam kültürünü buluşturan yayıncılık vizyonumuz.',
                 'desc_en'  => 'Discover Dioreal Digital: Our publishing vision bridging exclusive destinations, curated hotels, and luxury lifestyle.',
             ],
             'oteller' => [
