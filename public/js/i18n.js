@@ -187,11 +187,11 @@ document.addEventListener("DOMContentLoaded", () => {
     let lang = urlParams.get('lang');
     
     if (!lang) {
-        lang = localStorage.getItem('dioreal_lang');
+        lang = document.documentElement.getAttribute('lang');
     }
     
     if (!lang) {
-        lang = document.documentElement.getAttribute('lang') || 'tr';
+        lang = localStorage.getItem('dioreal_lang') || 'tr';
     }
     
     updateLang(lang);
