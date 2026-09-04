@@ -95,10 +95,10 @@ if (!function_exists('get_page_seo')) {
     {
         $seoMap = [
             'home' => [
-                'title_tr' => 'Dioreal Dijital — Lüks Seyahat, Koleksiyon Oteller & Yaşam Tarzı',
-                'title_en' => 'Dioreal Digital — Luxury Travel, Collection Hotels & Lifestyle',
-                'desc_tr'  => 'Seçkin destinasyonlar, premium markalar ve eşsiz tatil deneyimlerini bir araya getiren bağımsız lüks seyahat platformu.',
-                'desc_en'  => 'An independent luxury travel platform connecting exclusive destinations, boutique hotels, and luxury lifestyle experiences.',
+                'title_tr' => 'DIOREAL — Seyahat, Destinasyonlar ve Yaşam Kültürü',
+                'title_en' => 'DIOREAL — Travel, Destinations and Life Culture',
+                'desc_tr'  => 'Türkiye’den dünyaya seçilmiş destinasyonları, karakter sahibi otelleri, restoranları, yatları ve seyahat hikâyelerini keşfedin.',
+                'desc_en'  => 'Discover curated destinations, hotels with character, restaurants, yachts and travel stories from Turkey to the world.',
             ],
             'hakkimizda' => [
                 'title_tr' => 'Hakkımızda — Dioreal Dijital Lüks Seyahat Medyası',

@@ -40,24 +40,19 @@ class DatabaseSeeder extends Seeder
         Setting::set('hero_title_tr', "Türkiye ve dünyada seçkin\ndeneyimlerin kapısını aralıyoruz.");
         Setting::set('hero_title_en', "Opening doors to exclusive\nexperiences globally.");
 
-        // SVG Logo Generator Helper for Brands Seeding
-        $svgLogo = function ($text, $font, $style, $size) {
-            return "data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 60'><text x='50%' y='50%' dominant-baseline='middle' text-anchor='middle' font-family='{$font}' font-size='{$size}' font-style='{$style}' fill='%2394a3b8'>{$text}</text></svg>";
-        };
-
         $defaultBrands = [
-            ['name' => 'Nautical', 'img' => $svgLogo('Nautical', 'serif', '', 24)],
-            ['name' => 'PERDUE', 'img' => $svgLogo('PERDUE', 'sans-serif', '', 28)],
-            ['name' => 'Kassandra', 'img' => $svgLogo('Kassandra', 'serif', 'italic', 22)],
-            ['name' => 'ZAKROS', 'img' => $svgLogo('ZAKROS', 'sans-serif', '', 26)],
-            ['name' => 'HUAWEI', 'img' => $svgLogo('HUAWEI', 'sans-serif', '', 26)],
-            ['name' => 'SONY', 'img' => $svgLogo('SONY', 'sans-serif', '', 26)],
-            ['name' => 'oppo', 'img' => $svgLogo('oppo', 'sans-serif', '', 26)],
-            ['name' => 'CapCut', 'img' => $svgLogo('CapCut', 'sans-serif', '', 22)],
-            ['name' => 'Hus Wines', 'img' => $svgLogo('Hus Wines', 'serif', 'italic', 24)],
-            ['name' => 'RUPS', 'img' => $svgLogo('RUPS', 'sans-serif', '', 22)],
-            ['name' => 'Despot Evi', 'img' => $svgLogo('Despot Evi', 'serif', '', 20)],
-            ['name' => 'BLUE VOYAGE', 'img' => $svgLogo('BLUE VOYAGE', 'sans-serif', '', 20)],
+            ['name' => 'Nautical', 'img' => 'uploads/brands/1785092366_6a66590e9bac0.png'],
+            ['name' => 'PERDUE', 'img' => 'uploads/brands/1785093932_6a665f2cb2cb3.png'],
+            ['name' => 'Kassandra', 'img' => 'uploads/brands/1785093993_6a665f69aa28b.png'],
+            ['name' => 'ZAKROS', 'img' => 'uploads/brands/1785093832_6a665ec89fe38.png'],
+            ['name' => 'SONY', 'img' => 'uploads/brands/1785093954_6a665f42395ec.png'],
+            ['name' => 'oppo', 'img' => 'uploads/brands/1785092603_6a6659fb5e944.png'],
+            ['name' => 'CapCut', 'img' => 'uploads/brands/1785092623_6a665a0fa9a31.png'],
+            ['name' => 'Hus Wines', 'img' => 'uploads/brands/1785092903_6a665b273ebbc.png'],
+            ['name' => 'RUPS', 'img' => 'uploads/brands/1785093897_6a665f094ddfe.png'],
+            ['name' => 'Despot Evi', 'img' => 'uploads/brands/1785093698_6a665e426cbcf.png'],
+            ['name' => 'BLUE VOYAGE', 'img' => 'uploads/brands/1785093130_6a665c0a3debe.png'],
+            ['name' => 'HUAWEI', 'img' => 'uploads/brands/1785094412_6a66610c8e750.png'],
         ];
 
         Setting::set('brands', $defaultBrands);

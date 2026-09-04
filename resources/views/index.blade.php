@@ -207,8 +207,8 @@
 
         <div class="bt-about-grid" style="display: grid; gap: 2rem; text-align: left;">
             <!-- Trend Otel -->
-            <div class="bt-about-card" style="aspect-ratio: 3/4; position: relative; overflow: hidden; background: var(--near-black); cursor: pointer; transition: transform 0.4s;">
-                <img src="{{ dioreal_img($settings['trend_otel_img'] ?? '', 'foto.img/about_safari.jpg') }}" alt="Trend Otel" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.8s ease;">
+            <a href="{{ route('oteller') }}" class="bt-about-card" style="aspect-ratio: 3/4; position: relative; overflow: hidden; background: var(--near-black); cursor: pointer; transition: transform 0.4s; text-decoration: none; display: block;">
+                <img src="{{ dioreal_img($settings['trend_otel_img'] ?? '', 'foto.img/about_safari.webp') }}" alt="Trend Otel" loading="lazy" width="600" height="800" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.8s ease;">
                 <div style="position: absolute; bottom: 0; left: 0; right: 0; padding: 2rem; background: linear-gradient(transparent, rgba(0,0,0,0.85)); color: white; pointer-events: none;">
                     <div style="font-size: 0.75rem; letter-spacing: 0.2em; text-transform: uppercase; margin-bottom: 0.5rem; color: rgba(255,255,255,0.8);">
                         <span class="lang-text-tr">Trend Otel</span>
@@ -223,10 +223,10 @@
                         <span class="lang-text-en">{{ $settings['trend_otel_desc_en'] ?? 'The unique feeling of waking up in the hidden bays of the Aegean.' }}</span>
                     </p>
                 </div>
-            </div>
+            </a>
             <!-- Trend Restoran -->
-            <div class="bt-about-card" style="aspect-ratio: 3/4; position: relative; overflow: hidden; background: var(--near-black); cursor: pointer; transition: transform 0.4s;">
-                <img src="{{ dioreal_img($settings['trend_rest_img'] ?? '', 'foto.img/rest_mikla.jpg') }}" alt="Trend Restoran" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.8s ease;">
+            <a href="{{ route('restoranlar') }}" class="bt-about-card" style="aspect-ratio: 3/4; position: relative; overflow: hidden; background: var(--near-black); cursor: pointer; transition: transform 0.4s; text-decoration: none; display: block;">
+                <img src="{{ dioreal_img($settings['trend_rest_img'] ?? '', 'foto.img/rest_mikla.webp') }}" alt="Trend Restoran" loading="lazy" width="600" height="800" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.8s ease;">
                 <div style="position: absolute; bottom: 0; left: 0; right: 0; padding: 2rem; background: linear-gradient(transparent, rgba(0,0,0,0.85)); color: white; pointer-events: none;">
                     <div style="font-size: 0.75rem; letter-spacing: 0.2em; text-transform: uppercase; margin-bottom: 0.5rem; color: rgba(255,255,255,0.8);">
                         <span class="lang-text-tr">Trend Restoran</span>
@@ -241,10 +241,10 @@
                         <span class="lang-text-en">{{ $settings['trend_rest_desc_en'] ?? 'An unforgettable gastronomic journey with fresh seafood.' }}</span>
                     </p>
                 </div>
-            </div>
+            </a>
             <!-- Trend Yat -->
-            <div class="bt-about-card" style="aspect-ratio: 3/4; position: relative; overflow: hidden; background: var(--near-black); cursor: pointer; transition: transform 0.4s;">
-                <img src="{{ dioreal_img($settings['trend_yat_img'] ?? '', 'foto.img/about_yacht.jpg') }}" alt="Trend Yat" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.8s ease;">
+            <a href="{{ route('yatlar') }}" class="bt-about-card" style="aspect-ratio: 3/4; position: relative; overflow: hidden; background: var(--near-black); cursor: pointer; transition: transform 0.4s; text-decoration: none; display: block;">
+                <img src="{{ dioreal_img($settings['trend_yat_img'] ?? '', 'foto.img/about_yacht.webp') }}" alt="Trend Yat" loading="lazy" width="600" height="800" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.8s ease;">
                 <div style="position: absolute; bottom: 0; left: 0; right: 0; padding: 2rem; background: linear-gradient(transparent, rgba(0,0,0,0.85)); color: white; pointer-events: none;">
                     <div style="font-size: 0.75rem; letter-spacing: 0.2em; text-transform: uppercase; margin-bottom: 0.5rem; color: rgba(255,255,255,0.8);">
                         <span class="lang-text-tr">Trend Yat</span>
@@ -259,10 +259,10 @@
                         <span class="lang-text-en">{{ $settings['trend_yat_desc_en'] ?? 'Routes in infinite blue. Nothing but the sound of the wind.' }}</span>
                     </p>
                 </div>
-            </div>
+            </a>
             <!-- Trend Beach -->
-            <div class="bt-about-card" style="aspect-ratio: 3/4; position: relative; overflow: hidden; background: var(--near-black); cursor: pointer; transition: transform 0.4s;">
-                <img src="{{ dioreal_img($settings['trend_beach_img'] ?? '', 'foto.img/bodrum.jpg') }}" alt="Trend Beach" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.8s ease;">
+            <a href="{{ route('gezi-rehberi') }}" class="bt-about-card" style="aspect-ratio: 3/4; position: relative; overflow: hidden; background: var(--near-black); cursor: pointer; transition: transform 0.4s; text-decoration: none; display: block;">
+                <img src="{{ dioreal_img($settings['trend_beach_img'] ?? '', 'foto.img/bodrum.webp') }}" alt="Trend Beach" loading="lazy" width="600" height="800" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.8s ease;">
                 <div style="position: absolute; bottom: 0; left: 0; right: 0; padding: 2rem; background: linear-gradient(transparent, rgba(0,0,0,0.85)); color: white; pointer-events: none;">
                     <div style="font-size: 0.75rem; letter-spacing: 0.2em; text-transform: uppercase; margin-bottom: 0.5rem; color: rgba(255,255,255,0.8);">
                         <span class="lang-text-tr">Trend Beach</span>
@@ -277,7 +277,7 @@
                         <span class="lang-text-en">{{ $settings['trend_beach_desc_en'] ?? 'Golden sands and crystal waters. Moments accompanying the rhythm of the music.' }}</span>
                     </p>
                 </div>
-            </div>
+            </a>
         </div>
     </section>
     
