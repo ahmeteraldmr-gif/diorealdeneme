@@ -286,14 +286,31 @@
         <div class="guide-card-grid">
             @foreach($rehberler as $g)
                 @php
+                    $parseLang = function($field, $lang) {
+                        if (empty($field)) return '';
+                        if (is_string($field)) {
+                            $dec = json_decode($field, true);
+                            if (is_string($dec)) $dec = json_decode($dec, true);
+                            if (is_array($dec)) $field = $dec;
+                            else return $field;
+                        }
+                        if (is_array($field)) {
+                            if (!empty($field[$lang])) return $field[$lang];
+                            $alt = $lang === 'tr' ? 'en' : 'tr';
+                            if (!empty($field[$alt])) return $field[$alt];
+                            foreach ($field as $v) { if (!empty($v) && is_string($v)) return $v; }
+                        }
+                        return is_string($field) ? $field : '';
+                    };
+
                     $imgUrl = dioreal_img($g->img, 'foto.img/bodrum.jpg');
                     $slug = $g->slug_tr ?: ($g->slug_en ?: $g->id);
-                    $tagTr = !empty($g->tag["tr"]) ? $g->tag["tr"] : ($g->tag["en"] ?? "");
-                    $tagEn = !empty($g->tag["en"]) ? $g->tag["en"] : ($g->tag["tr"] ?? "");
-                    $titleTr = !empty($g->title["tr"]) ? $g->title["tr"] : ($g->title["en"] ?? "");
-                    $titleEn = !empty($g->title["en"]) ? $g->title["en"] : ($g->title["tr"] ?? "");
-                    $rawDescTr = !empty($g->desc["tr"]) ? $g->desc["tr"] : ($g->desc["en"] ?? "");
-                    $rawDescEn = !empty($g->desc["en"]) ? $g->desc["en"] : ($g->desc["tr"] ?? "");
+                    $tagTr = $parseLang($g->tag, 'tr');
+                    $tagEn = $parseLang($g->tag, 'en');
+                    $titleTr = $parseLang($g->title, 'tr');
+                    $titleEn = $parseLang($g->title, 'en');
+                    $rawDescTr = $parseLang($g->desc, 'tr');
+                    $rawDescEn = $parseLang($g->desc, 'en');
                     $cleanDescTr = trim(preg_replace('/\s+/', ' ', strip_tags($rawDescTr)));
                     $cleanDescEn = trim(preg_replace('/\s+/', ' ', strip_tags($rawDescEn)));
                     $descTr = \Illuminate\Support\Str::limit($cleanDescTr, 200);
@@ -304,17 +321,19 @@
                         <img src="{{ $imgUrl }}" onerror="this.onerror=null;this.src='{{ asset('foto.img/bodrum.jpg') }}';" alt="{{ $titleTr }}" class="guide-card-img">
                     </a>
                     <div class="guide-card-body">
-                        <span class="guide-card-tag lang-text-tr">{{ $tagTr }}</span>
-                        <span class="guide-card-tag lang-text-en">{{ $tagEn }}</span>
+                        @if($tagTr || $tagEn)
+                            <span class="guide-card-tag lang-text-tr">{{ $tagTr }}</span>
+                            <span class="guide-card-tag lang-text-en">{{ $tagEn ?: $tagTr }}</span>
+                        @endif
                         
                         <a href="{{ route('rehber.detay', $slug) }}" style="text-decoration: none; color: inherit;">
                             <h3 class="guide-card-title lang-text-tr">{{ $titleTr }}</h3>
-                            <h3 class="guide-card-title lang-text-en">{{ $titleEn }}</h3>
+                            <h3 class="guide-card-title lang-text-en">{{ $titleEn ?: $titleTr }}</h3>
                         </a>
                         
                         <div style="flex-grow: 1;">
                             <p class="guide-card-desc lang-text-tr">{{ $descTr }}</p>
-                            <p class="guide-card-desc lang-text-en">{{ $descEn }}</p>
+                            <p class="guide-card-desc lang-text-en">{{ $descEn ?: $descTr }}</p>
                         </div>
                         
                         <div style="margin-top: auto; padding-top: 0.5rem;">

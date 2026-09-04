@@ -61,9 +61,12 @@ class JsonToDbSeeder extends Seeder
                         if (empty($item['seo_description_tr']) && $trDesc) $item['seo_description_tr'] = Str::limit(strip_tags($trDesc), 155);
                         if (empty($item['seo_description_en']) && $enDesc) $item['seo_description_en'] = Str::limit(strip_tags($enDesc), 155);
 
-                        foreach (['name', 'title', 'tag', 'month', 'loc', 'desc', 'long_desc', 'content', 'gallery'] as $arrayKey) {
-                            if (isset($item[$arrayKey]) && is_array($item[$arrayKey])) {
-                                $item[$arrayKey] = json_encode($item[$arrayKey], JSON_UNESCAPED_UNICODE);
+                        foreach (['name', 'title', 'tag', 'month', 'loc', 'location', 'desc', 'long_desc', 'content', 'gallery'] as $arrayKey) {
+                            if (isset($item[$arrayKey]) && is_string($item[$arrayKey])) {
+                                $decoded = json_decode($item[$arrayKey], true);
+                                if (is_array($decoded)) {
+                                    $item[$arrayKey] = $decoded;
+                                }
                             }
                         }
 
