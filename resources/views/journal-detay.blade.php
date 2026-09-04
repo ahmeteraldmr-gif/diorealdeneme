@@ -444,8 +444,8 @@
             <!-- Full Content -->
             @if(!empty($contentTr) || !empty($contentEn))
                 <div class="jd-content">
-                    <div class="lang-text-tr">{!! $contentTr !!}</div>
-                    <div class="lang-text-en">{!! $contentEn !!}</div>
+                    <div class="lang-text-tr">{!! clean_dioreal_content($contentTr) !!}</div>
+                    <div class="lang-text-en">{!! clean_dioreal_content($contentEn) !!}</div>
                 </div>
             @else
                 <div class="jd-content" style="color: var(--mid-gray); text-align: center; padding: 4rem 0;">

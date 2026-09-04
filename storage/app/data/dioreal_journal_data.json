@@ -9,10 +9,10 @@
             "tr": "Seyahat Felsefesi",
             "en": "Travel Philosophy"
         },
-        "img": "foto.img\/amalfi.jpg",
+        "img": "foto.img/amalfi.jpg",
         "desc": {
-            "tr": "Dünyayı görmek artık hiç olmadığı kadar kolay. Peki her şeyi ekranlarımızdan keşfedebildiğimiz bir çağda neden hâlâ yola çıkıyoruz? Bu yazı, seyahatin...",
-            "en": "Seeing the world has never been easier. But in an age where we can explore almost everything through our screens, why do we still choose to travel? Th..."
+            "tr": "<p>Dünyayı görmek artık hiç olmadığı kadar kolay. Peki her şeyi ekranlarımızdan keşfedebildiğimiz bir çağda neden hâlâ yola çıkıyoruz? Bu yazı, seyahatin...</p>",
+            "en": "<p>Seeing the world has never been easier. But in an age where we can explore almost everything through our screens, why do we still choose to travel? Th...</p>"
         },
         "slug_tr": "6",
         "slug_en": "6-en",
@@ -37,7 +37,7 @@
             "tr": "",
             "en": ""
         },
-        "img": "foto.img\/norvec.jpg",
+        "img": "foto.img/norvec.jpg",
         "desc": {
             "tr": "",
             "en": ""
@@ -65,7 +65,7 @@
             "tr": "",
             "en": ""
         },
-        "img": "foto.img\/sahra.jpg",
+        "img": "foto.img/sahra.jpg",
         "desc": {
             "tr": "",
             "en": ""
@@ -93,7 +93,7 @@
             "tr": "",
             "en": ""
         },
-        "img": "uploads\/journals\/1784019795_6a55fb5300479.png",
+        "img": "uploads/journals/1784019795_6a55fb5300479.png",
         "desc": {
             "tr": "",
             "en": ""
@@ -121,7 +121,7 @@
             "tr": "",
             "en": ""
         },
-        "img": "uploads\/journals\/1784020142_6a55fcae131ce.png",
+        "img": "uploads/journals/1784020142_6a55fcae131ce.png",
         "desc": {
             "tr": "",
             "en": ""
@@ -149,10 +149,10 @@
             "tr": "Seyahat Felsefesi | 2026-07-25",
             "en": "Travel Philosophy | 2026-07-25"
         },
-        "img": "foto.img\/amalfi.jpg",
+        "img": "foto.img/amalfi.jpg",
         "desc": {
-            "tr": "Modern dünyada hız, seyahatin de ölçüsü hâline geldi. Oysa bazı destinasyonlar, ancak yavaşladığınızda kendini gösterir. Bir şehri gerçekten keşfetmek, görülecek yerlerin sayısıyla değil; orada geçirdiğiniz anların derinliğiyle ilgilidir.",
-            "en": "Modern travel has become a race against time. Yet some destinations reveal their true character only when you slow down. The beauty of a journey is measured not by how many places you visit, but by how deeply you experience each one."
+            "tr": "<p>Modern dünyada hız, seyahatin de ölçüsü hâline geldi. Oysa bazı destinasyonlar, ancak yavaşladığınızda kendini gösterir. Bir şehri gerçekten keşfetmek, görülecek yerlerin sayısıyla değil; orada geçirdiğiniz anların derinliğiyle ilgilidir.</p>",
+            "en": "<p>Modern travel has become a race against time. Yet some destinations reveal their true character only when you slow down. The beauty of a journey is measured not by how many places you visit, but by how deeply you experience each one.</p>"
         },
         "slug_tr": "yavas-seyahat-sanati",
         "slug_en": "yavas-seyahat-sanati-en",
@@ -177,10 +177,10 @@
             "tr": "Seyahat Felsefesi | 2026-07-25",
             "en": "Travel Philosophy | 2026-07-25"
         },
-        "img": "foto.img\/amalfi.jpg",
+        "img": "foto.img/amalfi.jpg",
         "desc": {
-            "tr": "Dünyada görülecek binlerce şehir var; fakat hepsi aynı hikâyeyi anlatmıyor. Bir destinasyonu değerli kılan, popüler olması değil, insana unutamayacağı bir deneyim sunabilmesidir.",
-            "en": "There are thousands of destinations to explore, but not all of them tell the same story. What makes a place truly remarkable is not its popularity, but its ability to leave a lasting impression on those who experience it."
+            "tr": "<p>Dünyada görülecek binlerce şehir var; fakat hepsi aynı hikâyeyi anlatmıyor. Bir destinasyonu değerli kılan, popüler olması değil, insana unutamayacağı bir deneyim sunabilmesidir.</p>",
+            "en": "<p>There are thousands of destinations to explore, but not all of them tell the same story. What makes a place truly remarkable is not its popularity, but its ability to leave a lasting impression on those who experience it.</p>"
         },
         "slug_tr": "neden-bazi-sehirler-unutulmaz",
         "slug_en": "neden-bazi-sehirler-unutulmaz-en",
@@ -205,10 +205,10 @@
             "tr": "Seyahat Felsefesi | 2026-07-25",
             "en": "Travel Philosophy | 2026-07-25"
         },
-        "img": "foto.img\/amalfi.jpg",
+        "img": "foto.img/amalfi.jpg",
         "desc": {
-            "tr": "En iyi yolculuklar havaalanında değil, merak ettiğiniz ilk soruyla başlar. Bir destinasyonu gitmeden önce tanımak, orada geçireceğiniz zamanı daha zengin, daha anlamlı ve daha unutulmaz hâle getirir.",
-            "en": "The best journeys begin long before you arrive. Learning about a destination before you travel enriches every moment you spend there, transforming a simple visit into a meaningful experience."
+            "tr": "<p>En iyi yolculuklar havaalanında değil, merak ettiğiniz ilk soruyla başlar. Bir destinasyonu gitmeden önce tanımak, orada geçireceğiniz zamanı daha zengin, daha anlamlı ve daha unutulmaz hâle getirir.</p>",
+            "en": "<p>The best journeys begin long before you arrive. Learning about a destination before you travel enriches every moment you spend there, transforming a simple visit into a meaningful experience.</p>"
         },
         "slug_tr": "yolculuk-gitmeden-once-baslar",
         "slug_en": "yolculuk-gitmeden-once-baslar-en",
@@ -233,10 +233,10 @@
             "tr": "Seyahat Felsefesi | 2026-07-25",
             "en": "Travel Philosophy | 2026-07-25"
         },
-        "img": "foto.img\/amalfi.jpg",
+        "img": "foto.img/amalfi.jpg",
         "desc": {
-            "tr": "Her yolculuk yalnızca yeni yerler keşfetmek değil, aynı zamanda misafir olduğumuz coğrafyalara saygı göstermektir. İyi bir gezgin, geride yalnızca ayak izini bırakır; gittiği yere ise daima değer katar.",
-            "en": "Every journey is more than discovering new places—it's about respecting the places that welcome us. A thoughtful traveler leaves little behind except footprints and takes away far more than photographs."
+            "tr": "<p>Her yolculuk yalnızca yeni yerler keşfetmek değil, aynı zamanda misafir olduğumuz coğrafyalara saygı göstermektir. İyi bir gezgin, geride yalnızca ayak izini bırakır; gittiği yere ise daima değer katar.</p>",
+            "en": "<p>Every journey is more than discovering new places—it&#039;s about respecting the places that welcome us. A thoughtful traveler leaves little behind except footprints and takes away far more than photographs.</p>"
         },
         "slug_tr": "iyi-bir-gezgin-ile-sadece-turist-arasindaki-fark",
         "slug_en": "iyi-bir-gezgin-ile-sadece-turist-arasindaki-fark-en",
@@ -261,10 +261,10 @@
             "tr": "Seyahat Felsefesi | 2026-07-25",
             "en": "Seyahat Felsefesi | 2026-07-25"
         },
-        "img": "foto.img\/amalfi.jpg",
+        "img": "foto.img/amalfi.jpg",
         "desc": {
-            "tr": "Bir destinasyonu seçerken çoğu zaman ilk baktığımız şey otel oluyor. Oysa iyi bir otel, ancak doğru şehrin içinde anlam kazanır. Çünkü asıl yolculuk, konakladığınız odada değil; kapısından çıktığınız anda başlar.",
-            "en": "For many travelers, choosing a destination begins with finding the right hotel. Yet even the finest hotel gains meaning only through the city that surrounds it. The real journey starts the moment you step outside its doors."
+            "tr": "<p>Bir destinasyonu seçerken çoğu zaman ilk baktığımız şey otel oluyor. Oysa iyi bir otel, ancak doğru şehrin içinde anlam kazanır. Çünkü asıl yolculuk, konakladığınız odada değil; kapısından çıktığınız anda başlar.</p>",
+            "en": "<p>For many travelers, choosing a destination begins with finding the right hotel. Yet even the finest hotel gains meaning only through the city that surrounds it. The real journey starts the moment you step outside its doors.</p>"
         },
         "slug_tr": "once-sehir-sonra-otel",
         "slug_en": "once-sehir-sonra-otel-en",
@@ -289,10 +289,10 @@
             "tr": "Seyahat Felsefesi | 2026-07-25",
             "en": "Travel Psychology | 2026-07-25"
         },
-        "img": "foto.img\/amalfi.jpg",
+        "img": "foto.img/amalfi.jpg",
         "desc": {
-            "tr": "Bazı şehirleri yıllar sonra bile tüm ayrıntılarıyla hatırlarız; bazılarını ise döndüğümüz gün unutmaya başlarız. Aradaki fark, gördüklerimizden çok hissettiklerimizde saklıdır.",
-            "en": "Some places remain vivid in our minds for decades, while others begin to fade the moment we leave. The difference lies not in what we saw, but in what we truly felt."
+            "tr": "<p>Bazı şehirleri yıllar sonra bile tüm ayrıntılarıyla hatırlarız; bazılarını ise döndüğümüz gün unutmaya başlarız. Aradaki fark, gördüklerimizden çok hissettiklerimizde saklıdır.</p>",
+            "en": "<p>Some places remain vivid in our minds for decades, while others begin to fade the moment we leave. The difference lies not in what we saw, but in what we truly felt.</p>"
         },
         "slug_tr": "neden-bazi-yolculuklari-hic-unutmayiz",
         "slug_en": "neden-bazi-yolculuklari-hic-unutmayiz-en",
@@ -317,10 +317,10 @@
             "tr": "Şehir Kültürü | 2026-07-25",
             "en": "City Culture | 2026-07-25"
         },
-        "img": "foto.img\/amalfi.jpg",
+        "img": "foto.img/amalfi.jpg",
         "desc": {
-            "tr": "Bazı şehirler ilk bakışta etkiler, bazıları ise zamanla kendini anlatır. Bir kentin gerçek kimliği, anıtlarında değil; sabah açılan dükkânlarında, meydanlarında ve gündelik yaşamın içinde saklıdır.",
-            "en": "Some cities impress you at first sight, while others reveal themselves slowly over time. A city's true identity is found not in its monuments, but in its streets, its people, and the rhythm of everyday life."
+            "tr": "<p>Bazı şehirler ilk bakışta etkiler, bazıları ise zamanla kendini anlatır. Bir kentin gerçek kimliği, anıtlarında değil; sabah açılan dükkânlarında, meydanlarında ve gündelik yaşamın içinde saklıdır.</p>",
+            "en": "<p>Some cities impress you at first sight, while others reveal themselves slowly over time. A city&#039;s true identity is found not in its monuments, but in its streets, its people, and the rhythm of everyday life.</p>"
         },
         "slug_tr": "bir-sehrin-ruhunu-kim-insa-eder",
         "slug_en": "bir-sehrin-ruhunu-kim-insa-eder-en",
@@ -345,10 +345,10 @@
             "tr": "Şehir Kültürü | 2026-07-25",
             "en": "City Culture | 2026-07-25"
         },
-        "img": "foto.img\/amalfi.jpg",
+        "img": "foto.img/amalfi.jpg",
         "desc": {
-            "tr": "Bir şehri anlamak istiyorsanız, önce insanların nerede durduğuna bakın. Meydanlar, kafeler ve pazarlar yalnızca buluşma noktaları değil; bir kentin gündelik yaşamını, kültürünü ve karakterini en doğal hâliyle yansıtan ortak yaşam alanlarıdır.",
-            "en": "If you want to understand a city, watch where its people choose to gather. Squares, cafés, and markets are more than public spaces—they are where a city's culture, character, and everyday life unfold naturally."
+            "tr": "<p>Bir şehri anlamak istiyorsanız, önce insanların nerede durduğuna bakın. Meydanlar, kafeler ve pazarlar yalnızca buluşma noktaları değil; bir kentin gündelik yaşamını, kültürünü ve karakterini en doğal hâliyle yansıtan ortak yaşam alanlarıdır.</p>",
+            "en": "<p>If you want to understand a city, watch where its people choose to gather. Squares, cafés, and markets are more than public spaces—they are where a city&#039;s culture, character, and everyday life unfold naturally.</p>"
         },
         "slug_tr": "bir-sehrin-oturma-odasi",
         "slug_en": "bir-sehrin-oturma-odasi-en",
@@ -373,10 +373,10 @@
             "tr": "Şehir Kültürü | 2026-07-25",
             "en": "City Culture | 2026-07-25"
         },
-        "img": "foto.img\/amalfi.jpg",
+        "img": "foto.img/amalfi.jpg",
         "desc": {
-            "tr": "Bir şehrin en çok fotoğrafı çekilen yeri, her zaman en unutulmaz yeri değildir. Bazen bir yolculuğun en değerli anları, haritalarda işaretlenmeyen sokaklarda ve plansız keşiflerde saklıdır.",
-            "en": "The most photographed place in a city is not always the most memorable. Sometimes, the finest moments of a journey are found in the streets no guidebook highlights and in discoveries that were never planned."
+            "tr": "<p>Bir şehrin en çok fotoğrafı çekilen yeri, her zaman en unutulmaz yeri değildir. Bazen bir yolculuğun en değerli anları, haritalarda işaretlenmeyen sokaklarda ve plansız keşiflerde saklıdır.</p>",
+            "en": "<p>The most photographed place in a city is not always the most memorable. Sometimes, the finest moments of a journey are found in the streets no guidebook highlights and in discoveries that were never planned.</p>"
         },
         "slug_tr": "sehrin-en-guzel-yeri-rehber-kitaplarda-yazmaz",
         "slug_en": "sehrin-en-guzel-yeri-rehber-kitaplarda-yazmaz-en",
@@ -401,10 +401,10 @@
             "tr": "Seyahat Kültürü | 2026-07-25",
             "en": "Travel Culture | 2026-07-25"
         },
-        "img": "foto.img\/amalfi.jpg",
+        "img": "foto.img/amalfi.jpg",
         "desc": {
-            "tr": "Bazı yolculuklar daha çok yer gösterir, bazıları ise daha doğru anlar yaşatır. Seyahatin kalitesi çoğu zaman gidilen yerlerle değil, yapılan seçimlerle şekillenir.",
-            "en": "Some journeys are measured by the number of places they include, while others are remembered for the moments they create. More often than not, the quality of a journey is shaped by the choices made along the way."
+            "tr": "<p>Bazı yolculuklar daha çok yer gösterir, bazıları ise daha doğru anlar yaşatır. Seyahatin kalitesi çoğu zaman gidilen yerlerle değil, yapılan seçimlerle şekillenir.</p>",
+            "en": "<p>Some journeys are measured by the number of places they include, while others are remembered for the moments they create. More often than not, the quality of a journey is shaped by the choices made along the way.</p>"
         },
         "slug_tr": "iyi-yolculuklar-iyi-secimlerle-baslar",
         "slug_en": "iyi-yolculuklar-iyi-secimlerle-baslar-en",
@@ -429,10 +429,10 @@
             "tr": "Şehir Kültürü | 2026-07-25",
             "en": "City Culture | 2026-07-25"
         },
-        "img": "foto.img\/amalfi.jpg",
+        "img": "foto.img/amalfi.jpg",
         "desc": {
-            "tr": "Aynı şehir, günün farklı saatlerinde bambaşka yüzlerini gösterir. Bir destinasyonu gerçekten tanımak, yalnızca nereye gittiğinizle değil; oraya ne zaman vardığınızla da ilgilidir.",
-            "en": "The same city can feel entirely different from one hour to the next. Truly understanding a destination is shaped not only by where you go, but by when you choose to be there."
+            "tr": "<p>Aynı şehir, günün farklı saatlerinde bambaşka yüzlerini gösterir. Bir destinasyonu gerçekten tanımak, yalnızca nereye gittiğinizle değil; oraya ne zaman vardığınızla da ilgilidir.</p>",
+            "en": "<p>The same city can feel entirely different from one hour to the next. Truly understanding a destination is shaped not only by where you go, but by when you choose to be there.</p>"
         },
         "slug_tr": "ayni-sehir-dort-farkli-hikaye",
         "slug_en": "ayni-sehir-dort-farkli-hikaye-en",
@@ -457,10 +457,10 @@
             "tr": "Konaklama Kültürü | 2026-07-25",
             "en": "Hospitality Culture | 2026-07-25"
         },
-        "img": "foto.img\/amalfi.jpg",
+        "img": "foto.img/amalfi.jpg",
         "desc": {
-            "tr": "Bir oteli unutulmaz yapan şey her zaman en yüksek katı, en geniş süiti ya da en gösterişli lobisi değildir. Bazen bütün yolculuğunuzu değiştiren ayrıntı, rezervasyon ekranında fark etmeden geçtiğiniz tek bir oda seçeneğidir.",
-            "en": "An unforgettable hotel is not always defined by its highest floor, largest suite, or grandest lobby. Sometimes, the detail that transforms an entire journey is the very room choice most travelers overlook."
+            "tr": "<p>Bir oteli unutulmaz yapan şey her zaman en yüksek katı, en geniş süiti ya da en gösterişli lobisi değildir. Bazen bütün yolculuğunuzu değiştiren ayrıntı, rezervasyon ekranında fark etmeden geçtiğiniz tek bir oda seçeneğidir.</p>",
+            "en": "<p>An unforgettable hotel is not always defined by its highest floor, largest suite, or grandest lobby. Sometimes, the detail that transforms an entire journey is the very room choice most travelers overlook.</p>"
         },
         "slug_tr": "her-pencere-ayni-sehre-bakmaz",
         "slug_en": "her-pencere-ayni-sehre-bakmaz-en",
@@ -485,10 +485,10 @@
             "tr": "Konaklama Kültürü | 2026-07-25",
             "en": "Hospitality Culture | 2026-07-25"
         },
-        "img": "foto.img\/amalfi.jpg",
+        "img": "foto.img/amalfi.jpg",
         "desc": {
-            "tr": "Bazı mekânlar yalnızca içinden geçmeniz için tasarlanır. Bazıları ise sizi yavaşlatır. İyi bir otelin lobisi, konaklamanın başladığı yer değil; o şehrin ilk cümlesidir.",
-            "en": "Some spaces are designed simply to be passed through. Others invite you to slow down. In a remarkable hotel, the lobby is not where your stay begins—it is the first sentence of the city."
+            "tr": "<p>Bazı mekânlar yalnızca içinden geçmeniz için tasarlanır. Bazıları ise sizi yavaşlatır. İyi bir otelin lobisi, konaklamanın başladığı yer değil; o şehrin ilk cümlesidir.</p>",
+            "en": "<p>Some spaces are designed simply to be passed through. Others invite you to slow down. In a remarkable hotel, the lobby is not where your stay begins—it is the first sentence of the city.</p>"
         },
         "slug_tr": "bir-otelin-kalbi-lobisidir",
         "slug_en": "bir-otelin-kalbi-lobisidir-en",

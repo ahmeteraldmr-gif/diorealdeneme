@@ -177,3 +177,66 @@ if (!function_exists('get_page_seo')) {
         return $default;
     }
 }
+
+if (!function_exists('clean_dioreal_content')) {
+    /**
+     * Cleans raw text/HTML by removing literal \r\n, \r, \n artifacts, <br> tags and wrapping plain text paragraphs in <p> and <h3>
+     */
+    function clean_dioreal_content($text): string
+    {
+        if (empty($text)) return '';
+
+        if (is_array($text)) {
+            $locale = function_exists('get_active_locale') ? get_active_locale() : 'tr';
+            $text = $text[$locale] ?? ($text['tr'] ?? ($text['en'] ?? reset($text)));
+        }
+
+        if (!is_string($text)) return '';
+
+        // Handle JSON strings or double-encoded strings if passed directly
+        if (str_starts_with(trim($text), '{') || str_starts_with(trim($text), '"')) {
+            $dec = json_decode($text, true);
+            if (is_string($dec)) $dec = json_decode($dec, true);
+            if (is_array($dec)) {
+                $locale = function_exists('get_active_locale') ? get_active_locale() : 'tr';
+                $text = $dec[$locale] ?? ($dec['tr'] ?? ($dec['en'] ?? reset($dec)));
+            } elseif (is_string($dec)) {
+                $text = $dec;
+            }
+        }
+
+        if (!is_string($text) || empty($text)) return '';
+
+        // Decode HTML entities and replace <br> with newlines
+        $text = html_entity_decode($text, ENT_QUOTES, 'UTF-8');
+        $text = preg_replace('/<br\s*\/?>/i', "\n", $text);
+
+        // Replace literal string representations of line breaks (\r\n, \n\r\n, \r, \n)
+        $text = str_replace(
+            ['\r\n', '\n\r\n', '\r', '\\r\\n', '\\n\\r\\n', '\\r', '\\n'],
+            ["\n", "\n", "\n", "\n", "\n", "\n", "\n"],
+            $text
+        );
+
+        // Replace actual carriage returns
+        $text = str_replace(["\r\n", "\r"], "\n", $text);
+
+        // Normalize 3+ newlines down to 2
+        $text = preg_replace("/\n{3,}/", "\n\n", $text);
+
+        // Separate and format paragraphs
+        $paragraphs = explode("\n\n", trim($text));
+        $formatted = [];
+        foreach ($paragraphs as $p) {
+            $p = trim(strip_tags($p));
+            if (empty($p)) continue;
+            // Short line without ending punctuation -> <h3>
+            if (mb_strlen($p) < 85 && !preg_match('/[\.\?\!:]$/u', $p) && preg_match('/^[A-ZÇĞİÖŞÜ0-9]/u', $p)) {
+                $formatted[] = '<h3>' . htmlspecialchars($p, ENT_QUOTES, 'UTF-8') . '</h3>';
+            } else {
+                $formatted[] = '<p>' . htmlspecialchars($p, ENT_QUOTES, 'UTF-8') . '</p>';
+            }
+        }
+        return implode("\n", $formatted);
+    }
+}

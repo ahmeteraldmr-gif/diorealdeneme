@@ -395,10 +395,10 @@
                     </div>
                     <div class="story-text" style="flex: 1.5;">
                         <div class="lang-text-tr">
-                            {!! nl2br(e(!empty($etkinlik->long_desc['tr']) ? $etkinlik->long_desc['tr'] : ($etkinlik->desc['tr'] ?? ''))) !!}
+                            {!! clean_dioreal_content(!empty($etkinlik->long_desc['tr']) ? $etkinlik->long_desc['tr'] : ($etkinlik->desc['tr'] ?? '')) !!}
                         </div>
                         <div class="lang-text-en">
-                            {!! nl2br(e(!empty($etkinlik->long_desc['en']) ? $etkinlik->long_desc['en'] : ($etkinlik->desc['en'] ?? ''))) !!}
+                            {!! clean_dioreal_content(!empty($etkinlik->long_desc['en']) ? $etkinlik->long_desc['en'] : ($etkinlik->desc['en'] ?? '')) !!}
                         </div>
                     </div>
                 </div>

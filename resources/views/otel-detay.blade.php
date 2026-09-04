@@ -470,10 +470,10 @@
                 <h2 class="detail-section-title" data-i18n="detail_about_hotel">Otel <em>Hakkında</em></h2>
                 
                 <div class="lang-text-tr">
-                    {!! nl2br($otel->long_desc['tr'] ?? ($otel->desc['tr'] ?? '')) !!}
+                    {!! clean_dioreal_content($otel->long_desc['tr'] ?? ($otel->desc['tr'] ?? '')) !!}
                 </div>
                 <div class="lang-text-en">
-                    {!! nl2br($otel->long_desc['en'] ?? ($otel->desc['en'] ?? '')) !!}
+                    {!! clean_dioreal_content($otel->long_desc['en'] ?? ($otel->desc['en'] ?? '')) !!}
                 </div>
             </div>
 

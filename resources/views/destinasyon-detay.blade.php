@@ -312,10 +312,10 @@
     @if(!empty($destination->desc['tr']) || !empty($destination->desc['en']))
         <section class="dest-intro">
             <div class="dest-intro-desc lang-text-tr">
-                {!! nl2br(e(preg_replace('/<br\s*\/?>/i', "\n", $destination->desc['tr'] ?? ''))) !!}
+                {!! clean_dioreal_content($destination->desc['tr'] ?? '') !!}
             </div>
             <div class="dest-intro-desc lang-text-en">
-                {!! nl2br(e(preg_replace('/<br\s*\/?>/i', "\n", $destination->desc['en'] ?? ''))) !!}
+                {!! clean_dioreal_content($destination->desc['en'] ?? '') !!}
             </div>
         </section>
     @endif

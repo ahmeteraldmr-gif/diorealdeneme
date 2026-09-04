@@ -387,8 +387,8 @@
         <!-- Main Article Content -->
         <article class="jd-article">
             <div class="jd-content">
-                <div class="lang-text-tr">{!! !empty($rehber->desc['tr']) ? $rehber->desc['tr'] : (is_string($rehber->desc ?? null) ? $rehber->desc : ($rehber->desc['en'] ?? '')) !!}</div>
-                <div class="lang-text-en">{!! !empty($rehber->desc['en']) ? $rehber->desc['en'] : (is_string($rehber->desc ?? null) ? $rehber->desc : ($rehber->desc['tr'] ?? '')) !!}</div>
+                <div class="lang-text-tr">{!! clean_dioreal_content(!empty($rehber->desc['tr']) ? $rehber->desc['tr'] : ($rehber->desc ?? '')) !!}</div>
+                <div class="lang-text-en">{!! clean_dioreal_content(!empty($rehber->desc['en']) ? $rehber->desc['en'] : ($rehber->desc['tr'] ?? ($rehber->desc ?? ''))) !!}</div>
             </div>
         </article>
 

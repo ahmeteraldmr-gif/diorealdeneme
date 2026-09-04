@@ -434,10 +434,10 @@
                 <h2 class="detail-section-title" data-i18n="detail_about_yacht">Yat <em>Hakkında</em></h2>
                 
                 <div class="lang-text-tr">
-                    {!! nl2br($yat->long_desc['tr'] ?? ($yat->desc['tr'] ?? '')) !!}
+                    {!! clean_dioreal_content($yat->long_desc['tr'] ?? ($yat->desc['tr'] ?? '')) !!}
                 </div>
                 <div class="lang-text-en">
-                    {!! nl2br($yat->long_desc['en'] ?? ($yat->desc['en'] ?? '')) !!}
+                    {!! clean_dioreal_content($yat->long_desc['en'] ?? ($yat->desc['en'] ?? '')) !!}
                 </div>
             </div>
 

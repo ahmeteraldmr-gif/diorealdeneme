@@ -457,10 +457,10 @@
                 <h2 class="detail-section-title" data-i18n="detail_about_rest">Mekan <em>Hakkında</em></h2>
                 
                 <div class="lang-text-tr">
-                    {!! nl2br($restoran->long_desc['tr'] ?? ($restoran->desc['tr'] ?? '')) !!}
+                    {!! clean_dioreal_content($restoran->long_desc['tr'] ?? ($restoran->desc['tr'] ?? '')) !!}
                 </div>
                 <div class="lang-text-en">
-                    {!! nl2br($restoran->long_desc['en'] ?? ($restoran->desc['en'] ?? '')) !!}
+                    {!! clean_dioreal_content($restoran->long_desc['en'] ?? ($restoran->desc['en'] ?? '')) !!}
                 </div>
             </div>
 
