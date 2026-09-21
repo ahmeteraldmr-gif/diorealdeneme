@@ -119,8 +119,9 @@ class PageController extends Controller
         $canonical = route('etkinlikler', $activeLang === 'en' ? ['lang' => 'en'] : []);
         $hreflang_tr = route('etkinlikler', ['lang' => 'tr']);
         $hreflang_en = route('etkinlikler', ['lang' => 'en']);
+        $settings = \App\Models\Setting::pluck('value', 'key')->toArray();
 
-        return view("etkinlikler", compact("etkinlikler", "seo", "canonical", "hreflang_tr", "hreflang_en"));
+        return view("etkinlikler", compact("etkinlikler", "seo", "canonical", "hreflang_tr", "hreflang_en", "settings"));
     }
 
     public function journal()
