@@ -132,8 +132,9 @@ class PageController extends Controller
         $canonical = route('journal', $activeLang === 'en' ? ['lang' => 'en'] : []);
         $hreflang_tr = route('journal', ['lang' => 'tr']);
         $hreflang_en = route('journal', ['lang' => 'en']);
+        $settings = \App\Models\Setting::pluck('value', 'key')->toArray();
 
-        return view("journal", compact("journals", "seo", "canonical", "hreflang_tr", "hreflang_en"));
+        return view("journal", compact("journals", "seo", "canonical", "hreflang_tr", "hreflang_en", "settings"));
     }
 
     public function otelDetay($slug_or_id)
