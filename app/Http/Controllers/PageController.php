@@ -54,8 +54,9 @@ class PageController extends Controller
         $canonical = route('hakkimizda', $activeLang === 'en' ? ['lang' => 'en'] : []);
         $hreflang_tr = route('hakkimizda', ['lang' => 'tr']);
         $hreflang_en = route('hakkimizda', ['lang' => 'en']);
+        $settings = \App\Models\Setting::pluck('value', 'key')->toArray();
 
-        return view("hakkimizda", compact("seo", "canonical", "hreflang_tr", "hreflang_en"));
+        return view("hakkimizda", compact("seo", "canonical", "hreflang_tr", "hreflang_en", "settings"));
     }
 
     public function oteller()
